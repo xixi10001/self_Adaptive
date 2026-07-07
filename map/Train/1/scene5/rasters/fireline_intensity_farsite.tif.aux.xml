@@ -1,0 +1,10 @@
+<PAMDataset>
+  <PAMRasterBand band="1">
+    <Description>Farsite Fireline Intensity</Description>
+    <UnitType>kW/m</UnitType>
+    <Metadata>
+      <MDI key="RepresentationType">THEMATIC</MDI>
+      <MDI key="UnitOfMeasure">kW/m</MDI>
+    </Metadata>
+  </PAMRasterBand>
+</PAMDataset>

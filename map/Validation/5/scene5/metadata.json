@@ -1,0 +1,221 @@
+{
+  "map_id": "val_area_005_scenario_005",
+  "split": "validation",
+  "area_id": "area_005",
+  "scenario_id": "scenario_005",
+  "resolution_m": 30,
+  "width": 285,
+  "height": 283,
+  "scenario_type": "farsite_dynamic_fire",
+  "difficulty": "hard",
+  "wind": {
+    "source": "weather_stream.wxs",
+    "wind_direction_deg": 15,
+    "wind_speed_mph": 10,
+    "wind_speed_mps_approx": 4.47
+  },
+  "fuel_moisture": {
+    "source": "fuel_moisture_dry.fms",
+    "class": "dry",
+    "one_hour": 5,
+    "ten_hour": 6,
+    "hundred_hour": 7,
+    "live_woody": 85,
+    "herbaceous": 55,
+    "foliar": 15
+  },
+  "ignition": {
+    "ignition_count": 2,
+    "ignition_file": "vectors/ignition.shp",
+    "ignition_centers_wgs84": [
+      {
+        "id": 1,
+        "latitude": 35.66823,
+        "longitude": -112.01876
+      },
+      {
+        "id": 2,
+        "latitude": 35.64143,
+        "longitude": -112.02251
+      }
+    ],
+    "actual_ignition_acres": 1.22,
+    "actual_ignition_cells_approx": 5,
+    "ignition_cells_target_total": [
+      5,
+      80
+    ],
+    "status": "pass",
+    "ignition_sizes_m": [
+      [
+        78.97,
+        61.09
+      ],
+      [
+        54.25,
+        31.0
+      ]
+    ]
+  },
+  "farsite": {
+    "run_name": "val_area_005_scenario_005",
+    "flammap_version": "6.2.45.0",
+    "run_completed": "2026-05-28 09:14:51",
+    "run_time_seconds": 0.49,
+    "weather_stream": "inputs/weather_stream.wxs",
+    "fuel_moisture_file": "inputs/fuel_moisture_dry.fms",
+    "ignition_file": "vectors/ignition.shp",
+    "landscape_file": "map5/map5.tif",
+    "landscape_resolution_m": 30.0,
+    "perimeter_resolution_m": 60,
+    "distance_resolution_m": 30,
+    "time_step_min": 60,
+    "use_acceleration": true,
+    "ember_spot": 0.0,
+    "spotting_enabled": false,
+    "spot_fires_created": 0,
+    "foliar_moisture_content": 100,
+    "crown_fire_calculation": "Scott/Reinhardt",
+    "burn_period": "05/01 12:00-13:59",
+    "burn_start": "2026-05-01 12:00",
+    "burn_end": "2026-05-01 14:00",
+    "burn_duration_hr": 2,
+    "selected_final_time": "05/01 14:00",
+    "final_number_fires": 3,
+    "final_number_vertices": 213
+  },
+  "fire_statistics": {
+    "target_final_burned_cells": [
+      300,
+      1200
+    ],
+    "target_final_total_acres": [
+      66,
+      266
+    ],
+    "target_fire_area_ratio": [
+      0.0037,
+      0.0149
+    ],
+    "actual_ignition_acres": 1.22,
+    "actual_ignition_cells_approx": 5,
+    "actual_final_total_acres": 260.7,
+    "actual_final_burned_cells_approx": 1174,
+    "actual_fire_area_ratio_approx": 0.0146,
+    "fires": 3,
+    "enclaves": 1,
+    "final_elapsed_time": "00 02:00",
+    "final_current_time": "05/01 14:00",
+    "final_timestep_acres": 194.89,
+    "scenario_target_status": "pass",
+    "global_target_status": "pass",
+    "status": "pass"
+  },
+  "timesteps": [
+    {
+      "elapsed_time": "00 00:00",
+      "current_time": "Ignition",
+      "fires": null,
+      "enclaves": null,
+      "total_acres": 1.22,
+      "timestep_acres": null,
+      "burned_cells_approx": 5,
+      "fire_area_ratio_approx": 0.0001,
+      "selected": false,
+      "reason": "ignition_only"
+    },
+    {
+      "elapsed_time": "00 01:00",
+      "current_time": "05/01 13:00",
+      "fires": 5,
+      "enclaves": 3,
+      "total_acres": 65.81,
+      "timestep_acres": 64.59,
+      "burned_cells_approx": 296,
+      "fire_area_ratio_approx": 0.0037,
+      "selected": false,
+      "reason": "intermediate_step_not_final"
+    },
+    {
+      "elapsed_time": "00 02:00",
+      "current_time": "05/01 14:00",
+      "fires": 3,
+      "enclaves": 1,
+      "total_acres": 260.7,
+      "timestep_acres": 194.89,
+      "burned_cells_approx": 1174,
+      "fire_area_ratio_approx": 0.0146,
+      "selected": true,
+      "reason": "final_simulation_timestep"
+    }
+  ],
+  "target_range_check": {
+    "initial_fire_cells_target": [
+      5,
+      80
+    ],
+    "active_fire_cells_target": [
+      300,
+      1200
+    ],
+    "fire_area_ratio_target": [
+      0.0037,
+      0.0149
+    ],
+    "actual_initial_fire_cells_approx": 5,
+    "actual_active_fire_cells_approx": 1174,
+    "actual_fire_area_ratio_approx": 0.0146,
+    "initial_fire_cells_status": "pass",
+    "active_fire_cells_status": "pass",
+    "fire_area_ratio_status": "pass",
+    "status": "pass"
+  },
+  "uav": {
+    "uav_count": 2,
+    "start_mode": "random_safe_start",
+    "starts_wgs84": [
+      {
+        "uav_id": 1,
+        "latitude": 46.276,
+        "longitude": -114.092
+      },
+      {
+        "uav_id": 2,
+        "latitude": 46.222,
+        "longitude": -114.012
+      }
+    ],
+    "sensor_radius_m": 450,
+    "communication_radius_m": 1500,
+    "max_steps": 800
+  },
+  "rasters": {
+    "arrival_time": "rasters/arrival_time.tif",
+    "flame_length": "rasters/flame_length_farsite.tif",
+    "rate_of_spread": "rasters/ros_farsite.tif",
+    "fireline_intensity": "rasters/fireline_intensity_farsite.tif",
+    "spread_direction": "rasters/spread_direction_farsite.tif",
+    "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+    "crown_fire_activity": "rasters/crown_fire_activity_farsite.tif"
+  },
+  "vectors": {
+    "ignition": "vectors/ignition.shp",
+    "fire_perimeter": "vectors/fire_perimeter.shp"
+  },
+  "inputs": {
+    "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+    "weather_stream": "inputs/weather_stream.wxs"
+  },
+  "reports": {
+    "fire_growth_report": "reports/fire_growth_report.csv",
+    "run_log": "reports/Run_log.txt"
+  },
+  "derived_calculation": {
+    "cell_area_m2": 900,
+    "cell_area_acres_approx": 0.222,
+    "total_map_cells": 80655,
+    "burned_cells_formula": "actual_final_total_acres / 0.222",
+    "fire_area_ratio_formula": "actual_final_burned_cells_approx / 80655"
+  },
+  "notes": "Validation scenario 5 for area_005. Hard difficulty with 2 ignitions. Wind direction 15 deg (NNE), peak wind 10 mph during burn period per Run_log RAWS data. Fuel moisture class dry (1hr:5, 10hr:6, 100hr:7, live_woody:85, herb:55, foliar:15) per Run_log FUEL_MOISTURES_DATA. Final burned area 260.70 acres (1174 cells), fire_area_ratio 1.46%, all global checks pass. FlamMap 6.2.45.0, run completed 2026-05-28 09:14:51."
+}

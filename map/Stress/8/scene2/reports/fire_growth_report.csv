@@ -1,0 +1,9 @@
+Run: stress_area_008_scenario_002
+Farsite Fire Growth
+	Note: Ignition acreage included
+Ignition Acres: 7.90
+
+Elapsed (DD HH:mm) 	Current(MM/DD HH:mm) 	Fires 	Enclaves 	Total Acres	Timestep Acres
+ 00 00:00 	Ignition
+ 00 01:00 		06/01 13:00 	       11 	        7 	   239.19	   231.29
+ 00 02:00 		06/01 14:00 	       11 	        7 	   566.44	   327.25

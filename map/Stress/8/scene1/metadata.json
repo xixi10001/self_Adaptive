@@ -1,0 +1,243 @@
+{
+  "map_id": "stress_area_008_scenario_001",
+  "split": "stress",
+  "area_id": "area_008",
+  "scenario_id": "scenario_001",
+  "resolution_m": 30,
+  "width": 285,
+  "height": 283,
+  "scenario_type": "strong_wind",
+  "simulation_type": "farsite_dynamic_fire",
+  "difficulty": "stress",
+  "stress_focus": "strong wind search stability",
+  "wind": {
+    "source": "weather_stream.wxs",
+    "wind_direction_deg": 270,
+    "expected_wind_direction_deg": 270,
+    "allowed_wind_directions_deg": [
+      270
+    ],
+    "wind_speed_range_mph": [
+      12,
+      16
+    ],
+    "expected_wind_speed_range_mph": [
+      12,
+      16
+    ],
+    "peak_wind_speed_mph": 16,
+    "peak_wind_speed_mps_approx": 7.15
+  },
+  "fuel_moisture": {
+    "source": "fuel_moisture_dry.fms",
+    "class": "dry",
+    "one_hour": 5,
+    "ten_hour": 6,
+    "hundred_hour": 7,
+    "herbaceous": 55,
+    "live_woody": 85,
+    "foliar": 15
+  },
+  "ignition": {
+    "ignition_count": 2,
+    "ignition_count_target": [
+      2,
+      2
+    ],
+    "ignition_count_status": "pass",
+    "ignition_file": "vectors/ignition.shp",
+    "ignition_center_wgs84": null,
+    "ignition_centers_wgs84": [
+      {
+        "latitude": 40.7649,
+        "longitude": -111.53288
+      },
+      {
+        "latitude": 40.71958,
+        "longitude": -111.58874
+      }
+    ],
+    "ignition_size_m": null,
+    "ignition_sizes_m": [
+      [
+        154.54,
+        76.0
+      ],
+      [
+        62.7,
+        42.28
+      ]
+    ],
+    "actual_ignition_acres": 2.84,
+    "actual_ignition_cells_approx": 13,
+    "initial_fire_cells_target": [
+      5,
+      80
+    ],
+    "stress_initial_fire_cells_target": [
+      16,
+      24
+    ],
+    "initial_fire_cells_status": "pass",
+    "stress_initial_fire_cells_status": "below_target",
+    "status": "pass"
+  },
+  "farsite": {
+    "run_name": "stress_area_008_scenario_001",
+    "flammap_version": "6.2.45.0",
+    "run_completed": "2026-06-02 11:28:32",
+    "run_time_seconds": 0.35,
+    "weather_stream": "inputs/weather_stream.wxs",
+    "fuel_moisture_file": "inputs/fuel_moisture_dry.fms",
+    "ignition_file": "vectors/ignition.shp",
+    "landscape_file": "map8/map8.tif",
+    "landscape_resolution_m": 30.0,
+    "perimeter_resolution_m": 60,
+    "distance_resolution_m": 30,
+    "time_step_min": 60,
+    "use_acceleration": true,
+    "ember_spot": 0.0,
+    "spotting_enabled": false,
+    "spot_fires_created": 0,
+    "foliar_moisture_content": 100,
+    "crown_fire_calculation": "Scott/Reinhardt",
+    "burn_start": "2026-05-01 12:00",
+    "burn_end": "2026-05-01 14:00",
+    "burn_duration_hr": 2,
+    "selected_final_time": "05/01 14:00",
+    "final_number_fires": 5,
+    "final_number_vertices": 320
+  },
+  "fire_statistics": {
+    "stress_target_final_burned_cells": [
+      1200,
+      2200
+    ],
+    "stress_target_final_total_acres": [
+      266,
+      488
+    ],
+    "stress_target_fire_area_ratio": [
+      0.0149,
+      0.0273
+    ],
+    "normal_target_final_burned_cells": [
+      300,
+      1200
+    ],
+    "normal_target_fire_area_ratio": [
+      0.0037,
+      0.0149
+    ],
+    "actual_ignition_acres": 2.84,
+    "actual_ignition_cells_approx": 13,
+    "actual_final_total_acres": 287.36,
+    "actual_final_burned_cells_approx": 1294,
+    "actual_fire_area_ratio_approx": 0.016,
+    "fires": 5,
+    "enclaves": 3,
+    "final_elapsed_time": "00 02:00",
+    "final_current_time": "05/01 14:00",
+    "final_timestep_acres": 153.37,
+    "normal_target_status": "exceeded",
+    "stress_target_status": "pass",
+    "status": "pass_for_stress"
+  },
+  "target_range_check": {
+    "initial_fire_cells_target": [
+      5,
+      80
+    ],
+    "stress_initial_fire_cells_target": [
+      16,
+      24
+    ],
+    "normal_active_fire_cells_target": [
+      300,
+      1200
+    ],
+    "normal_fire_area_ratio_target": [
+      0.0037,
+      0.0149
+    ],
+    "stress_active_fire_cells_target": [
+      1200,
+      2200
+    ],
+    "stress_fire_area_ratio_target": [
+      0.0149,
+      0.0273
+    ],
+    "actual_initial_fire_cells_approx": 13,
+    "actual_active_fire_cells_approx": 1294,
+    "actual_fire_area_ratio_approx": 0.016,
+    "initial_fire_cells_status": "pass",
+    "stress_initial_fire_cells_status": "below_target",
+    "normal_active_fire_cells_status": "exceeded",
+    "normal_fire_area_ratio_status": "exceeded",
+    "stress_active_fire_cells_status": "pass",
+    "normal_target_status": "exceeded",
+    "stress_target_status": "pass",
+    "status": "pass_for_stress",
+    "stress_fire_area_ratio_status": "pass"
+  },
+  "stress_validation": {
+    "normal_target_status": "exceeded",
+    "stress_target_status": "pass",
+    "status": "pass_for_stress",
+    "hard_too_large_cells_threshold": 5000,
+    "configuration_warnings": [
+      "initial_fire_cells_differs_from_stress_design"
+    ]
+  },
+  "rejected_timesteps": [
+    {
+      "elapsed_time": "00 01:00",
+      "current_time": "05/01 13:00",
+      "fires": 5,
+      "enclaves": 3,
+      "total_acres": 133.99,
+      "burned_cells_approx": 604,
+      "fire_area_ratio_approx": 0.0075,
+      "timestep_acres": 131.15,
+      "reason": "too_small_for_stress_target"
+    }
+  ],
+  "uav": {
+    "uav_count": 2,
+    "start_mode": "not_recorded",
+    "starts_wgs84": null,
+    "sensor_radius_m": 450,
+    "communication_radius_m": 1500,
+    "max_steps": 800
+  },
+  "rasters": {
+    "arrival_time": "rasters/arrival_time.tif",
+    "flame_length": "rasters/flame_length_farsite.tif",
+    "rate_of_spread": "rasters/ros_farsite.tif",
+    "fireline_intensity": "rasters/fireline_intensity_farsite.tif",
+    "spread_direction": "rasters/spread_direction_farsite.tif",
+    "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+    "crown_fire_activity": "rasters/crown_fire_activity_farsite.tif"
+  },
+  "vectors": {
+    "ignition": "vectors/ignition.shp",
+    "fire_perimeter": "vectors/fire_perimeter.shp"
+  },
+  "inputs": {
+    "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+    "weather_stream": "inputs/weather_stream.wxs"
+  },
+  "reports": {
+    "fire_growth_report": "reports/fire_growth_report.csv",
+    "run_log": "reports/Run_log.txt"
+  },
+  "derived_calculation": {
+    "cell_area_m2": 900,
+    "cell_area_acres_approx": 0.222,
+    "total_map_cells": 80655,
+    "burned_cells_formula": "actual_final_total_acres / 0.222",
+    "fire_area_ratio_formula": "actual_final_burned_cells_approx / 80655"
+  },
+  "notes": "Stress scenario 1 for area_008. Type: strong_wind. Fuel moisture class: dry. Wind range: 12-16 mph from [270]. Final burned area: 287.36 acres (1294 cells). Normal target is intentionally exceeded for stress testing. UAV starts are not recorded in source files."
+}

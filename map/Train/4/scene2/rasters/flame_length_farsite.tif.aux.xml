@@ -1,0 +1,10 @@
+<PAMDataset>
+  <PAMRasterBand band="1">
+    <Description>Farsite Flame Length</Description>
+    <UnitType>Feet</UnitType>
+    <Metadata>
+      <MDI key="RepresentationType">THEMATIC</MDI>
+      <MDI key="UnitOfMeasure">Feet</MDI>
+    </Metadata>
+  </PAMRasterBand>
+</PAMDataset>

@@ -1,0 +1,10 @@
+<PAMDataset>
+  <PAMRasterBand band="1">
+    <Description>Farsite Arrival Time</Description>
+    <UnitType>Minutes</UnitType>
+    <Metadata>
+      <MDI key="RepresentationType">THEMATIC</MDI>
+      <MDI key="UnitOfMeasure">Minutes</MDI>
+    </Metadata>
+  </PAMRasterBand>
+</PAMDataset>

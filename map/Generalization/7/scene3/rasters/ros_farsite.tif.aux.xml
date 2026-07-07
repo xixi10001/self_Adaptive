@@ -1,0 +1,10 @@
+<PAMDataset>
+  <PAMRasterBand band="1">
+    <Description>Farsite Rate Of Spread</Description>
+    <UnitType>Chains/Hr</UnitType>
+    <Metadata>
+      <MDI key="RepresentationType">THEMATIC</MDI>
+      <MDI key="UnitOfMeasure">Chains/Hr</MDI>
+    </Metadata>
+  </PAMRasterBand>
+</PAMDataset>

@@ -1,0 +1,10 @@
+<PAMDataset>
+  <PAMRasterBand band="1">
+    <Description>Farsite Crown Fire Activity</Description>
+    <UnitType>Class</UnitType>
+    <Metadata>
+      <MDI key="RepresentationType">THEMATIC</MDI>
+      <MDI key="UnitOfMeasure">Class</MDI>
+    </Metadata>
+  </PAMRasterBand>
+</PAMDataset>

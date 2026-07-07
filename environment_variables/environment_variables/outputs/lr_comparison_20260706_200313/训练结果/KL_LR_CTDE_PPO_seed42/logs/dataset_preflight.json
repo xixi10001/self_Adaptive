@@ -1,0 +1,500 @@
+{
+  "dataset_index_version": 2,
+  "scene_split_counts": {
+    "train": 24,
+    "validation": 6,
+    "generalization": 12,
+    "stress": 4
+  },
+  "observation_profile": "baseline",
+  "reward_profile": "boundary_coverage",
+  "observation_profile_dims": {
+    "baseline": {
+      "local_obs_dim": 19,
+      "global_state_dim": 19
+    },
+    "static_terrain": {
+      "local_obs_dim": 26,
+      "global_state_dim": 19
+    },
+    "dynamic_front": {
+      "local_obs_dim": 25,
+      "global_state_dim": 19
+    },
+    "risk_aware": {
+      "local_obs_dim": 22,
+      "global_state_dim": 19
+    }
+  },
+  "norm_params_source": "scene_p99.5",
+  "use_scene_uav_params": false,
+  "use_metadata_uav_params": false,
+  "vision_radius": 16,
+  "configured_vision_radius": 16,
+  "sensor_radius_cells": null,
+  "max_steps": 600,
+  "configured_max_steps": 600,
+  "scene_key": null,
+  "boundary_validation": {
+    "train_area001_scenario001": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 340,
+      "init_fire_cells": 17,
+      "actual_init_area_percent": 5.0,
+      "cutoff_time": 12.497843742370605,
+      "init_boundary_points": 17
+    },
+    "train_area001_scenario002": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 662,
+      "init_fire_cells": 34,
+      "actual_init_area_percent": 5.13595166163142,
+      "cutoff_time": 11.077836990356445,
+      "init_boundary_points": 30
+    },
+    "train_area001_scenario003": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 853,
+      "init_fire_cells": 43,
+      "actual_init_area_percent": 5.041031652989449,
+      "cutoff_time": 10.151718139648438,
+      "init_boundary_points": 32
+    },
+    "train_area001_scenario004": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 679,
+      "init_fire_cells": 34,
+      "actual_init_area_percent": 5.007363770250368,
+      "cutoff_time": 11.18162727355957,
+      "init_boundary_points": 26
+    },
+    "train_area001_scenario005": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 1197,
+      "init_fire_cells": 60,
+      "actual_init_area_percent": 5.012531328320802,
+      "cutoff_time": 8.536202430725098,
+      "init_boundary_points": 49
+    },
+    "train_area001_scenario006": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 1096,
+      "init_fire_cells": 55,
+      "actual_init_area_percent": 5.018248175182482,
+      "cutoff_time": 21.356231689453125,
+      "init_boundary_points": 39
+    },
+    "train_area002_scenario001": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 359,
+      "init_fire_cells": 18,
+      "actual_init_area_percent": 5.013927576601671,
+      "cutoff_time": 19.987380981445312,
+      "init_boundary_points": 16
+    },
+    "train_area002_scenario002": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 430,
+      "init_fire_cells": 22,
+      "actual_init_area_percent": 5.116279069767442,
+      "cutoff_time": 13.499466896057129,
+      "init_boundary_points": 21
+    },
+    "train_area002_scenario003": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 560,
+      "init_fire_cells": 28,
+      "actual_init_area_percent": 5.0,
+      "cutoff_time": 13.346437454223633,
+      "init_boundary_points": 25
+    },
+    "train_area002_scenario004": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 804,
+      "init_fire_cells": 41,
+      "actual_init_area_percent": 5.099502487562189,
+      "cutoff_time": 10.424092292785645,
+      "init_boundary_points": 34
+    },
+    "train_area002_scenario005": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 930,
+      "init_fire_cells": 47,
+      "actual_init_area_percent": 5.053763440860215,
+      "cutoff_time": 14.119272232055664,
+      "init_boundary_points": 39
+    },
+    "train_area002_scenario006": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 733,
+      "init_fire_cells": 37,
+      "actual_init_area_percent": 5.04774897680764,
+      "cutoff_time": 13.430342674255371,
+      "init_boundary_points": 29
+    },
+    "train_area003_scenario001": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 269,
+      "init_fire_cells": 14,
+      "actual_init_area_percent": 5.204460966542751,
+      "cutoff_time": 14.451483726501465,
+      "init_boundary_points": 14
+    },
+    "train_area003_scenario002": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 359,
+      "init_fire_cells": 18,
+      "actual_init_area_percent": 5.013927576601671,
+      "cutoff_time": 14.94638729095459,
+      "init_boundary_points": 17
+    },
+    "train_area003_scenario003": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 512,
+      "init_fire_cells": 26,
+      "actual_init_area_percent": 5.078125,
+      "cutoff_time": 14.444368362426758,
+      "init_boundary_points": 24
+    },
+    "train_area003_scenario004": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 707,
+      "init_fire_cells": 36,
+      "actual_init_area_percent": 5.091937765205092,
+      "cutoff_time": 10.926579475402832,
+      "init_boundary_points": 28
+    },
+    "train_area003_scenario005": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 803,
+      "init_fire_cells": 41,
+      "actual_init_area_percent": 5.1058530510585305,
+      "cutoff_time": 9.595187187194824,
+      "init_boundary_points": 34
+    },
+    "train_area003_scenario006": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 646,
+      "init_fire_cells": 33,
+      "actual_init_area_percent": 5.108359133126935,
+      "cutoff_time": 18.072099685668945,
+      "init_boundary_points": 31
+    },
+    "train_area004_scenario001": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 312,
+      "init_fire_cells": 16,
+      "actual_init_area_percent": 5.128205128205129,
+      "cutoff_time": 22.68110466003418,
+      "init_boundary_points": 15
+    },
+    "train_area004_scenario002": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 468,
+      "init_fire_cells": 24,
+      "actual_init_area_percent": 5.128205128205129,
+      "cutoff_time": 14.109410285949707,
+      "init_boundary_points": 21
+    },
+    "train_area004_scenario003": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 488,
+      "init_fire_cells": 25,
+      "actual_init_area_percent": 5.122950819672131,
+      "cutoff_time": 15.930397987365723,
+      "init_boundary_points": 22
+    },
+    "train_area004_scenario004": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 797,
+      "init_fire_cells": 40,
+      "actual_init_area_percent": 5.018820577164367,
+      "cutoff_time": 15.725573539733887,
+      "init_boundary_points": 35
+    },
+    "train_area004_scenario005": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 820,
+      "init_fire_cells": 41,
+      "actual_init_area_percent": 5.0,
+      "cutoff_time": 17.126312255859375,
+      "init_boundary_points": 36
+    },
+    "train_area004_scenario006": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 667,
+      "init_fire_cells": 34,
+      "actual_init_area_percent": 5.097451274362818,
+      "cutoff_time": 13.070569038391113,
+      "init_boundary_points": 26
+    },
+    "validation_area005_scenario001": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 312,
+      "init_fire_cells": 16,
+      "actual_init_area_percent": 5.128205128205129,
+      "cutoff_time": 21.725595474243164,
+      "init_boundary_points": 14
+    },
+    "validation_area005_scenario002": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 563,
+      "init_fire_cells": 29,
+      "actual_init_area_percent": 5.150976909413854,
+      "cutoff_time": 14.526257514953613,
+      "init_boundary_points": 22
+    },
+    "validation_area005_scenario003": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 638,
+      "init_fire_cells": 32,
+      "actual_init_area_percent": 5.015673981191223,
+      "cutoff_time": 23.4832763671875,
+      "init_boundary_points": 25
+    },
+    "validation_area005_scenario004": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 1117,
+      "init_fire_cells": 56,
+      "actual_init_area_percent": 5.0134288272157566,
+      "cutoff_time": 20.437185287475586,
+      "init_boundary_points": 41
+    },
+    "validation_area005_scenario005": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 1155,
+      "init_fire_cells": 58,
+      "actual_init_area_percent": 5.021645021645021,
+      "cutoff_time": 32.82783126831055,
+      "init_boundary_points": 37
+    },
+    "validation_area005_scenario006": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 1195,
+      "init_fire_cells": 60,
+      "actual_init_area_percent": 5.02092050209205,
+      "cutoff_time": 21.634471893310547,
+      "init_boundary_points": 42
+    },
+    "generalization_area006_scenario001": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 343,
+      "init_fire_cells": 18,
+      "actual_init_area_percent": 5.247813411078718,
+      "cutoff_time": 18.2700138092041,
+      "init_boundary_points": 16
+    },
+    "generalization_area006_scenario002": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 566,
+      "init_fire_cells": 29,
+      "actual_init_area_percent": 5.123674911660777,
+      "cutoff_time": 21.457805633544922,
+      "init_boundary_points": 21
+    },
+    "generalization_area006_scenario003": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 618,
+      "init_fire_cells": 31,
+      "actual_init_area_percent": 5.016181229773463,
+      "cutoff_time": 25.334440231323242,
+      "init_boundary_points": 27
+    },
+    "generalization_area006_scenario004": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 865,
+      "init_fire_cells": 44,
+      "actual_init_area_percent": 5.086705202312139,
+      "cutoff_time": 18.737628936767578,
+      "init_boundary_points": 36
+    },
+    "generalization_area006_scenario005": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 738,
+      "init_fire_cells": 37,
+      "actual_init_area_percent": 5.013550135501355,
+      "cutoff_time": 18.035985946655273,
+      "init_boundary_points": 34
+    },
+    "generalization_area006_scenario006": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 741,
+      "init_fire_cells": 38,
+      "actual_init_area_percent": 5.128205128205129,
+      "cutoff_time": 18.948347091674805,
+      "init_boundary_points": 29
+    },
+    "generalization_area007_scenario001": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 373,
+      "init_fire_cells": 19,
+      "actual_init_area_percent": 5.093833780160858,
+      "cutoff_time": 21.822755813598633,
+      "init_boundary_points": 18
+    },
+    "generalization_area007_scenario002": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 541,
+      "init_fire_cells": 28,
+      "actual_init_area_percent": 5.175600739371534,
+      "cutoff_time": 21.28597640991211,
+      "init_boundary_points": 24
+    },
+    "generalization_area007_scenario003": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 711,
+      "init_fire_cells": 36,
+      "actual_init_area_percent": 5.063291139240507,
+      "cutoff_time": 22.415184020996094,
+      "init_boundary_points": 34
+    },
+    "generalization_area007_scenario004": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 893,
+      "init_fire_cells": 45,
+      "actual_init_area_percent": 5.039193729003359,
+      "cutoff_time": 20.673213958740234,
+      "init_boundary_points": 32
+    },
+    "generalization_area007_scenario005": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 957,
+      "init_fire_cells": 48,
+      "actual_init_area_percent": 5.015673981191223,
+      "cutoff_time": 24.619354248046875,
+      "init_boundary_points": 43
+    },
+    "generalization_area007_scenario006": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 675,
+      "init_fire_cells": 34,
+      "actual_init_area_percent": 5.037037037037037,
+      "cutoff_time": 27.41697883605957,
+      "init_boundary_points": 29
+    },
+    "stress_area008_scenario001": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 1249,
+      "init_fire_cells": 63,
+      "actual_init_area_percent": 5.044035228182546,
+      "cutoff_time": 15.712020874023438,
+      "init_boundary_points": 45
+    },
+    "stress_area008_scenario002": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 2457,
+      "init_fire_cells": 123,
+      "actual_init_area_percent": 5.006105006105006,
+      "cutoff_time": 15.399537086486816,
+      "init_boundary_points": 90
+    },
+    "stress_area008_scenario003": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 1598,
+      "init_fire_cells": 80,
+      "actual_init_area_percent": 5.006257822277847,
+      "cutoff_time": 19.266233444213867,
+      "init_boundary_points": 63
+    },
+    "stress_area008_scenario004": {
+      "t0_boundary_points": 1,
+      "init_percentile": 5.0,
+      "init_area_percent": 5.0,
+      "total_fire_cells": 3383,
+      "init_fire_cells": 170,
+      "actual_init_area_percent": 5.025125628140704,
+      "cutoff_time": 18.155620574951172,
+      "init_boundary_points": 84
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<PAMDataset>
+  <PAMRasterBand band="1">
+    <Description>Farsite Heat per Unit Area</Description>
+    <UnitType>BTU/ft^2</UnitType>
+    <Metadata>
+      <MDI key="RepresentationType">THEMATIC</MDI>
+      <MDI key="UnitOfMeasure">BTU/ft^2</MDI>
+    </Metadata>
+  </PAMRasterBand>
+</PAMDataset>

@@ -1,0 +1,9 @@
+Run: gen_area_006_scenario_002
+Farsite Fire Growth
+	Note: Ignition acreage included
+Ignition Acres: 1.66
+
+Elapsed (DD HH:mm) 	Current(MM/DD HH:mm) 	Fires 	Enclaves 	Total Acres	Timestep Acres
+ 00 00:00 	Ignition
+ 00 01:00 		05/01 13:00 	        1 	        0 	    37.88	    36.21
+ 00 02:00 		05/01 14:00 	        4 	        3 	   130.82	    92.94

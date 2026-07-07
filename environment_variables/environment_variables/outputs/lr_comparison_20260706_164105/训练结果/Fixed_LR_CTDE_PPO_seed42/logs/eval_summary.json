@@ -1,0 +1,53 @@
+{
+  "best_val": {
+    "available": true,
+    "model_path": "d:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260706_164105\\训练结果\\Fixed_LR_CTDE_PPO_seed42\\models\\ppo_best_val.pth",
+    "splits": {
+      "validation": {
+        "path": "d:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260706_164105\\训练结果\\Fixed_LR_CTDE_PPO_seed42\\logs\\best_val_validation_eval.json",
+        "stages": {
+          "3": {
+            "episodes": 300,
+            "mean_reward": -53.122831336415366,
+            "mean_coverage": 0.43096552492278384,
+            "success_rate": 0.46,
+            "mean_length": 447.66,
+            "timeout_rate": 0.54,
+            "zero_coverage_timeout_rate": 0.12333333333333334,
+            "mean_task_score": 0.404262762461392
+          }
+        }
+      },
+      "generalization": {
+        "path": "d:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260706_164105\\训练结果\\Fixed_LR_CTDE_PPO_seed42\\logs\\best_val_generalization_eval.json",
+        "stages": {
+          "3": {
+            "episodes": 600,
+            "mean_reward": -71.39694101374397,
+            "mean_coverage": 0.3041883408597724,
+            "success_rate": 0.2683333333333333,
+            "mean_length": 496.76666666666665,
+            "timeout_rate": 0.7316666666666667,
+            "zero_coverage_timeout_rate": 0.28,
+            "mean_task_score": 0.26700528154099734
+          }
+        }
+      },
+      "stress": {
+        "path": "d:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260706_164105\\训练结果\\Fixed_LR_CTDE_PPO_seed42\\logs\\best_val_stress_eval.json",
+        "stages": {
+          "3": {
+            "episodes": 200,
+            "mean_reward": -92.42334620625616,
+            "mean_coverage": 0.11224383794040371,
+            "success_rate": 0.045,
+            "mean_length": 574.6,
+            "timeout_rate": 0.955,
+            "zero_coverage_timeout_rate": 0.515,
+            "mean_task_score": 0.07808858563686853
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,3 @@
+﻿run,episodes,final_stage,ppo_updates,last_task_score_percent,last_coverage_percent,last_success_percent,last_timeout_percent,auc_task_score_percent,steps_to_threshold,tail_task_score_std_percent,kl_overshoot_percent
+Fixed_LR_CTDE_PPO_seed42,2500,3,201,47.539079,45.012158,56.000000,44.000000,24.127482,4842.000000,33.275916,0.000000
+KL_LR_CTDE_PPO_seed42,2500,3,199,36.364013,29.140693,48.000000,52.000000,21.575329,4842.000000,33.441215,0.000000

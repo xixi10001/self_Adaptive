@@ -1,0 +1,31 @@
+﻿# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment files
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Model checkpoints only
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+
+# Any models folders
+**/models/
+
+# Optional: compressed/raw map data, usually too large
+*.zip
+*.tar
+*.tar.gz
+*.tif
+*.tiff

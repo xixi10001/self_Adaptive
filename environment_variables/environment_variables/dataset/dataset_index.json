@@ -1,0 +1,3218 @@
+{
+  "version": 2,
+  "description": "FARSITE scene index for Arl dataset reader. Four splits are preserved for experiments.",
+  "source_root": "D:/DestopMoren/Desktop/Pyproject/Self-adaptive parameters/map",
+  "schema": {
+    "version": 2,
+    "path_base": {
+      "scene_dir": "source_root-relative",
+      "static_map": "source_root-relative",
+      "metadata": "scene_dir-relative",
+      "rasters": "scene_dir-relative",
+      "vectors": "scene_dir-relative",
+      "inputs": "scene_dir-relative",
+      "reports": "scene_dir-relative"
+    },
+    "required_scene_fields": [
+      "scene_key",
+      "split",
+      "scene_dir",
+      "static_map",
+      "metadata",
+      "rasters"
+    ],
+    "required_rasters": [
+      "intensity",
+      "time",
+      "length",
+      "speedRate",
+      "spread_direction",
+      "heat_per_unit_area",
+      "crown_fire"
+    ]
+  },
+  "splits": {
+    "train": [
+      "train_area001_scenario001",
+      "train_area001_scenario002",
+      "train_area001_scenario003",
+      "train_area001_scenario004",
+      "train_area001_scenario005",
+      "train_area001_scenario006",
+      "train_area002_scenario001",
+      "train_area002_scenario002",
+      "train_area002_scenario003",
+      "train_area002_scenario004",
+      "train_area002_scenario005",
+      "train_area002_scenario006",
+      "train_area003_scenario001",
+      "train_area003_scenario002",
+      "train_area003_scenario003",
+      "train_area003_scenario004",
+      "train_area003_scenario005",
+      "train_area003_scenario006",
+      "train_area004_scenario001",
+      "train_area004_scenario002",
+      "train_area004_scenario003",
+      "train_area004_scenario004",
+      "train_area004_scenario005",
+      "train_area004_scenario006"
+    ],
+    "validation": [
+      "validation_area005_scenario001",
+      "validation_area005_scenario002",
+      "validation_area005_scenario003",
+      "validation_area005_scenario004",
+      "validation_area005_scenario005",
+      "validation_area005_scenario006"
+    ],
+    "generalization": [
+      "generalization_area006_scenario001",
+      "generalization_area006_scenario002",
+      "generalization_area006_scenario003",
+      "generalization_area006_scenario004",
+      "generalization_area006_scenario005",
+      "generalization_area006_scenario006",
+      "generalization_area007_scenario001",
+      "generalization_area007_scenario002",
+      "generalization_area007_scenario003",
+      "generalization_area007_scenario004",
+      "generalization_area007_scenario005",
+      "generalization_area007_scenario006"
+    ],
+    "stress": [
+      "stress_area008_scenario001",
+      "stress_area008_scenario002",
+      "stress_area008_scenario003",
+      "stress_area008_scenario004"
+    ]
+  },
+  "raster_files": {
+    "intensity": "rasters/fireline_intensity_farsite.tif",
+    "time": "rasters/arrival_time.tif",
+    "length": "rasters/flame_length_farsite.tif",
+    "speedRate": "rasters/ros_farsite.tif",
+    "spread_direction": "rasters/spread_direction_farsite.tif",
+    "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+    "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+  },
+  "scenes": {
+    "train_area001_scenario001": {
+      "scene_key": "train_area001_scenario001",
+      "split": "train",
+      "scene_dir": "Train/1/scene1",
+      "static_map": "Train/1/map1/map1.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_normal.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_001",
+      "scenario_id": "scenario_001",
+      "difficulty": "easy",
+      "width_metadata": 285,
+      "height_metadata": 284,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 225,
+        "wind_speed_mph": 7,
+        "wind_speed_mps_approx": 3.13
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          300,
+          500
+        ],
+        "target_final_total_acres": [
+          67,
+          111
+        ],
+        "target_fire_area_ratio": [
+          0.0037,
+          0.0062
+        ],
+        "actual_ignition_acres": 4.66,
+        "actual_ignition_cells_approx": 21,
+        "actual_final_total_acres": 82.74,
+        "actual_final_burned_cells_approx": 373,
+        "actual_fire_area_ratio_approx": 0.0046,
+        "fires": 1,
+        "enclaves": 0,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 46.06,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "train_area001_scenario002": {
+      "scene_key": "train_area001_scenario002",
+      "split": "train",
+      "scene_dir": "Train/1/scene2",
+      "static_map": "Train/1/map1/map1.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_001",
+      "scenario_id": "scenario_002",
+      "difficulty": "medium",
+      "width_metadata": 285,
+      "height_metadata": 284,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 90,
+        "wind_speed_mph": 11,
+        "wind_speed_mps_approx": 4.92
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          400,
+          700
+        ],
+        "target_final_total_acres": [
+          89,
+          156
+        ],
+        "target_fire_area_ratio": [
+          0.0049,
+          0.0086
+        ],
+        "actual_ignition_acres": 5.01,
+        "actual_ignition_cells_approx": 23,
+        "actual_final_total_acres": 159.03,
+        "actual_final_burned_cells_approx": 716,
+        "actual_fire_area_ratio_approx": 0.0088,
+        "fires": 4,
+        "enclaves": 3,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 71.59,
+        "scenario_target_status": "near_pass_high",
+        "global_target_status": "pass",
+        "status": "pass_with_warning"
+      }
+    },
+    "train_area001_scenario003": {
+      "scene_key": "train_area001_scenario003",
+      "split": "train",
+      "scene_dir": "Train/1/scene3",
+      "static_map": "Train/1/map1/map1.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_001",
+      "scenario_id": "scenario_003",
+      "difficulty": "medium",
+      "width_metadata": 285,
+      "height_metadata": 284,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 315,
+        "wind_speed_mph": 13,
+        "wind_speed_mps_approx": 5.81
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          500,
+          900
+        ],
+        "target_final_total_acres": [
+          111,
+          200
+        ],
+        "target_fire_area_ratio": [
+          0.0062,
+          0.0111
+        ],
+        "actual_ignition_acres": 3.09,
+        "actual_ignition_cells_approx": 14,
+        "actual_final_total_acres": 197.29,
+        "actual_final_burned_cells_approx": 889,
+        "actual_fire_area_ratio_approx": 0.011,
+        "fires": 2,
+        "enclaves": 0,
+        "final_elapsed_time": "00 01:00",
+        "final_current_time": "05/01 13:00",
+        "scenario_target_status": "pass",
+        "global_target_status": "warning_initial_fire_too_small",
+        "status": "pass_with_warning",
+        "final_timestep_acres": 194.2
+      }
+    },
+    "train_area001_scenario004": {
+      "scene_key": "train_area001_scenario004",
+      "split": "train",
+      "scene_dir": "Train/1/scene4",
+      "static_map": "Train/1/map1/map1.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_001",
+      "scenario_id": "scenario_004",
+      "difficulty": "hard",
+      "width_metadata": 285,
+      "height_metadata": 284,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 180,
+        "wind_speed_mph": 15,
+        "wind_speed_mps_approx": 6.71
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          600,
+          1000
+        ],
+        "target_final_total_acres": [
+          133,
+          222
+        ],
+        "target_fire_area_ratio": [
+          0.0074,
+          0.0124
+        ],
+        "actual_ignition_acres": 2.61,
+        "actual_ignition_cells_approx": 12,
+        "actual_final_total_acres": 157.13,
+        "actual_final_burned_cells_approx": 708,
+        "actual_fire_area_ratio_approx": 0.0087,
+        "fires": 4,
+        "enclaves": 2,
+        "final_elapsed_time": "00 01:00",
+        "final_current_time": "05/01 13:00",
+        "final_timestep_acres": 154.52,
+        "scenario_target_status": "pass",
+        "global_target_status": "warning_initial_fire_too_small",
+        "status": "pass_with_warning"
+      }
+    },
+    "train_area001_scenario005": {
+      "scene_key": "train_area001_scenario005",
+      "split": "train",
+      "scene_dir": "Train/1/scene5",
+      "static_map": "Train/1/map1/map1.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "../scene4/inputs/fuel_moisture_dry.fms",
+        "weather_stream": "../scene4/inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_001",
+      "scenario_id": "scenario_005",
+      "difficulty": "hard",
+      "width_metadata": 285,
+      "height_metadata": 284,
+      "wind": {
+        "source": "../scene4/inputs/weather_stream.wxs",
+        "wind_direction_deg": 180,
+        "wind_speed_mph": 15,
+        "wind_speed_mps_approx": 6.71
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          700,
+          1100
+        ],
+        "target_final_total_acres": [
+          155,
+          244
+        ],
+        "target_fire_area_ratio": [
+          0.0086,
+          0.0136
+        ],
+        "actual_ignition_acres": 5.32,
+        "actual_ignition_cells_approx": 24,
+        "actual_final_total_acres": 276.94,
+        "actual_final_burned_cells_approx": 1247,
+        "actual_fire_area_ratio_approx": 0.0154,
+        "fires": 3,
+        "enclaves": 0,
+        "final_elapsed_time": "00 01:00",
+        "final_current_time": "05/01 13:00",
+        "final_timestep_acres": 271.62,
+        "scenario_target_status": "fail_high",
+        "global_target_status": "warning_active_fire_high",
+        "status": "pass_with_warning",
+        "initial_area_status": "pass"
+      }
+    },
+    "train_area001_scenario006": {
+      "scene_key": "train_area001_scenario006",
+      "split": "train",
+      "scene_dir": "Train/1/scene6",
+      "static_map": "Train/1/map1/map1.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_001",
+      "scenario_id": "scenario_006",
+      "difficulty": "mixed",
+      "width_metadata": 285,
+      "height_metadata": 284,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 270,
+        "wind_speed_mph": 9,
+        "wind_speed_mps_approx": 4.02
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          500,
+          900
+        ],
+        "target_final_total_acres": [
+          111,
+          200
+        ],
+        "target_fire_area_ratio": [
+          0.0062,
+          0.0111
+        ],
+        "actual_ignition_acres": 3.33,
+        "actual_ignition_cells_approx": 15,
+        "actual_final_total_acres": 250.6,
+        "actual_final_burned_cells_approx": 1129,
+        "actual_fire_area_ratio_approx": 0.0139,
+        "fires": 3,
+        "enclaves": 1,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 170.54,
+        "scenario_target_status": "fail_high",
+        "global_target_status": "warning_initial_fire_too_small",
+        "status": "pass_with_warning"
+      }
+    },
+    "train_area002_scenario001": {
+      "scene_key": "train_area002_scenario001",
+      "split": "train",
+      "scene_dir": "Train/2/scene1",
+      "static_map": "Train/2/map2/map2.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_002",
+      "scenario_id": "scenario_001",
+      "difficulty": "easy",
+      "width_metadata": 289,
+      "height_metadata": 271,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 135,
+        "wind_speed_mph": 10,
+        "wind_speed_mps_approx": 4.47
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          300,
+          500
+        ],
+        "target_final_total_acres": [
+          67,
+          111
+        ],
+        "target_fire_area_ratio": [
+          0.0038,
+          0.0064
+        ],
+        "actual_ignition_acres": 4.93,
+        "actual_ignition_cells_approx": 22,
+        "actual_final_total_acres": 88.84,
+        "actual_final_burned_cells_approx": 400,
+        "actual_fire_area_ratio_approx": 0.0051,
+        "fires": 5,
+        "enclaves": 4,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 61.01,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "train_area002_scenario002": {
+      "scene_key": "train_area002_scenario002",
+      "split": "train",
+      "scene_dir": "Train/2/scene2",
+      "static_map": "Train/2/map2/map2.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_002",
+      "scenario_id": "scenario_002",
+      "difficulty": "medium",
+      "width_metadata": 289,
+      "height_metadata": 271,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 90,
+        "wind_speed_mph": 13,
+        "wind_speed_mps_approx": 5.81
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          400,
+          700
+        ],
+        "target_final_total_acres": [
+          89,
+          155
+        ],
+        "target_fire_area_ratio": [
+          0.0051,
+          0.0089
+        ],
+        "actual_ignition_acres": 5.8,
+        "actual_ignition_cells_approx": 26,
+        "actual_final_total_acres": 109.15,
+        "actual_final_burned_cells_approx": 492,
+        "actual_fire_area_ratio_approx": 0.0063,
+        "fires": 6,
+        "enclaves": 5,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 63.43,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "train_area002_scenario003": {
+      "scene_key": "train_area002_scenario003",
+      "split": "train",
+      "scene_dir": "Train/2/scene3",
+      "static_map": "Train/2/map2/map2.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_002",
+      "scenario_id": "scenario_003",
+      "difficulty": "medium",
+      "width_metadata": 289,
+      "height_metadata": 271,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 315,
+        "wind_speed_mph": 13,
+        "wind_speed_mps_approx": 5.81
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          500,
+          900
+        ],
+        "target_final_total_acres": [
+          111,
+          200
+        ],
+        "target_fire_area_ratio": [
+          0.0064,
+          0.0115
+        ],
+        "actual_ignition_acres": 5.53,
+        "actual_ignition_cells_approx": 25,
+        "actual_final_total_acres": 136.44,
+        "actual_final_burned_cells_approx": 615,
+        "actual_fire_area_ratio_approx": 0.0079,
+        "fires": 4,
+        "enclaves": 2,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 87.53,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "train_area002_scenario004": {
+      "scene_key": "train_area002_scenario004",
+      "split": "train",
+      "scene_dir": "Train/2/scene4",
+      "static_map": "Train/2/map2/map2.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_002",
+      "scenario_id": "scenario_004",
+      "difficulty": "hard",
+      "width_metadata": 289,
+      "height_metadata": 271,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 180,
+        "wind_speed_mph": 15,
+        "wind_speed_mps_approx": 6.71
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          600,
+          1000
+        ],
+        "target_final_total_acres": [
+          133,
+          222
+        ],
+        "target_fire_area_ratio": [
+          0.0077,
+          0.0128
+        ],
+        "actual_ignition_acres": 5.56,
+        "actual_ignition_cells_approx": 25,
+        "actual_final_total_acres": 188.89,
+        "actual_final_burned_cells_approx": 851,
+        "actual_fire_area_ratio_approx": 0.0109,
+        "fires": 6,
+        "enclaves": 4,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 84.3,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "train_area002_scenario005": {
+      "scene_key": "train_area002_scenario005",
+      "split": "train",
+      "scene_dir": "Train/2/scene5",
+      "static_map": "Train/2/map2/map2.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_002",
+      "scenario_id": "scenario_005",
+      "difficulty": "hard",
+      "width_metadata": 289,
+      "height_metadata": 271,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 45,
+        "wind_speed_mph": 15,
+        "wind_speed_mps_approx": 6.71
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          700,
+          1100
+        ],
+        "target_final_total_acres": [
+          155,
+          244
+        ],
+        "target_fire_area_ratio": [
+          0.0089,
+          0.014
+        ],
+        "actual_ignition_acres": 8.16,
+        "actual_ignition_cells_approx": 37,
+        "actual_final_total_acres": 222.52,
+        "actual_final_burned_cells_approx": 1002,
+        "actual_fire_area_ratio_approx": 0.0128,
+        "fires": 8,
+        "enclaves": 5,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 151.69,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "train_area002_scenario006": {
+      "scene_key": "train_area002_scenario006",
+      "split": "train",
+      "scene_dir": "Train/2/scene6",
+      "static_map": "Train/2/map2/map2.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_002",
+      "scenario_id": "scenario_006",
+      "difficulty": "mixed",
+      "width_metadata": 289,
+      "height_metadata": 271,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 225,
+        "wind_speed_mph": 13,
+        "wind_speed_mps_approx": 5.81
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          500,
+          900
+        ],
+        "target_final_total_acres": [
+          111,
+          200
+        ],
+        "target_fire_area_ratio": [
+          0.0064,
+          0.0115
+        ],
+        "actual_ignition_acres": 13.89,
+        "actual_ignition_cells_approx": 63,
+        "actual_final_total_acres": 184.02,
+        "actual_final_burned_cells_approx": 829,
+        "actual_fire_area_ratio_approx": 0.0106,
+        "fires": 7,
+        "enclaves": 5,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 104.17,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "train_area003_scenario001": {
+      "scene_key": "train_area003_scenario001",
+      "split": "train",
+      "scene_dir": "Train/3/scene1",
+      "static_map": "Train/3/map3/map3.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_003",
+      "scenario_id": "scenario_001",
+      "difficulty": "easy",
+      "width_metadata": 285,
+      "height_metadata": 284,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 225,
+        "wind_speed_mph": 9,
+        "wind_speed_mps_approx": 4.02
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          300,
+          500
+        ],
+        "target_final_total_acres": [
+          67,
+          111
+        ],
+        "target_fire_area_ratio": [
+          0.0037,
+          0.0062
+        ],
+        "actual_ignition_acres": 4.8,
+        "actual_ignition_cells_approx": 22,
+        "actual_final_total_acres": 67.97,
+        "actual_final_burned_cells_approx": 306,
+        "actual_fire_area_ratio_approx": 0.0038,
+        "fires": 4,
+        "enclaves": 3,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 34.06,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "train_area003_scenario002": {
+      "scene_key": "train_area003_scenario002",
+      "split": "train",
+      "scene_dir": "Train/3/scene2",
+      "static_map": "Train/3/map3/map3.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_003",
+      "scenario_id": "scenario_002",
+      "difficulty": "medium",
+      "width_metadata": 285,
+      "height_metadata": 284,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 90,
+        "wind_speed_mph": 13,
+        "wind_speed_mps_approx": 5.81
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          400,
+          700
+        ],
+        "target_final_total_acres": [
+          89,
+          155
+        ],
+        "target_fire_area_ratio": [
+          0.0049,
+          0.0086
+        ],
+        "actual_ignition_acres": 4.46,
+        "actual_ignition_cells_approx": 20,
+        "actual_final_total_acres": 89.97,
+        "actual_final_burned_cells_approx": 405,
+        "actual_fire_area_ratio_approx": 0.005,
+        "fires": 12,
+        "enclaves": 11,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 56.01,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "train_area003_scenario003": {
+      "scene_key": "train_area003_scenario003",
+      "split": "train",
+      "scene_dir": "Train/3/scene3",
+      "static_map": "Train/3/map3/map3.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_003",
+      "scenario_id": "scenario_003",
+      "difficulty": "medium",
+      "width_metadata": 285,
+      "height_metadata": 284,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 240,
+        "wind_speed_mph": 14,
+        "wind_speed_mps_approx": 6.26
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          500,
+          900
+        ],
+        "target_final_total_acres": [
+          111,
+          200
+        ],
+        "target_fire_area_ratio": [
+          0.0062,
+          0.0111
+        ],
+        "actual_ignition_acres": 5.47,
+        "actual_ignition_cells_approx": 25,
+        "actual_final_total_acres": 124.23,
+        "actual_final_burned_cells_approx": 560,
+        "actual_fire_area_ratio_approx": 0.0069,
+        "fires": 3,
+        "enclaves": 1,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 74.62,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "train_area003_scenario004": {
+      "scene_key": "train_area003_scenario004",
+      "split": "train",
+      "scene_dir": "Train/3/scene4",
+      "static_map": "Train/3/map3/map3.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_003",
+      "scenario_id": "scenario_004",
+      "difficulty": "hard",
+      "width_metadata": 285,
+      "height_metadata": 284,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 105,
+        "wind_speed_mph": 16,
+        "wind_speed_mps_approx": 7.15
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          600,
+          1000
+        ],
+        "target_final_total_acres": [
+          133,
+          222
+        ],
+        "target_fire_area_ratio": [
+          0.0074,
+          0.0124
+        ],
+        "actual_ignition_acres": 8.14,
+        "actual_ignition_cells_approx": 37,
+        "actual_final_total_acres": 171.63,
+        "actual_final_burned_cells_approx": 773,
+        "actual_fire_area_ratio_approx": 0.0096,
+        "fires": 6,
+        "enclaves": 4,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 78.2,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "train_area003_scenario005": {
+      "scene_key": "train_area003_scenario005",
+      "split": "train",
+      "scene_dir": "Train/3/scene5",
+      "static_map": "Train/3/map3/map3.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_003",
+      "scenario_id": "scenario_005",
+      "difficulty": "hard",
+      "width_metadata": 285,
+      "height_metadata": 284,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 300,
+        "wind_speed_mph": 17,
+        "wind_speed_mps_approx": 7.6
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          700,
+          1100
+        ],
+        "target_final_total_acres": [
+          155,
+          244
+        ],
+        "target_fire_area_ratio": [
+          0.0086,
+          0.0136
+        ],
+        "actual_ignition_acres": 7.62,
+        "actual_ignition_cells_approx": 34,
+        "actual_final_total_acres": 192.71,
+        "actual_final_burned_cells_approx": 868,
+        "actual_fire_area_ratio_approx": 0.0107,
+        "fires": 10,
+        "enclaves": 7,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 99.32,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "train_area003_scenario006": {
+      "scene_key": "train_area003_scenario006",
+      "split": "train",
+      "scene_dir": "Train/3/scene6",
+      "static_map": "Train/3/map3/map3.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_003",
+      "scenario_id": "scenario_006",
+      "difficulty": "mixed",
+      "width_metadata": 285,
+      "height_metadata": 284,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 30,
+        "wind_speed_mph": 15,
+        "wind_speed_mps_approx": 6.71
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          500,
+          900
+        ],
+        "target_final_total_acres": [
+          111,
+          200
+        ],
+        "target_fire_area_ratio": [
+          0.0062,
+          0.0111
+        ],
+        "actual_ignition_acres": 6.55,
+        "actual_ignition_cells_approx": 30,
+        "actual_final_total_acres": 154.68,
+        "actual_final_burned_cells_approx": 697,
+        "actual_fire_area_ratio_approx": 0.0086,
+        "fires": 9,
+        "enclaves": 7,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 85.75,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "train_area004_scenario001": {
+      "scene_key": "train_area004_scenario001",
+      "split": "train",
+      "scene_dir": "Train/4/scene1",
+      "static_map": "Train/4/map4/map4.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_004",
+      "scenario_id": "scenario_001",
+      "difficulty": "easy",
+      "width_metadata": 291,
+      "height_metadata": 283,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 60,
+        "wind_speed_mph": 9,
+        "wind_speed_mps_approx": 4.02
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          300,
+          500
+        ],
+        "target_final_total_acres": [
+          67,
+          111
+        ],
+        "target_fire_area_ratio": [
+          0.0036,
+          0.0061
+        ],
+        "actual_ignition_acres": 3.01,
+        "actual_ignition_cells_approx": 14,
+        "actual_final_total_acres": 75.14,
+        "actual_final_burned_cells_approx": 338,
+        "actual_fire_area_ratio_approx": 0.0041,
+        "fires": 3,
+        "enclaves": 2,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 44.62,
+        "scenario_target_status": "pass",
+        "global_target_status": "warning_initial_fire_too_small",
+        "status": "pass_with_warning"
+      }
+    },
+    "train_area004_scenario002": {
+      "scene_key": "train_area004_scenario002",
+      "split": "train",
+      "scene_dir": "Train/4/scene2",
+      "static_map": "Train/4/map4/map4.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_004",
+      "scenario_id": "scenario_002",
+      "difficulty": "medium",
+      "width_metadata": 291,
+      "height_metadata": 283,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 210,
+        "wind_speed_mph": 13,
+        "wind_speed_mps_approx": 5.81
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          400,
+          700
+        ],
+        "target_final_total_acres": [
+          89,
+          155
+        ],
+        "target_fire_area_ratio": [
+          0.0049,
+          0.0085
+        ],
+        "actual_ignition_acres": 4.62,
+        "actual_ignition_cells_approx": 21,
+        "actual_final_total_acres": 112.41,
+        "actual_final_burned_cells_approx": 506,
+        "actual_fire_area_ratio_approx": 0.0061,
+        "fires": 9,
+        "enclaves": 8,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 56.66,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "train_area004_scenario003": {
+      "scene_key": "train_area004_scenario003",
+      "split": "train",
+      "scene_dir": "Train/4/scene3",
+      "static_map": "Train/4/map4/map4.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_004",
+      "scenario_id": "scenario_003",
+      "difficulty": "medium",
+      "width_metadata": 291,
+      "height_metadata": 283,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 330,
+        "wind_speed_mph": 14,
+        "wind_speed_mps_approx": 6.26
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          500,
+          900
+        ],
+        "target_final_total_acres": [
+          111,
+          200
+        ],
+        "target_fire_area_ratio": [
+          0.0061,
+          0.0109
+        ],
+        "actual_ignition_acres": 4.68,
+        "actual_ignition_cells_approx": 21,
+        "actual_final_total_acres": 119.86,
+        "actual_final_burned_cells_approx": 540,
+        "actual_fire_area_ratio_approx": 0.0066,
+        "fires": 5,
+        "enclaves": 3,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 65.55,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "train_area004_scenario004": {
+      "scene_key": "train_area004_scenario004",
+      "split": "train",
+      "scene_dir": "Train/4/scene4",
+      "static_map": "Train/4/map4/map4.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_004",
+      "scenario_id": "scenario_004",
+      "difficulty": "hard",
+      "width_metadata": 291,
+      "height_metadata": 283,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 120,
+        "wind_speed_mph": 16,
+        "wind_speed_mps_approx": 7.15
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          600,
+          1000
+        ],
+        "target_final_total_acres": [
+          133,
+          222
+        ],
+        "target_fire_area_ratio": [
+          0.0073,
+          0.0121
+        ],
+        "actual_ignition_acres": 7.13,
+        "actual_ignition_cells_approx": 32,
+        "actual_final_total_acres": 193.37,
+        "actual_final_burned_cells_approx": 871,
+        "actual_fire_area_ratio_approx": 0.0106,
+        "fires": 10,
+        "enclaves": 8,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 110.87,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "train_area004_scenario005": {
+      "scene_key": "train_area004_scenario005",
+      "split": "train",
+      "scene_dir": "Train/4/scene5",
+      "static_map": "Train/4/map4/map4.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_004",
+      "scenario_id": "scenario_005",
+      "difficulty": "hard",
+      "width_metadata": 291,
+      "height_metadata": 283,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 285,
+        "wind_speed_mph": 17,
+        "wind_speed_mps_approx": 7.6
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          700,
+          1100
+        ],
+        "target_final_total_acres": [
+          155,
+          244
+        ],
+        "target_fire_area_ratio": [
+          0.0085,
+          0.0134
+        ],
+        "actual_ignition_acres": 7.06,
+        "actual_ignition_cells_approx": 32,
+        "actual_final_total_acres": 198.41,
+        "actual_final_burned_cells_approx": 894,
+        "actual_fire_area_ratio_approx": 0.0109,
+        "fires": 14,
+        "enclaves": 11,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 103.6,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "train_area004_scenario006": {
+      "scene_key": "train_area004_scenario006",
+      "split": "train",
+      "scene_dir": "Train/4/scene6",
+      "static_map": "Train/4/map4/map4.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_004",
+      "scenario_id": "scenario_006",
+      "difficulty": "mixed",
+      "width_metadata": 291,
+      "height_metadata": 283,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 15,
+        "wind_speed_mph": 15,
+        "wind_speed_mps_approx": 6.71
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          500,
+          900
+        ],
+        "target_final_total_acres": [
+          111,
+          200
+        ],
+        "target_fire_area_ratio": [
+          0.0061,
+          0.0109
+        ],
+        "actual_ignition_acres": 4.15,
+        "actual_ignition_cells_approx": 19,
+        "actual_final_total_acres": 157.91,
+        "actual_final_burned_cells_approx": 711,
+        "actual_fire_area_ratio_approx": 0.0086,
+        "fires": 12,
+        "enclaves": 10,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 90.35,
+        "scenario_target_status": "pass",
+        "global_target_status": "warning_initial_fire_too_small",
+        "status": "pass_with_warning"
+      }
+    },
+    "validation_area005_scenario001": {
+      "scene_key": "validation_area005_scenario001",
+      "split": "validation",
+      "scene_dir": "Validation/5/scene1",
+      "static_map": "Validation/5/map5/map5.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_005",
+      "scenario_id": "scenario_001",
+      "difficulty": "easy",
+      "width_metadata": 285,
+      "height_metadata": 283,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 135,
+        "wind_speed_mph": 7,
+        "wind_speed_mps_approx": 3.13
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          300,
+          500
+        ],
+        "target_final_total_acres": [
+          67,
+          111
+        ],
+        "target_fire_area_ratio": [
+          0.0037,
+          0.0062
+        ],
+        "actual_ignition_acres": 2.01,
+        "actual_ignition_cells_approx": 9,
+        "actual_final_total_acres": 73.31,
+        "actual_final_burned_cells_approx": 330,
+        "actual_fire_area_ratio_approx": 0.0041,
+        "fires": 1,
+        "enclaves": 0,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 49.12,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "validation_area005_scenario002": {
+      "scene_key": "validation_area005_scenario002",
+      "split": "validation",
+      "scene_dir": "Validation/5/scene2",
+      "static_map": "Validation/5/map5/map5.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_005",
+      "scenario_id": "scenario_002",
+      "difficulty": "medium",
+      "width_metadata": 285,
+      "height_metadata": 283,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 300,
+        "wind_speed_mph": 13,
+        "wind_speed_mps_approx": 5.81
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          400,
+          700
+        ],
+        "target_final_total_acres": [
+          89,
+          156
+        ],
+        "target_fire_area_ratio": [
+          0.005,
+          0.0087
+        ],
+        "actual_ignition_acres": 3.93,
+        "actual_ignition_cells_approx": 18,
+        "actual_final_total_acres": 132.62,
+        "actual_final_burned_cells_approx": 597,
+        "actual_fire_area_ratio_approx": 0.0074,
+        "fires": 2,
+        "enclaves": 1,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 58.64,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "validation_area005_scenario003": {
+      "scene_key": "validation_area005_scenario003",
+      "split": "validation",
+      "scene_dir": "Validation/5/scene3",
+      "static_map": "Validation/5/map5/map5.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_005",
+      "scenario_id": "scenario_003",
+      "difficulty": "medium",
+      "width_metadata": 285,
+      "height_metadata": 283,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 45,
+        "wind_speed_mph": 10,
+        "wind_speed_mps_approx": 4.47
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          500,
+          800
+        ],
+        "target_final_total_acres": [
+          111,
+          177
+        ],
+        "target_fire_area_ratio": [
+          0.0062,
+          0.0099
+        ],
+        "actual_ignition_acres": 3.08,
+        "actual_ignition_cells_approx": 14,
+        "actual_final_total_acres": 148.96,
+        "actual_final_burned_cells_approx": 671,
+        "actual_fire_area_ratio_approx": 0.0083,
+        "fires": 3,
+        "enclaves": 1,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 105.9,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "validation_area005_scenario004": {
+      "scene_key": "validation_area005_scenario004",
+      "split": "validation",
+      "scene_dir": "Validation/5/scene4",
+      "static_map": "Validation/5/map5/map5.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_005",
+      "scenario_id": "scenario_004",
+      "difficulty": "hard",
+      "width_metadata": 285,
+      "height_metadata": 283,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 270,
+        "wind_speed_mph": 10,
+        "wind_speed_mps_approx": 4.47
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          600,
+          1200
+        ],
+        "target_final_total_acres": [
+          133,
+          266
+        ],
+        "target_fire_area_ratio": [
+          0.0074,
+          0.0149
+        ],
+        "actual_ignition_acres": 3.84,
+        "actual_ignition_cells_approx": 17,
+        "actual_final_total_acres": 255.49,
+        "actual_final_burned_cells_approx": 1151,
+        "actual_fire_area_ratio_approx": 0.0143,
+        "fires": 3,
+        "enclaves": 1,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 174.27,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "validation_area005_scenario005": {
+      "scene_key": "validation_area005_scenario005",
+      "split": "validation",
+      "scene_dir": "Validation/5/scene5",
+      "static_map": "Validation/5/map5/map5.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_005",
+      "scenario_id": "scenario_005",
+      "difficulty": "hard",
+      "width_metadata": 285,
+      "height_metadata": 283,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 15,
+        "wind_speed_mph": 10,
+        "wind_speed_mps_approx": 4.47
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          300,
+          1200
+        ],
+        "target_final_total_acres": [
+          66,
+          266
+        ],
+        "target_fire_area_ratio": [
+          0.0037,
+          0.0149
+        ],
+        "actual_ignition_acres": 1.22,
+        "actual_ignition_cells_approx": 5,
+        "actual_final_total_acres": 260.7,
+        "actual_final_burned_cells_approx": 1174,
+        "actual_fire_area_ratio_approx": 0.0146,
+        "fires": 3,
+        "enclaves": 1,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 194.89,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "validation_area005_scenario006": {
+      "scene_key": "validation_area005_scenario006",
+      "split": "validation",
+      "scene_dir": "Validation/5/scene6",
+      "static_map": "Validation/5/map5/map5.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_005",
+      "scenario_id": "scenario_006",
+      "difficulty": "mixed",
+      "width_metadata": 285,
+      "height_metadata": 283,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 225,
+        "wind_speed_mph": 10,
+        "wind_speed_mps_approx": 4.47
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          300,
+          1200
+        ],
+        "target_final_total_acres": [
+          66,
+          266
+        ],
+        "target_fire_area_ratio": [
+          0.0037,
+          0.0149
+        ],
+        "actual_ignition_acres": 3.83,
+        "actual_ignition_cells_approx": 17,
+        "actual_final_total_acres": 272.74,
+        "actual_final_burned_cells_approx": 1229,
+        "actual_fire_area_ratio_approx": 0.0152,
+        "fires": 2,
+        "enclaves": 0,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 185.81,
+        "scenario_target_status": "near_pass_high",
+        "global_target_status": "warning_active_fire_high",
+        "status": "pass_with_warning"
+      }
+    },
+    "generalization_area006_scenario001": {
+      "scene_key": "generalization_area006_scenario001",
+      "split": "generalization",
+      "scene_dir": "Generalization/6/scene1",
+      "static_map": "Generalization/6/map6/map6.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_006",
+      "scenario_id": "scenario_001",
+      "difficulty": "easy",
+      "width_metadata": 285,
+      "height_metadata": 283,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 135,
+        "wind_speed_mph": 8,
+        "wind_speed_mps_approx": 3.58
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          300,
+          500
+        ],
+        "target_final_total_acres": [
+          67,
+          111
+        ],
+        "target_fire_area_ratio": [
+          0.0037,
+          0.0062
+        ],
+        "actual_ignition_acres": 2.97,
+        "actual_ignition_cells_approx": 13,
+        "actual_final_total_acres": 81.84,
+        "actual_final_burned_cells_approx": 369,
+        "actual_fire_area_ratio_approx": 0.0046,
+        "fires": 1,
+        "enclaves": 0,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 49.28,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "generalization_area006_scenario002": {
+      "scene_key": "generalization_area006_scenario002",
+      "split": "generalization",
+      "scene_dir": "Generalization/6/scene2",
+      "static_map": "Generalization/6/map6/map6.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_006",
+      "scenario_id": "scenario_002",
+      "difficulty": "medium",
+      "width_metadata": 285,
+      "height_metadata": 283,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 300,
+        "wind_speed_mph": 11,
+        "wind_speed_mps_approx": 4.92
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          400,
+          700
+        ],
+        "target_final_total_acres": [
+          89,
+          155
+        ],
+        "target_fire_area_ratio": [
+          0.005,
+          0.0087
+        ],
+        "actual_ignition_acres": 1.66,
+        "actual_ignition_cells_approx": 7,
+        "actual_final_total_acres": 130.82,
+        "actual_final_burned_cells_approx": 589,
+        "actual_fire_area_ratio_approx": 0.0073,
+        "fires": 4,
+        "enclaves": 3,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 92.94,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "generalization_area006_scenario003": {
+      "scene_key": "generalization_area006_scenario003",
+      "split": "generalization",
+      "scene_dir": "Generalization/6/scene3",
+      "static_map": "Generalization/6/map6/map6.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_006",
+      "scenario_id": "scenario_003",
+      "difficulty": "medium",
+      "width_metadata": 285,
+      "height_metadata": 283,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 45,
+        "wind_speed_mph": 13,
+        "wind_speed_mps_approx": 5.81
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          500,
+          900
+        ],
+        "target_final_total_acres": [
+          111,
+          200
+        ],
+        "target_fire_area_ratio": [
+          0.0062,
+          0.0112
+        ],
+        "actual_ignition_acres": 3.26,
+        "actual_ignition_cells_approx": 15,
+        "actual_final_total_acres": 145.07,
+        "actual_final_burned_cells_approx": 653,
+        "actual_fire_area_ratio_approx": 0.0081,
+        "fires": 4,
+        "enclaves": 2,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 92.46,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "generalization_area006_scenario004": {
+      "scene_key": "generalization_area006_scenario004",
+      "split": "generalization",
+      "scene_dir": "Generalization/6/scene4",
+      "static_map": "Generalization/6/map6/map6.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_006",
+      "scenario_id": "scenario_004",
+      "difficulty": "hard",
+      "width_metadata": 285,
+      "height_metadata": 283,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 180,
+        "wind_speed_mph": 11,
+        "wind_speed_mps_approx": 4.92
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          600,
+          1000
+        ],
+        "target_final_total_acres": [
+          133,
+          222
+        ],
+        "target_fire_area_ratio": [
+          0.0074,
+          0.0124
+        ],
+        "actual_ignition_acres": 3.31,
+        "actual_ignition_cells_approx": 15,
+        "actual_final_total_acres": 201.7,
+        "actual_final_burned_cells_approx": 909,
+        "actual_fire_area_ratio_approx": 0.0113,
+        "fires": 11,
+        "enclaves": 9,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 122.27,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "generalization_area006_scenario005": {
+      "scene_key": "generalization_area006_scenario005",
+      "split": "generalization",
+      "scene_dir": "Generalization/6/scene5",
+      "static_map": "Generalization/6/map6/map6.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_006",
+      "scenario_id": "scenario_005",
+      "difficulty": "hard",
+      "width_metadata": 285,
+      "height_metadata": 283,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 135,
+        "wind_speed_mph": 8,
+        "wind_speed_mps_approx": 3.58
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          600,
+          1000
+        ],
+        "target_final_total_acres": [
+          133,
+          222
+        ],
+        "target_fire_area_ratio": [
+          0.0074,
+          0.0124
+        ],
+        "actual_ignition_acres": 3.93,
+        "actual_ignition_cells_approx": 18,
+        "actual_final_total_acres": 176.02,
+        "actual_final_burned_cells_approx": 793,
+        "actual_fire_area_ratio_approx": 0.0098,
+        "fires": 16,
+        "enclaves": 13,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 110.65,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "generalization_area006_scenario006": {
+      "scene_key": "generalization_area006_scenario006",
+      "split": "generalization",
+      "scene_dir": "Generalization/6/scene6",
+      "static_map": "Generalization/6/map6/map6.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_006",
+      "scenario_id": "scenario_006",
+      "difficulty": "medium",
+      "width_metadata": 285,
+      "height_metadata": 283,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 30,
+        "wind_speed_mph": 9,
+        "wind_speed_mps_approx": 4.02
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          300,
+          1200
+        ],
+        "target_final_total_acres": [
+          67,
+          266
+        ],
+        "target_fire_area_ratio": [
+          0.0037,
+          0.0149
+        ],
+        "actual_ignition_acres": 3.52,
+        "actual_ignition_cells_approx": 16,
+        "actual_final_total_acres": 171.96,
+        "actual_final_burned_cells_approx": 775,
+        "actual_fire_area_ratio_approx": 0.0096,
+        "fires": 8,
+        "enclaves": 6,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 102.49,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "generalization_area007_scenario001": {
+      "scene_key": "generalization_area007_scenario001",
+      "split": "generalization",
+      "scene_dir": "Generalization/7/scene1",
+      "static_map": "Generalization/7/map7/map7.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_007",
+      "scenario_id": "scenario_001",
+      "difficulty": "easy",
+      "width_metadata": 257,
+      "height_metadata": 257,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 225,
+        "wind_speed_mph": 9,
+        "wind_speed_mps_approx": 4.02
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          300,
+          500
+        ],
+        "target_final_total_acres": [
+          67,
+          111
+        ],
+        "target_fire_area_ratio": [
+          0.0045,
+          0.0076
+        ],
+        "actual_ignition_acres": 2.19,
+        "actual_ignition_cells_approx": 10,
+        "actual_final_total_acres": 88.15,
+        "actual_final_burned_cells_approx": 397,
+        "actual_fire_area_ratio_approx": 0.006,
+        "fires": 4,
+        "enclaves": 3,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 58.01,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "generalization_area007_scenario002": {
+      "scene_key": "generalization_area007_scenario002",
+      "split": "generalization",
+      "scene_dir": "Generalization/7/scene2",
+      "static_map": "Generalization/7/map7/map7.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_007",
+      "scenario_id": "scenario_002",
+      "difficulty": "medium",
+      "width_metadata": 257,
+      "height_metadata": 257,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 60,
+        "wind_speed_mph": 9,
+        "wind_speed_mps_approx": 4.02
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          500,
+          700
+        ],
+        "target_final_total_acres": [
+          111,
+          155
+        ],
+        "target_fire_area_ratio": [
+          0.0076,
+          0.0106
+        ],
+        "actual_ignition_acres": 4.99,
+        "actual_ignition_cells_approx": 22,
+        "actual_final_total_acres": 127.47,
+        "actual_final_burned_cells_approx": 574,
+        "actual_fire_area_ratio_approx": 0.0087,
+        "fires": 1,
+        "enclaves": 0,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 83.54,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "generalization_area007_scenario003": {
+      "scene_key": "generalization_area007_scenario003",
+      "split": "generalization",
+      "scene_dir": "Generalization/7/scene3",
+      "static_map": "Generalization/7/map7/map7.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_007",
+      "scenario_id": "scenario_003",
+      "difficulty": "medium",
+      "width_metadata": 257,
+      "height_metadata": 257,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 225,
+        "wind_speed_mph": 8,
+        "wind_speed_mps_approx": 3.58
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          600,
+          800
+        ],
+        "target_final_total_acres": [
+          133,
+          178
+        ],
+        "target_fire_area_ratio": [
+          0.0091,
+          0.0121
+        ],
+        "actual_ignition_acres": 3.86,
+        "actual_ignition_cells_approx": 17,
+        "actual_final_total_acres": 165.6,
+        "actual_final_burned_cells_approx": 746,
+        "actual_fire_area_ratio_approx": 0.0113,
+        "fires": 7,
+        "enclaves": 5,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 110.49,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "generalization_area007_scenario004": {
+      "scene_key": "generalization_area007_scenario004",
+      "split": "generalization",
+      "scene_dir": "Generalization/7/scene4",
+      "static_map": "Generalization/7/map7/map7.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_007",
+      "scenario_id": "scenario_004",
+      "difficulty": "hard",
+      "width_metadata": 257,
+      "height_metadata": 257,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 225,
+        "wind_speed_mph": 10,
+        "wind_speed_mps_approx": 4.47
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          800,
+          1000
+        ],
+        "target_final_total_acres": [
+          178,
+          222
+        ],
+        "target_fire_area_ratio": [
+          0.0121,
+          0.0151
+        ],
+        "actual_ignition_acres": 1.82,
+        "actual_ignition_cells_approx": 8,
+        "actual_final_total_acres": 204.18,
+        "actual_final_burned_cells_approx": 920,
+        "actual_fire_area_ratio_approx": 0.0139,
+        "fires": 4,
+        "enclaves": 2,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 137.51,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "generalization_area007_scenario005": {
+      "scene_key": "generalization_area007_scenario005",
+      "split": "generalization",
+      "scene_dir": "Generalization/7/scene5",
+      "static_map": "Generalization/7/map7/map7.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_007",
+      "scenario_id": "scenario_005",
+      "difficulty": "hard",
+      "width_metadata": 257,
+      "height_metadata": 257,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 240,
+        "wind_speed_mph": 9,
+        "wind_speed_mps_approx": 4.02
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          900,
+          1150
+        ],
+        "target_final_total_acres": [
+          200,
+          255
+        ],
+        "target_fire_area_ratio": [
+          0.0136,
+          0.0174
+        ],
+        "actual_ignition_acres": 5.85,
+        "actual_ignition_cells_approx": 26,
+        "actual_final_total_acres": 226.41,
+        "actual_final_burned_cells_approx": 1020,
+        "actual_fire_area_ratio_approx": 0.0154,
+        "fires": 6,
+        "enclaves": 3,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 160.69,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "generalization_area007_scenario006": {
+      "scene_key": "generalization_area007_scenario006",
+      "split": "generalization",
+      "scene_dir": "Generalization/7/scene6",
+      "static_map": "Generalization/7/map7/map7.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_007",
+      "scenario_id": "scenario_006",
+      "difficulty": "medium",
+      "width_metadata": 257,
+      "height_metadata": 257,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 15,
+        "wind_speed_mph": 10,
+        "wind_speed_mps_approx": 4.47
+      },
+      "fire_statistics": {
+        "target_final_burned_cells": [
+          600,
+          1000
+        ],
+        "target_final_total_acres": [
+          133,
+          222
+        ],
+        "target_fire_area_ratio": [
+          0.0091,
+          0.0151
+        ],
+        "actual_ignition_acres": 1.93,
+        "actual_ignition_cells_approx": 9,
+        "actual_final_total_acres": 156.71,
+        "actual_final_burned_cells_approx": 706,
+        "actual_fire_area_ratio_approx": 0.0107,
+        "fires": 3,
+        "enclaves": 1,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 113.56,
+        "scenario_target_status": "pass",
+        "global_target_status": "pass",
+        "status": "pass"
+      }
+    },
+    "stress_area008_scenario001": {
+      "scene_key": "stress_area008_scenario001",
+      "split": "stress",
+      "scene_dir": "Stress/8/scene1",
+      "static_map": "Stress/8/map8/map8.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_008",
+      "scenario_id": "scenario_001",
+      "difficulty": "stress",
+      "width_metadata": 285,
+      "height_metadata": 283,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 270,
+        "expected_wind_direction_deg": 270,
+        "allowed_wind_directions_deg": [
+          270
+        ],
+        "wind_speed_range_mph": [
+          12,
+          16
+        ],
+        "expected_wind_speed_range_mph": [
+          12,
+          16
+        ],
+        "peak_wind_speed_mph": 16,
+        "peak_wind_speed_mps_approx": 7.15
+      },
+      "fire_statistics": {
+        "stress_target_final_burned_cells": [
+          1200,
+          2200
+        ],
+        "stress_target_final_total_acres": [
+          266,
+          488
+        ],
+        "stress_target_fire_area_ratio": [
+          0.0149,
+          0.0273
+        ],
+        "normal_target_final_burned_cells": [
+          300,
+          1200
+        ],
+        "normal_target_fire_area_ratio": [
+          0.0037,
+          0.0149
+        ],
+        "actual_ignition_acres": 2.84,
+        "actual_ignition_cells_approx": 13,
+        "actual_final_total_acres": 287.36,
+        "actual_final_burned_cells_approx": 1294,
+        "actual_fire_area_ratio_approx": 0.016,
+        "fires": 5,
+        "enclaves": 3,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 153.37,
+        "normal_target_status": "exceeded",
+        "stress_target_status": "pass",
+        "status": "pass_for_stress"
+      }
+    },
+    "stress_area008_scenario002": {
+      "scene_key": "stress_area008_scenario002",
+      "split": "stress",
+      "scene_dir": "Stress/8/scene2",
+      "static_map": "Stress/8/map8/map8.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_008",
+      "scenario_id": "scenario_002",
+      "difficulty": "stress",
+      "width_metadata": 285,
+      "height_metadata": 283,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 45,
+        "expected_wind_direction_deg": 45,
+        "allowed_wind_directions_deg": [
+          45
+        ],
+        "wind_speed_range_mph": [
+          8,
+          12
+        ],
+        "expected_wind_speed_range_mph": [
+          9,
+          13
+        ],
+        "peak_wind_speed_mph": 12,
+        "peak_wind_speed_mps_approx": 5.36
+      },
+      "fire_statistics": {
+        "stress_target_final_burned_cells": [
+          1200,
+          2500
+        ],
+        "stress_target_final_total_acres": [
+          266,
+          555
+        ],
+        "stress_target_fire_area_ratio": [
+          0.0149,
+          0.031
+        ],
+        "normal_target_final_burned_cells": [
+          300,
+          1200
+        ],
+        "normal_target_fire_area_ratio": [
+          0.0037,
+          0.0149
+        ],
+        "actual_ignition_acres": 7.9,
+        "actual_ignition_cells_approx": 36,
+        "actual_final_total_acres": 566.44,
+        "actual_final_burned_cells_approx": 2552,
+        "actual_fire_area_ratio_approx": 0.0316,
+        "fires": 11,
+        "enclaves": 7,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "06/01 14:00",
+        "final_timestep_acres": 327.25,
+        "normal_target_status": "exceeded",
+        "stress_target_status": "slightly_exceeded",
+        "status": "pass_for_stress_with_warning"
+      }
+    },
+    "stress_area008_scenario003": {
+      "scene_key": "stress_area008_scenario003",
+      "split": "stress",
+      "scene_dir": "Stress/8/scene3",
+      "static_map": "Stress/8/map8/map8.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_008",
+      "scenario_id": "scenario_003",
+      "difficulty": "stress",
+      "width_metadata": 285,
+      "height_metadata": 283,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 90,
+        "expected_wind_direction_deg": 90,
+        "allowed_wind_directions_deg": [
+          90
+        ],
+        "wind_speed_range_mph": [
+          10,
+          14
+        ],
+        "expected_wind_speed_range_mph": [
+          10,
+          14
+        ],
+        "peak_wind_speed_mph": 14,
+        "peak_wind_speed_mps_approx": 6.26
+      },
+      "fire_statistics": {
+        "stress_target_final_burned_cells": [
+          800,
+          2000
+        ],
+        "stress_target_final_total_acres": [
+          178,
+          444
+        ],
+        "stress_target_fire_area_ratio": [
+          0.0099,
+          0.0248
+        ],
+        "normal_target_final_burned_cells": [
+          300,
+          1200
+        ],
+        "normal_target_fire_area_ratio": [
+          0.0037,
+          0.0149
+        ],
+        "actual_ignition_acres": 3.62,
+        "actual_ignition_cells_approx": 16,
+        "actual_final_total_acres": 363.3,
+        "actual_final_burned_cells_approx": 1636,
+        "actual_fire_area_ratio_approx": 0.0203,
+        "fires": 7,
+        "enclaves": 5,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 234.8,
+        "normal_target_status": "exceeded",
+        "stress_target_status": "pass",
+        "status": "pass_for_stress"
+      }
+    },
+    "stress_area008_scenario004": {
+      "scene_key": "stress_area008_scenario004",
+      "split": "stress",
+      "scene_dir": "Stress/8/scene4",
+      "static_map": "Stress/8/map8/map8.tif",
+      "metadata": "metadata.json",
+      "rasters": {
+        "intensity": "rasters/fireline_intensity_farsite.tif",
+        "time": "rasters/arrival_time.tif",
+        "length": "rasters/flame_length_farsite.tif",
+        "speedRate": "rasters/ros_farsite.tif",
+        "spread_direction": "rasters/spread_direction_farsite.tif",
+        "heat_per_unit_area": "rasters/heat_per_unit_area_farsite.tif",
+        "crown_fire": "rasters/crown_fire_activity_farsite.tif"
+      },
+      "vectors": {
+        "ignition": "vectors/ignition.shp",
+        "fire_perimeter": "vectors/fire_perimeter.shp"
+      },
+      "inputs": {
+        "fuel_moisture": "inputs/fuel_moisture_dry.fms",
+        "weather_stream": "inputs/weather_stream.wxs"
+      },
+      "reports": {
+        "fire_growth_report": "reports/fire_growth_report.csv",
+        "run_log": "reports/Run_log.txt"
+      },
+      "area_id": "area_008",
+      "scenario_id": "scenario_004",
+      "difficulty": "stress_extreme",
+      "width_metadata": 285,
+      "height_metadata": 283,
+      "wind": {
+        "source": "weather_stream.wxs",
+        "wind_direction_deg": 315,
+        "expected_wind_direction_deg": 315,
+        "allowed_wind_directions_deg": [
+          315
+        ],
+        "wind_speed_range_mph": [
+          11,
+          16
+        ],
+        "expected_wind_speed_range_mph": [
+          13,
+          18
+        ],
+        "peak_wind_speed_mph": 16,
+        "peak_wind_speed_mps_approx": 7.15
+      },
+      "fire_statistics": {
+        "stress_target_final_burned_cells": [
+          2000,
+          3500
+        ],
+        "stress_target_final_total_acres": [
+          444,
+          777
+        ],
+        "stress_target_fire_area_ratio": [
+          0.0248,
+          0.0434
+        ],
+        "normal_target_final_burned_cells": [
+          300,
+          1200
+        ],
+        "normal_target_fire_area_ratio": [
+          0.0037,
+          0.0149
+        ],
+        "actual_ignition_acres": 5.31,
+        "actual_ignition_cells_approx": 24,
+        "actual_final_total_acres": 772.77,
+        "actual_final_burned_cells_approx": 3481,
+        "actual_fire_area_ratio_approx": 0.0432,
+        "fires": 16,
+        "enclaves": 13,
+        "final_elapsed_time": "00 02:00",
+        "final_current_time": "05/01 14:00",
+        "final_timestep_acres": 485.54,
+        "normal_target_status": "exceeded",
+        "stress_target_status": "pass",
+        "status": "pass_for_stress"
+      }
+    }
+  }
+}
