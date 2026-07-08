@@ -1,0 +1,31 @@
+{
+  "settings": {
+    "score_threshold": 0.55,
+    "window": 50,
+    "tail_fraction": 0.2,
+    "target_kl": 0.01
+  },
+  "convergence_efficiency": {
+    "auc_task_score_by_steps": 0.22375883224870385,
+    "steps_to_threshold": 6302.0,
+    "updates_to_threshold": 1.0
+  },
+  "reward_stability": {
+    "reward_std_tail": 79.96572769911562,
+    "task_score_std_tail": 0.2797605535673893,
+    "mean_performance_drop": 0.0031990917296707377,
+    "max_performance_drop": 0.01999333333333342
+  },
+  "kl_stability": {
+    "mean_kl": 0.00747796277022001,
+    "kl_std": 0.002152162047936403,
+    "mean_abs_kl_error": 0.0028818881608946175,
+    "kl_overshoot_rate": 0.005076142131979695,
+    "clip_fraction_mean": 0.08391350737677807,
+    "clip_fraction_std": 0.02882042323265073,
+    "actor_lr_mean": 0.000390926017463164,
+    "actor_lr_min": 0.0002092585813947577,
+    "actor_lr_max": 0.0004,
+    "num_ppo_updates_measured": 197
+  }
+}

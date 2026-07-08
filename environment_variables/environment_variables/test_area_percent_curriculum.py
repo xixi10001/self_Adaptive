@@ -136,10 +136,28 @@ class CurriculumScheduleTest(unittest.TestCase):
         self.assertEqual(manager.stage3_near_prob, 0.25)
 
         for _ in range(125):
-            manager.update(success=False, coverage=0.20)
+            manager.update(success=True, coverage=0.20)
 
         self.assertEqual(manager.current_stage3_target, 0.35)
         self.assertLess(manager.stage3_near_prob, 0.25)
+
+    def test_stage3_target_does_not_advance_on_coverage_without_success(self):
+        manager = CurriculumManager(stage3_final_target=0.60)
+        manager.current_stage = 3
+
+        for _ in range(125):
+            manager.update(success=False, coverage=0.20)
+
+        self.assertEqual(manager.current_stage3_target, 0.20)
+
+    def test_stage3_target_does_not_advance_with_zero_coverage_timeouts(self):
+        manager = CurriculumManager(stage3_final_target=0.60)
+        manager.current_stage = 3
+
+        for i in range(125):
+            manager.update(success=True, coverage=0.20, zero_coverage_timeout=(i % 2 == 0))
+
+        self.assertEqual(manager.current_stage3_target, 0.20)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,1799 @@
+
+============================================================
+Dataset Preflight: validate scenes (46)
+============================================================
+Loading scene train_area001_scenario001...
+Scene train_area001_scenario001 norm_params | intensity_max=500, length_max=3.276, speedRate_max=15.87, heat_per_unit_area_max=261.7, crown_fire_max=1, wind_speed_max=7
+Scene train_area001_scenario001 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario001 t=0 boundary points: 1
+  train_area001_scenario001: t=0 boundary points = 1 | init_area5% boundary points = 17 | actual_area=5.00%
+Loading scene train_area001_scenario002...
+Scene train_area001_scenario002 norm_params | intensity_max=500, length_max=4.386, speedRate_max=30.62, heat_per_unit_area_max=311.1, crown_fire_max=1, wind_speed_max=11
+Scene train_area001_scenario002 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario002 t=0 boundary points: 1
+  train_area001_scenario002: t=0 boundary points = 1 | init_area5% boundary points = 30 | actual_area=5.14%
+Loading scene train_area001_scenario003...
+Scene train_area001_scenario003 norm_params | intensity_max=1639, length_max=7.657, speedRate_max=41.87, heat_per_unit_area_max=873.6, crown_fire_max=1, wind_speed_max=13
+Scene train_area001_scenario003 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario003 t=0 boundary points: 1
+  train_area001_scenario003: t=0 boundary points = 1 | init_area5% boundary points = 32 | actual_area=5.04%
+Loading scene train_area001_scenario004...
+Scene train_area001_scenario004 norm_params | intensity_max=2493, length_max=9.284, speedRate_max=47.68, heat_per_unit_area_max=1277, crown_fire_max=1, wind_speed_max=15
+Scene train_area001_scenario004 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario004 t=0 boundary points: 1
+  train_area001_scenario004: t=0 boundary points = 1 | init_area5% boundary points = 26 | actual_area=5.01%
+Loading scene train_area001_scenario005...
+Scene train_area001_scenario005 norm_params | intensity_max=2503, length_max=9.351, speedRate_max=46.38, heat_per_unit_area_max=902.4, crown_fire_max=2, wind_speed_max=15
+Scene train_area001_scenario005 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario005 t=0 boundary points: 1
+  train_area001_scenario005: t=0 boundary points = 1 | init_area5% boundary points = 49 | actual_area=5.01%
+Loading scene train_area001_scenario006...
+Scene train_area001_scenario006 norm_params | intensity_max=1058, length_max=6.259, speedRate_max=20.81, heat_per_unit_area_max=803.4, crown_fire_max=1, wind_speed_max=9
+Scene train_area001_scenario006 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario006 t=0 boundary points: 1
+  train_area001_scenario006: t=0 boundary points = 1 | init_area5% boundary points = 39 | actual_area=5.02%
+Loading scene train_area002_scenario001...
+Scene train_area002_scenario001 norm_params | intensity_max=692.9, length_max=5.367, speedRate_max=37.46, heat_per_unit_area_max=1276, crown_fire_max=2, wind_speed_max=10
+Scene train_area002_scenario001 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario001 t=0 boundary points: 1
+  train_area002_scenario001: t=0 boundary points = 1 | init_area5% boundary points = 16 | actual_area=5.01%
+Loading scene train_area002_scenario002...
+Scene train_area002_scenario002 norm_params | intensity_max=2900, length_max=16.7, speedRate_max=33.56, heat_per_unit_area_max=3213, crown_fire_max=2, wind_speed_max=13
+Scene train_area002_scenario002 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario002 t=0 boundary points: 1
+  train_area002_scenario002: t=0 boundary points = 1 | init_area5% boundary points = 21 | actual_area=5.12%
+Loading scene train_area002_scenario003...
+Scene train_area002_scenario003 norm_params | intensity_max=2506, length_max=16.13, speedRate_max=37.84, heat_per_unit_area_max=3790, crown_fire_max=2, wind_speed_max=13
+Scene train_area002_scenario003 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario003 t=0 boundary points: 1
+  train_area002_scenario003: t=0 boundary points = 1 | init_area5% boundary points = 25 | actual_area=5.00%
+Loading scene train_area002_scenario004...
+Scene train_area002_scenario004 norm_params | intensity_max=4268, length_max=23, speedRate_max=42.52, heat_per_unit_area_max=2431, crown_fire_max=2, wind_speed_max=15
+Scene train_area002_scenario004 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario004 t=0 boundary points: 1
+  train_area002_scenario004: t=0 boundary points = 1 | init_area5% boundary points = 34 | actual_area=5.10%
+Loading scene train_area002_scenario005...
+Scene train_area002_scenario005 norm_params | intensity_max=3970, length_max=21.92, speedRate_max=36.56, heat_per_unit_area_max=3371, crown_fire_max=2, wind_speed_max=15
+Scene train_area002_scenario005 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario005 t=0 boundary points: 1
+  train_area002_scenario005: t=0 boundary points = 1 | init_area5% boundary points = 39 | actual_area=5.05%
+Loading scene train_area002_scenario006...
+Scene train_area002_scenario006 norm_params | intensity_max=2598, length_max=16.52, speedRate_max=29.6, heat_per_unit_area_max=2231, crown_fire_max=2, wind_speed_max=13
+Scene train_area002_scenario006 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario006 t=0 boundary points: 1
+  train_area002_scenario006: t=0 boundary points = 1 | init_area5% boundary points = 29 | actual_area=5.05%
+Loading scene train_area003_scenario001...
+Scene train_area003_scenario001 norm_params | intensity_max=866.5, length_max=5.709, speedRate_max=17.55, heat_per_unit_area_max=846.2, crown_fire_max=2, wind_speed_max=9
+Scene train_area003_scenario001 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario001 t=0 boundary points: 1
+  train_area003_scenario001: t=0 boundary points = 1 | init_area5% boundary points = 14 | actual_area=5.20%
+Loading scene train_area003_scenario002...
+Scene train_area003_scenario002 norm_params | intensity_max=979.2, length_max=7.114, speedRate_max=28.41, heat_per_unit_area_max=1217, crown_fire_max=2, wind_speed_max=13
+Scene train_area003_scenario002 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario002 t=0 boundary points: 1
+  train_area003_scenario002: t=0 boundary points = 1 | init_area5% boundary points = 17 | actual_area=5.01%
+Loading scene train_area003_scenario003...
+Scene train_area003_scenario003 norm_params | intensity_max=5583, length_max=27.51, speedRate_max=26.05, heat_per_unit_area_max=7313, crown_fire_max=2, wind_speed_max=14
+Scene train_area003_scenario003 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario003 t=0 boundary points: 1
+  train_area003_scenario003: t=0 boundary points = 1 | init_area5% boundary points = 24 | actual_area=5.08%
+Loading scene train_area003_scenario004...
+Scene train_area003_scenario004 norm_params | intensity_max=8000, length_max=35.34, speedRate_max=46.75, heat_per_unit_area_max=7640, crown_fire_max=2, wind_speed_max=16
+Scene train_area003_scenario004 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario004 t=0 boundary points: 1
+  train_area003_scenario004: t=0 boundary points = 1 | init_area5% boundary points = 28 | actual_area=5.09%
+Loading scene train_area003_scenario005...
+Scene train_area003_scenario005 norm_params | intensity_max=8000, length_max=39.78, speedRate_max=29.58, heat_per_unit_area_max=7703, crown_fire_max=2, wind_speed_max=17
+Scene train_area003_scenario005 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario005 t=0 boundary points: 1
+  train_area003_scenario005: t=0 boundary points = 1 | init_area5% boundary points = 34 | actual_area=5.11%
+Loading scene train_area003_scenario006...
+Scene train_area003_scenario006 norm_params | intensity_max=5060, length_max=25.75, speedRate_max=32.57, heat_per_unit_area_max=3331, crown_fire_max=2, wind_speed_max=15
+Scene train_area003_scenario006 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario006 t=0 boundary points: 1
+  train_area003_scenario006: t=0 boundary points = 1 | init_area5% boundary points = 31 | actual_area=5.11%
+Loading scene train_area004_scenario001...
+Scene train_area004_scenario001 norm_params | intensity_max=536, length_max=4.578, speedRate_max=22.18, heat_per_unit_area_max=780.2, crown_fire_max=2, wind_speed_max=9
+Scene train_area004_scenario001 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario001 t=0 boundary points: 1
+  train_area004_scenario001: t=0 boundary points = 1 | init_area5% boundary points = 15 | actual_area=5.13%
+Loading scene train_area004_scenario002...
+Scene train_area004_scenario002 norm_params | intensity_max=8000, length_max=43.24, speedRate_max=25.29, heat_per_unit_area_max=7545, crown_fire_max=2, wind_speed_max=13
+Scene train_area004_scenario002 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario002 t=0 boundary points: 1
+  train_area004_scenario002: t=0 boundary points = 1 | init_area5% boundary points = 21 | actual_area=5.13%
+Loading scene train_area004_scenario003...
+Scene train_area004_scenario003 norm_params | intensity_max=7909, length_max=34.67, speedRate_max=23.96, heat_per_unit_area_max=6057, crown_fire_max=2, wind_speed_max=14
+Scene train_area004_scenario003 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario003 t=0 boundary points: 1
+  train_area004_scenario003: t=0 boundary points = 1 | init_area5% boundary points = 22 | actual_area=5.12%
+Loading scene train_area004_scenario004...
+Scene train_area004_scenario004 norm_params | intensity_max=4591, length_max=24.14, speedRate_max=18.83, heat_per_unit_area_max=5353, crown_fire_max=2, wind_speed_max=16
+Scene train_area004_scenario004 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario004 t=0 boundary points: 1
+  train_area004_scenario004: t=0 boundary points = 1 | init_area5% boundary points = 35 | actual_area=5.02%
+Loading scene train_area004_scenario005...
+Scene train_area004_scenario005 norm_params | intensity_max=8000, length_max=35.38, speedRate_max=27.16, heat_per_unit_area_max=6388, crown_fire_max=2, wind_speed_max=17
+Scene train_area004_scenario005 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario005 t=0 boundary points: 1
+  train_area004_scenario005: t=0 boundary points = 1 | init_area5% boundary points = 36 | actual_area=5.00%
+Loading scene train_area004_scenario006...
+Scene train_area004_scenario006 norm_params | intensity_max=8000, length_max=43.07, speedRate_max=32.97, heat_per_unit_area_max=5879, crown_fire_max=2, wind_speed_max=15
+Scene train_area004_scenario006 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario006 t=0 boundary points: 1
+  train_area004_scenario006: t=0 boundary points = 1 | init_area5% boundary points = 26 | actual_area=5.10%
+Loading scene validation_area005_scenario001...
+Scene validation_area005_scenario001 norm_params | intensity_max=500, length_max=3.889, speedRate_max=16.07, heat_per_unit_area_max=514.6, crown_fire_max=1, wind_speed_max=7
+Scene validation_area005_scenario001 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario001 t=0 boundary points: 1
+  validation_area005_scenario001: t=0 boundary points = 1 | init_area5% boundary points = 14 | actual_area=5.13%
+Loading scene validation_area005_scenario002...
+Scene validation_area005_scenario002 norm_params | intensity_max=2868, length_max=9.893, speedRate_max=34.24, heat_per_unit_area_max=1838, crown_fire_max=2, wind_speed_max=13
+Scene validation_area005_scenario002 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario002 t=0 boundary points: 1
+  validation_area005_scenario002: t=0 boundary points = 1 | init_area5% boundary points = 22 | actual_area=5.15%
+Loading scene validation_area005_scenario003...
+Scene validation_area005_scenario003 norm_params | intensity_max=1227, length_max=6.908, speedRate_max=15.86, heat_per_unit_area_max=1816, crown_fire_max=2, wind_speed_max=10
+Scene validation_area005_scenario003 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario003 t=0 boundary points: 1
+  validation_area005_scenario003: t=0 boundary points = 1 | init_area5% boundary points = 25 | actual_area=5.02%
+Loading scene validation_area005_scenario004...
+Scene validation_area005_scenario004 norm_params | intensity_max=4343, length_max=12.22, speedRate_max=31.47, heat_per_unit_area_max=2265, crown_fire_max=2, wind_speed_max=10
+Scene validation_area005_scenario004 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario004 t=0 boundary points: 1
+  validation_area005_scenario004: t=0 boundary points = 1 | init_area5% boundary points = 41 | actual_area=5.01%
+Loading scene validation_area005_scenario005...
+Scene validation_area005_scenario005 norm_params | intensity_max=4258, length_max=14.69, speedRate_max=30.92, heat_per_unit_area_max=2341, crown_fire_max=2, wind_speed_max=10
+Scene validation_area005_scenario005 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario005 t=0 boundary points: 1
+  validation_area005_scenario005: t=0 boundary points = 1 | init_area5% boundary points = 37 | actual_area=5.02%
+Loading scene validation_area005_scenario006...
+Scene validation_area005_scenario006 norm_params | intensity_max=3361, length_max=11.08, speedRate_max=23.91, heat_per_unit_area_max=2228, crown_fire_max=2, wind_speed_max=10
+Scene validation_area005_scenario006 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario006 t=0 boundary points: 1
+  validation_area005_scenario006: t=0 boundary points = 1 | init_area5% boundary points = 42 | actual_area=5.02%
+Loading scene generalization_area006_scenario001...
+Scene generalization_area006_scenario001 norm_params | intensity_max=2852, length_max=14.79, speedRate_max=25.58, heat_per_unit_area_max=2000, crown_fire_max=2, wind_speed_max=8
+Scene generalization_area006_scenario001 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario001 t=0 boundary points: 1
+  generalization_area006_scenario001: t=0 boundary points = 1 | init_area5% boundary points = 16 | actual_area=5.25%
+Loading scene generalization_area006_scenario002...
+Scene generalization_area006_scenario002 norm_params | intensity_max=2553, length_max=16.33, speedRate_max=18.36, heat_per_unit_area_max=2769, crown_fire_max=2, wind_speed_max=11
+Scene generalization_area006_scenario002 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario002 t=0 boundary points: 1
+  generalization_area006_scenario002: t=0 boundary points = 1 | init_area5% boundary points = 21 | actual_area=5.12%
+Loading scene generalization_area006_scenario003...
+Scene generalization_area006_scenario003 norm_params | intensity_max=1928, length_max=13.53, speedRate_max=21.81, heat_per_unit_area_max=2055, crown_fire_max=2, wind_speed_max=13
+Scene generalization_area006_scenario003 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario003 t=0 boundary points: 1
+  generalization_area006_scenario003: t=0 boundary points = 1 | init_area5% boundary points = 27 | actual_area=5.02%
+Loading scene generalization_area006_scenario004...
+Scene generalization_area006_scenario004 norm_params | intensity_max=3023, length_max=18.27, speedRate_max=27.79, heat_per_unit_area_max=3134, crown_fire_max=2, wind_speed_max=11
+Scene generalization_area006_scenario004 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario004 t=0 boundary points: 1
+  generalization_area006_scenario004: t=0 boundary points = 1 | init_area5% boundary points = 36 | actual_area=5.09%
+Loading scene generalization_area006_scenario005...
+Scene generalization_area006_scenario005 norm_params | intensity_max=3837, length_max=21.41, speedRate_max=23.1, heat_per_unit_area_max=3296, crown_fire_max=2, wind_speed_max=8
+Scene generalization_area006_scenario005 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario005 t=0 boundary points: 1
+  generalization_area006_scenario005: t=0 boundary points = 1 | init_area5% boundary points = 34 | actual_area=5.01%
+Loading scene generalization_area006_scenario006...
+Scene generalization_area006_scenario006 norm_params | intensity_max=2478, length_max=16, speedRate_max=16.08, heat_per_unit_area_max=3114, crown_fire_max=2, wind_speed_max=9
+Scene generalization_area006_scenario006 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario006 t=0 boundary points: 1
+  generalization_area006_scenario006: t=0 boundary points = 1 | init_area5% boundary points = 29 | actual_area=5.13%
+Loading scene generalization_area007_scenario001...
+Scene generalization_area007_scenario001 norm_params | intensity_max=500, length_max=3.68, speedRate_max=17.67, heat_per_unit_area_max=415.9, crown_fire_max=2, wind_speed_max=9
+Scene generalization_area007_scenario001 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario001 t=0 boundary points: 1
+  generalization_area007_scenario001: t=0 boundary points = 1 | init_area5% boundary points = 18 | actual_area=5.09%
+Loading scene generalization_area007_scenario002...
+Scene generalization_area007_scenario002 norm_params | intensity_max=642.2, length_max=6.506, speedRate_max=8.942, heat_per_unit_area_max=1162, crown_fire_max=2, wind_speed_max=9
+Scene generalization_area007_scenario002 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario002 t=0 boundary points: 1
+  generalization_area007_scenario002: t=0 boundary points = 1 | init_area5% boundary points = 24 | actual_area=5.18%
+Loading scene generalization_area007_scenario003...
+Scene generalization_area007_scenario003 norm_params | intensity_max=500, length_max=3.86, speedRate_max=16.09, heat_per_unit_area_max=371.7, crown_fire_max=2, wind_speed_max=8
+Scene generalization_area007_scenario003 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario003 t=0 boundary points: 1
+  generalization_area007_scenario003: t=0 boundary points = 1 | init_area5% boundary points = 34 | actual_area=5.06%
+Loading scene generalization_area007_scenario004...
+Scene generalization_area007_scenario004 norm_params | intensity_max=1179, length_max=9.751, speedRate_max=17.83, heat_per_unit_area_max=1598, crown_fire_max=2, wind_speed_max=10
+Scene generalization_area007_scenario004 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario004 t=0 boundary points: 1
+  generalization_area007_scenario004: t=0 boundary points = 1 | init_area5% boundary points = 32 | actual_area=5.04%
+Loading scene generalization_area007_scenario005...
+Scene generalization_area007_scenario005 norm_params | intensity_max=500, length_max=4.332, speedRate_max=12.68, heat_per_unit_area_max=1079, crown_fire_max=2, wind_speed_max=9
+Scene generalization_area007_scenario005 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario005 t=0 boundary points: 1
+  generalization_area007_scenario005: t=0 boundary points = 1 | init_area5% boundary points = 43 | actual_area=5.02%
+Loading scene generalization_area007_scenario006...
+Scene generalization_area007_scenario006 norm_params | intensity_max=500, length_max=4.926, speedRate_max=15.28, heat_per_unit_area_max=1147, crown_fire_max=2, wind_speed_max=10
+Scene generalization_area007_scenario006 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario006 t=0 boundary points: 1
+  generalization_area007_scenario006: t=0 boundary points = 1 | init_area5% boundary points = 29 | actual_area=5.04%
+Loading scene stress_area008_scenario001...
+Scene stress_area008_scenario001 norm_params | intensity_max=8000, length_max=27.5, speedRate_max=64.75, heat_per_unit_area_max=3963, crown_fire_max=2, wind_speed_max=16
+Scene stress_area008_scenario001 loaded | shape=(283, 285) | rasters=8
+Scene stress_area008_scenario001 t=0 boundary points: 1
+  stress_area008_scenario001: t=0 boundary points = 1 | init_area5% boundary points = 45 | actual_area=5.04%
+Loading scene stress_area008_scenario002...
+Scene stress_area008_scenario002 norm_params | intensity_max=7048, length_max=16.01, speedRate_max=48.91, heat_per_unit_area_max=3154, crown_fire_max=2, wind_speed_max=13
+Scene stress_area008_scenario002 loaded | shape=(283, 285) | rasters=8
+Scene stress_area008_scenario002 t=0 boundary points: 1
+  stress_area008_scenario002: t=0 boundary points = 1 | init_area5% boundary points = 90 | actual_area=5.01%
+Loading scene stress_area008_scenario003...
+Scene stress_area008_scenario003 norm_params | intensity_max=7965, length_max=28.76, speedRate_max=53.49, heat_per_unit_area_max=5432, crown_fire_max=2, wind_speed_max=14
+Scene stress_area008_scenario003 loaded | shape=(283, 285) | rasters=8
+Scene stress_area008_scenario003 t=0 boundary points: 1
+  stress_area008_scenario003: t=0 boundary points = 1 | init_area5% boundary points = 63 | actual_area=5.01%
+Loading scene stress_area008_scenario004...
+Scene stress_area008_scenario004 norm_params | intensity_max=8000, length_max=34.91, speedRate_max=65.01, heat_per_unit_area_max=4693, crown_fire_max=2, wind_speed_max=18
+Scene stress_area008_scenario004 loaded | shape=(283, 285) | rasters=8
+Scene stress_area008_scenario004 t=0 boundary points: 1
+  stress_area008_scenario004: t=0 boundary points = 1 | init_area5% boundary points = 84 | actual_area=5.03%
+
+======================================================================
+CTDE-PPO 基线训练开始
+======================================================================
+输出目录=d:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260707_222909\训练结果\Fixed_LR_CTDE_PPO_seed42
+随机种子=42
+学习率策略=fixed | target_kl=0.0100 | actor_lr=2.00e-04 | kl_lr_alpha=0.100
+observation_profile=baseline | reward_profile=boundary_coverage | norm_params_source=scene_p99.5
+初始位置百分位=5.0
+Loading scene train_area002_scenario001...
+Scene train_area002_scenario001 norm_params | intensity_max=692.9, length_max=5.367, speedRate_max=37.46, heat_per_unit_area_max=1276, crown_fire_max=2, wind_speed_max=10
+Scene train_area002_scenario001 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario001 t=0 boundary points: 1
+基线环境已初始化 | 模式=train | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+CTDE-PPO 基线已初始化 | 设备=cuda | 本地观测=17 | 全局状态=19 | lr_adapt_mode=fixed
+Loading scene train_area004_scenario002...
+Scene train_area004_scenario002 norm_params | intensity_max=8000, length_max=43.24, speedRate_max=25.29, heat_per_unit_area_max=7545, crown_fire_max=2, wind_speed_max=13
+Scene train_area004_scenario002 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario002 t=0 boundary points: 1
+  [curriculum] env.init_area_percent -> None
+Loading scene train_area002_scenario005...
+Scene train_area002_scenario005 norm_params | intensity_max=3970, length_max=21.92, speedRate_max=36.56, heat_per_unit_area_max=3371, crown_fire_max=2, wind_speed_max=15
+Scene train_area002_scenario005 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario005 t=0 boundary points: 1
+Loading scene train_area001_scenario006...
+Scene train_area001_scenario006 norm_params | intensity_max=1058, length_max=6.259, speedRate_max=20.81, heat_per_unit_area_max=803.4, crown_fire_max=1, wind_speed_max=9
+Scene train_area001_scenario006 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario006 t=0 boundary points: 1
+Loading scene train_area001_scenario001...
+Scene train_area001_scenario001 norm_params | intensity_max=500, length_max=3.276, speedRate_max=15.87, heat_per_unit_area_max=261.7, crown_fire_max=1, wind_speed_max=7
+Scene train_area001_scenario001 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario001 t=0 boundary points: 1
+Loading scene train_area001_scenario002...
+Scene train_area001_scenario002 norm_params | intensity_max=500, length_max=4.386, speedRate_max=30.62, heat_per_unit_area_max=311.1, crown_fire_max=1, wind_speed_max=11
+Scene train_area001_scenario002 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario002 t=0 boundary points: 1
+Loading scene train_area001_scenario003...
+Scene train_area001_scenario003 norm_params | intensity_max=1639, length_max=7.657, speedRate_max=41.87, heat_per_unit_area_max=873.6, crown_fire_max=1, wind_speed_max=13
+Scene train_area001_scenario003 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario003 t=0 boundary points: 1
+Loading scene train_area004_scenario003...
+Scene train_area004_scenario003 norm_params | intensity_max=7909, length_max=34.67, speedRate_max=23.96, heat_per_unit_area_max=6057, crown_fire_max=2, wind_speed_max=14
+Scene train_area004_scenario003 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario003 t=0 boundary points: 1
+Loading scene train_area003_scenario005...
+Scene train_area003_scenario005 norm_params | intensity_max=8000, length_max=39.78, speedRate_max=29.58, heat_per_unit_area_max=7703, crown_fire_max=2, wind_speed_max=17
+Scene train_area003_scenario005 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario005 t=0 boundary points: 1
+回合   10 | 场景=train_area003_scenario005 | 阶段=1 | 奖励=    2.8 | 步数= 86.9 | 覆盖率= 76.4% | 成功率=  90% | 任务得分= 82.3% | 超时率=  10% | 零覆盖超时=  10% | KL=0.0000 | KLema=0.0000 | clip=0.000 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+Loading scene train_area003_scenario001...
+Scene train_area003_scenario001 norm_params | intensity_max=866.5, length_max=5.709, speedRate_max=17.55, heat_per_unit_area_max=846.2, crown_fire_max=2, wind_speed_max=9
+Scene train_area003_scenario001 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario001 t=0 boundary points: 1
+Loading scene train_area004_scenario005...
+Scene train_area004_scenario005 norm_params | intensity_max=8000, length_max=35.38, speedRate_max=27.16, heat_per_unit_area_max=6388, crown_fire_max=2, wind_speed_max=17
+Scene train_area004_scenario005 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario005 t=0 boundary points: 1
+Loading scene train_area002_scenario003...
+Scene train_area002_scenario003 norm_params | intensity_max=2506, length_max=16.13, speedRate_max=37.84, heat_per_unit_area_max=3790, crown_fire_max=2, wind_speed_max=13
+Scene train_area002_scenario003 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario003 t=0 boundary points: 1
+Loading scene train_area002_scenario004...
+Scene train_area002_scenario004 norm_params | intensity_max=4268, length_max=23, speedRate_max=42.52, heat_per_unit_area_max=2431, crown_fire_max=2, wind_speed_max=15
+Scene train_area002_scenario004 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario004 t=0 boundary points: 1
+回合   20 | 场景=train_area004_scenario002 | 阶段=1 | 奖励=    2.6 | 步数= 88.9 | 覆盖率= 75.4% | 成功率=  90% | 任务得分= 81.7% | 超时率=  10% | 零覆盖超时=  10% | KL=0.0000 | KLema=0.0000 | clip=0.000 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+Loading scene train_area004_scenario006...
+Scene train_area004_scenario006 norm_params | intensity_max=8000, length_max=43.07, speedRate_max=32.97, heat_per_unit_area_max=5879, crown_fire_max=2, wind_speed_max=15
+Scene train_area004_scenario006 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario006 t=0 boundary points: 1
+Loading scene train_area001_scenario005...
+Scene train_area001_scenario005 norm_params | intensity_max=2503, length_max=9.351, speedRate_max=46.38, heat_per_unit_area_max=902.4, crown_fire_max=2, wind_speed_max=15
+Scene train_area001_scenario005 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario005 t=0 boundary points: 1
+Loading scene train_area003_scenario004...
+Scene train_area003_scenario004 norm_params | intensity_max=8000, length_max=35.34, speedRate_max=46.75, heat_per_unit_area_max=7640, crown_fire_max=2, wind_speed_max=16
+Scene train_area003_scenario004 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario004 t=0 boundary points: 1
+Loading scene train_area004_scenario001...
+Scene train_area004_scenario001 norm_params | intensity_max=536, length_max=4.578, speedRate_max=22.18, heat_per_unit_area_max=780.2, crown_fire_max=2, wind_speed_max=9
+Scene train_area004_scenario001 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario001 t=0 boundary points: 1
+回合   30 | 场景=train_area001_scenario006 | 阶段=1 | 奖励=   -4.5 | 步数=130.2 | 覆盖率= 71.3% | 成功率=  83% | 任务得分= 76.3% | 超时率=  17% | 零覆盖超时=  17% | KL=0.0000 | KLema=0.0000 | clip=0.000 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+Loading scene train_area002_scenario002...
+Scene train_area002_scenario002 norm_params | intensity_max=2900, length_max=16.7, speedRate_max=33.56, heat_per_unit_area_max=3213, crown_fire_max=2, wind_speed_max=13
+Scene train_area002_scenario002 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario002 t=0 boundary points: 1
+Loading scene train_area003_scenario006...
+Scene train_area003_scenario006 norm_params | intensity_max=5060, length_max=25.75, speedRate_max=32.57, heat_per_unit_area_max=3331, crown_fire_max=2, wind_speed_max=15
+Scene train_area003_scenario006 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario006 t=0 boundary points: 1
+回合   40 | 场景=train_area001_scenario002 | 阶段=1 | 奖励=   -2.8 | 步数=120.3 | 覆盖率= 71.4% | 成功率=  85% | 任务得分= 77.2% | 超时率=  15% | 零覆盖超时=  15% | KL=0.0055 | KLema=0.0055 | clip=0.025 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+Loading scene train_area003_scenario003...
+Scene train_area003_scenario003 norm_params | intensity_max=5583, length_max=27.51, speedRate_max=26.05, heat_per_unit_area_max=7313, crown_fire_max=2, wind_speed_max=14
+Scene train_area003_scenario003 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario003 t=0 boundary points: 1
+Loading scene train_area002_scenario006...
+Scene train_area002_scenario006 norm_params | intensity_max=2598, length_max=16.52, speedRate_max=29.6, heat_per_unit_area_max=2231, crown_fire_max=2, wind_speed_max=13
+Scene train_area002_scenario006 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario006 t=0 boundary points: 1
+Loading scene train_area004_scenario004...
+Scene train_area004_scenario004 norm_params | intensity_max=4591, length_max=24.14, speedRate_max=18.83, heat_per_unit_area_max=5353, crown_fire_max=2, wind_speed_max=16
+Scene train_area004_scenario004 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario004 t=0 boundary points: 1
+回合   50 | 场景=train_area001_scenario002 | 阶段=1 | 奖励=   -4.2 | 步数=126.0 | 覆盖率= 69.8% | 成功率=  84% | 任务得分= 75.9% | 超时率=  16% | 零覆盖超时=  16% | KL=0.0055 | KLema=0.0055 | clip=0.025 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+Loading scene train_area001_scenario004...
+Scene train_area001_scenario004 norm_params | intensity_max=2493, length_max=9.284, speedRate_max=47.68, heat_per_unit_area_max=1277, crown_fire_max=1, wind_speed_max=15
+Scene train_area001_scenario004 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario004 t=0 boundary points: 1
+Loading scene train_area003_scenario002...
+Scene train_area003_scenario002 norm_params | intensity_max=979.2, length_max=7.114, speedRate_max=28.41, heat_per_unit_area_max=1217, crown_fire_max=2, wind_speed_max=13
+Scene train_area003_scenario002 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario002 t=0 boundary points: 1
+回合   60 | 场景=train_area002_scenario003 | 阶段=1 | 奖励=   -1.4 | 步数=111.9 | 覆盖率= 72.3% | 成功率=  87% | 任务得分= 78.4% | 超时率=  13% | 零覆盖超时=  13% | KL=0.0055 | KLema=0.0055 | clip=0.025 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合   70 | 场景=train_area002_scenario001 | 阶段=1 | 奖励=    0.4 | 步数=102.3 | 覆盖率= 73.3% | 成功率=  89% | 任务得分= 79.8% | 超时率=  11% | 零覆盖超时=  11% | KL=0.0055 | KLema=0.0055 | clip=0.025 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+
+  [area curriculum] init_area_percent -> 1.0 | stage1_success=92.0%
+  [curriculum] env.init_area_percent -> 1.0
+回合   80 | 场景=train_area003_scenario004 | 阶段=1 | 奖励=    0.3 | 步数=101.1 | 覆盖率= 73.1% | 成功率=  89% | 任务得分= 79.8% | 超时率=  11% | 零覆盖超时=  11% | KL=0.0047 | KLema=0.0054 | clip=0.035 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合   90 | 场景=train_area003_scenario003 | 阶段=1 | 奖励=    1.7 | 步数= 90.9 | 覆盖率= 74.1% | 成功率=  90% | 任务得分= 81.0% | 超时率=  10% | 零覆盖超时=  10% | KL=0.0047 | KLema=0.0054 | clip=0.035 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  100 | 场景=train_area001_scenario001 | 阶段=1 | 奖励=    1.7 | 步数= 89.7 | 覆盖率= 73.9% | 成功率=  90% | 任务得分= 80.9% | 超时率=  10% | 零覆盖超时=  10% | KL=0.0047 | KLema=0.0054 | clip=0.035 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=100 | 阶段=1 | 每场景回合=5
+======================================================================
+Loading scene validation_area005_scenario001...
+Scene validation_area005_scenario001 norm_params | intensity_max=500, length_max=3.889, speedRate_max=16.07, heat_per_unit_area_max=514.6, crown_fire_max=1, wind_speed_max=7
+Scene validation_area005_scenario001 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario001 t=0 boundary points: 1
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+Loading scene validation_area005_scenario002...
+Scene validation_area005_scenario002 norm_params | intensity_max=2868, length_max=9.893, speedRate_max=34.24, heat_per_unit_area_max=1838, crown_fire_max=2, wind_speed_max=13
+Scene validation_area005_scenario002 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario002 t=0 boundary points: 1
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+Loading scene validation_area005_scenario003...
+Scene validation_area005_scenario003 norm_params | intensity_max=1227, length_max=6.908, speedRate_max=15.86, heat_per_unit_area_max=1816, crown_fire_max=2, wind_speed_max=10
+Scene validation_area005_scenario003 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario003 t=0 boundary points: 1
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+Loading scene validation_area005_scenario004...
+Scene validation_area005_scenario004 norm_params | intensity_max=4343, length_max=12.22, speedRate_max=31.47, heat_per_unit_area_max=2265, crown_fire_max=2, wind_speed_max=10
+Scene validation_area005_scenario004 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario004 t=0 boundary points: 1
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+Loading scene validation_area005_scenario005...
+Scene validation_area005_scenario005 norm_params | intensity_max=4258, length_max=14.69, speedRate_max=30.92, heat_per_unit_area_max=2341, crown_fire_max=2, wind_speed_max=10
+Scene validation_area005_scenario005 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario005 t=0 boundary points: 1
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+Loading scene validation_area005_scenario006...
+Scene validation_area005_scenario006 norm_params | intensity_max=3361, length_max=11.08, speedRate_max=23.91, heat_per_unit_area_max=2228, crown_fire_max=2, wind_speed_max=10
+Scene validation_area005_scenario006 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario006 t=0 boundary points: 1
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+评估阶段=1 | 回合数=30 | 任务得分=3.5% | 覆盖率=0.8% | 成功率=6.7% | 平均步数=568.4
+  -> 最佳训练滚动任务得分: 80.9%
+回合  110 | 场景=train_area001_scenario006 | 阶段=1 | 奖励=    2.7 | 步数= 81.7 | 覆盖率= 75.5% | 成功率=  91% | 任务得分= 82.3% | 超时率=   9% | 零覆盖超时=   9% | KL=0.0047 | KLema=0.0054 | clip=0.035 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  120 | 场景=train_area003_scenario004 | 阶段=1 | 奖励=    1.8 | 步数= 84.7 | 覆盖率= 76.0% | 成功率=  90% | 任务得分= 82.2% | 超时率=  10% | 零覆盖超时=  10% | KL=0.0047 | KLema=0.0054 | clip=0.035 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  130 | 场景=train_area002_scenario006 | 阶段=1 | 奖励=    3.9 | 步数= 70.7 | 覆盖率= 77.0% | 成功率=  92% | 任务得分= 83.7% | 超时率=   8% | 零覆盖超时=   8% | KL=0.0047 | KLema=0.0054 | clip=0.035 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  140 | 场景=train_area002_scenario002 | 阶段=1 | 奖励=    4.9 | 步数= 62.3 | 覆盖率= 78.5% | 成功率=  93% | 任务得分= 85.1% | 超时率=   7% | 零覆盖超时=   7% | KL=0.0047 | KLema=0.0054 | clip=0.035 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+
+课程阶段 1 -> 2 | 本阶段回合=150 | 成功率=94.0% | 覆盖率=83.0% | 零覆盖超时=6.0%
+课程阶段已切换为 2
+切换到阶段 2 前已处理阶段 1 的缓存数据
+回合  150 | 场景=train_area004_scenario004 | 阶段=2 | 奖励=    7.1 | 步数= 49.0 | 覆盖率= 80.5% | 成功率=  95% | 任务得分= 87.1% | 超时率=   5% | 零覆盖超时=   5% | KL=0.0064 | KLema=0.0055 | clip=0.056 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  160 | 场景=train_area001_scenario003 | 阶段=2 | 奖励=    3.8 | 步数= 58.6 | 覆盖率= 75.9% | 成功率=  93% | 任务得分= 83.9% | 超时率=   7% | 零覆盖超时=   7% | KL=0.0064 | KLema=0.0055 | clip=0.056 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  170 | 场景=train_area004_scenario001 | 阶段=2 | 奖励=   -1.5 | 步数= 72.3 | 覆盖率= 72.4% | 成功率=  90% | 任务得分= 80.8% | 超时率=  10% | 零覆盖超时=  10% | KL=0.0064 | KLema=0.0055 | clip=0.056 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  180 | 场景=train_area001_scenario005 | 阶段=2 | 奖励=   -7.7 | 步数= 87.4 | 覆盖率= 69.0% | 成功率=  87% | 任务得分= 77.7% | 超时率=  13% | 零覆盖超时=  13% | KL=0.0096 | KLema=0.0059 | clip=0.109 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  190 | 场景=train_area003_scenario002 | 阶段=2 | 奖励=  -15.0 | 步数=113.9 | 覆盖率= 64.1% | 成功率=  84% | 任务得分= 73.5% | 超时率=  16% | 零覆盖超时=  16% | KL=0.0096 | KLema=0.0059 | clip=0.109 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  200 | 场景=train_area004_scenario002 | 阶段=2 | 奖励=  -14.5 | 步数=113.0 | 覆盖率= 63.0% | 成功率=  84% | 任务得分= 72.9% | 超时率=  16% | 零覆盖超时=  16% | KL=0.0063 | KLema=0.0059 | clip=0.058 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=200 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+评估阶段=2 | 回合数=30 | 任务得分=9.1% | 覆盖率=2.7% | 成功率=16.7% | 平均步数=517.7
+回合  210 | 场景=train_area002_scenario002 | 阶段=2 | 奖励=  -19.5 | 步数=130.7 | 覆盖率= 57.9% | 成功率=  81% | 任务得分= 68.9% | 超时率=  19% | 零覆盖超时=  19% | KL=0.0063 | KLema=0.0059 | clip=0.058 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  220 | 场景=train_area004_scenario004 | 阶段=2 | 奖励=  -20.2 | 步数=131.0 | 覆盖率= 53.1% | 成功率=  81% | 任务得分= 66.5% | 超时率=  19% | 零覆盖超时=  19% | KL=0.0063 | KLema=0.0059 | clip=0.058 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  230 | 场景=train_area001_scenario002 | 阶段=2 | 奖励=  -27.4 | 步数=152.1 | 覆盖率= 50.7% | 成功率=  78% | 任务得分= 63.7% | 超时率=  22% | 零覆盖超时=  22% | KL=0.0064 | KLema=0.0060 | clip=0.078 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  240 | 场景=train_area001_scenario002 | 阶段=2 | 奖励=  -32.4 | 步数=171.3 | 覆盖率= 44.8% | 成功率=  75% | 任务得分= 59.2% | 超时率=  25% | 零覆盖超时=  25% | KL=0.0064 | KLema=0.0060 | clip=0.078 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  250 | 场景=train_area004_scenario006 | 阶段=2 | 奖励=  -40.5 | 步数=199.3 | 覆盖率= 41.0% | 成功率=  71% | 任务得分= 55.1% | 超时率=  29% | 零覆盖超时=  29% | KL=0.0079 | KLema=0.0062 | clip=0.095 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  260 | 场景=train_area003_scenario003 | 阶段=2 | 奖励=  -39.6 | 步数=197.7 | 覆盖率= 41.4% | 成功率=  71% | 任务得分= 55.4% | 超时率=  29% | 零覆盖超时=  29% | KL=0.0079 | KLema=0.0062 | clip=0.095 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  270 | 场景=train_area002_scenario004 | 阶段=2 | 奖励=  -39.5 | 步数=202.0 | 覆盖率= 41.5% | 成功率=  71% | 任务得分= 55.3% | 超时率=  29% | 零覆盖超时=  29% | KL=0.0070 | KLema=0.0063 | clip=0.116 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  280 | 场景=train_area002_scenario002 | 阶段=2 | 奖励=  -32.1 | 步数=184.1 | 覆盖率= 44.1% | 成功率=  74% | 任务得分= 58.1% | 超时率=  26% | 零覆盖超时=  26% | KL=0.0070 | KLema=0.0063 | clip=0.116 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  290 | 场景=train_area001_scenario001 | 阶段=2 | 奖励=  -28.0 | 步数=173.0 | 覆盖率= 46.3% | 成功率=  75% | 任务得分= 59.9% | 超时率=  25% | 零覆盖超时=  25% | KL=0.0070 | KLema=0.0063 | clip=0.116 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  300 | 场景=train_area004_scenario002 | 阶段=2 | 奖励=  -31.9 | 步数=184.3 | 覆盖率= 44.1% | 成功率=  73% | 任务得分= 57.8% | 超时率=  27% | 零覆盖超时=  27% | KL=0.0073 | KLema=0.0064 | clip=0.090 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=300 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+评估阶段=2 | 回合数=30 | 任务得分=11.2% | 覆盖率=3.8% | 成功率=20.0% | 平均步数=499.6
+回合  310 | 场景=train_area002_scenario003 | 阶段=2 | 奖励=  -31.4 | 步数=184.9 | 覆盖率= 43.6% | 成功率=  73% | 任务得分= 57.5% | 超时率=  27% | 零覆盖超时=  27% | KL=0.0073 | KLema=0.0064 | clip=0.090 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  320 | 场景=train_area002_scenario004 | 阶段=2 | 奖励=  -36.6 | 步数=202.9 | 覆盖率= 43.7% | 成功率=  70% | 任务得分= 56.1% | 超时率=  30% | 零覆盖超时=  29% | KL=0.0055 | KLema=0.0063 | clip=0.068 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  330 | 场景=train_area003_scenario004 | 阶段=2 | 奖励=  -29.8 | 步数=188.2 | 覆盖率= 44.4% | 成功率=  73% | 任务得分= 57.8% | 超时率=  27% | 零覆盖超时=  26% | KL=0.0055 | KLema=0.0063 | clip=0.068 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  340 | 场景=train_area002_scenario005 | 阶段=2 | 奖励=  -24.9 | 步数=174.7 | 覆盖率= 46.8% | 成功率=  75% | 任务得分= 60.1% | 超时率=  25% | 零覆盖超时=  24% | KL=0.0055 | KLema=0.0063 | clip=0.068 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  350 | 场景=train_area003_scenario006 | 阶段=2 | 奖励=  -16.7 | 步数=151.3 | 覆盖率= 47.3% | 成功率=  78% | 任务得分= 62.0% | 超时率=  22% | 零覆盖超时=  21% | KL=0.0056 | KLema=0.0062 | clip=0.052 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  360 | 场景=train_area004_scenario005 | 阶段=2 | 奖励=  -18.4 | 步数=158.1 | 覆盖率= 45.9% | 成功率=  77% | 任务得分= 60.8% | 超时率=  23% | 零覆盖超时=  22% | KL=0.0056 | KLema=0.0062 | clip=0.052 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  370 | 场景=train_area001_scenario005 | 阶段=2 | 奖励=  -13.1 | 步数=141.8 | 覆盖率= 47.6% | 成功率=  79% | 任务得分= 62.8% | 超时率=  21% | 零覆盖超时=  20% | KL=0.0056 | KLema=0.0062 | clip=0.052 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  380 | 场景=train_area001_scenario005 | 阶段=2 | 奖励=  -17.3 | 步数=156.3 | 覆盖率= 44.1% | 成功率=  77% | 任务得分= 59.9% | 超时率=  23% | 零覆盖超时=  22% | KL=0.0044 | KLema=0.0060 | clip=0.049 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  390 | 场景=train_area004_scenario004 | 阶段=2 | 奖励=  -20.0 | 步数=164.2 | 覆盖率= 42.7% | 成功率=  75% | 任务得分= 58.4% | 超时率=  25% | 零覆盖超时=  24% | KL=0.0044 | KLema=0.0060 | clip=0.049 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  400 | 场景=train_area001_scenario003 | 阶段=2 | 奖励=  -13.8 | 步数=147.5 | 覆盖率= 44.5% | 成功率=  78% | 任务得分= 60.7% | 超时率=  22% | 零覆盖超时=  21% | KL=0.0044 | KLema=0.0060 | clip=0.049 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=400 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+评估阶段=2 | 回合数=30 | 任务得分=9.0% | 覆盖率=3.1% | 成功率=16.7% | 平均步数=526.4
+回合  410 | 场景=train_area002_scenario001 | 阶段=2 | 奖励=  -11.3 | 步数=140.7 | 覆盖率= 44.3% | 成功率=  79% | 任务得分= 61.1% | 超时率=  21% | 零覆盖超时=  20% | KL=0.0044 | KLema=0.0060 | clip=0.049 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  420 | 场景=train_area002_scenario001 | 阶段=2 | 奖励=   -8.9 | 步数=134.4 | 覆盖率= 44.8% | 成功率=  80% | 任务得分= 61.9% | 超时率=  20% | 零覆盖超时=  19% | KL=0.0069 | KLema=0.0061 | clip=0.082 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  430 | 场景=train_area002_scenario003 | 阶段=2 | 奖励=  -18.8 | 步数=163.0 | 覆盖率= 41.2% | 成功率=  74% | 任务得分= 57.4% | 超时率=  26% | 零覆盖超时=  25% | KL=0.0064 | KLema=0.0061 | clip=0.065 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  440 | 场景=train_area002_scenario001 | 阶段=2 | 奖励=  -22.1 | 步数=176.2 | 覆盖率= 39.6% | 成功率=  72% | 任务得分= 55.5% | 超时率=  28% | 零覆盖超时=  26% | KL=0.0064 | KLema=0.0061 | clip=0.065 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+
+课程阶段 2 -> 3 | 本阶段回合=300 | 成功率=68.0% | 覆盖率=37.3% | 零覆盖超时=28.0%
+课程阶段已切换为 3
+切换到阶段 3 前已处理阶段 2 的缓存数据
+回合  450 | 场景=train_area001_scenario005 | 阶段=3 | 奖励=  -21.9 | 步数=180.7 | 覆盖率= 40.5% | 成功率=  73% | 任务得分= 56.1% | 超时率=  27% | 零覆盖超时=  25% | KL=0.0071 | KLema=0.0062 | clip=0.076 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.249
+  [curriculum] env.stage3_near_prob -> 0.248
+  [curriculum] env.stage3_near_prob -> 0.247
+  [curriculum] env.stage3_near_prob -> 0.246
+  [curriculum] env.stage3_near_prob -> 0.245
+  [curriculum] env.stage3_near_prob -> 0.244
+  [curriculum] env.stage3_near_prob -> 0.243
+  [curriculum] env.stage3_near_prob -> 0.242
+  [curriculum] env.stage3_near_prob -> 0.241
+  [curriculum] env.stage3_near_prob -> 0.240
+回合  460 | 场景=train_area001_scenario005 | 阶段=3 | 奖励=  -28.9 | 步数=202.3 | 覆盖率= 39.1% | 成功率=  70% | 任务得分= 53.8% | 超时率=  30% | 零覆盖超时=  28% | KL=0.0071 | KLema=0.0062 | clip=0.076 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.239
+  [curriculum] env.stage3_near_prob -> 0.238
+  [curriculum] env.stage3_near_prob -> 0.237
+  [curriculum] env.stage3_near_prob -> 0.236
+  [curriculum] env.stage3_near_prob -> 0.235
+  [curriculum] env.stage3_near_prob -> 0.234
+  [curriculum] env.stage3_near_prob -> 0.233
+  [curriculum] env.stage3_near_prob -> 0.232
+  [curriculum] env.stage3_near_prob -> 0.231
+  [curriculum] env.stage3_near_prob -> 0.230
+回合  470 | 场景=train_area003_scenario002 | 阶段=3 | 奖励=  -41.6 | 步数=245.7 | 覆盖率= 33.8% | 成功率=  64% | 任务得分= 47.9% | 超时率=  36% | 零覆盖超时=  34% | KL=0.0053 | KLema=0.0061 | clip=0.055 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.229
+  [curriculum] env.stage3_near_prob -> 0.228
+  [curriculum] env.stage3_near_prob -> 0.227
+  [curriculum] env.stage3_near_prob -> 0.226
+  [curriculum] env.stage3_near_prob -> 0.225
+  [curriculum] env.stage3_near_prob -> 0.224
+  [curriculum] env.stage3_near_prob -> 0.223
+  [curriculum] env.stage3_near_prob -> 0.222
+  [curriculum] env.stage3_near_prob -> 0.221
+  [curriculum] env.stage3_near_prob -> 0.220
+回合  480 | 场景=train_area004_scenario006 | 阶段=3 | 奖励=  -46.4 | 步数=262.1 | 覆盖率= 32.2% | 成功率=  61% | 任务得分= 45.7% | 超时率=  39% | 零覆盖超时=  37% | KL=0.0053 | KLema=0.0061 | clip=0.055 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.219
+  [curriculum] env.stage3_near_prob -> 0.218
+  [curriculum] env.stage3_near_prob -> 0.217
+  [curriculum] env.stage3_near_prob -> 0.216
+  [curriculum] env.stage3_near_prob -> 0.215
+  [curriculum] env.stage3_near_prob -> 0.214
+  [curriculum] env.stage3_near_prob -> 0.213
+  [curriculum] env.stage3_near_prob -> 0.212
+  [curriculum] env.stage3_near_prob -> 0.211
+  [curriculum] env.stage3_near_prob -> 0.210
+回合  490 | 场景=train_area004_scenario006 | 阶段=3 | 奖励=  -50.4 | 步数=281.4 | 覆盖率= 29.2% | 成功率=  60% | 任务得分= 43.2% | 超时率=  40% | 零覆盖超时=  38% | KL=0.0081 | KLema=0.0063 | clip=0.098 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.209
+  [curriculum] env.stage3_near_prob -> 0.208
+  [curriculum] env.stage3_near_prob -> 0.207
+  [curriculum] env.stage3_near_prob -> 0.206
+  [curriculum] env.stage3_near_prob -> 0.205
+  [curriculum] env.stage3_near_prob -> 0.204
+  [curriculum] env.stage3_near_prob -> 0.203
+  [curriculum] env.stage3_near_prob -> 0.202
+  [curriculum] env.stage3_near_prob -> 0.201
+  [curriculum] env.stage3_near_prob -> 0.200
+回合  500 | 场景=train_area003_scenario004 | 阶段=3 | 奖励=  -65.9 | 步数=328.1 | 覆盖率= 24.1% | 成功率=  52% | 任务得分= 36.7% | 超时率=  48% | 零覆盖超时=  46% | KL=0.0063 | KLema=0.0062 | clip=0.040 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+
+======================================================================
+验证评估 | 回合=500 | 阶段=3 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+评估阶段=3 | 回合数=30 | 任务得分=3.2% | 覆盖率=3.3% | 成功率=3.3% | 平均步数=582.6
+  -> 最佳验证模型分数: -50.3% (任务得分=3.2%)
+  [curriculum] env.stage3_near_prob -> 0.199
+  [curriculum] env.stage3_near_prob -> 0.198
+  [curriculum] env.stage3_near_prob -> 0.197
+  [curriculum] env.stage3_near_prob -> 0.196
+  [curriculum] env.stage3_near_prob -> 0.195
+  [curriculum] env.stage3_near_prob -> 0.194
+  [curriculum] env.stage3_near_prob -> 0.193
+  [curriculum] env.stage3_near_prob -> 0.192
+  [curriculum] env.stage3_near_prob -> 0.191
+  [curriculum] env.stage3_near_prob -> 0.190
+回合  510 | 场景=train_area004_scenario003 | 阶段=3 | 奖励=  -76.9 | 步数=365.6 | 覆盖率= 21.1% | 成功率=  46% | 任务得分= 32.2% | 超时率=  54% | 零覆盖超时=  52% | KL=0.0060 | KLema=0.0062 | clip=0.053 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.189
+  [curriculum] env.stage3_near_prob -> 0.188
+  [curriculum] env.stage3_near_prob -> 0.187
+  [curriculum] env.stage3_near_prob -> 0.186
+  [curriculum] env.stage3_near_prob -> 0.185
+  [curriculum] env.stage3_near_prob -> 0.184
+  [curriculum] env.stage3_near_prob -> 0.183
+  [curriculum] env.stage3_near_prob -> 0.182
+  [curriculum] env.stage3_near_prob -> 0.181
+  [curriculum] env.stage3_near_prob -> 0.180
+回合  520 | 场景=train_area003_scenario001 | 阶段=3 | 奖励=  -84.2 | 步数=392.4 | 覆盖率= 18.0% | 成功率=  42% | 任务得分= 28.5% | 超时率=  58% | 零覆盖超时=  57% | KL=0.0050 | KLema=0.0061 | clip=0.034 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.179
+  [curriculum] env.stage3_near_prob -> 0.178
+  [curriculum] env.stage3_near_prob -> 0.177
+  [curriculum] env.stage3_near_prob -> 0.176
+  [curriculum] env.stage3_near_prob -> 0.175
+  [curriculum] env.stage3_near_prob -> 0.174
+  [curriculum] env.stage3_near_prob -> 0.173
+  [curriculum] env.stage3_near_prob -> 0.172
+  [curriculum] env.stage3_near_prob -> 0.171
+  [curriculum] env.stage3_near_prob -> 0.170
+回合  530 | 场景=train_area004_scenario001 | 阶段=3 | 奖励=  -89.6 | 步数=410.2 | 覆盖率= 16.1% | 成功率=  39% | 任务得分= 26.1% | 超时率=  61% | 零覆盖超时=  60% | KL=0.0056 | KLema=0.0060 | clip=0.060 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.169
+  [curriculum] env.stage3_near_prob -> 0.168
+  [curriculum] env.stage3_near_prob -> 0.167
+  [curriculum] env.stage3_near_prob -> 0.166
+  [curriculum] env.stage3_near_prob -> 0.165
+  [curriculum] env.stage3_near_prob -> 0.164
+  [curriculum] env.stage3_near_prob -> 0.163
+  [curriculum] env.stage3_near_prob -> 0.162
+  [curriculum] env.stage3_near_prob -> 0.161
+  [curriculum] env.stage3_near_prob -> 0.160
+回合  540 | 场景=train_area002_scenario005 | 阶段=3 | 奖励=  -96.1 | 步数=429.4 | 覆盖率= 13.6% | 成功率=  36% | 任务得分= 23.3% | 超时率=  64% | 零覆盖超时=  64% | KL=0.0068 | KLema=0.0061 | clip=0.079 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.159
+  [curriculum] env.stage3_near_prob -> 0.158
+  [curriculum] env.stage3_near_prob -> 0.157
+  [curriculum] env.stage3_near_prob -> 0.156
+  [curriculum] env.stage3_near_prob -> 0.155
+  [curriculum] env.stage3_near_prob -> 0.154
+  [curriculum] env.stage3_near_prob -> 0.153
+  [curriculum] env.stage3_near_prob -> 0.152
+  [curriculum] env.stage3_near_prob -> 0.151
+  [curriculum] env.stage3_near_prob -> 0.150
+回合  550 | 场景=train_area003_scenario004 | 阶段=3 | 奖励= -109.7 | 步数=467.2 | 覆盖率=  8.5% | 成功率=  28% | 任务得分= 17.1% | 超时率=  72% | 零覆盖超时=  71% | KL=0.0050 | KLema=0.0060 | clip=0.057 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.149
+  [curriculum] env.stage3_near_prob -> 0.148
+  [curriculum] env.stage3_near_prob -> 0.147
+  [curriculum] env.stage3_near_prob -> 0.146
+  [curriculum] env.stage3_near_prob -> 0.145
+  [curriculum] env.stage3_near_prob -> 0.144
+  [curriculum] env.stage3_near_prob -> 0.143
+  [curriculum] env.stage3_near_prob -> 0.142
+  [curriculum] env.stage3_near_prob -> 0.141
+  [curriculum] env.stage3_near_prob -> 0.140
+回合  560 | 场景=train_area004_scenario004 | 阶段=3 | 奖励= -109.8 | 步数=468.8 | 覆盖率=  8.3% | 成功率=  27% | 任务得分= 16.6% | 超时率=  73% | 零覆盖超时=  71% | KL=0.0054 | KLema=0.0059 | clip=0.071 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.139
+  [curriculum] env.stage3_near_prob -> 0.138
+  [curriculum] env.stage3_near_prob -> 0.137
+  [curriculum] env.stage3_near_prob -> 0.136
+  [curriculum] env.stage3_near_prob -> 0.135
+  [curriculum] env.stage3_near_prob -> 0.134
+  [curriculum] env.stage3_near_prob -> 0.133
+  [curriculum] env.stage3_near_prob -> 0.132
+  [curriculum] env.stage3_near_prob -> 0.131
+  [curriculum] env.stage3_near_prob -> 0.130
+回合  570 | 场景=train_area004_scenario002 | 阶段=3 | 奖励= -109.7 | 步数=468.7 | 覆盖率=  7.9% | 成功率=  26% | 任务得分= 16.1% | 超时率=  74% | 零覆盖超时=  71% | KL=0.0065 | KLema=0.0060 | clip=0.080 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.129
+  [curriculum] env.stage3_near_prob -> 0.128
+  [curriculum] env.stage3_near_prob -> 0.127
+  [curriculum] env.stage3_near_prob -> 0.126
+  [curriculum] env.stage3_near_prob -> 0.125
+  [curriculum] env.stage3_near_prob -> 0.124
+  [curriculum] env.stage3_near_prob -> 0.123
+  [curriculum] env.stage3_near_prob -> 0.122
+  [curriculum] env.stage3_near_prob -> 0.121
+  [curriculum] env.stage3_near_prob -> 0.120
+回合  580 | 场景=train_area004_scenario005 | 阶段=3 | 奖励= -113.3 | 步数=482.6 | 覆盖率=  7.0% | 成功率=  24% | 任务得分= 14.6% | 超时率=  76% | 零覆盖超时=  72% | KL=0.0060 | KLema=0.0062 | clip=0.066 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.119
+  [curriculum] env.stage3_near_prob -> 0.118
+  [curriculum] env.stage3_near_prob -> 0.117
+  [curriculum] env.stage3_near_prob -> 0.116
+  [curriculum] env.stage3_near_prob -> 0.115
+  [curriculum] env.stage3_near_prob -> 0.114
+  [curriculum] env.stage3_near_prob -> 0.113
+  [curriculum] env.stage3_near_prob -> 0.112
+  [curriculum] env.stage3_near_prob -> 0.111
+  [curriculum] env.stage3_near_prob -> 0.110
+回合  590 | 场景=train_area001_scenario001 | 阶段=3 | 奖励= -110.4 | 步数=470.6 | 覆盖率=  7.2% | 成功率=  24% | 任务得分= 15.1% | 超时率=  76% | 零覆盖超时=  72% | KL=0.0060 | KLema=0.0062 | clip=0.066 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.109
+  [curriculum] env.stage3_near_prob -> 0.108
+  [curriculum] env.stage3_near_prob -> 0.107
+  [curriculum] env.stage3_near_prob -> 0.106
+  [curriculum] env.stage3_near_prob -> 0.105
+  [curriculum] env.stage3_near_prob -> 0.104
+  [curriculum] env.stage3_near_prob -> 0.103
+  [curriculum] env.stage3_near_prob -> 0.102
+  [curriculum] env.stage3_near_prob -> 0.101
+  [curriculum] env.stage3_near_prob -> 0.100
+回合  600 | 场景=train_area002_scenario003 | 阶段=3 | 奖励= -107.3 | 步数=465.5 | 覆盖率=  7.8% | 成功率=  25% | 任务得分= 15.9% | 超时率=  75% | 零覆盖超时=  71% | KL=0.0065 | KLema=0.0062 | clip=0.088 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=600 | 阶段=3 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+评估阶段=3 | 回合数=30 | 任务得分=5.8% | 覆盖率=5.3% | 成功率=6.7% | 平均步数=566.5
+  -> 最佳验证模型分数: -45.4% (任务得分=5.8%)
+  [curriculum] env.stage3_near_prob -> 0.099
+  [curriculum] env.stage3_near_prob -> 0.098
+  [curriculum] env.stage3_near_prob -> 0.097
+  [curriculum] env.stage3_near_prob -> 0.096
+  [curriculum] env.stage3_near_prob -> 0.095
+  [curriculum] env.stage3_near_prob -> 0.094
+  [curriculum] env.stage3_near_prob -> 0.093
+  [curriculum] env.stage3_near_prob -> 0.092
+  [curriculum] env.stage3_near_prob -> 0.091
+  [curriculum] env.stage3_near_prob -> 0.090
+回合  610 | 场景=train_area002_scenario003 | 阶段=3 | 奖励= -105.0 | 步数=460.6 | 覆盖率=  8.1% | 成功率=  26% | 任务得分= 16.5% | 超时率=  74% | 零覆盖超时=  70% | KL=0.0055 | KLema=0.0062 | clip=0.060 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.089
+  [curriculum] env.stage3_near_prob -> 0.088
+  [curriculum] env.stage3_near_prob -> 0.087
+  [curriculum] env.stage3_near_prob -> 0.086
+  [curriculum] env.stage3_near_prob -> 0.085
+  [curriculum] env.stage3_near_prob -> 0.084
+  [curriculum] env.stage3_near_prob -> 0.083
+  [curriculum] env.stage3_near_prob -> 0.082
+  [curriculum] env.stage3_near_prob -> 0.081
+  [curriculum] env.stage3_near_prob -> 0.080
+回合  620 | 场景=train_area001_scenario004 | 阶段=3 | 奖励= -105.4 | 步数=457.6 | 覆盖率=  8.1% | 成功率=  27% | 任务得分= 16.9% | 超时率=  73% | 零覆盖超时=  69% | KL=0.0070 | KLema=0.0062 | clip=0.078 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.079
+  [curriculum] env.stage3_near_prob -> 0.078
+  [curriculum] env.stage3_near_prob -> 0.077
+  [curriculum] env.stage3_near_prob -> 0.076
+  [curriculum] env.stage3_near_prob -> 0.075
+  [curriculum] env.stage3_near_prob -> 0.074
+  [curriculum] env.stage3_near_prob -> 0.073
+  [curriculum] env.stage3_near_prob -> 0.072
+  [curriculum] env.stage3_near_prob -> 0.071
+  [curriculum] env.stage3_near_prob -> 0.070
+回合  630 | 场景=train_area001_scenario001 | 阶段=3 | 奖励= -104.3 | 步数=452.9 | 覆盖率=  8.5% | 成功率=  29% | 任务得分= 17.9% | 超时率=  71% | 零覆盖超时=  67% | KL=0.0074 | KLema=0.0064 | clip=0.092 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.069
+  [curriculum] env.stage3_near_prob -> 0.068
+  [curriculum] env.stage3_near_prob -> 0.067
+  [curriculum] env.stage3_near_prob -> 0.066
+  [curriculum] env.stage3_near_prob -> 0.065
+  [curriculum] env.stage3_near_prob -> 0.064
+  [curriculum] env.stage3_near_prob -> 0.063
+  [curriculum] env.stage3_near_prob -> 0.062
+  [curriculum] env.stage3_near_prob -> 0.061
+  [curriculum] env.stage3_near_prob -> 0.060
+回合  640 | 场景=train_area003_scenario005 | 阶段=3 | 奖励= -106.6 | 步数=463.0 | 覆盖率=  8.1% | 成功率=  27% | 任务得分= 16.7% | 超时率=  73% | 零覆盖超时=  69% | KL=0.0055 | KLema=0.0063 | clip=0.054 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.059
+  [curriculum] env.stage3_near_prob -> 0.058
+  [curriculum] env.stage3_near_prob -> 0.057
+  [curriculum] env.stage3_near_prob -> 0.056
+  [curriculum] env.stage3_near_prob -> 0.055
+  [curriculum] env.stage3_near_prob -> 0.054
+  [curriculum] env.stage3_near_prob -> 0.053
+  [curriculum] env.stage3_near_prob -> 0.052
+  [curriculum] env.stage3_near_prob -> 0.051
+  [curriculum] env.stage3_near_prob -> 0.050
+回合  650 | 场景=train_area001_scenario003 | 阶段=3 | 奖励= -107.5 | 步数=468.7 | 覆盖率=  7.9% | 成功率=  27% | 任务得分= 16.4% | 超时率=  73% | 零覆盖超时=  70% | KL=0.0064 | KLema=0.0064 | clip=0.079 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.049
+  [curriculum] env.stage3_near_prob -> 0.048
+  [curriculum] env.stage3_near_prob -> 0.047
+  [curriculum] env.stage3_near_prob -> 0.046
+  [curriculum] env.stage3_near_prob -> 0.045
+  [curriculum] env.stage3_near_prob -> 0.044
+  [curriculum] env.stage3_near_prob -> 0.043
+  [curriculum] env.stage3_near_prob -> 0.042
+  [curriculum] env.stage3_near_prob -> 0.041
+  [curriculum] env.stage3_near_prob -> 0.040
+回合  660 | 场景=train_area003_scenario006 | 阶段=3 | 奖励= -109.6 | 步数=476.1 | 覆盖率=  7.0% | 成功率=  26% | 任务得分= 15.4% | 超时率=  74% | 零覆盖超时=  72% | KL=0.0055 | KLema=0.0063 | clip=0.059 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.039
+  [curriculum] env.stage3_near_prob -> 0.038
+  [curriculum] env.stage3_near_prob -> 0.037
+  [curriculum] env.stage3_near_prob -> 0.036
+  [curriculum] env.stage3_near_prob -> 0.035
+  [curriculum] env.stage3_near_prob -> 0.034
+  [curriculum] env.stage3_near_prob -> 0.033
+  [curriculum] env.stage3_near_prob -> 0.032
+  [curriculum] env.stage3_near_prob -> 0.031
+  [curriculum] env.stage3_near_prob -> 0.030
+回合  670 | 场景=train_area003_scenario005 | 阶段=3 | 奖励= -113.1 | 步数=482.1 | 覆盖率=  6.8% | 成功率=  25% | 任务得分= 14.8% | 超时率=  75% | 零覆盖超时=  74% | KL=0.0072 | KLema=0.0065 | clip=0.099 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.029
+  [curriculum] env.stage3_near_prob -> 0.028
+  [curriculum] env.stage3_near_prob -> 0.027
+  [curriculum] env.stage3_near_prob -> 0.026
+  [curriculum] env.stage3_near_prob -> 0.025
+  [curriculum] env.stage3_near_prob -> 0.024
+  [curriculum] env.stage3_near_prob -> 0.023
+  [curriculum] env.stage3_near_prob -> 0.022
+  [curriculum] env.stage3_near_prob -> 0.021
+  [curriculum] env.stage3_near_prob -> 0.020
+回合  680 | 场景=train_area004_scenario005 | 阶段=3 | 奖励= -109.8 | 步数=470.5 | 覆盖率=  7.5% | 成功率=  27% | 任务得分= 16.2% | 超时率=  73% | 零覆盖超时=  73% | KL=0.0072 | KLema=0.0065 | clip=0.099 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.019
+  [curriculum] env.stage3_near_prob -> 0.018
+  [curriculum] env.stage3_near_prob -> 0.017
+  [curriculum] env.stage3_near_prob -> 0.016
+  [curriculum] env.stage3_near_prob -> 0.015
+  [curriculum] env.stage3_near_prob -> 0.014
+  [curriculum] env.stage3_near_prob -> 0.013
+  [curriculum] env.stage3_near_prob -> 0.012
+  [curriculum] env.stage3_near_prob -> 0.011
+  [curriculum] env.stage3_near_prob -> 0.010
+回合  690 | 场景=train_area002_scenario004 | 阶段=3 | 奖励= -118.7 | 步数=497.0 | 覆盖率=  6.4% | 成功率=  23% | 任务得分= 13.5% | 超时率=  77% | 零覆盖超时=  76% | KL=0.0075 | KLema=0.0066 | clip=0.102 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.009
+  [curriculum] env.stage3_near_prob -> 0.008
+  [curriculum] env.stage3_near_prob -> 0.007
+  [curriculum] env.stage3_near_prob -> 0.006
+  [curriculum] env.stage3_near_prob -> 0.005
+  [curriculum] env.stage3_near_prob -> 0.004
+  [curriculum] env.stage3_near_prob -> 0.003
+  [curriculum] env.stage3_near_prob -> 0.002
+  [curriculum] env.stage3_near_prob -> 0.001
+  [curriculum] env.stage3_near_prob -> 0.000
+回合  700 | 场景=train_area001_scenario004 | 阶段=3 | 奖励= -121.2 | 步数=500.6 | 覆盖率=  6.0% | 成功率=  23% | 任务得分= 13.2% | 超时率=  77% | 零覆盖超时=  76% | KL=0.0052 | KLema=0.0065 | clip=0.058 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=700 | 阶段=3 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+评估阶段=3 | 回合数=30 | 任务得分=6.2% | 覆盖率=6.6% | 成功率=6.7% | 平均步数=573.1
+  -> 最佳验证模型分数: -43.3% (任务得分=6.2%)
+回合  710 | 场景=train_area003_scenario002 | 阶段=3 | 奖励= -121.8 | 步数=500.6 | 覆盖率=  6.5% | 成功率=  23% | 任务得分= 13.5% | 超时率=  77% | 零覆盖超时=  76% | KL=0.0064 | KLema=0.0064 | clip=0.080 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  720 | 场景=train_area001_scenario001 | 阶段=3 | 奖励= -121.0 | 步数=500.4 | 覆盖率=  6.6% | 成功率=  23% | 任务得分= 13.5% | 超时率=  77% | 零覆盖超时=  76% | KL=0.0071 | KLema=0.0065 | clip=0.095 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  730 | 场景=train_area004_scenario001 | 阶段=3 | 奖励= -117.5 | 步数=494.0 | 覆盖率=  6.6% | 成功率=  23% | 任务得分= 13.7% | 超时率=  77% | 零覆盖超时=  76% | KL=0.0051 | KLema=0.0064 | clip=0.054 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  740 | 场景=train_area004_scenario004 | 阶段=3 | 奖励= -113.5 | 步数=486.0 | 覆盖率=  7.1% | 成功率=  26% | 任务得分= 15.1% | 超时率=  74% | 零覆盖超时=  73% | KL=0.0054 | KLema=0.0063 | clip=0.074 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  750 | 场景=train_area004_scenario006 | 阶段=3 | 奖励= -112.4 | 步数=482.3 | 覆盖率=  7.1% | 成功率=  26% | 任务得分= 15.3% | 超时率=  74% | 零覆盖超时=  73% | KL=0.0064 | KLema=0.0063 | clip=0.085 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  760 | 场景=train_area003_scenario006 | 阶段=3 | 奖励= -111.7 | 步数=480.6 | 覆盖率=  7.3% | 成功率=  27% | 任务得分= 15.7% | 超时率=  73% | 零覆盖超时=  72% | KL=0.0061 | KLema=0.0063 | clip=0.088 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  770 | 场景=train_area002_scenario001 | 阶段=3 | 奖励= -110.5 | 步数=482.3 | 覆盖率=  7.2% | 成功率=  27% | 任务得分= 15.6% | 超时率=  73% | 零覆盖超时=  72% | KL=0.0060 | KLema=0.0061 | clip=0.071 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  780 | 场景=train_area004_scenario003 | 阶段=3 | 奖励= -116.0 | 步数=502.6 | 覆盖率=  6.1% | 成功率=  23% | 任务得分= 13.2% | 超时率=  77% | 零覆盖超时=  75% | KL=0.0067 | KLema=0.0062 | clip=0.096 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  790 | 场景=train_area004_scenario006 | 阶段=3 | 奖励= -109.4 | 步数=485.1 | 覆盖率=  6.9% | 成功率=  26% | 任务得分= 15.1% | 超时率=  74% | 零覆盖超时=  73% | KL=0.0054 | KLema=0.0061 | clip=0.066 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  800 | 场景=train_area002_scenario002 | 阶段=3 | 奖励= -105.1 | 步数=483.6 | 覆盖率=  7.2% | 成功率=  27% | 任务得分= 15.6% | 超时率=  73% | 零覆盖超时=  71% | KL=0.0077 | KLema=0.0062 | clip=0.093 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+
+======================================================================
+验证评估 | 回合=800 | 阶段=3 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+评估阶段=3 | 回合数=30 | 任务得分=7.9% | 覆盖率=9.8% | 成功率=6.7% | 平均步数=571.9
+  -> 最佳验证模型分数: -33.8% (任务得分=7.9%)
+回合  810 | 场景=train_area003_scenario004 | 阶段=3 | 奖励= -105.4 | 步数=486.9 | 覆盖率=  6.6% | 成功率=  27% | 任务得分= 15.2% | 超时率=  73% | 零覆盖超时=  71% | KL=0.0059 | KLema=0.0062 | clip=0.077 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  820 | 场景=train_area002_scenario003 | 阶段=3 | 奖励= -108.6 | 步数=496.3 | 覆盖率=  6.1% | 成功率=  25% | 任务得分= 14.0% | 超时率=  75% | 零覆盖超时=  73% | KL=0.0067 | KLema=0.0062 | clip=0.089 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  830 | 场景=train_area004_scenario006 | 阶段=3 | 奖励= -104.2 | 步数=486.5 | 覆盖率=  7.0% | 成功率=  29% | 任务得分= 16.0% | 超时率=  71% | 零覆盖超时=  69% | KL=0.0067 | KLema=0.0062 | clip=0.089 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  840 | 场景=train_area003_scenario001 | 阶段=3 | 奖励= -110.7 | 步数=502.1 | 覆盖率=  5.9% | 成功率=  25% | 任务得分= 13.7% | 超时率=  75% | 零覆盖超时=  73% | KL=0.0063 | KLema=0.0062 | clip=0.081 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  850 | 场景=train_area004_scenario005 | 阶段=3 | 奖励= -109.4 | 步数=503.3 | 覆盖率=  5.9% | 成功率=  25% | 任务得分= 13.7% | 超时率=  75% | 零覆盖超时=  72% | KL=0.0071 | KLema=0.0062 | clip=0.095 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  860 | 场景=train_area004_scenario006 | 阶段=3 | 奖励= -110.2 | 步数=510.5 | 覆盖率=  5.7% | 成功率=  23% | 任务得分= 12.7% | 超时率=  77% | 零覆盖超时=  73% | KL=0.0070 | KLema=0.0063 | clip=0.097 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  870 | 场景=train_area001_scenario002 | 阶段=3 | 奖励= -106.8 | 步数=500.6 | 覆盖率=  6.1% | 成功率=  25% | 任务得分= 13.9% | 超时率=  75% | 零覆盖超时=  71% | KL=0.0069 | KLema=0.0064 | clip=0.086 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  880 | 场景=train_area004_scenario005 | 阶段=3 | 奖励= -105.5 | 步数=494.7 | 覆盖率=  6.6% | 成功率=  26% | 任务得分= 14.6% | 超时率=  74% | 零覆盖超时=  70% | KL=0.0054 | KLema=0.0062 | clip=0.070 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  890 | 场景=train_area004_scenario005 | 阶段=3 | 奖励= -103.7 | 步数=490.6 | 覆盖率=  7.1% | 成功率=  28% | 任务得分= 15.6% | 超时率=  72% | 零覆盖超时=  68% | KL=0.0054 | KLema=0.0062 | clip=0.070 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  900 | 场景=train_area004_scenario006 | 阶段=3 | 奖励= -102.5 | 步数=490.2 | 覆盖率=  7.6% | 成功率=  30% | 任务得分= 16.4% | 超时率=  70% | 零覆盖超时=  67% | KL=0.0053 | KLema=0.0061 | clip=0.075 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=900 | 阶段=3 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+评估阶段=3 | 回合数=30 | 任务得分=18.5% | 覆盖率=21.2% | 成功率=20.0% | 平均步数=543.8
+  -> 最佳验证模型分数: -19.4% (任务得分=18.5%)
+回合  910 | 场景=train_area004_scenario004 | 阶段=3 | 奖励= -100.8 | 步数=489.4 | 覆盖率=  7.7% | 成功率=  31% | 任务得分= 16.9% | 超时率=  69% | 零覆盖超时=  66% | KL=0.0048 | KLema=0.0059 | clip=0.056 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  920 | 场景=train_area002_scenario006 | 阶段=3 | 奖励=  -95.4 | 步数=483.3 | 覆盖率=  8.7% | 成功率=  35% | 任务得分= 18.7% | 超时率=  65% | 零覆盖超时=  62% | KL=0.0058 | KLema=0.0059 | clip=0.071 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  930 | 场景=train_area001_scenario005 | 阶段=3 | 奖励=  -95.2 | 步数=481.7 | 覆盖率=  8.3% | 成功率=  34% | 任务得分= 18.3% | 超时率=  66% | 零覆盖超时=  63% | KL=0.0052 | KLema=0.0058 | clip=0.069 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  940 | 场景=train_area001_scenario004 | 阶段=3 | 奖励=  -90.5 | 步数=470.2 | 覆盖率=  9.0% | 成功率=  37% | 任务得分= 19.9% | 超时率=  63% | 零覆盖超时=  60% | KL=0.0047 | KLema=0.0057 | clip=0.062 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  950 | 场景=train_area002_scenario002 | 阶段=3 | 奖励=  -85.4 | 步数=453.1 | 覆盖率= 10.0% | 成功率=  40% | 任务得分= 21.9% | 超时率=  60% | 零覆盖超时=  58% | KL=0.0047 | KLema=0.0057 | clip=0.062 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  960 | 场景=train_area004_scenario005 | 阶段=3 | 奖励=  -76.0 | 步数=425.9 | 覆盖率= 11.3% | 成功率=  46% | 任务得分= 25.3% | 超时率=  54% | 零覆盖超时=  53% | KL=0.0055 | KLema=0.0057 | clip=0.073 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  970 | 场景=train_area004_scenario004 | 阶段=3 | 奖励=  -71.1 | 步数=413.2 | 覆盖率= 12.2% | 成功率=  49% | 任务得分= 27.0% | 超时率=  51% | 零覆盖超时=  50% | KL=0.0058 | KLema=0.0057 | clip=0.073 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  980 | 场景=train_area002_scenario002 | 阶段=3 | 奖励=  -63.4 | 步数=395.4 | 覆盖率= 13.3% | 成功率=  55% | 任务得分= 30.0% | 超时率=  45% | 零覆盖超时=  45% | KL=0.0049 | KLema=0.0056 | clip=0.060 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  990 | 场景=train_area003_scenario002 | 阶段=3 | 奖励=  -60.9 | 步数=392.3 | 覆盖率= 13.5% | 成功率=  56% | 任务得分= 30.5% | 超时率=  44% | 零覆盖超时=  44% | KL=0.0049 | KLema=0.0056 | clip=0.060 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1000 | 场景=train_area003_scenario005 | 阶段=3 | 奖励=  -60.1 | 步数=380.1 | 覆盖率= 13.6% | 成功率=  55% | 任务得分= 30.6% | 超时率=  45% | 零覆盖超时=  45% | KL=0.0063 | KLema=0.0057 | clip=0.077 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=1000 | 阶段=3 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+评估阶段=3 | 回合数=30 | 任务得分=21.1% | 覆盖率=22.0% | 成功率=23.3% | 平均步数=507.1
+  -> 最佳验证模型分数: -14.6% (任务得分=21.1%)
+回合 1010 | 场景=train_area003_scenario001 | 阶段=3 | 奖励=  -56.4 | 步数=367.5 | 覆盖率= 14.5% | 成功率=  57% | 任务得分= 32.1% | 超时率=  43% | 零覆盖超时=  43% | KL=0.0066 | KLema=0.0058 | clip=0.090 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 1020 | 场景=train_area001_scenario006 | 阶段=3 | 奖励=  -56.3 | 步数=363.2 | 覆盖率= 14.2% | 成功率=  56% | 任务得分= 31.8% | 超时率=  44% | 零覆盖超时=  44% | KL=0.0057 | KLema=0.0058 | clip=0.082 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 1030 | 场景=train_area001_scenario004 | 阶段=3 | 奖励=  -60.7 | 步数=376.1 | 覆盖率= 13.8% | 成功率=  54% | 任务得分= 30.6% | 超时率=  46% | 零覆盖超时=  46% | KL=0.0057 | KLema=0.0058 | clip=0.077 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1040 | 场景=train_area002_scenario004 | 阶段=3 | 奖励=  -61.4 | 步数=377.5 | 覆盖率= 13.6% | 成功率=  53% | 任务得分= 30.1% | 超时率=  47% | 零覆盖超时=  47% | KL=0.0084 | KLema=0.0060 | clip=0.102 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 1050 | 场景=train_area001_scenario006 | 阶段=3 | 奖励=  -60.4 | 步数=375.1 | 覆盖率= 13.6% | 成功率=  54% | 任务得分= 30.5% | 超时率=  46% | 零覆盖超时=  46% | KL=0.0069 | KLema=0.0061 | clip=0.084 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1060 | 场景=train_area004_scenario001 | 阶段=3 | 奖励=  -63.6 | 步数=388.0 | 覆盖率= 13.3% | 成功率=  53% | 任务得分= 29.6% | 超时率=  47% | 零覆盖超时=  47% | KL=0.0097 | KLema=0.0065 | clip=0.128 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 1070 | 场景=train_area003_scenario004 | 阶段=3 | 奖励=  -62.0 | 步数=385.6 | 覆盖率= 13.5% | 成功率=  54% | 任务得分= 30.1% | 超时率=  46% | 零覆盖超时=  46% | KL=0.0052 | KLema=0.0064 | clip=0.075 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1080 | 场景=train_area004_scenario004 | 阶段=3 | 奖励=  -62.4 | 步数=384.6 | 覆盖率= 13.4% | 成功率=  53% | 任务得分= 29.8% | 超时率=  47% | 零覆盖超时=  47% | KL=0.0052 | KLema=0.0064 | clip=0.075 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 1090 | 场景=train_area001_scenario003 | 阶段=3 | 奖励=  -64.6 | 步数=387.5 | 覆盖率= 13.1% | 成功率=  51% | 任务得分= 28.9% | 超时率=  49% | 零覆盖超时=  49% | KL=0.0085 | KLema=0.0066 | clip=0.107 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1100 | 场景=train_area003_scenario006 | 阶段=3 | 奖励=  -69.9 | 步数=399.7 | 覆盖率= 12.6% | 成功率=  49% | 任务得分= 27.7% | 超时率=  51% | 零覆盖超时=  51% | KL=0.0060 | KLema=0.0065 | clip=0.069 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+
+======================================================================
+验证评估 | 回合=1100 | 阶段=3 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+评估阶段=3 | 回合数=30 | 任务得分=8.1% | 覆盖率=10.2% | 成功率=6.7% | 平均步数=570.5
+回合 1110 | 场景=train_area004_scenario005 | 阶段=3 | 奖励=  -71.5 | 步数=408.9 | 覆盖率= 12.3% | 成功率=  49% | 任务得分= 27.2% | 超时率=  51% | 零覆盖超时=  51% | KL=0.0077 | KLema=0.0066 | clip=0.108 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1120 | 场景=train_area001_scenario005 | 阶段=3 | 奖励=  -70.2 | 步数=408.5 | 覆盖率= 12.5% | 成功率=  50% | 任务得分= 27.6% | 超时率=  50% | 零覆盖超时=  50% | KL=0.0062 | KLema=0.0066 | clip=0.079 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 1130 | 场景=train_area001_scenario005 | 阶段=3 | 奖励=  -65.6 | 步数=395.1 | 覆盖率= 13.3% | 成功率=  52% | 任务得分= 29.1% | 超时率=  48% | 零覆盖超时=  48% | KL=0.0054 | KLema=0.0065 | clip=0.071 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 1140 | 场景=train_area003_scenario004 | 阶段=3 | 奖励=  -63.8 | 步数=389.6 | 覆盖率= 13.8% | 成功率=  54% | 任务得分= 30.1% | 超时率=  46% | 零覆盖超时=  46% | KL=0.0055 | KLema=0.0064 | clip=0.070 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 1150 | 场景=train_area004_scenario002 | 阶段=3 | 奖励=  -60.9 | 步数=383.8 | 覆盖率= 14.2% | 成功率=  56% | 任务得分= 31.1% | 超时率=  44% | 零覆盖超时=  44% | KL=0.0047 | KLema=0.0062 | clip=0.065 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1160 | 场景=train_area003_scenario006 | 阶段=3 | 奖励=  -57.7 | 步数=371.4 | 覆盖率= 14.8% | 成功率=  58% | 任务得分= 32.4% | 超时率=  42% | 零覆盖超时=  42% | KL=0.0057 | KLema=0.0062 | clip=0.082 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1170 | 场景=train_area001_scenario001 | 阶段=3 | 奖励=  -58.9 | 步数=374.2 | 覆盖率= 14.7% | 成功率=  57% | 任务得分= 32.0% | 超时率=  43% | 零覆盖超时=  43% | KL=0.0057 | KLema=0.0062 | clip=0.082 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1180 | 场景=train_area004_scenario005 | 阶段=3 | 奖励=  -61.2 | 步数=380.7 | 覆盖率= 14.0% | 成功率=  55% | 任务得分= 30.8% | 超时率=  45% | 零覆盖超时=  45% | KL=0.0052 | KLema=0.0061 | clip=0.066 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1190 | 场景=train_area002_scenario006 | 阶段=3 | 奖励=  -61.8 | 步数=382.3 | 覆盖率= 13.7% | 成功率=  55% | 任务得分= 30.6% | 超时率=  45% | 零覆盖超时=  45% | KL=0.0057 | KLema=0.0060 | clip=0.064 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 1200 | 场景=train_area004_scenario002 | 阶段=3 | 奖励=  -55.8 | 步数=373.8 | 覆盖率= 14.1% | 成功率=  58% | 任务得分= 32.0% | 超时率=  42% | 零覆盖超时=  42% | KL=0.0054 | KLema=0.0060 | clip=0.078 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=1200 | 阶段=3 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+评估阶段=3 | 回合数=30 | 任务得分=21.5% | 覆盖率=20.4% | 成功率=26.7% | 平均步数=499.4
+回合 1210 | 场景=train_area003_scenario001 | 阶段=3 | 奖励=  -49.7 | 步数=353.6 | 覆盖率= 14.7% | 成功率=  61% | 任务得分= 33.9% | 超时率=  39% | 零覆盖超时=  39% | KL=0.0053 | KLema=0.0059 | clip=0.066 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1220 | 场景=train_area004_scenario006 | 阶段=3 | 奖励=  -45.2 | 步数=335.4 | 覆盖率= 15.4% | 成功率=  63% | 任务得分= 35.4% | 超时率=  37% | 零覆盖超时=  37% | KL=0.0053 | KLema=0.0059 | clip=0.066 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 1230 | 场景=train_area004_scenario001 | 阶段=3 | 奖励=  -41.9 | 步数=328.1 | 覆盖率= 15.8% | 成功率=  65% | 任务得分= 36.5% | 超时率=  35% | 零覆盖超时=  35% | KL=0.0084 | KLema=0.0062 | clip=0.106 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1240 | 场景=train_area002_scenario001 | 阶段=3 | 奖励=  -37.2 | 步数=316.0 | 覆盖率= 16.3% | 成功率=  67% | 任务得分= 37.7% | 超时率=  33% | 零覆盖超时=  33% | KL=0.0066 | KLema=0.0062 | clip=0.076 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1250 | 场景=train_area003_scenario006 | 阶段=3 | 奖励=  -42.0 | 步数=330.1 | 覆盖率= 15.6% | 成功率=  64% | 任务得分= 36.0% | 超时率=  36% | 零覆盖超时=  36% | KL=0.0066 | KLema=0.0062 | clip=0.076 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1260 | 场景=train_area003_scenario004 | 阶段=3 | 奖励=  -43.7 | 步数=332.3 | 覆盖率= 15.2% | 成功率=  62% | 任务得分= 35.1% | 超时率=  38% | 零覆盖超时=  37% | KL=0.0070 | KLema=0.0063 | clip=0.087 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 1270 | 场景=train_area002_scenario005 | 阶段=3 | 奖励=  -46.3 | 步数=337.4 | 覆盖率= 14.7% | 成功率=  60% | 任务得分= 34.1% | 超时率=  40% | 零覆盖超时=  39% | KL=0.0067 | KLema=0.0063 | clip=0.085 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 1280 | 场景=train_area004_scenario006 | 阶段=3 | 奖励=  -41.7 | 步数=323.4 | 覆盖率= 15.7% | 成功率=  63% | 任务得分= 36.0% | 超时率=  37% | 零覆盖超时=  36% | KL=0.0057 | KLema=0.0063 | clip=0.065 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 1290 | 场景=train_area001_scenario003 | 阶段=3 | 奖励=  -42.7 | 步数=329.6 | 覆盖率= 15.5% | 成功率=  62% | 任务得分= 35.4% | 超时率=  38% | 零覆盖超时=  36% | KL=0.0052 | KLema=0.0061 | clip=0.074 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 1300 | 场景=train_area003_scenario003 | 阶段=3 | 奖励=  -44.4 | 步数=331.3 | 覆盖率= 15.3% | 成功率=  61% | 任务得分= 34.9% | 超时率=  39% | 零覆盖超时=  37% | KL=0.0064 | KLema=0.0062 | clip=0.092 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=1300 | 阶段=3 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+评估阶段=3 | 回合数=30 | 任务得分=23.1% | 覆盖率=22.8% | 成功率=26.7% | 平均步数=489.2
+  -> 最佳验证模型分数: -11.8% (任务得分=23.1%)
+回合 1310 | 场景=train_area003_scenario002 | 阶段=3 | 奖励=  -48.4 | 步数=342.8 | 覆盖率= 14.8% | 成功率=  59% | 任务得分= 33.7% | 超时率=  41% | 零覆盖超时=  39% | KL=0.0064 | KLema=0.0062 | clip=0.092 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 1320 | 场景=train_area004_scenario004 | 阶段=3 | 奖励=  -54.5 | 步数=359.7 | 覆盖率= 14.0% | 成功率=  56% | 任务得分= 31.8% | 超时率=  44% | 零覆盖超时=  42% | KL=0.0049 | KLema=0.0060 | clip=0.060 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 1330 | 场景=train_area001_scenario004 | 阶段=3 | 奖励=  -57.8 | 步数=370.5 | 覆盖率= 13.6% | 成功率=  55% | 任务得分= 31.0% | 超时率=  45% | 零覆盖超时=  43% | KL=0.0053 | KLema=0.0060 | clip=0.075 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 1340 | 场景=train_area004_scenario005 | 阶段=3 | 奖励=  -60.2 | 步数=375.0 | 覆盖率= 13.6% | 成功率=  53% | 任务得分= 30.2% | 超时率=  47% | 零覆盖超时=  45% | KL=0.0046 | KLema=0.0058 | clip=0.057 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 1350 | 场景=train_area003_scenario006 | 阶段=3 | 奖励=  -60.4 | 步数=371.6 | 覆盖率= 13.5% | 成功率=  53% | 任务得分= 30.2% | 超时率=  47% | 零覆盖超时=  45% | KL=0.0077 | KLema=0.0060 | clip=0.080 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1360 | 场景=train_area004_scenario004 | 阶段=3 | 奖励=  -60.9 | 步数=380.1 | 覆盖率= 13.5% | 成功率=  54% | 任务得分= 30.3% | 超时率=  46% | 零覆盖超时=  45% | KL=0.0032 | KLema=0.0057 | clip=0.042 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 1370 | 场景=train_area002_scenario006 | 阶段=3 | 奖励=  -59.6 | 步数=377.0 | 覆盖率= 13.8% | 成功率=  55% | 任务得分= 30.8% | 超时率=  45% | 零覆盖超时=  44% | KL=0.0045 | KLema=0.0056 | clip=0.055 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 1380 | 场景=train_area004_scenario004 | 阶段=3 | 奖励=  -59.8 | 步数=381.1 | 覆盖率= 13.5% | 成功率=  55% | 任务得分= 30.5% | 超时率=  45% | 零覆盖超时=  44% | KL=0.0044 | KLema=0.0055 | clip=0.055 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 1390 | 场景=train_area001_scenario006 | 阶段=3 | 奖励=  -55.6 | 步数=363.3 | 覆盖率= 14.3% | 成功率=  58% | 任务得分= 32.5% | 超时率=  42% | 零覆盖超时=  42% | KL=0.0044 | KLema=0.0055 | clip=0.055 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1400 | 场景=train_area001_scenario001 | 阶段=3 | 奖励=  -51.8 | 步数=353.0 | 覆盖率= 15.3% | 成功率=  60% | 任务得分= 33.9% | 超时率=  40% | 零覆盖超时=  40% | KL=0.0065 | KLema=0.0056 | clip=0.088 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=1400 | 阶段=3 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+评估阶段=3 | 回合数=30 | 任务得分=19.6% | 覆盖率=19.5% | 成功率=23.3% | 平均步数=515.8
+回合 1410 | 场景=train_area003_scenario006 | 阶段=3 | 奖励=  -50.3 | 步数=345.6 | 覆盖率= 15.4% | 成功率=  60% | 任务得分= 34.2% | 超时率=  40% | 零覆盖超时=  40% | KL=0.0065 | KLema=0.0056 | clip=0.088 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1420 | 场景=train_area003_scenario001 | 阶段=3 | 奖励=  -44.7 | 步数=331.2 | 覆盖率= 16.3% | 成功率=  63% | 任务得分= 36.0% | 超时率=  37% | 零覆盖超时=  37% | KL=0.0034 | KLema=0.0054 | clip=0.048 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1430 | 场景=train_area004_scenario006 | 阶段=3 | 奖励=  -41.8 | 步数=324.9 | 覆盖率= 16.7% | 成功率=  65% | 任务得分= 37.0% | 超时率=  35% | 零覆盖超时=  35% | KL=0.0044 | KLema=0.0053 | clip=0.054 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1440 | 场景=train_area001_scenario002 | 阶段=3 | 奖励=  -39.0 | 步数=325.1 | 覆盖率= 17.0% | 成功率=  68% | 任务得分= 38.1% | 超时率=  32% | 零覆盖超时=  32% | KL=0.0037 | KLema=0.0051 | clip=0.045 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 1450 | 场景=train_area004_scenario003 | 阶段=3 | 奖励=  -37.6 | 步数=321.9 | 覆盖率= 17.3% | 成功率=  68% | 任务得分= 38.3% | 超时率=  32% | 零覆盖超时=  32% | KL=0.0037 | KLema=0.0051 | clip=0.045 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 1460 | 场景=train_area004_scenario001 | 阶段=3 | 奖励=  -39.4 | 步数=328.8 | 覆盖率= 17.1% | 成功率=  67% | 任务得分= 37.7% | 超时率=  33% | 零覆盖超时=  32% | KL=0.0079 | KLema=0.0054 | clip=0.092 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1470 | 场景=train_area002_scenario002 | 阶段=3 | 奖励=  -38.2 | 步数=330.3 | 覆盖率= 17.1% | 成功率=  68% | 任务得分= 37.9% | 超时率=  32% | 零覆盖超时=  31% | KL=0.0053 | KLema=0.0054 | clip=0.069 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 1480 | 场景=train_area003_scenario003 | 阶段=3 | 奖励=  -40.4 | 步数=336.3 | 覆盖率= 17.3% | 成功率=  67% | 任务得分= 37.5% | 超时率=  33% | 零覆盖超时=  32% | KL=0.0035 | KLema=0.0052 | clip=0.046 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1490 | 场景=train_area004_scenario004 | 阶段=3 | 奖励=  -38.2 | 步数=332.8 | 覆盖率= 17.4% | 成功率=  68% | 任务得分= 38.0% | 超时率=  32% | 零覆盖超时=  31% | KL=0.0066 | KLema=0.0053 | clip=0.087 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1500 | 场景=train_area002_scenario001 | 阶段=3 | 奖励=  -39.2 | 步数=336.1 | 覆盖率= 16.8% | 成功率=  68% | 任务得分= 37.6% | 超时率=  32% | 零覆盖超时=  31% | KL=0.0066 | KLema=0.0053 | clip=0.087 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=1500 | 阶段=3 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+评估阶段=3 | 回合数=30 | 任务得分=29.2% | 覆盖率=27.7% | 成功率=36.7% | 平均步数=469.0
+  -> 最佳验证模型分数: 1.3% (任务得分=29.2%)
+回合 1510 | 场景=train_area001_scenario001 | 阶段=3 | 奖励=  -41.3 | 步数=347.8 | 覆盖率= 16.6% | 成功率=  67% | 任务得分= 36.8% | 超时率=  33% | 零覆盖超时=  32% | KL=0.0055 | KLema=0.0054 | clip=0.075 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1520 | 场景=train_area003_scenario006 | 阶段=3 | 奖励=  -36.7 | 步数=334.3 | 覆盖率= 17.3% | 成功率=  70% | 任务得分= 38.5% | 超时率=  30% | 零覆盖超时=  29% | KL=0.0036 | KLema=0.0052 | clip=0.044 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1530 | 场景=train_area001_scenario002 | 阶段=3 | 奖励=  -37.9 | 步数=335.7 | 覆盖率= 16.9% | 成功率=  68% | 任务得分= 37.7% | 超时率=  32% | 零覆盖超时=  31% | KL=0.0057 | KLema=0.0052 | clip=0.067 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 1540 | 场景=train_area004_scenario001 | 阶段=3 | 奖励=  -38.0 | 步数=332.8 | 覆盖率= 17.1% | 成功率=  68% | 任务得分= 37.8% | 超时率=  32% | 零覆盖超时=  31% | KL=0.0057 | KLema=0.0052 | clip=0.067 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1550 | 场景=train_area003_scenario005 | 阶段=3 | 奖励=  -35.5 | 步数=333.0 | 覆盖率= 17.4% | 成功率=  71% | 任务得分= 38.9% | 超时率=  29% | 零覆盖超时=  28% | KL=0.0057 | KLema=0.0053 | clip=0.072 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+
+  [stage3 curriculum] target 20% -> 35% | avg_coverage=19.3% | success=80.0% | zero_timeout=20.0%
+  [curriculum] env.stage3_target -> 0.35
+  [curriculum] env.stage3_near_prob -> 0.250
+  [curriculum] env.stage3_near_prob -> 0.249
+回合 1560 | 场景=train_area002_scenario002 | 阶段=3 | 奖励=  -31.8 | 步数=312.7 | 覆盖率= 17.7% | 成功率=  72% | 任务得分= 40.0% | 超时率=  28% | 零覆盖超时=  28% | KL=0.0061 | KLema=0.0054 | clip=0.079 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.248
+  [curriculum] env.stage3_near_prob -> 0.247
+  [curriculum] env.stage3_near_prob -> 0.246
+  [curriculum] env.stage3_near_prob -> 0.245
+  [curriculum] env.stage3_near_prob -> 0.244
+  [curriculum] env.stage3_near_prob -> 0.243
+  [curriculum] env.stage3_near_prob -> 0.242
+  [curriculum] env.stage3_near_prob -> 0.241
+  [curriculum] env.stage3_near_prob -> 0.240
+  [curriculum] env.stage3_near_prob -> 0.239
+回合 1570 | 场景=train_area002_scenario002 | 阶段=3 | 奖励=  -24.9 | 步数=289.7 | 覆盖率= 20.3% | 成功率=  76% | 任务得分= 43.3% | 超时率=  24% | 零覆盖超时=  24% | KL=0.0061 | KLema=0.0054 | clip=0.079 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.238
+  [curriculum] env.stage3_near_prob -> 0.237
+  [curriculum] env.stage3_near_prob -> 0.236
+  [curriculum] env.stage3_near_prob -> 0.235
+  [curriculum] env.stage3_near_prob -> 0.234
+  [curriculum] env.stage3_near_prob -> 0.233
+  [curriculum] env.stage3_near_prob -> 0.232
+  [curriculum] env.stage3_near_prob -> 0.231
+  [curriculum] env.stage3_near_prob -> 0.230
+  [curriculum] env.stage3_near_prob -> 0.229
+回合 1580 | 场景=train_area003_scenario002 | 阶段=3 | 奖励=  -22.2 | 步数=279.5 | 覆盖率= 21.4% | 成功率=  77% | 任务得分= 44.5% | 超时率=  23% | 零覆盖超时=  23% | KL=0.0053 | KLema=0.0054 | clip=0.076 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.228
+  [curriculum] env.stage3_near_prob -> 0.227
+  [curriculum] env.stage3_near_prob -> 0.226
+  [curriculum] env.stage3_near_prob -> 0.225
+  [curriculum] env.stage3_near_prob -> 0.224
+  [curriculum] env.stage3_near_prob -> 0.223
+  [curriculum] env.stage3_near_prob -> 0.222
+  [curriculum] env.stage3_near_prob -> 0.221
+  [curriculum] env.stage3_near_prob -> 0.220
+  [curriculum] env.stage3_near_prob -> 0.219
+回合 1590 | 场景=train_area003_scenario006 | 阶段=3 | 奖励=  -23.4 | 步数=283.4 | 覆盖率= 22.8% | 成功率=  77% | 任务得分= 45.1% | 超时率=  23% | 零覆盖超时=  23% | KL=0.0053 | KLema=0.0054 | clip=0.076 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.218
+  [curriculum] env.stage3_near_prob -> 0.217
+  [curriculum] env.stage3_near_prob -> 0.216
+  [curriculum] env.stage3_near_prob -> 0.215
+  [curriculum] env.stage3_near_prob -> 0.214
+  [curriculum] env.stage3_near_prob -> 0.213
+  [curriculum] env.stage3_near_prob -> 0.212
+  [curriculum] env.stage3_near_prob -> 0.211
+  [curriculum] env.stage3_near_prob -> 0.210
+  [curriculum] env.stage3_near_prob -> 0.209
+回合 1600 | 场景=train_area002_scenario005 | 阶段=3 | 奖励=  -17.8 | 步数=270.5 | 覆盖率= 25.1% | 成功率=  80% | 任务得分= 47.5% | 超时率=  20% | 零覆盖超时=  20% | KL=0.0056 | KLema=0.0054 | clip=0.073 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=1600 | 阶段=3 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+评估阶段=3 | 回合数=30 | 任务得分=13.8% | 覆盖率=16.4% | 成功率=13.3% | 平均步数=552.2
+  [curriculum] env.stage3_near_prob -> 0.208
+  [curriculum] env.stage3_near_prob -> 0.207
+  [curriculum] env.stage3_near_prob -> 0.206
+  [curriculum] env.stage3_near_prob -> 0.205
+  [curriculum] env.stage3_near_prob -> 0.204
+  [curriculum] env.stage3_near_prob -> 0.203
+  [curriculum] env.stage3_near_prob -> 0.202
+  [curriculum] env.stage3_near_prob -> 0.201
+  [curriculum] env.stage3_near_prob -> 0.200
+  [curriculum] env.stage3_near_prob -> 0.199
+回合 1610 | 场景=train_area004_scenario005 | 阶段=3 | 奖励=  -14.5 | 步数=257.1 | 覆盖率= 26.7% | 成功率=  82% | 任务得分= 49.4% | 超时率=  18% | 零覆盖超时=  18% | KL=0.0056 | KLema=0.0054 | clip=0.073 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.198
+  [curriculum] env.stage3_near_prob -> 0.197
+  [curriculum] env.stage3_near_prob -> 0.196
+  [curriculum] env.stage3_near_prob -> 0.195
+  [curriculum] env.stage3_near_prob -> 0.194
+  [curriculum] env.stage3_near_prob -> 0.193
+  [curriculum] env.stage3_near_prob -> 0.192
+  [curriculum] env.stage3_near_prob -> 0.191
+  [curriculum] env.stage3_near_prob -> 0.190
+  [curriculum] env.stage3_near_prob -> 0.189
+回合 1620 | 场景=train_area003_scenario006 | 阶段=3 | 奖励=  -16.4 | 步数=264.1 | 覆盖率= 27.4% | 成功率=  80% | 任务得分= 48.9% | 超时率=  20% | 零覆盖超时=  19% | KL=0.0101 | KLema=0.0059 | clip=0.100 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.188
+  [curriculum] env.stage3_near_prob -> 0.187
+  [curriculum] env.stage3_near_prob -> 0.186
+  [curriculum] env.stage3_near_prob -> 0.185
+  [curriculum] env.stage3_near_prob -> 0.184
+  [curriculum] env.stage3_near_prob -> 0.183
+  [curriculum] env.stage3_near_prob -> 0.182
+  [curriculum] env.stage3_near_prob -> 0.181
+  [curriculum] env.stage3_near_prob -> 0.180
+  [curriculum] env.stage3_near_prob -> 0.179
+回合 1630 | 场景=train_area002_scenario006 | 阶段=3 | 奖励=  -17.8 | 步数=271.4 | 覆盖率= 28.3% | 成功率=  80% | 任务得分= 49.1% | 超时率=  20% | 零覆盖超时=  18% | KL=0.0084 | KLema=0.0061 | clip=0.096 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.178
+  [curriculum] env.stage3_near_prob -> 0.177
+  [curriculum] env.stage3_near_prob -> 0.176
+  [curriculum] env.stage3_near_prob -> 0.175
+  [curriculum] env.stage3_near_prob -> 0.174
+  [curriculum] env.stage3_near_prob -> 0.173
+  [curriculum] env.stage3_near_prob -> 0.172
+  [curriculum] env.stage3_near_prob -> 0.171
+  [curriculum] env.stage3_near_prob -> 0.170
+  [curriculum] env.stage3_near_prob -> 0.169
+回合 1640 | 场景=train_area004_scenario003 | 阶段=3 | 奖励=  -20.8 | 步数=275.8 | 覆盖率= 28.3% | 成功率=  77% | 任务得分= 48.0% | 超时率=  23% | 零覆盖超时=  21% | KL=0.0066 | KLema=0.0062 | clip=0.068 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.168
+  [curriculum] env.stage3_near_prob -> 0.167
+  [curriculum] env.stage3_near_prob -> 0.166
+  [curriculum] env.stage3_near_prob -> 0.165
+  [curriculum] env.stage3_near_prob -> 0.164
+  [curriculum] env.stage3_near_prob -> 0.163
+  [curriculum] env.stage3_near_prob -> 0.162
+  [curriculum] env.stage3_near_prob -> 0.161
+  [curriculum] env.stage3_near_prob -> 0.160
+  [curriculum] env.stage3_near_prob -> 0.159
+回合 1650 | 场景=train_area004_scenario001 | 阶段=3 | 奖励=  -23.7 | 步数=273.9 | 覆盖率= 29.3% | 成功率=  75% | 任务得分= 48.0% | 超时率=  25% | 零覆盖超时=  23% | KL=0.0060 | KLema=0.0061 | clip=0.072 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.158
+  [curriculum] env.stage3_near_prob -> 0.157
+  [curriculum] env.stage3_near_prob -> 0.156
+  [curriculum] env.stage3_near_prob -> 0.155
+  [curriculum] env.stage3_near_prob -> 0.154
+  [curriculum] env.stage3_near_prob -> 0.153
+  [curriculum] env.stage3_near_prob -> 0.152
+  [curriculum] env.stage3_near_prob -> 0.151
+  [curriculum] env.stage3_near_prob -> 0.150
+  [curriculum] env.stage3_near_prob -> 0.149
+回合 1660 | 场景=train_area002_scenario001 | 阶段=3 | 奖励=  -22.2 | 步数=272.8 | 覆盖率= 30.8% | 成功率=  76% | 任务得分= 49.1% | 超时率=  24% | 零覆盖超时=  22% | KL=0.0060 | KLema=0.0061 | clip=0.072 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.148
+  [curriculum] env.stage3_near_prob -> 0.147
+  [curriculum] env.stage3_near_prob -> 0.146
+  [curriculum] env.stage3_near_prob -> 0.145
+  [curriculum] env.stage3_near_prob -> 0.144
+  [curriculum] env.stage3_near_prob -> 0.143
+  [curriculum] env.stage3_near_prob -> 0.142
+  [curriculum] env.stage3_near_prob -> 0.141
+  [curriculum] env.stage3_near_prob -> 0.140
+  [curriculum] env.stage3_near_prob -> 0.139
+回合 1670 | 场景=train_area002_scenario001 | 阶段=3 | 奖励=  -25.0 | 步数=283.9 | 覆盖率= 30.3% | 成功率=  75% | 任务得分= 48.2% | 超时率=  25% | 零覆盖超时=  23% | KL=0.0050 | KLema=0.0060 | clip=0.068 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.138
+  [curriculum] env.stage3_near_prob -> 0.137
+  [curriculum] env.stage3_near_prob -> 0.136
+  [curriculum] env.stage3_near_prob -> 0.135
+  [curriculum] env.stage3_near_prob -> 0.134
+  [curriculum] env.stage3_near_prob -> 0.133
+  [curriculum] env.stage3_near_prob -> 0.132
+  [curriculum] env.stage3_near_prob -> 0.131
+  [curriculum] env.stage3_near_prob -> 0.130
+  [curriculum] env.stage3_near_prob -> 0.129
+回合 1680 | 场景=train_area003_scenario004 | 阶段=3 | 奖励=  -27.0 | 步数=286.9 | 覆盖率= 29.8% | 成功率=  74% | 任务得分= 47.6% | 超时率=  26% | 零覆盖超时=  23% | KL=0.0087 | KLema=0.0063 | clip=0.127 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.128
+  [curriculum] env.stage3_near_prob -> 0.127
+  [curriculum] env.stage3_near_prob -> 0.126
+  [curriculum] env.stage3_near_prob -> 0.125
+  [curriculum] env.stage3_near_prob -> 0.124
+  [curriculum] env.stage3_near_prob -> 0.123
+  [curriculum] env.stage3_near_prob -> 0.122
+  [curriculum] env.stage3_near_prob -> 0.121
+  [curriculum] env.stage3_near_prob -> 0.120
+  [curriculum] env.stage3_near_prob -> 0.119
+回合 1690 | 场景=train_area001_scenario005 | 阶段=3 | 奖励=  -28.3 | 步数=298.8 | 覆盖率= 29.1% | 成功率=  73% | 任务得分= 46.5% | 超时率=  27% | 零覆盖超时=  24% | KL=0.0087 | KLema=0.0063 | clip=0.127 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.118
+  [curriculum] env.stage3_near_prob -> 0.117
+  [curriculum] env.stage3_near_prob -> 0.116
+  [curriculum] env.stage3_near_prob -> 0.115
+  [curriculum] env.stage3_near_prob -> 0.114
+  [curriculum] env.stage3_near_prob -> 0.113
+  [curriculum] env.stage3_near_prob -> 0.112
+  [curriculum] env.stage3_near_prob -> 0.111
+  [curriculum] env.stage3_near_prob -> 0.110
+  [curriculum] env.stage3_near_prob -> 0.109
+回合 1700 | 场景=train_area004_scenario006 | 阶段=3 | 奖励=  -33.2 | 步数=311.7 | 覆盖率= 28.0% | 成功率=  70% | 任务得分= 44.6% | 超时率=  30% | 零覆盖超时=  26% | KL=0.0059 | KLema=0.0063 | clip=0.057 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=1700 | 阶段=3 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+评估阶段=3 | 回合数=30 | 任务得分=23.7% | 覆盖率=23.6% | 成功率=26.7% | 平均步数=484.9
+  [curriculum] env.stage3_near_prob -> 0.108
+  [curriculum] env.stage3_near_prob -> 0.107
+  [curriculum] env.stage3_near_prob -> 0.106
+  [curriculum] env.stage3_near_prob -> 0.105
+  [curriculum] env.stage3_near_prob -> 0.104
+  [curriculum] env.stage3_near_prob -> 0.103
+  [curriculum] env.stage3_near_prob -> 0.102
+  [curriculum] env.stage3_near_prob -> 0.101
+  [curriculum] env.stage3_near_prob -> 0.100
+  [curriculum] env.stage3_near_prob -> 0.099
+回合 1710 | 场景=train_area001_scenario004 | 阶段=3 | 奖励=  -36.3 | 步数=324.9 | 覆盖率= 27.5% | 成功率=  68% | 任务得分= 43.3% | 超时率=  32% | 零覆盖超时=  27% | KL=0.0062 | KLema=0.0063 | clip=0.090 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.098
+  [curriculum] env.stage3_near_prob -> 0.097
+  [curriculum] env.stage3_near_prob -> 0.096
+  [curriculum] env.stage3_near_prob -> 0.095
+  [curriculum] env.stage3_near_prob -> 0.094
+  [curriculum] env.stage3_near_prob -> 0.093
+  [curriculum] env.stage3_near_prob -> 0.092
+  [curriculum] env.stage3_near_prob -> 0.091
+  [curriculum] env.stage3_near_prob -> 0.090
+  [curriculum] env.stage3_near_prob -> 0.089
+回合 1720 | 场景=train_area003_scenario001 | 阶段=3 | 奖励=  -36.2 | 步数=324.7 | 覆盖率= 27.7% | 成功率=  69% | 任务得分= 43.7% | 超时率=  31% | 零覆盖超时=  27% | KL=0.0075 | KLema=0.0064 | clip=0.106 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.088
+  [curriculum] env.stage3_near_prob -> 0.087
+  [curriculum] env.stage3_near_prob -> 0.086
+  [curriculum] env.stage3_near_prob -> 0.085
+  [curriculum] env.stage3_near_prob -> 0.084
+  [curriculum] env.stage3_near_prob -> 0.083
+  [curriculum] env.stage3_near_prob -> 0.082
+  [curriculum] env.stage3_near_prob -> 0.081
+  [curriculum] env.stage3_near_prob -> 0.080
+  [curriculum] env.stage3_near_prob -> 0.079
+回合 1730 | 场景=train_area002_scenario003 | 阶段=3 | 奖励=  -34.1 | 步数=314.4 | 覆盖率= 28.2% | 成功率=  70% | 任务得分= 44.6% | 超时率=  30% | 零覆盖超时=  27% | KL=0.0075 | KLema=0.0064 | clip=0.106 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.078
+  [curriculum] env.stage3_near_prob -> 0.077
+  [curriculum] env.stage3_near_prob -> 0.076
+  [curriculum] env.stage3_near_prob -> 0.075
+  [curriculum] env.stage3_near_prob -> 0.074
+  [curriculum] env.stage3_near_prob -> 0.073
+  [curriculum] env.stage3_near_prob -> 0.072
+  [curriculum] env.stage3_near_prob -> 0.071
+  [curriculum] env.stage3_near_prob -> 0.070
+  [curriculum] env.stage3_near_prob -> 0.069
+回合 1740 | 场景=train_area001_scenario004 | 阶段=3 | 奖励=  -33.9 | 步数=319.8 | 覆盖率= 28.8% | 成功率=  72% | 任务得分= 45.4% | 超时率=  28% | 零覆盖超时=  25% | KL=0.0062 | KLema=0.0064 | clip=0.066 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.068
+  [curriculum] env.stage3_near_prob -> 0.067
+  [curriculum] env.stage3_near_prob -> 0.066
+  [curriculum] env.stage3_near_prob -> 0.065
+  [curriculum] env.stage3_near_prob -> 0.064
+  [curriculum] env.stage3_near_prob -> 0.063
+  [curriculum] env.stage3_near_prob -> 0.062
+  [curriculum] env.stage3_near_prob -> 0.061
+  [curriculum] env.stage3_near_prob -> 0.060
+  [curriculum] env.stage3_near_prob -> 0.059
+回合 1750 | 场景=train_area001_scenario005 | 阶段=3 | 奖励=  -34.3 | 步数=322.9 | 覆盖率= 28.5% | 成功率=  72% | 任务得分= 45.1% | 超时率=  28% | 零覆盖超时=  25% | KL=0.0062 | KLema=0.0063 | clip=0.085 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.058
+  [curriculum] env.stage3_near_prob -> 0.057
+  [curriculum] env.stage3_near_prob -> 0.056
+  [curriculum] env.stage3_near_prob -> 0.055
+  [curriculum] env.stage3_near_prob -> 0.054
+  [curriculum] env.stage3_near_prob -> 0.053
+  [curriculum] env.stage3_near_prob -> 0.052
+  [curriculum] env.stage3_near_prob -> 0.051
+  [curriculum] env.stage3_near_prob -> 0.050
+  [curriculum] env.stage3_near_prob -> 0.049
+回合 1760 | 场景=train_area003_scenario006 | 阶段=3 | 奖励=  -38.9 | 步数=335.1 | 覆盖率= 27.8% | 成功率=  70% | 任务得分= 43.8% | 超时率=  30% | 零覆盖超时=  27% | KL=0.0086 | KLema=0.0066 | clip=0.113 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.048
+  [curriculum] env.stage3_near_prob -> 0.047
+  [curriculum] env.stage3_near_prob -> 0.046
+  [curriculum] env.stage3_near_prob -> 0.045
+  [curriculum] env.stage3_near_prob -> 0.044
+  [curriculum] env.stage3_near_prob -> 0.043
+  [curriculum] env.stage3_near_prob -> 0.042
+  [curriculum] env.stage3_near_prob -> 0.041
+  [curriculum] env.stage3_near_prob -> 0.040
+  [curriculum] env.stage3_near_prob -> 0.039
+回合 1770 | 场景=train_area002_scenario004 | 阶段=3 | 奖励=  -43.7 | 步数=348.8 | 覆盖率= 26.6% | 成功率=  67% | 任务得分= 41.8% | 超时率=  33% | 零覆盖超时=  30% | KL=0.0061 | KLema=0.0065 | clip=0.083 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.038
+  [curriculum] env.stage3_near_prob -> 0.037
+  [curriculum] env.stage3_near_prob -> 0.036
+  [curriculum] env.stage3_near_prob -> 0.035
+  [curriculum] env.stage3_near_prob -> 0.034
+  [curriculum] env.stage3_near_prob -> 0.033
+  [curriculum] env.stage3_near_prob -> 0.032
+  [curriculum] env.stage3_near_prob -> 0.031
+  [curriculum] env.stage3_near_prob -> 0.030
+  [curriculum] env.stage3_near_prob -> 0.029
+回合 1780 | 场景=train_area004_scenario005 | 阶段=3 | 奖励=  -42.6 | 步数=352.4 | 覆盖率= 26.2% | 成功率=  67% | 任务得分= 41.5% | 超时率=  33% | 零覆盖超时=  30% | KL=0.0074 | KLema=0.0066 | clip=0.060 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.028
+  [curriculum] env.stage3_near_prob -> 0.027
+  [curriculum] env.stage3_near_prob -> 0.026
+  [curriculum] env.stage3_near_prob -> 0.025
+  [curriculum] env.stage3_near_prob -> 0.024
+  [curriculum] env.stage3_near_prob -> 0.023
+  [curriculum] env.stage3_near_prob -> 0.022
+  [curriculum] env.stage3_near_prob -> 0.021
+  [curriculum] env.stage3_near_prob -> 0.020
+  [curriculum] env.stage3_near_prob -> 0.019
+回合 1790 | 场景=train_area003_scenario006 | 阶段=3 | 奖励=  -40.6 | 步数=340.9 | 覆盖率= 26.7% | 成功率=  68% | 任务得分= 42.4% | 超时率=  32% | 零覆盖超时=  29% | KL=0.0074 | KLema=0.0066 | clip=0.060 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.018
+  [curriculum] env.stage3_near_prob -> 0.017
+  [curriculum] env.stage3_near_prob -> 0.016
+  [curriculum] env.stage3_near_prob -> 0.015
+  [curriculum] env.stage3_near_prob -> 0.014
+  [curriculum] env.stage3_near_prob -> 0.013
+  [curriculum] env.stage3_near_prob -> 0.012
+  [curriculum] env.stage3_near_prob -> 0.011
+  [curriculum] env.stage3_near_prob -> 0.010
+  [curriculum] env.stage3_near_prob -> 0.009
+回合 1800 | 场景=train_area002_scenario006 | 阶段=3 | 奖励=  -44.1 | 步数=353.0 | 覆盖率= 26.0% | 成功率=  66% | 任务得分= 41.1% | 超时率=  34% | 零覆盖超时=  31% | KL=0.0067 | KLema=0.0066 | clip=0.097 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=1800 | 阶段=3 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+评估阶段=3 | 回合数=30 | 任务得分=19.5% | 覆盖率=21.3% | 成功率=20.0% | 平均步数=513.7
+  [curriculum] env.stage3_near_prob -> 0.008
+  [curriculum] env.stage3_near_prob -> 0.007
+  [curriculum] env.stage3_near_prob -> 0.006
+  [curriculum] env.stage3_near_prob -> 0.005
+  [curriculum] env.stage3_near_prob -> 0.004
+  [curriculum] env.stage3_near_prob -> 0.003
+  [curriculum] env.stage3_near_prob -> 0.002
+  [curriculum] env.stage3_near_prob -> 0.001
+  [curriculum] env.stage3_near_prob -> 0.000
+回合 1810 | 场景=train_area001_scenario006 | 阶段=3 | 奖励=  -45.6 | 步数=350.5 | 覆盖率= 25.6% | 成功率=  65% | 任务得分= 40.6% | 超时率=  35% | 零覆盖超时=  32% | KL=0.0047 | KLema=0.0064 | clip=0.070 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1820 | 场景=train_area001_scenario004 | 阶段=3 | 奖励=  -46.3 | 步数=350.4 | 覆盖率= 25.6% | 成功率=  64% | 任务得分= 40.3% | 超时率=  36% | 零覆盖超时=  33% | KL=0.0050 | KLema=0.0063 | clip=0.062 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1830 | 场景=train_area002_scenario004 | 阶段=3 | 奖励=  -50.2 | 步数=355.7 | 覆盖率= 25.1% | 成功率=  62% | 任务得分= 39.3% | 超时率=  38% | 零覆盖超时=  33% | KL=0.0044 | KLema=0.0061 | clip=0.051 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1840 | 场景=train_area002_scenario005 | 阶段=3 | 奖励=  -50.4 | 步数=352.8 | 覆盖率= 24.6% | 成功率=  60% | 任务得分= 38.6% | 超时率=  40% | 零覆盖超时=  34% | KL=0.0041 | KLema=0.0059 | clip=0.053 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1850 | 场景=train_area002_scenario001 | 阶段=3 | 奖励=  -48.7 | 步数=351.2 | 覆盖率= 24.6% | 成功率=  60% | 任务得分= 38.6% | 超时率=  40% | 零覆盖超时=  34% | KL=0.0041 | KLema=0.0059 | clip=0.053 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1860 | 场景=train_area001_scenario001 | 阶段=3 | 奖励=  -46.3 | 步数=343.6 | 覆盖率= 24.7% | 成功率=  61% | 任务得分= 39.2% | 超时率=  39% | 零覆盖超时=  33% | KL=0.0085 | KLema=0.0062 | clip=0.097 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1870 | 场景=train_area003_scenario004 | 阶段=3 | 奖励=  -41.8 | 步数=330.4 | 覆盖率= 25.7% | 成功率=  63% | 任务得分= 40.7% | 超时率=  37% | 零覆盖超时=  31% | KL=0.0037 | KLema=0.0059 | clip=0.052 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1880 | 场景=train_area002_scenario004 | 阶段=3 | 奖励=  -39.9 | 步数=322.2 | 覆盖率= 26.8% | 成功率=  65% | 任务得分= 42.1% | 超时率=  35% | 零覆盖超时=  29% | KL=0.0037 | KLema=0.0059 | clip=0.052 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 1890 | 场景=train_area002_scenario003 | 阶段=3 | 奖励=  -39.0 | 步数=320.2 | 覆盖率= 27.0% | 成功率=  65% | 任务得分= 42.3% | 超时率=  35% | 零覆盖超时=  28% | KL=0.0061 | KLema=0.0059 | clip=0.084 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+
+  [stage3 curriculum] target 35% -> 50% | avg_coverage=30.2% | success=76.0% | zero_timeout=20.0%
+  [curriculum] env.stage3_target -> 0.50
+  [curriculum] env.stage3_near_prob -> 0.250
+  [curriculum] env.stage3_near_prob -> 0.249
+  [curriculum] env.stage3_near_prob -> 0.248
+  [curriculum] env.stage3_near_prob -> 0.247
+  [curriculum] env.stage3_near_prob -> 0.246
+  [curriculum] env.stage3_near_prob -> 0.245
+  [curriculum] env.stage3_near_prob -> 0.244
+  [curriculum] env.stage3_near_prob -> 0.243
+  [curriculum] env.stage3_near_prob -> 0.242
+回合 1900 | 场景=train_area001_scenario006 | 阶段=3 | 奖励=  -35.2 | 步数=308.4 | 覆盖率= 28.3% | 成功率=  67% | 任务得分= 44.0% | 超时率=  33% | 零覆盖超时=  26% | KL=0.0040 | KLema=0.0057 | clip=0.053 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=1900 | 阶段=3 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+评估阶段=3 | 回合数=30 | 任务得分=23.9% | 覆盖率=23.6% | 成功率=26.7% | 平均步数=475.3
+  [curriculum] env.stage3_near_prob -> 0.241
+  [curriculum] env.stage3_near_prob -> 0.240
+  [curriculum] env.stage3_near_prob -> 0.239
+  [curriculum] env.stage3_near_prob -> 0.238
+  [curriculum] env.stage3_near_prob -> 0.237
+  [curriculum] env.stage3_near_prob -> 0.236
+  [curriculum] env.stage3_near_prob -> 0.235
+  [curriculum] env.stage3_near_prob -> 0.234
+  [curriculum] env.stage3_near_prob -> 0.233
+  [curriculum] env.stage3_near_prob -> 0.232
+回合 1910 | 场景=train_area004_scenario003 | 阶段=3 | 奖励=  -31.4 | 步数=298.8 | 覆盖率= 30.3% | 成功率=  68% | 任务得分= 45.6% | 超时率=  32% | 零覆盖超时=  24% | KL=0.0054 | KLema=0.0057 | clip=0.066 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.231
+  [curriculum] env.stage3_near_prob -> 0.230
+  [curriculum] env.stage3_near_prob -> 0.229
+  [curriculum] env.stage3_near_prob -> 0.228
+  [curriculum] env.stage3_near_prob -> 0.227
+  [curriculum] env.stage3_near_prob -> 0.226
+  [curriculum] env.stage3_near_prob -> 0.225
+  [curriculum] env.stage3_near_prob -> 0.224
+  [curriculum] env.stage3_near_prob -> 0.223
+  [curriculum] env.stage3_near_prob -> 0.222
+回合 1920 | 场景=train_area004_scenario006 | 阶段=3 | 奖励=  -36.5 | 步数=311.5 | 覆盖率= 30.5% | 成功率=  66% | 任务得分= 44.7% | 超时率=  34% | 零覆盖超时=  24% | KL=0.0043 | KLema=0.0056 | clip=0.047 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.221
+  [curriculum] env.stage3_near_prob -> 0.220
+  [curriculum] env.stage3_near_prob -> 0.219
+  [curriculum] env.stage3_near_prob -> 0.218
+  [curriculum] env.stage3_near_prob -> 0.217
+  [curriculum] env.stage3_near_prob -> 0.216
+  [curriculum] env.stage3_near_prob -> 0.215
+  [curriculum] env.stage3_near_prob -> 0.214
+  [curriculum] env.stage3_near_prob -> 0.213
+  [curriculum] env.stage3_near_prob -> 0.212
+回合 1930 | 场景=train_area001_scenario006 | 阶段=3 | 奖励=  -30.3 | 步数=296.7 | 覆盖率= 32.7% | 成功率=  69% | 任务得分= 47.2% | 超时率=  31% | 零覆盖超时=  23% | KL=0.0043 | KLema=0.0056 | clip=0.047 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.211
+  [curriculum] env.stage3_near_prob -> 0.210
+  [curriculum] env.stage3_near_prob -> 0.209
+  [curriculum] env.stage3_near_prob -> 0.208
+  [curriculum] env.stage3_near_prob -> 0.207
+  [curriculum] env.stage3_near_prob -> 0.206
+  [curriculum] env.stage3_near_prob -> 0.205
+  [curriculum] env.stage3_near_prob -> 0.204
+  [curriculum] env.stage3_near_prob -> 0.203
+  [curriculum] env.stage3_near_prob -> 0.202
+回合 1940 | 场景=train_area002_scenario001 | 阶段=3 | 奖励=  -26.0 | 步数=285.9 | 覆盖率= 34.9% | 成功率=  71% | 任务得分= 49.2% | 超时率=  29% | 零覆盖超时=  20% | KL=0.0058 | KLema=0.0056 | clip=0.066 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.201
+  [curriculum] env.stage3_near_prob -> 0.200
+  [curriculum] env.stage3_near_prob -> 0.199
+  [curriculum] env.stage3_near_prob -> 0.198
+  [curriculum] env.stage3_near_prob -> 0.197
+  [curriculum] env.stage3_near_prob -> 0.196
+  [curriculum] env.stage3_near_prob -> 0.195
+  [curriculum] env.stage3_near_prob -> 0.194
+  [curriculum] env.stage3_near_prob -> 0.193
+  [curriculum] env.stage3_near_prob -> 0.192
+回合 1950 | 场景=train_area002_scenario004 | 阶段=3 | 奖励=  -28.3 | 步数=291.4 | 覆盖率= 35.7% | 成功率=  70% | 任务得分= 49.1% | 超时率=  30% | 零覆盖超时=  19% | KL=0.0089 | KLema=0.0059 | clip=0.094 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.191
+  [curriculum] env.stage3_near_prob -> 0.190
+  [curriculum] env.stage3_near_prob -> 0.189
+  [curriculum] env.stage3_near_prob -> 0.188
+  [curriculum] env.stage3_near_prob -> 0.187
+  [curriculum] env.stage3_near_prob -> 0.186
+  [curriculum] env.stage3_near_prob -> 0.185
+  [curriculum] env.stage3_near_prob -> 0.184
+  [curriculum] env.stage3_near_prob -> 0.183
+  [curriculum] env.stage3_near_prob -> 0.182
+回合 1960 | 场景=train_area002_scenario003 | 阶段=3 | 奖励=  -24.3 | 步数=281.2 | 覆盖率= 38.1% | 成功率=  72% | 任务得分= 51.3% | 超时率=  28% | 零覆盖超时=  17% | KL=0.0089 | KLema=0.0059 | clip=0.094 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.181
+  [curriculum] env.stage3_near_prob -> 0.180
+  [curriculum] env.stage3_near_prob -> 0.179
+  [curriculum] env.stage3_near_prob -> 0.178
+  [curriculum] env.stage3_near_prob -> 0.177
+  [curriculum] env.stage3_near_prob -> 0.176
+  [curriculum] env.stage3_near_prob -> 0.175
+  [curriculum] env.stage3_near_prob -> 0.174
+  [curriculum] env.stage3_near_prob -> 0.173
+  [curriculum] env.stage3_near_prob -> 0.172
+回合 1970 | 场景=train_area001_scenario001 | 阶段=3 | 奖励=  -27.4 | 步数=291.6 | 覆盖率= 38.9% | 成功率=  70% | 任务得分= 50.7% | 超时率=  30% | 零覆盖超时=  17% | KL=0.0044 | KLema=0.0058 | clip=0.056 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.171
+  [curriculum] env.stage3_near_prob -> 0.170
+  [curriculum] env.stage3_near_prob -> 0.169
+  [curriculum] env.stage3_near_prob -> 0.168
+  [curriculum] env.stage3_near_prob -> 0.167
+  [curriculum] env.stage3_near_prob -> 0.166
+  [curriculum] env.stage3_near_prob -> 0.165
+  [curriculum] env.stage3_near_prob -> 0.164
+  [curriculum] env.stage3_near_prob -> 0.163
+  [curriculum] env.stage3_near_prob -> 0.162
+回合 1980 | 场景=train_area002_scenario005 | 阶段=3 | 奖励=  -27.9 | 步数=294.5 | 覆盖率= 39.9% | 成功率=  68% | 任务得分= 50.5% | 超时率=  32% | 零覆盖超时=  16% | KL=0.0053 | KLema=0.0057 | clip=0.065 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.161
+  [curriculum] env.stage3_near_prob -> 0.160
+  [curriculum] env.stage3_near_prob -> 0.159
+  [curriculum] env.stage3_near_prob -> 0.158
+  [curriculum] env.stage3_near_prob -> 0.157
+  [curriculum] env.stage3_near_prob -> 0.156
+  [curriculum] env.stage3_near_prob -> 0.155
+  [curriculum] env.stage3_near_prob -> 0.154
+  [curriculum] env.stage3_near_prob -> 0.153
+  [curriculum] env.stage3_near_prob -> 0.152
+回合 1990 | 场景=train_area004_scenario002 | 阶段=3 | 奖励=  -32.1 | 步数=310.3 | 覆盖率= 39.8% | 成功率=  65% | 任务得分= 49.1% | 超时率=  35% | 零覆盖超时=  18% | KL=0.0063 | KLema=0.0058 | clip=0.083 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.151
+  [curriculum] env.stage3_near_prob -> 0.150
+  [curriculum] env.stage3_near_prob -> 0.149
+  [curriculum] env.stage3_near_prob -> 0.148
+  [curriculum] env.stage3_near_prob -> 0.147
+  [curriculum] env.stage3_near_prob -> 0.146
+  [curriculum] env.stage3_near_prob -> 0.145
+  [curriculum] env.stage3_near_prob -> 0.144
+  [curriculum] env.stage3_near_prob -> 0.143
+  [curriculum] env.stage3_near_prob -> 0.142
+回合 2000 | 场景=train_area001_scenario006 | 阶段=3 | 奖励=  -32.5 | 步数=316.2 | 覆盖率= 40.5% | 成功率=  64% | 任务得分= 48.9% | 超时率=  36% | 零覆盖超时=  17% | KL=0.0063 | KLema=0.0058 | clip=0.083 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=2000 | 阶段=3 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+评估阶段=3 | 回合数=30 | 任务得分=30.1% | 覆盖率=27.7% | 成功率=36.7% | 平均步数=443.0
+  [curriculum] env.stage3_near_prob -> 0.141
+  [curriculum] env.stage3_near_prob -> 0.140
+  [curriculum] env.stage3_near_prob -> 0.139
+  [curriculum] env.stage3_near_prob -> 0.138
+  [curriculum] env.stage3_near_prob -> 0.137
+  [curriculum] env.stage3_near_prob -> 0.136
+  [curriculum] env.stage3_near_prob -> 0.135
+  [curriculum] env.stage3_near_prob -> 0.134
+  [curriculum] env.stage3_near_prob -> 0.133
+  [curriculum] env.stage3_near_prob -> 0.132
+回合 2010 | 场景=train_area002_scenario003 | 阶段=3 | 奖励=  -28.7 | 步数=303.6 | 覆盖率= 42.0% | 成功率=  67% | 任务得分= 51.0% | 超时率=  33% | 零覆盖超时=  15% | KL=0.0045 | KLema=0.0057 | clip=0.054 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.131
+  [curriculum] env.stage3_near_prob -> 0.130
+  [curriculum] env.stage3_near_prob -> 0.129
+  [curriculum] env.stage3_near_prob -> 0.128
+  [curriculum] env.stage3_near_prob -> 0.127
+  [curriculum] env.stage3_near_prob -> 0.126
+  [curriculum] env.stage3_near_prob -> 0.125
+  [curriculum] env.stage3_near_prob -> 0.124
+  [curriculum] env.stage3_near_prob -> 0.123
+  [curriculum] env.stage3_near_prob -> 0.122
+回合 2020 | 场景=train_area001_scenario003 | 阶段=3 | 奖励=  -25.1 | 步数=298.3 | 覆盖率= 42.3% | 成功率=  67% | 任务得分= 51.3% | 超时率=  33% | 零覆盖超时=  14% | KL=0.0045 | KLema=0.0057 | clip=0.054 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.121
+  [curriculum] env.stage3_near_prob -> 0.120
+  [curriculum] env.stage3_near_prob -> 0.119
+  [curriculum] env.stage3_near_prob -> 0.118
+  [curriculum] env.stage3_near_prob -> 0.117
+  [curriculum] env.stage3_near_prob -> 0.116
+  [curriculum] env.stage3_near_prob -> 0.115
+  [curriculum] env.stage3_near_prob -> 0.114
+  [curriculum] env.stage3_near_prob -> 0.113
+  [curriculum] env.stage3_near_prob -> 0.112
+回合 2030 | 场景=train_area002_scenario006 | 阶段=3 | 奖励=  -28.0 | 步数=306.3 | 覆盖率= 41.4% | 成功率=  65% | 任务得分= 50.0% | 超时率=  35% | 零覆盖超时=  15% | KL=0.0042 | KLema=0.0055 | clip=0.060 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.111
+  [curriculum] env.stage3_near_prob -> 0.110
+  [curriculum] env.stage3_near_prob -> 0.109
+  [curriculum] env.stage3_near_prob -> 0.108
+  [curriculum] env.stage3_near_prob -> 0.107
+  [curriculum] env.stage3_near_prob -> 0.106
+  [curriculum] env.stage3_near_prob -> 0.105
+  [curriculum] env.stage3_near_prob -> 0.104
+  [curriculum] env.stage3_near_prob -> 0.103
+  [curriculum] env.stage3_near_prob -> 0.102
+回合 2040 | 场景=train_area001_scenario001 | 阶段=3 | 奖励=  -27.0 | 步数=300.4 | 覆盖率= 41.6% | 成功率=  66% | 任务得分= 50.6% | 超时率=  34% | 零覆盖超时=  15% | KL=0.0074 | KLema=0.0057 | clip=0.094 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.101
+  [curriculum] env.stage3_near_prob -> 0.100
+  [curriculum] env.stage3_near_prob -> 0.099
+  [curriculum] env.stage3_near_prob -> 0.098
+  [curriculum] env.stage3_near_prob -> 0.097
+  [curriculum] env.stage3_near_prob -> 0.096
+  [curriculum] env.stage3_near_prob -> 0.095
+  [curriculum] env.stage3_near_prob -> 0.094
+  [curriculum] env.stage3_near_prob -> 0.093
+  [curriculum] env.stage3_near_prob -> 0.092
+回合 2050 | 场景=train_area004_scenario005 | 阶段=3 | 奖励=  -24.1 | 步数=297.7 | 覆盖率= 42.5% | 成功率=  67% | 任务得分= 51.4% | 超时率=  33% | 零覆盖超时=  13% | KL=0.0074 | KLema=0.0057 | clip=0.094 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.091
+  [curriculum] env.stage3_near_prob -> 0.090
+  [curriculum] env.stage3_near_prob -> 0.089
+  [curriculum] env.stage3_near_prob -> 0.088
+  [curriculum] env.stage3_near_prob -> 0.087
+  [curriculum] env.stage3_near_prob -> 0.086
+  [curriculum] env.stage3_near_prob -> 0.085
+  [curriculum] env.stage3_near_prob -> 0.084
+  [curriculum] env.stage3_near_prob -> 0.083
+  [curriculum] env.stage3_near_prob -> 0.082
+回合 2060 | 场景=train_area002_scenario005 | 阶段=3 | 奖励=  -27.0 | 步数=305.6 | 覆盖率= 41.3% | 成功率=  65% | 任务得分= 49.9% | 超时率=  35% | 零覆盖超时=  15% | KL=0.0053 | KLema=0.0057 | clip=0.062 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.081
+  [curriculum] env.stage3_near_prob -> 0.080
+  [curriculum] env.stage3_near_prob -> 0.079
+  [curriculum] env.stage3_near_prob -> 0.078
+  [curriculum] env.stage3_near_prob -> 0.077
+  [curriculum] env.stage3_near_prob -> 0.076
+  [curriculum] env.stage3_near_prob -> 0.075
+  [curriculum] env.stage3_near_prob -> 0.074
+  [curriculum] env.stage3_near_prob -> 0.073
+  [curriculum] env.stage3_near_prob -> 0.072
+回合 2070 | 场景=train_area001_scenario002 | 阶段=3 | 奖励=  -26.8 | 步数=302.1 | 覆盖率= 41.1% | 成功率=  65% | 任务得分= 50.0% | 超时率=  35% | 零覆盖超时=  15% | KL=0.0054 | KLema=0.0056 | clip=0.066 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.071
+  [curriculum] env.stage3_near_prob -> 0.070
+  [curriculum] env.stage3_near_prob -> 0.069
+  [curriculum] env.stage3_near_prob -> 0.068
+  [curriculum] env.stage3_near_prob -> 0.067
+  [curriculum] env.stage3_near_prob -> 0.066
+  [curriculum] env.stage3_near_prob -> 0.065
+  [curriculum] env.stage3_near_prob -> 0.064
+  [curriculum] env.stage3_near_prob -> 0.063
+  [curriculum] env.stage3_near_prob -> 0.062
+回合 2080 | 场景=train_area003_scenario002 | 阶段=3 | 奖励=  -25.6 | 步数=298.8 | 覆盖率= 41.5% | 成功率=  67% | 任务得分= 50.9% | 超时率=  33% | 零覆盖超时=  16% | KL=0.0054 | KLema=0.0056 | clip=0.066 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.061
+  [curriculum] env.stage3_near_prob -> 0.060
+  [curriculum] env.stage3_near_prob -> 0.059
+  [curriculum] env.stage3_near_prob -> 0.058
+  [curriculum] env.stage3_near_prob -> 0.057
+  [curriculum] env.stage3_near_prob -> 0.056
+  [curriculum] env.stage3_near_prob -> 0.055
+  [curriculum] env.stage3_near_prob -> 0.054
+  [curriculum] env.stage3_near_prob -> 0.053
+  [curriculum] env.stage3_near_prob -> 0.052
+回合 2090 | 场景=train_area003_scenario005 | 阶段=3 | 奖励=  -27.2 | 步数=302.3 | 覆盖率= 41.3% | 成功率=  66% | 任务得分= 50.4% | 超时率=  34% | 零覆盖超时=  16% | KL=0.0080 | KLema=0.0059 | clip=0.102 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.051
+  [curriculum] env.stage3_near_prob -> 0.050
+  [curriculum] env.stage3_near_prob -> 0.049
+  [curriculum] env.stage3_near_prob -> 0.048
+  [curriculum] env.stage3_near_prob -> 0.047
+  [curriculum] env.stage3_near_prob -> 0.046
+  [curriculum] env.stage3_near_prob -> 0.045
+  [curriculum] env.stage3_near_prob -> 0.044
+  [curriculum] env.stage3_near_prob -> 0.043
+  [curriculum] env.stage3_near_prob -> 0.042
+回合 2100 | 场景=train_area002_scenario004 | 阶段=3 | 奖励=  -23.6 | 步数=285.4 | 覆盖率= 41.8% | 成功率=  69% | 任务得分= 52.1% | 超时率=  31% | 零覆盖超时=  16% | KL=0.0046 | KLema=0.0057 | clip=0.058 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=2100 | 阶段=3 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+评估阶段=3 | 回合数=30 | 任务得分=26.9% | 覆盖率=26.9% | 成功率=30.0% | 平均步数=468.2
+  [curriculum] env.stage3_near_prob -> 0.041
+  [curriculum] env.stage3_near_prob -> 0.040
+  [curriculum] env.stage3_near_prob -> 0.039
+  [curriculum] env.stage3_near_prob -> 0.038
+  [curriculum] env.stage3_near_prob -> 0.037
+  [curriculum] env.stage3_near_prob -> 0.036
+  [curriculum] env.stage3_near_prob -> 0.035
+  [curriculum] env.stage3_near_prob -> 0.034
+  [curriculum] env.stage3_near_prob -> 0.033
+  [curriculum] env.stage3_near_prob -> 0.032
+回合 2110 | 场景=train_area002_scenario004 | 阶段=3 | 奖励=  -29.7 | 步数=306.1 | 覆盖率= 39.5% | 成功率=  66% | 任务得分= 49.4% | 超时率=  34% | 零覆盖超时=  20% | KL=0.0073 | KLema=0.0059 | clip=0.084 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.031
+  [curriculum] env.stage3_near_prob -> 0.030
+  [curriculum] env.stage3_near_prob -> 0.029
+  [curriculum] env.stage3_near_prob -> 0.028
+  [curriculum] env.stage3_near_prob -> 0.027
+  [curriculum] env.stage3_near_prob -> 0.026
+  [curriculum] env.stage3_near_prob -> 0.025
+  [curriculum] env.stage3_near_prob -> 0.024
+  [curriculum] env.stage3_near_prob -> 0.023
+  [curriculum] env.stage3_near_prob -> 0.022
+回合 2120 | 场景=train_area002_scenario006 | 阶段=3 | 奖励=  -29.9 | 步数=305.1 | 覆盖率= 39.6% | 成功率=  67% | 任务得分= 49.7% | 超时率=  33% | 零覆盖超时=  20% | KL=0.0073 | KLema=0.0059 | clip=0.084 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.021
+  [curriculum] env.stage3_near_prob -> 0.020
+  [curriculum] env.stage3_near_prob -> 0.019
+  [curriculum] env.stage3_near_prob -> 0.018
+  [curriculum] env.stage3_near_prob -> 0.017
+  [curriculum] env.stage3_near_prob -> 0.016
+  [curriculum] env.stage3_near_prob -> 0.015
+  [curriculum] env.stage3_near_prob -> 0.014
+  [curriculum] env.stage3_near_prob -> 0.013
+  [curriculum] env.stage3_near_prob -> 0.012
+回合 2130 | 场景=train_area001_scenario002 | 阶段=3 | 奖励=  -28.1 | 步数=303.3 | 覆盖率= 40.2% | 成功率=  69% | 任务得分= 50.7% | 超时率=  31% | 零覆盖超时=  19% | KL=0.0045 | KLema=0.0058 | clip=0.062 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+  [curriculum] env.stage3_near_prob -> 0.011
+  [curriculum] env.stage3_near_prob -> 0.010
+  [curriculum] env.stage3_near_prob -> 0.009
+  [curriculum] env.stage3_near_prob -> 0.008
+  [curriculum] env.stage3_near_prob -> 0.007
+  [curriculum] env.stage3_near_prob -> 0.006
+  [curriculum] env.stage3_near_prob -> 0.005
+  [curriculum] env.stage3_near_prob -> 0.004
+  [curriculum] env.stage3_near_prob -> 0.003
+  [curriculum] env.stage3_near_prob -> 0.002
+回合 2140 | 场景=train_area003_scenario005 | 阶段=3 | 奖励=  -28.8 | 步数=308.3 | 覆盖率= 39.9% | 成功率=  69% | 任务得分= 50.4% | 超时率=  31% | 零覆盖超时=  20% | KL=0.0055 | KLema=0.0057 | clip=0.071 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+  [curriculum] env.stage3_near_prob -> 0.001
+  [curriculum] env.stage3_near_prob -> 0.000
+回合 2150 | 场景=train_area003_scenario001 | 阶段=3 | 奖励=  -31.2 | 步数=309.8 | 覆盖率= 38.6% | 成功率=  68% | 任务得分= 49.4% | 超时率=  32% | 零覆盖超时=  24% | KL=0.0050 | KLema=0.0057 | clip=0.065 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 2160 | 场景=train_area002_scenario003 | 阶段=3 | 奖励=  -31.9 | 步数=314.1 | 覆盖率= 39.4% | 成功率=  69% | 任务得分= 49.9% | 超时率=  31% | 零覆盖超时=  22% | KL=0.0050 | KLema=0.0057 | clip=0.065 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 2170 | 场景=train_area004_scenario002 | 阶段=3 | 奖励=  -31.9 | 步数=313.4 | 覆盖率= 39.1% | 成功率=  69% | 任务得分= 49.8% | 超时率=  31% | 零覆盖超时=  23% | KL=0.0052 | KLema=0.0056 | clip=0.071 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 2180 | 场景=train_area004_scenario003 | 阶段=3 | 奖励=  -37.1 | 步数=331.5 | 覆盖率= 37.1% | 成功率=  66% | 任务得分= 47.3% | 超时率=  34% | 零覆盖超时=  25% | KL=0.0042 | KLema=0.0055 | clip=0.050 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 2190 | 场景=train_area003_scenario004 | 阶段=3 | 奖励=  -38.7 | 步数=328.8 | 覆盖率= 36.3% | 成功率=  66% | 任务得分= 47.0% | 超时率=  34% | 零覆盖超时=  28% | KL=0.0077 | KLema=0.0057 | clip=0.091 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 2200 | 场景=train_area002_scenario005 | 阶段=3 | 奖励=  -42.2 | 步数=349.0 | 覆盖率= 35.7% | 成功率=  64% | 任务得分= 45.4% | 超时率=  36% | 零覆盖超时=  29% | KL=0.0046 | KLema=0.0056 | clip=0.055 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+
+======================================================================
+验证评估 | 回合=2200 | 阶段=3 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+评估阶段=3 | 回合数=30 | 任务得分=27.0% | 覆盖率=26.6% | 成功率=30.0% | 平均步数=459.6
+回合 2210 | 场景=train_area001_scenario001 | 阶段=3 | 奖励=  -43.4 | 步数=354.3 | 覆盖率= 35.2% | 成功率=  63% | 任务得分= 44.7% | 超时率=  37% | 零覆盖超时=  29% | KL=0.0040 | KLema=0.0054 | clip=0.054 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 2220 | 场景=train_area002_scenario001 | 阶段=3 | 奖励=  -45.9 | 步数=360.8 | 覆盖率= 34.3% | 成功率=  62% | 任务得分= 43.7% | 超时率=  38% | 零覆盖超时=  32% | KL=0.0061 | KLema=0.0055 | clip=0.073 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 2230 | 场景=train_area001_scenario001 | 阶段=3 | 奖励=  -47.2 | 步数=366.2 | 覆盖率= 33.4% | 成功率=  60% | 任务得分= 42.5% | 超时率=  40% | 零覆盖超时=  33% | KL=0.0061 | KLema=0.0055 | clip=0.073 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 2240 | 场景=train_area004_scenario006 | 阶段=3 | 奖励=  -52.0 | 步数=383.0 | 覆盖率= 32.1% | 成功率=  56% | 任务得分= 40.1% | 超时率=  44% | 零覆盖超时=  35% | KL=0.0053 | KLema=0.0055 | clip=0.061 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 2250 | 场景=train_area004_scenario003 | 阶段=3 | 奖励=  -51.0 | 步数=382.3 | 覆盖率= 33.0% | 成功率=  57% | 任务得分= 40.9% | 超时率=  43% | 零覆盖超时=  33% | KL=0.0051 | KLema=0.0055 | clip=0.062 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 2260 | 场景=train_area003_scenario003 | 阶段=3 | 奖励=  -51.6 | 步数=385.2 | 覆盖率= 31.8% | 成功率=  55% | 任务得分= 39.6% | 超时率=  45% | 零覆盖超时=  35% | KL=0.0052 | KLema=0.0054 | clip=0.065 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 2270 | 场景=train_area003_scenario002 | 阶段=3 | 奖励=  -53.7 | 步数=385.7 | 覆盖率= 31.3% | 成功率=  54% | 任务得分= 39.0% | 超时率=  46% | 零覆盖超时=  37% | KL=0.0058 | KLema=0.0055 | clip=0.072 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 2280 | 场景=train_area003_scenario001 | 阶段=3 | 奖励=  -51.5 | 步数=381.6 | 覆盖率= 32.3% | 成功率=  54% | 任务得分= 39.6% | 超时率=  46% | 零覆盖超时=  36% | KL=0.0040 | KLema=0.0053 | clip=0.051 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 2290 | 场景=train_area001_scenario003 | 阶段=3 | 奖励=  -46.7 | 步数=374.1 | 覆盖率= 34.1% | 成功率=  56% | 任务得分= 41.4% | 超时率=  44% | 零覆盖超时=  31% | KL=0.0046 | KLema=0.0052 | clip=0.052 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 2300 | 场景=train_area002_scenario004 | 阶段=3 | 奖励=  -50.2 | 步数=375.7 | 覆盖率= 32.9% | 成功率=  54% | 任务得分= 40.1% | 超时率=  46% | 零覆盖超时=  34% | KL=0.0069 | KLema=0.0054 | clip=0.077 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=2300 | 阶段=3 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+评估阶段=3 | 回合数=30 | 任务得分=26.4% | 覆盖率=26.2% | 成功率=30.0% | 平均步数=471.5
+回合 2310 | 场景=train_area004_scenario003 | 阶段=3 | 奖励=  -48.3 | 步数=371.3 | 覆盖率= 33.8% | 成功率=  56% | 任务得分= 41.3% | 超时率=  44% | 零覆盖超时=  33% | KL=0.0069 | KLema=0.0054 | clip=0.077 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 2320 | 场景=train_area004_scenario006 | 阶段=3 | 奖励=  -51.8 | 步数=381.7 | 覆盖率= 32.7% | 成功率=  53% | 任务得分= 39.5% | 超时率=  47% | 零覆盖超时=  34% | KL=0.0083 | KLema=0.0057 | clip=0.115 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 2330 | 场景=train_area003_scenario004 | 阶段=3 | 奖励=  -47.7 | 步数=367.8 | 覆盖率= 34.0% | 成功率=  56% | 任务得分= 41.5% | 超时率=  44% | 零覆盖超时=  32% | KL=0.0058 | KLema=0.0057 | clip=0.070 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 2340 | 场景=train_area002_scenario003 | 阶段=3 | 奖励=  -45.6 | 步数=364.9 | 覆盖率= 34.5% | 成功率=  58% | 任务得分= 42.5% | 超时率=  42% | 零覆盖超时=  31% | KL=0.0057 | KLema=0.0057 | clip=0.071 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 2350 | 场景=train_area004_scenario001 | 阶段=3 | 奖励=  -41.7 | 步数=361.3 | 覆盖率= 35.5% | 成功率=  59% | 任务得分= 43.4% | 超时率=  41% | 零覆盖超时=  29% | KL=0.0050 | KLema=0.0056 | clip=0.064 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 2360 | 场景=train_area004_scenario001 | 阶段=3 | 奖励=  -46.0 | 步数=370.7 | 覆盖率= 35.1% | 成功率=  58% | 任务得分= 42.6% | 超时率=  42% | 零覆盖超时=  30% | KL=0.0067 | KLema=0.0057 | clip=0.092 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 2370 | 场景=train_area003_scenario003 | 阶段=3 | 奖励=  -44.9 | 步数=379.0 | 覆盖率= 35.8% | 成功率=  60% | 任务得分= 43.3% | 超时率=  40% | 零覆盖超时=  27% | KL=0.0051 | KLema=0.0057 | clip=0.066 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 2380 | 场景=train_area001_scenario005 | 阶段=3 | 奖励=  -41.4 | 步数=367.2 | 覆盖率= 36.5% | 成功率=  63% | 任务得分= 44.9% | 超时率=  37% | 零覆盖超时=  26% | KL=0.0051 | KLema=0.0057 | clip=0.066 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 2390 | 场景=train_area002_scenario002 | 阶段=3 | 奖励=  -46.6 | 步数=380.3 | 覆盖率= 35.2% | 成功率=  60% | 任务得分= 42.9% | 超时率=  40% | 零覆盖超时=  28% | KL=0.0056 | KLema=0.0057 | clip=0.067 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 2400 | 场景=train_area001_scenario006 | 阶段=3 | 奖励=  -43.2 | 步数=370.8 | 覆盖率= 36.7% | 成功率=  62% | 任务得分= 44.6% | 超时率=  38% | 零覆盖超时=  24% | KL=0.0045 | KLema=0.0056 | clip=0.060 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=2400 | 阶段=3 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+评估阶段=3 | 回合数=30 | 任务得分=35.3% | 覆盖率=32.5% | 成功率=43.3% | 平均步数=419.0
+  -> 最佳验证模型分数: 10.7% (任务得分=35.3%)
+回合 2410 | 场景=train_area001_scenario005 | 阶段=3 | 奖励=  -40.9 | 步数=360.4 | 覆盖率= 37.4% | 成功率=  62% | 任务得分= 45.3% | 超时率=  38% | 零覆盖超时=  22% | KL=0.0047 | KLema=0.0055 | clip=0.059 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 2420 | 场景=train_area004_scenario001 | 阶段=3 | 奖励=  -35.3 | 步数=345.2 | 覆盖率= 39.2% | 成功率=  66% | 任务得分= 47.9% | 超时率=  34% | 零覆盖超时=  20% | KL=0.0047 | KLema=0.0055 | clip=0.059 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 2430 | 场景=train_area003_scenario005 | 阶段=3 | 奖励=  -38.3 | 步数=359.7 | 覆盖率= 38.5% | 成功率=  64% | 任务得分= 46.5% | 超时率=  36% | 零覆盖超时=  21% | KL=0.0078 | KLema=0.0057 | clip=0.092 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 2440 | 场景=train_area002_scenario002 | 阶段=3 | 奖励=  -36.8 | 步数=355.7 | 覆盖率= 38.5% | 成功率=  64% | 任务得分= 46.6% | 超时率=  36% | 零覆盖超时=  19% | KL=0.0040 | KLema=0.0055 | clip=0.049 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 2450 | 场景=train_area002_scenario001 | 阶段=3 | 奖励=  -38.9 | 步数=354.8 | 覆盖率= 37.5% | 成功率=  63% | 任务得分= 45.8% | 超时率=  37% | 零覆盖超时=  21% | KL=0.0051 | KLema=0.0055 | clip=0.073 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 2460 | 场景=train_area003_scenario006 | 阶段=3 | 奖励=  -37.6 | 步数=352.0 | 覆盖率= 37.6% | 成功率=  63% | 任务得分= 46.0% | 超时率=  37% | 零覆盖超时=  21% | KL=0.0042 | KLema=0.0054 | clip=0.055 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 2470 | 场景=train_area004_scenario006 | 阶段=3 | 奖励=  -40.9 | 步数=351.9 | 覆盖率= 36.3% | 成功率=  60% | 任务得分= 44.4% | 超时率=  40% | 零覆盖超时=  25% | KL=0.0070 | KLema=0.0055 | clip=0.092 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 2480 | 场景=train_area001_scenario002 | 阶段=3 | 奖励=  -47.1 | 步数=368.1 | 覆盖率= 34.6% | 成功率=  57% | 任务得分= 42.1% | 超时率=  43% | 零覆盖超时=  28% | KL=0.0054 | KLema=0.0055 | clip=0.069 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合 2490 | 场景=train_area001_scenario005 | 阶段=3 | 奖励=  -47.0 | 步数=363.0 | 覆盖率= 35.0% | 成功率=  58% | 任务得分= 42.8% | 超时率=  42% | 零覆盖超时=  27% | KL=0.0074 | KLema=0.0057 | clip=0.083 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合 2500 | 场景=train_area002_scenario003 | 阶段=3 | 奖励=  -51.4 | 步数=373.8 | 覆盖率= 33.5% | 成功率=  55% | 任务得分= 40.8% | 超时率=  45% | 零覆盖超时=  30% | KL=0.0067 | KLema=0.0058 | clip=0.080 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=2500 | 阶段=3 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+评估阶段=3 | 回合数=30 | 任务得分=34.8% | 覆盖率=33.5% | 成功率=40.0% | 平均步数=416.8
+  -> 最佳验证模型分数: 11.2% (任务得分=34.8%)
+
+======================================================================
+训练后最佳验证模型评估
+数据划分=['validation', 'generalization', 'stress'] | 评估阶段=[3] | 每场景回合=50
+======================================================================
+CTDE-PPO 基线已初始化 | 设备=cuda | 本地观测=17 | 全局状态=19 | lr_adapt_mode=fixed
+
+best_val模型评估 | 数据划分=validation
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+基线环境已初始化 | 模式=validation | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+评估阶段=3 | 回合数=300 | 任务得分=27.6% | 覆盖率=30.3% | 成功率=28.7% | 平均步数=483.2
+best_val_validation_eval=d:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260707_222909\训练结果\Fixed_LR_CTDE_PPO_seed42\logs\best_val_validation_eval.json
+
+best_val模型评估 | 数据划分=generalization
+Loading scene generalization_area006_scenario001...
+Scene generalization_area006_scenario001 norm_params | intensity_max=2852, length_max=14.79, speedRate_max=25.58, heat_per_unit_area_max=2000, crown_fire_max=2, wind_speed_max=8
+Scene generalization_area006_scenario001 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario001 t=0 boundary points: 1
+基线环境已初始化 | 模式=generalization | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+Loading scene generalization_area006_scenario002...
+Scene generalization_area006_scenario002 norm_params | intensity_max=2553, length_max=16.33, speedRate_max=18.36, heat_per_unit_area_max=2769, crown_fire_max=2, wind_speed_max=11
+Scene generalization_area006_scenario002 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario002 t=0 boundary points: 1
+基线环境已初始化 | 模式=generalization | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+Loading scene generalization_area006_scenario003...
+Scene generalization_area006_scenario003 norm_params | intensity_max=1928, length_max=13.53, speedRate_max=21.81, heat_per_unit_area_max=2055, crown_fire_max=2, wind_speed_max=13
+Scene generalization_area006_scenario003 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario003 t=0 boundary points: 1
+基线环境已初始化 | 模式=generalization | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+Loading scene generalization_area006_scenario004...
+Scene generalization_area006_scenario004 norm_params | intensity_max=3023, length_max=18.27, speedRate_max=27.79, heat_per_unit_area_max=3134, crown_fire_max=2, wind_speed_max=11
+Scene generalization_area006_scenario004 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario004 t=0 boundary points: 1
+基线环境已初始化 | 模式=generalization | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+Loading scene generalization_area006_scenario005...
+Scene generalization_area006_scenario005 norm_params | intensity_max=3837, length_max=21.41, speedRate_max=23.1, heat_per_unit_area_max=3296, crown_fire_max=2, wind_speed_max=8
+Scene generalization_area006_scenario005 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario005 t=0 boundary points: 1
+基线环境已初始化 | 模式=generalization | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+Loading scene generalization_area006_scenario006...
+Scene generalization_area006_scenario006 norm_params | intensity_max=2478, length_max=16, speedRate_max=16.08, heat_per_unit_area_max=3114, crown_fire_max=2, wind_speed_max=9
+Scene generalization_area006_scenario006 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario006 t=0 boundary points: 1
+基线环境已初始化 | 模式=generalization | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+Loading scene generalization_area007_scenario001...
+Scene generalization_area007_scenario001 norm_params | intensity_max=500, length_max=3.68, speedRate_max=17.67, heat_per_unit_area_max=415.9, crown_fire_max=2, wind_speed_max=9
+Scene generalization_area007_scenario001 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario001 t=0 boundary points: 1
+基线环境已初始化 | 模式=generalization | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+Loading scene generalization_area007_scenario002...
+Scene generalization_area007_scenario002 norm_params | intensity_max=642.2, length_max=6.506, speedRate_max=8.942, heat_per_unit_area_max=1162, crown_fire_max=2, wind_speed_max=9
+Scene generalization_area007_scenario002 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario002 t=0 boundary points: 1
+基线环境已初始化 | 模式=generalization | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+Loading scene generalization_area007_scenario003...
+Scene generalization_area007_scenario003 norm_params | intensity_max=500, length_max=3.86, speedRate_max=16.09, heat_per_unit_area_max=371.7, crown_fire_max=2, wind_speed_max=8
+Scene generalization_area007_scenario003 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario003 t=0 boundary points: 1
+基线环境已初始化 | 模式=generalization | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+Loading scene generalization_area007_scenario004...
+Scene generalization_area007_scenario004 norm_params | intensity_max=1179, length_max=9.751, speedRate_max=17.83, heat_per_unit_area_max=1598, crown_fire_max=2, wind_speed_max=10
+Scene generalization_area007_scenario004 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario004 t=0 boundary points: 1
+基线环境已初始化 | 模式=generalization | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+Loading scene generalization_area007_scenario005...
+Scene generalization_area007_scenario005 norm_params | intensity_max=500, length_max=4.332, speedRate_max=12.68, heat_per_unit_area_max=1079, crown_fire_max=2, wind_speed_max=9
+Scene generalization_area007_scenario005 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario005 t=0 boundary points: 1
+基线环境已初始化 | 模式=generalization | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+Loading scene generalization_area007_scenario006...
+Scene generalization_area007_scenario006 norm_params | intensity_max=500, length_max=4.926, speedRate_max=15.28, heat_per_unit_area_max=1147, crown_fire_max=2, wind_speed_max=10
+Scene generalization_area007_scenario006 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario006 t=0 boundary points: 1
+基线环境已初始化 | 模式=generalization | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+评估阶段=3 | 回合数=600 | 任务得分=29.7% | 覆盖率=34.7% | 成功率=27.8% | 平均步数=480.0
+generalization_eval=d:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260707_222909\训练结果\Fixed_LR_CTDE_PPO_seed42\logs\generalization_eval.json
+eval_results=d:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260707_222909\训练结果\Fixed_LR_CTDE_PPO_seed42\logs\eval_results.json
+best_val_generalization_eval=d:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260707_222909\训练结果\Fixed_LR_CTDE_PPO_seed42\logs\best_val_generalization_eval.json
+
+best_val模型评估 | 数据划分=stress
+Loading scene stress_area008_scenario001...
+Scene stress_area008_scenario001 norm_params | intensity_max=8000, length_max=27.5, speedRate_max=64.75, heat_per_unit_area_max=3963, crown_fire_max=2, wind_speed_max=16
+Scene stress_area008_scenario001 loaded | shape=(283, 285) | rasters=8
+Scene stress_area008_scenario001 t=0 boundary points: 1
+基线环境已初始化 | 模式=stress | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+Loading scene stress_area008_scenario002...
+Scene stress_area008_scenario002 norm_params | intensity_max=7048, length_max=16.01, speedRate_max=48.91, heat_per_unit_area_max=3154, crown_fire_max=2, wind_speed_max=13
+Scene stress_area008_scenario002 loaded | shape=(283, 285) | rasters=8
+Scene stress_area008_scenario002 t=0 boundary points: 1
+基线环境已初始化 | 模式=stress | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+Loading scene stress_area008_scenario003...
+Scene stress_area008_scenario003 norm_params | intensity_max=7965, length_max=28.76, speedRate_max=53.49, heat_per_unit_area_max=5432, crown_fire_max=2, wind_speed_max=14
+Scene stress_area008_scenario003 loaded | shape=(283, 285) | rasters=8
+Scene stress_area008_scenario003 t=0 boundary points: 1
+基线环境已初始化 | 模式=stress | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+Loading scene stress_area008_scenario004...
+Scene stress_area008_scenario004 norm_params | intensity_max=8000, length_max=34.91, speedRate_max=65.01, heat_per_unit_area_max=4693, crown_fire_max=2, wind_speed_max=18
+Scene stress_area008_scenario004 loaded | shape=(283, 285) | rasters=8
+Scene stress_area008_scenario004 t=0 boundary points: 1
+基线环境已初始化 | 模式=stress | 本地观测维度=17 | 全局状态维度=19 | observation_profile=baseline | reward_profile=boundary_coverage
+评估阶段=3 | 回合数=200 | 任务得分=14.9% | 覆盖率=21.9% | 成功率=8.5% | 平均步数=557.7
+best_val_stress_eval=d:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260707_222909\训练结果\Fixed_LR_CTDE_PPO_seed42\logs\best_val_stress_eval.json
+eval_summary=d:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260707_222909\训练结果\Fixed_LR_CTDE_PPO_seed42\logs\eval_summary.json
+
+======================================================================
+训练完成
+总步数=829096 | PPO更新=192 | 用时=59.4 分钟
+最终阶段=3
+训练日志=d:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260707_222909\训练结果\Fixed_LR_CTDE_PPO_seed42\logs\training_log.json
+验证日志=d:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260707_222909\训练结果\Fixed_LR_CTDE_PPO_seed42\logs\validation_log.json
+质量指标=d:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260707_222909\训练结果\Fixed_LR_CTDE_PPO_seed42\logs\model_quality_metrics.json
+泛化评估=d:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260707_222909\训练结果\Fixed_LR_CTDE_PPO_seed42\logs\generalization_eval.json
+评估结果=d:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260707_222909\训练结果\Fixed_LR_CTDE_PPO_seed42\logs\eval_results.json
+评估摘要=d:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260707_222909\训练结果\Fixed_LR_CTDE_PPO_seed42\logs\eval_summary.json
+最终模型=d:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260707_222909\训练结果\Fixed_LR_CTDE_PPO_seed42\models\ppo_final.pth
+控制台日志=d:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260707_222909\训练结果\Fixed_LR_CTDE_PPO_seed42\train_console_log.txt
+源码快照=d:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260707_222909\训练结果\训练源码
+质量摘要 | AUC=0.25938878380000147 | tail得分标准差=0.327971060681193 | KL超限率=0.0
+======================================================================
+
+================================================================================
+开始学习率对比变体: KL_LR_CTDE_PPO | 随机种子=42
+输出目录=d:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260707_222909\训练结果\KL_LR_CTDE_PPO_seed42
+================================================================================
