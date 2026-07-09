@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: ""
+title: 自适应参数优化项目根目录
+scope:
+    - .gitignore
+source_files: []
+depends_on: []
+related_to: []

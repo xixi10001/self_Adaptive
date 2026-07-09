@@ -1,6 +1,20 @@
 import unittest
 
+import numpy as np
+
 from rl_environment_baseline import FireSearchBaselineEnvironment
+
+
+class _FakeEnvData:
+    def __init__(self, heat: float, fire_count: int = 0):
+        self.heat = heat
+        self.fire_count = fire_count
+
+    def get_thermal_value(self, row, col):
+        return self.heat
+
+    def get_local_fire_info(self, row, col, radius):
+        return {"fire_count": self.fire_count}
 
 
 class BoundaryRewardDesignTest(unittest.TestCase):
@@ -27,6 +41,27 @@ class BoundaryRewardDesignTest(unittest.TestCase):
         partial_coverage_penalty = env._timeout_terminal_penalty(coverage=0.30)
 
         self.assertGreater(zero_coverage_penalty, partial_coverage_penalty + 20.0)
+
+    def test_heat_signal_uses_conservative_thermal_threshold(self):
+        env = object.__new__(FireSearchBaselineEnvironment)
+        env.vision_radius = 16
+        pos = np.array([10, 10])
+
+        env.env_data = _FakeEnvData(heat=0.49, fire_count=0)
+        below = env._get_heat_signal_features(pos)
+        self.assertFalse(below["thermal_sensor_signal"])
+        self.assertFalse(below["has_heat_signal"])
+
+        env.env_data = _FakeEnvData(heat=0.50, fire_count=0)
+        at_threshold = env._get_heat_signal_features(pos)
+        self.assertTrue(at_threshold["thermal_sensor_signal"])
+        self.assertTrue(at_threshold["has_heat_signal"])
+
+        env.env_data = _FakeEnvData(heat=0.0, fire_count=1)
+        local_fire = env._get_heat_signal_features(pos)
+        self.assertFalse(local_fire["thermal_sensor_signal"])
+        self.assertTrue(local_fire["local_fire_visible"])
+        self.assertTrue(local_fire["has_heat_signal"])
 
 
 if __name__ == "__main__":

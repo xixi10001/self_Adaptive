@@ -1,0 +1,26 @@
+# 知识卡导出索引文件
+schema_version: 1
+locale: zh-CN
+branch: main
+nodes_managed: true
+exported_at: "2026-07-09T07:06:28Z"
+modules:
+    "":
+        dir_name: 自适应参数优化项目根目录
+        title: 自适应参数优化项目根目录
+        scope:
+            - .gitignore
+        source_files: []
+        children:
+            - fire_simulation_datasets
+        depends_on: []
+        related_to: []
+    fire_simulation_datasets:
+        dir_name: FARSite 火灾仿真数据集（按训练_验证_泛化_压力划分）
+        title: FARSite 火灾仿真数据集（按训练/验证/泛化/压力划分）
+        scope:
+            - map/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []

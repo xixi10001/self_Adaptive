@@ -564,7 +564,15 @@ class CurriculumManager:
     PERCENTILE_LADDER = [None, 1.0, 2.5, 5.0]
     STAGE3_TARGET_MIN_EPS = [100, 200, 350, 0]
     STAGE3_NEAR_SPAWN_INIT = 0.25
-    STAGE3_NEAR_SPAWN_ANNEAL_EPS = 250
+    # 方案 C: 能力绑定阶梯式退火，替代旧的线性退火
+    STAGE3_NEAR_LADDER = [0.25, 0.15, 0.05, 0.0]
+    STAGE3_NEAR_MIN_EPS = [80, 100, 120]  # 每级最少回合数
+    # 每级退火的能力门槛: (success_rate, max_zero_timeout_rate, min_coverage)
+    STAGE3_NEAR_GATES = [
+        (0.30, 0.20, 0.25),   # 0.25 -> 0.15
+        (0.40, 0.15, 0.35),   # 0.15 -> 0.05
+        (0.50, 0.10, 0.45),   # 0.05 -> 0.00
+    ]
 
     def __init__(self, final_init_area_percent: float = 5.0, stage3_final_target: float = 0.60):
         self.current_stage = 1
@@ -583,6 +591,8 @@ class CurriculumManager:
         self._pct_advance_threshold = 0.35
         self._s3_target_idx = 0
         self._s3_target_eps = 0
+        self._near_idx = 0
+        self._near_eps = 0
         self.PERCENTILE_LADDER = [None, 1.0, 2.5, float(final_init_area_percent)]
         self.STAGE3_TARGET_LADDER = [0.20, 0.35, 0.50, float(stage3_final_target)]
 
@@ -598,8 +608,7 @@ class CurriculumManager:
     def stage3_near_prob(self) -> float:
         if self.current_stage != 3:
             return self.STAGE3_NEAR_SPAWN_INIT
-        ratio = min(1.0, self._s3_target_eps / max(self.STAGE3_NEAR_SPAWN_ANNEAL_EPS, 1))
-        return float(self.STAGE3_NEAR_SPAWN_INIT * (1.0 - ratio))
+        return self.STAGE3_NEAR_LADDER[self._near_idx]
 
     def update(self, success: bool, coverage: float, zero_coverage_timeout: bool = False) -> int:
         stage = self.current_stage
@@ -613,7 +622,9 @@ class CurriculumManager:
             self._try_advance_percentile()
         if stage == 3:
             self._s3_target_eps += 1
+            self._near_eps += 1
             self._try_advance_stage3_target()
+            self._try_advance_near_prob()
             return self.current_stage
 
         success_rate = float(np.mean(self.stage_success_rates[stage])) if self.stage_success_rates[stage] else 0.0
@@ -674,11 +685,12 @@ class CurriculumManager:
             else 0.0
         )
         current_target = self.STAGE3_TARGET_LADDER[self._s3_target_idx]
+        # 方案 C: 更严格的能力门槛
         if (
             self._s3_target_eps >= min_eps
             and avg_coverage >= current_target * 0.85
-            and success_rate >= 0.45
-            and zero_timeout_rate <= self.stage_zero_timeout_thresholds[3]
+            and success_rate >= 0.50
+            and zero_timeout_rate <= 0.15
         ):
             self._s3_target_idx += 1
             self._s3_target_eps = 0
@@ -686,6 +698,32 @@ class CurriculumManager:
                 f"\n  [stage3 curriculum] target {current_target:.0%} -> "
                 f"{self.current_stage3_target:.0%} | avg_coverage={avg_coverage * 100:.1f}% | "
                 f"success={success_rate * 100:.1f}% | zero_timeout={zero_timeout_rate * 100:.1f}%"
+            )
+
+    def _try_advance_near_prob(self):
+        """方案 C: 能力绑定阶梯式 near_prob 退火。"""
+        if self._near_idx >= len(self.STAGE3_NEAR_LADDER) - 1:
+            return
+        min_eps = self.STAGE3_NEAR_MIN_EPS[self._near_idx]
+        if self._near_eps < min_eps:
+            return
+        avg_coverage = float(np.mean(self.stage_coverages[3])) if self.stage_coverages[3] else 0.0
+        success_rate = float(np.mean(self.stage_success_rates[3])) if self.stage_success_rates[3] else 0.0
+        zero_timeout_rate = (
+            float(np.mean(self.stage_zero_timeout_rates[3]))
+            if self.stage_zero_timeout_rates[3]
+            else 0.0
+        )
+        req_sr, req_zt, req_cov = self.STAGE3_NEAR_GATES[self._near_idx]
+        if success_rate >= req_sr and zero_timeout_rate <= req_zt and avg_coverage >= req_cov:
+            old_prob = self.STAGE3_NEAR_LADDER[self._near_idx]
+            self._near_idx += 1
+            self._near_eps = 0
+            new_prob = self.STAGE3_NEAR_LADDER[self._near_idx]
+            print(
+                f"\n  [near curriculum] near_prob {old_prob:.2f} -> {new_prob:.2f} | "
+                f"success={success_rate * 100:.1f}% | zero_timeout={zero_timeout_rate * 100:.1f}% | "
+                f"coverage={avg_coverage * 100:.1f}%"
             )
 
     def get_stage_info(self) -> Dict:

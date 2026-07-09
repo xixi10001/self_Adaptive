@@ -1,0 +1,3 @@
+﻿run,episodes,mean_reward,mean_task_score_percent,mean_coverage_percent,success_percent,timeout_percent,zero_coverage_timeout_percent,mean_steps,mean_info_gain
+Fixed_LR_CTDE_PPO_seed42,600,-36.088019,53.429227,49.728787,62.500000,37.500000,2.500000,305.555000,0.000000
+KL_LR_CTDE_PPO_seed42,600,-49.672192,47.032299,45.146488,54.333333,45.666667,6.166667,355.228333,0.000000

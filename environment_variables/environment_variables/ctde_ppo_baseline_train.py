@@ -32,10 +32,16 @@ from rl_environment_baseline import FireSearchBaselineEnvironment
 
 _data_module = importlib.import_module("\u4fe1\u606f\u8f6c\u6362")
 DatasetIndex = _data_module.DatasetIndex
+SceneManager = _data_module.SceneManager
 validate_scene_boundaries = _data_module.validate_scene_boundaries
 RESULTS_DIR_NAME = "\u8bad\u7ec3\u7ed3\u679c"
 SOURCE_DIR_NAME = "\u8bad\u7ec3\u6e90\u7801"
 CONSOLE_LOG_NAME = "train_console_log.txt"
+THERMAL_HEALTH_LIMITS = {
+    "sat_ratio": 0.10,
+    "high_ratio": 0.50,
+    "zero_grad_in_high_ratio": 0.20,
+}
 
 
 class TeeStream:
@@ -564,7 +570,16 @@ class CurriculumManager:
     PERCENTILE_LADDER = [None, 1.0, 2.5, 5.0]
     STAGE3_TARGET_MIN_EPS = [100, 200, 350, 0]
     STAGE3_NEAR_SPAWN_INIT = 0.25
-    STAGE3_NEAR_SPAWN_ANNEAL_EPS = 250
+    # 方案 C: 能力绑定阶梯式退火，替代旧的线性退火
+    STAGE3_NEAR_LADDER = [0.25, 0.15, 0.05, 0.0]
+    STAGE3_NEAR_MIN_EPS = [80, 100, 120]  # 每级最少回合数
+    # 每级退火的能力门槛: (success_rate, max_zero_timeout_rate, min_coverage)
+    STAGE3_NEAR_GATES = [
+        (0.30, 0.20, 0.25),   # 0.25 -> 0.15
+        (0.40, 0.15, 0.35),   # 0.15 -> 0.05
+        (0.50, 0.10, 0.45),   # 0.05 -> 0.00
+    ]
+    TERMINAL_FOCUS_EPISODES = 300  # 最后 300 回合强制评估条件
 
     def __init__(self, final_init_area_percent: float = 5.0, stage3_final_target: float = 0.60):
         self.current_stage = 1
@@ -583,8 +598,11 @@ class CurriculumManager:
         self._pct_advance_threshold = 0.35
         self._s3_target_idx = 0
         self._s3_target_eps = 0
+        self._s3_near_idx = 0
+        self._near_eps = 0
         self.PERCENTILE_LADDER = [None, 1.0, 2.5, float(final_init_area_percent)]
         self.STAGE3_TARGET_LADDER = [0.20, 0.35, 0.50, float(stage3_final_target)]
+        self._terminal_focus_active = False
 
     @property
     def current_init_percentile(self):
@@ -598,8 +616,7 @@ class CurriculumManager:
     def stage3_near_prob(self) -> float:
         if self.current_stage != 3:
             return self.STAGE3_NEAR_SPAWN_INIT
-        ratio = min(1.0, self._s3_target_eps / max(self.STAGE3_NEAR_SPAWN_ANNEAL_EPS, 1))
-        return float(self.STAGE3_NEAR_SPAWN_INIT * (1.0 - ratio))
+        return self.STAGE3_NEAR_LADDER[self._s3_near_idx]
 
     def update(self, success: bool, coverage: float, zero_coverage_timeout: bool = False) -> int:
         stage = self.current_stage
@@ -613,7 +630,9 @@ class CurriculumManager:
             self._try_advance_percentile()
         if stage == 3:
             self._s3_target_eps += 1
+            self._near_eps += 1
             self._try_advance_stage3_target()
+            self._try_advance_near_prob()
             return self.current_stage
 
         success_rate = float(np.mean(self.stage_success_rates[stage])) if self.stage_success_rates[stage] else 0.0
@@ -674,11 +693,12 @@ class CurriculumManager:
             else 0.0
         )
         current_target = self.STAGE3_TARGET_LADDER[self._s3_target_idx]
+        # 方案 C: 更严格的能力门槛
         if (
             self._s3_target_eps >= min_eps
             and avg_coverage >= current_target * 0.85
-            and success_rate >= 0.45
-            and zero_timeout_rate <= self.stage_zero_timeout_thresholds[3]
+            and success_rate >= 0.50
+            and zero_timeout_rate <= 0.15
         ):
             self._s3_target_idx += 1
             self._s3_target_eps = 0
@@ -686,6 +706,35 @@ class CurriculumManager:
                 f"\n  [stage3 curriculum] target {current_target:.0%} -> "
                 f"{self.current_stage3_target:.0%} | avg_coverage={avg_coverage * 100:.1f}% | "
                 f"success={success_rate * 100:.1f}% | zero_timeout={zero_timeout_rate * 100:.1f}%"
+            )
+
+    def _try_advance_near_prob(self):
+        """方案 C: 能力绑定阶梯式 near_prob 退火，且不超过 target 进度。"""
+        if self._s3_near_idx >= len(self.STAGE3_NEAR_LADDER) - 1:
+            return
+        # 关键约束: near_prob 退火不超前于 target 推进
+        if self._s3_near_idx >= self._s3_target_idx:
+            return
+        min_eps = self.STAGE3_NEAR_MIN_EPS[self._s3_near_idx]
+        if self._near_eps < min_eps:
+            return
+        avg_coverage = float(np.mean(self.stage_coverages[3])) if self.stage_coverages[3] else 0.0
+        success_rate = float(np.mean(self.stage_success_rates[3])) if self.stage_success_rates[3] else 0.0
+        zero_timeout_rate = (
+            float(np.mean(self.stage_zero_timeout_rates[3]))
+            if self.stage_zero_timeout_rates[3]
+            else 0.0
+        )
+        req_sr, req_zt, req_cov = self.STAGE3_NEAR_GATES[self._s3_near_idx]
+        if success_rate >= req_sr and zero_timeout_rate <= req_zt and avg_coverage >= req_cov:
+            old_prob = self.STAGE3_NEAR_LADDER[self._s3_near_idx]
+            self._s3_near_idx += 1
+            self._near_eps = 0
+            new_prob = self.STAGE3_NEAR_LADDER[self._s3_near_idx]
+            print(
+                f"\n  [near curriculum] near_prob {old_prob:.2f} -> {new_prob:.2f} | "
+                f"success={success_rate * 100:.1f}% | zero_timeout={zero_timeout_rate * 100:.1f}% | "
+                f"coverage={avg_coverage * 100:.1f}%"
             )
 
     def get_stage_info(self) -> Dict:
@@ -700,6 +749,11 @@ class CurriculumManager:
             "stage3_target": self.current_stage3_target if stage == 3 else None,
             "stage3_near_prob": self.stage3_near_prob if stage == 3 else None,
         }
+
+    def activate_terminal_focus(self):
+        """强制切换到评估条件: target=最终值, near_prob=0.0"""
+        self._s3_target_idx = len(self.STAGE3_TARGET_LADDER) - 1
+        self._s3_near_idx = len(self.STAGE3_NEAR_LADDER) - 1
 
 
 class CTDE_PPO_Agent:
@@ -1168,6 +1222,59 @@ def _write_json(path: str, data):
         json.dump(_to_jsonable(data), f, indent=2, ensure_ascii=False)
 
 
+def _thermal_health_failures(records: List[Dict]) -> List[str]:
+    failures = []
+    for record in records:
+        split = str(record.get("split", "?"))
+        scene_key = str(record.get("scene_key", "?"))
+        for metric, limit in THERMAL_HEALTH_LIMITS.items():
+            value = float(record.get(metric, 0.0))
+            if value > limit:
+                failures.append(
+                    f"{split}/{scene_key} {metric}={value:.3f} > {limit:.3f}"
+                )
+    return failures
+
+
+def _assert_thermal_health_ok(records: List[Dict]) -> None:
+    failures = _thermal_health_failures(records)
+    if failures:
+        shown = "; ".join(failures[:8])
+        remaining = len(failures) - min(len(failures), 8)
+        suffix = f"; ... {remaining} more" if remaining > 0 else ""
+        raise RuntimeError(
+            "Thermal health check failed before training: " + shown + suffix
+        )
+
+
+def _collect_thermal_health(
+    data_dir: str,
+    dataset_index: DatasetIndex,
+    splits: List[str],
+    init_percentile,
+    init_area_percent,
+    scene_keys_by_split: Dict[str, List[str]] = None,
+) -> List[Dict]:
+    scene_manager = SceneManager(data_dir)
+    scene_keys_by_split = scene_keys_by_split or {}
+    records = []
+    for split in splits:
+        split = dataset_index.normalize_mode(split)
+        scene_keys = scene_keys_by_split.get(split) or dataset_index.scene_keys(split)
+        for scene_key in scene_keys:
+            scene = scene_manager.get_specific_scene(scene_key)
+            scene.initialize_training_boundary(
+                init_percentile=init_percentile,
+                init_area_percent=init_area_percent,
+            )
+            scene._compute_thermal_field()
+            record = scene.diagnose_thermal_health()
+            record["split"] = split
+            record["scene_key"] = scene_key
+            records.append(record)
+    return records
+
+
 def train(config: Dict = None):
     config = normalize_training_config(config)
 
@@ -1189,10 +1296,23 @@ def train(config: Dict = None):
         init_area_percent=config["init_area_percent"],
         verbose=True,
     )
+    thermal_health_records = _collect_thermal_health(
+        config["data_dir"],
+        dataset_index,
+        splits=["train", "validation", "generalization", "stress"],
+        init_percentile=config["init_percentile"],
+        init_area_percent=config["init_area_percent"],
+        scene_keys_by_split={config["train_split"]: config["train_scene_keys"]},
+    )
     preflight_payload = _build_experiment_metadata(config, dataset_index)
     preflight_payload["boundary_validation"] = preflight_counts
-    with open(os.path.join(log_dir, "dataset_preflight.json"), "w", encoding="utf-8") as f:
-        json.dump(_to_jsonable(preflight_payload), f, indent=2, ensure_ascii=False)
+    preflight_payload["thermal_health"] = {
+        "limits": dict(THERMAL_HEALTH_LIMITS),
+        "records": thermal_health_records,
+        "failures": _thermal_health_failures(thermal_health_records),
+    }
+    _write_json(os.path.join(log_dir, "dataset_preflight.json"), preflight_payload)
+    _assert_thermal_health_ok(thermal_health_records)
 
     print("\n" + "=" * 70)
     print("CTDE-PPO 基线训练开始")
@@ -1312,6 +1432,7 @@ def train(config: Dict = None):
         "init_area_percent": [],
         "stage3_target": [],
         "stage3_near_prob": [],
+        "terminal_focus": [],
     }
 
     validation_log = {
@@ -1346,6 +1467,23 @@ def train(config: Dict = None):
     }
 
     for episode in range(1, config["total_episodes"] + 1):
+        # 终末专注: 最后 N 回合强制评估条件
+        remaining = config["total_episodes"] - episode
+        if (
+            remaining <= CurriculumManager.TERMINAL_FOCUS_EPISODES
+            and curriculum.current_stage == 3
+            and not curriculum._terminal_focus_active
+        ):
+            curriculum.activate_terminal_focus()
+            curriculum._terminal_focus_active = True
+            # 立即同步 env 参数，避免首回合使用旧值
+            env.stage_targets[3] = curriculum.current_stage3_target
+            env.stage3_near_prob = curriculum.stage3_near_prob
+            print(
+                f"\n  [terminal focus] 剩余{remaining}回合, "
+                f"强制 target={curriculum.current_stage3_target:.2f}, "
+                f"near_prob={curriculum.stage3_near_prob:.2f}"
+            )
         obs = env.reset()
         episode_reward = 0.0
         episode_length = 0
@@ -1409,6 +1547,9 @@ def train(config: Dict = None):
         training_log["init_area_percent"].append(env.init_area_percent)
         training_log["stage3_target"].append(env.stage_targets[3])
         training_log["stage3_near_prob"].append(env.stage3_near_prob)
+        training_log["terminal_focus"].append(
+            1 if curriculum._terminal_focus_active else 0
+        )
 
         old_stage = curriculum.current_stage
         new_stage = curriculum.update(
@@ -1422,6 +1563,7 @@ def train(config: Dict = None):
         difficulty_changed = (
             next_area_percent != env.init_area_percent
             or next_stage3_target != env.stage_targets[3]
+            or next_stage3_near_prob != env.stage3_near_prob
         )
         if new_stage != env.curriculum_stage or difficulty_changed:
             if len(agent.buffer) >= agent.min_update_batch_size:
@@ -1486,6 +1628,8 @@ def train(config: Dict = None):
             is_best_val = (
                 bool(config["save_best_by_validation"])
                 and curriculum.current_stage == 3
+                and curriculum.stage_episodes[3] >= 300  # 阶段3至少运行300回合
+                and curriculum._terminal_focus_active     # 终末专注已激活
                 and val_model_score > best_val_model_score
             )
             if is_best_val:

@@ -139,7 +139,12 @@ class CurriculumScheduleTest(unittest.TestCase):
             manager.update(success=True, coverage=0.20)
 
         self.assertEqual(manager.current_stage3_target, 0.35)
-        self.assertLess(manager.stage3_near_prob, 0.25)
+        self.assertEqual(manager.stage3_near_prob, 0.25)
+
+        for _ in range(60):
+            manager.update(success=True, coverage=0.25)
+
+        self.assertEqual(manager.stage3_near_prob, 0.15)
 
     def test_stage3_target_does_not_advance_on_coverage_without_success(self):
         manager = CurriculumManager(stage3_final_target=0.60)
