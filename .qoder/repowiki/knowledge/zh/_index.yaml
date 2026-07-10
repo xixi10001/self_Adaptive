@@ -3,11 +3,11 @@ schema_version: 1
 locale: zh-CN
 branch: main
 nodes_managed: true
-exported_at: "2026-07-09T07:06:28Z"
+exported_at: "2026-07-09T09:13:33Z"
 modules:
     "":
-        dir_name: 自适应参数优化项目根目录
-        title: 自适应参数优化项目根目录
+        dir_name: 火灾仿真数据集与训练工程根
+        title: 火灾仿真数据集与训练工程根
         scope:
             - .gitignore
         source_files: []
@@ -16,8 +16,8 @@ modules:
         depends_on: []
         related_to: []
     fire_simulation_datasets:
-        dir_name: FARSite 火灾仿真数据集（按训练_验证_泛化_压力划分）
-        title: FARSite 火灾仿真数据集（按训练/验证/泛化/压力划分）
+        dir_name: FARSite_FlamMap 火灾仿真数据集（Train_Validation_Generalization_Stress）
+        title: FARSite/FlamMap 火灾仿真数据集（Train/Validation/Generalization/Stress）
         scope:
             - map/
         source_files: []

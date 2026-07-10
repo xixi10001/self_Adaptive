@@ -1,6 +1,6 @@
 schema_version: 1
 module_path: fire_simulation_datasets
-title: FARSite 火灾仿真数据集（按训练/验证/泛化/压力划分）
+title: FARSite/FlamMap 火灾仿真数据集（Train/Validation/Generalization/Stress）
 scope:
     - map/
 source_files: []

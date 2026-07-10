@@ -1,6 +1,6 @@
 schema_version: 1
 module_path: ""
-title: 自适应参数优化项目根目录
+title: 火灾仿真数据集与训练工程根
 scope:
     - .gitignore
 source_files: []

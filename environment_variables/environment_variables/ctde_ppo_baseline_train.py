@@ -114,11 +114,18 @@ DEFAULT_TRAIN_CONFIG = {
     "actor_lr": 2e-4,
     "critic_lr": 5e-4,
     "lr_adapt_mode": "fixed",
-    "target_kl": 0.010,
-    "actor_lr_min": 2e-5,
-    "actor_lr_max": 4e-4,
+    "target_kl": 0.0065,
+    "actor_lr_min": 1e-4,
+    "actor_lr_max": 2.5e-4,
     "kl_ema_beta": 0.9,
-    "kl_lr_alpha": 0.1,
+    "kl_lr_low_ratio": 0.80,
+    "kl_lr_high_ratio": 1.20,
+    "kl_lr_emergency_ratio": 2.00,
+    "kl_lr_up_factor": 1.03,
+    "kl_lr_down_factor": 0.85,
+    "kl_lr_emergency_factor": 0.70,
+    "kl_lr_low_patience": 3,
+    "kl_early_stop_ratio": 1.50,
     "gamma": 0.99,
     "gae_lambda": 0.95,
     "clip_epsilon": 0.2,
@@ -149,7 +156,7 @@ DEFAULT_TRAIN_CONFIG = {
     "quality_score_threshold": 0.55,
     "quality_window": 50,
     "quality_tail_fraction": 0.2,
-    "quality_target_kl": 0.010,
+    "quality_target_kl": 0.0065,
     "plot_after_train": True,
     "figure_window": 100,
     "figure_dpi": 300,
@@ -236,7 +243,20 @@ def normalize_training_config(config: Dict = None) -> Dict:
     normalized["actor_lr_min"] = max(1e-12, float(normalized["actor_lr_min"]))
     normalized["actor_lr_max"] = max(normalized["actor_lr_min"], float(normalized["actor_lr_max"]))
     normalized["kl_ema_beta"] = float(np.clip(normalized["kl_ema_beta"], 0.0, 0.999))
-    normalized["kl_lr_alpha"] = max(0.0, float(normalized["kl_lr_alpha"]))
+    normalized["kl_lr_low_ratio"] = max(0.0, float(normalized["kl_lr_low_ratio"]))
+    normalized["kl_lr_high_ratio"] = max(
+        normalized["kl_lr_low_ratio"], float(normalized["kl_lr_high_ratio"])
+    )
+    normalized["kl_lr_emergency_ratio"] = max(
+        normalized["kl_lr_high_ratio"], float(normalized["kl_lr_emergency_ratio"])
+    )
+    normalized["kl_lr_up_factor"] = max(1.0, float(normalized["kl_lr_up_factor"]))
+    normalized["kl_lr_down_factor"] = float(np.clip(normalized["kl_lr_down_factor"], 1e-6, 1.0))
+    normalized["kl_lr_emergency_factor"] = float(
+        np.clip(normalized["kl_lr_emergency_factor"], 1e-6, normalized["kl_lr_down_factor"])
+    )
+    normalized["kl_lr_low_patience"] = max(1, int(normalized["kl_lr_low_patience"]))
+    normalized["kl_early_stop_ratio"] = max(1.0, float(normalized["kl_early_stop_ratio"]))
     normalized["gamma"] = float(normalized["gamma"])
     normalized["gae_lambda"] = float(normalized["gae_lambda"])
     normalized["clip_epsilon"] = float(normalized["clip_epsilon"])
@@ -766,11 +786,18 @@ class CTDE_PPO_Agent:
         actor_lr: float = 2e-4,
         critic_lr: float = 5e-4,
         lr_adapt_mode: str = "fixed",
-        target_kl: float = 0.010,
-        actor_lr_min: float = 2e-5,
-        actor_lr_max: float = 4e-4,
+        target_kl: float = 0.0065,
+        actor_lr_min: float = 1e-4,
+        actor_lr_max: float = 2.5e-4,
         kl_ema_beta: float = 0.9,
-        kl_lr_alpha: float = 0.1,
+        kl_lr_low_ratio: float = 0.80,
+        kl_lr_high_ratio: float = 1.20,
+        kl_lr_emergency_ratio: float = 2.00,
+        kl_lr_up_factor: float = 1.03,
+        kl_lr_down_factor: float = 0.85,
+        kl_lr_emergency_factor: float = 0.70,
+        kl_lr_low_patience: int = 3,
+        kl_early_stop_ratio: float = 1.50,
         gamma: float = 0.99,
         gae_lambda: float = 0.95,
         clip_epsilon: float = 0.2,
@@ -789,8 +816,18 @@ class CTDE_PPO_Agent:
         self.actor_lr_min = max(1e-12, float(actor_lr_min))
         self.actor_lr_max = max(self.actor_lr_min, float(actor_lr_max))
         self.kl_ema_beta = float(np.clip(kl_ema_beta, 0.0, 0.999))
-        self.kl_lr_alpha = max(0.0, float(kl_lr_alpha))
+        self.kl_lr_low_ratio = max(0.0, float(kl_lr_low_ratio))
+        self.kl_lr_high_ratio = max(self.kl_lr_low_ratio, float(kl_lr_high_ratio))
+        self.kl_lr_emergency_ratio = max(self.kl_lr_high_ratio, float(kl_lr_emergency_ratio))
+        self.kl_lr_up_factor = max(1.0, float(kl_lr_up_factor))
+        self.kl_lr_down_factor = float(np.clip(kl_lr_down_factor, 1e-6, 1.0))
+        self.kl_lr_emergency_factor = float(
+            np.clip(kl_lr_emergency_factor, 1e-6, self.kl_lr_down_factor)
+        )
+        self.kl_lr_low_patience = max(1, int(kl_lr_low_patience))
+        self.kl_early_stop_ratio = max(1.0, float(kl_early_stop_ratio))
         self.kl_ema = None
+        self._consecutive_low_kl = 0
         self.gamma = float(gamma)
         self.gae_lambda = float(gae_lambda)
         self.clip_epsilon = float(clip_epsilon)
@@ -836,15 +873,32 @@ class CTDE_PPO_Agent:
     def _adapt_actor_lr_by_kl(self, mean_kl: float) -> str:
         kl_ema = self._update_kl_ema(mean_kl)
         current_lr = float(self.actor_optimizer.param_groups[0]["lr"])
-        lr_factor = float(np.exp(-self.kl_lr_alpha * (kl_ema / self.target_kl - 1.0)))
-        new_lr = float(np.clip(current_lr * lr_factor, self.actor_lr_min, self.actor_lr_max))
-        self._set_actor_lr(new_lr)
+        if mean_kl > self.kl_lr_emergency_ratio * self.target_kl:
+            self._consecutive_low_kl = 0
+            new_lr = current_lr * self.kl_lr_emergency_factor
+            action = "emergency_down"
+        elif max(mean_kl, kl_ema) > self.kl_lr_high_ratio * self.target_kl:
+            self._consecutive_low_kl = 0
+            new_lr = current_lr * self.kl_lr_down_factor
+            action = "down"
+        elif kl_ema < self.kl_lr_low_ratio * self.target_kl:
+            self._consecutive_low_kl += 1
+            if self._consecutive_low_kl >= self.kl_lr_low_patience:
+                self._consecutive_low_kl = 0
+                new_lr = current_lr * self.kl_lr_up_factor
+                action = "up"
+            else:
+                new_lr = current_lr
+                action = "low_wait"
+        else:
+            self._consecutive_low_kl = 0
+            new_lr = current_lr
+            action = "keep"
 
-        if np.isclose(new_lr, current_lr):
-            return "keep"
-        if new_lr < current_lr:
-            return "down"
-        return "up"
+        self._set_actor_lr(new_lr)
+        if not np.isclose(self.actor_optimizer.param_groups[0]["lr"], current_lr):
+            return action
+        return "keep" if action in {"up", "down", "emergency_down"} else action
 
     def select_actions(self, local_obs: List[np.ndarray]) -> Tuple[List[int], List[float]]:
         local_obs_tensor = torch.FloatTensor(np.array(local_obs)).to(self.device)
@@ -908,6 +962,8 @@ class CTDE_PPO_Agent:
         total_approx_kl = 0.0
         total_clip_fraction = 0.0
         update_steps = 0
+        ppo_epochs_completed = 0
+        kl_early_stop = False
 
         for _ in range(self.ppo_epochs):
             indices = torch.randperm(buffer_size, device=self.device)
@@ -966,6 +1022,15 @@ class CTDE_PPO_Agent:
                 total_clip_fraction += float(clip_fraction.item())
                 update_steps += 1
 
+            ppo_epochs_completed += 1
+            running_mean_kl = total_approx_kl / max(update_steps, 1)
+            if (
+                self.lr_adapt_mode == "kl"
+                and running_mean_kl > self.kl_early_stop_ratio * self.target_kl
+            ):
+                kl_early_stop = True
+                break
+
         self.buffer.clear()
         self.training_step += 1
 
@@ -984,6 +1049,10 @@ class CTDE_PPO_Agent:
             "approx_kl": mean_kl,
             "kl_ema": self.kl_ema if self.kl_ema is not None else mean_kl,
             "kl_lr_action": kl_lr_action,
+            "target_kl": self.target_kl,
+            "consecutive_low_kl": self._consecutive_low_kl,
+            "kl_early_stop": kl_early_stop,
+            "ppo_epochs_completed": ppo_epochs_completed,
             "clip_fraction": total_clip_fraction / denom,
             "actor_lr": self.actor_optimizer.param_groups[0]["lr"],
             "critic_lr": self.critic_optimizer.param_groups[0]["lr"],
@@ -999,18 +1068,33 @@ class CTDE_PPO_Agent:
                 "critic_optimizer_state_dict": self.critic_optimizer.state_dict(),
                 "training_step": self.training_step,
                 "kl_ema": self.kl_ema,
+                "lr_controller_state": {
+                    "kl_ema": self.kl_ema,
+                    "consecutive_low_kl": self._consecutive_low_kl,
+                    "target_kl": self.target_kl,
+                },
             },
             path,
         )
 
-    def load(self, path: str):
+    def load(self, path: str, restore_training_state: bool = True):
         checkpoint = torch.load(path, map_location=self.device)
         self.actor.load_state_dict(checkpoint["actor_state_dict"])
         self.critic.load_state_dict(checkpoint["critic_state_dict"])
+        if not restore_training_state:
+            self.kl_ema = None
+            self._consecutive_low_kl = 0
+            return
+
         self.actor_optimizer.load_state_dict(checkpoint["actor_optimizer_state_dict"])
         self.critic_optimizer.load_state_dict(checkpoint["critic_optimizer_state_dict"])
-        self.training_step = int(checkpoint["training_step"])
-        self.kl_ema = checkpoint.get("kl_ema")
+        self._set_actor_lr(self.actor_optimizer.param_groups[0]["lr"])
+        self.training_step = int(checkpoint.get("training_step", 0))
+        controller_state = checkpoint.get("lr_controller_state", {})
+        self.kl_ema = controller_state.get("kl_ema", checkpoint.get("kl_ema"))
+        self._consecutive_low_kl = int(controller_state.get("consecutive_low_kl", 0))
+        if "target_kl" in controller_state:
+            self.target_kl = max(1e-8, float(controller_state["target_kl"]))
 
 
 def _make_output_dir(config: Dict) -> str:
@@ -1322,7 +1406,12 @@ def train(config: Dict = None):
     print(
         f"学习率策略={config['lr_adapt_mode']} | "
         f"target_kl={config['target_kl']:.4f} | actor_lr={config['actor_lr']:.2e} | "
-        f"kl_lr_alpha={config['kl_lr_alpha']:.3f}"
+        f"actor_lr范围=[{config['actor_lr_min']:.2e}, {config['actor_lr_max']:.2e}]"
+    )
+    print(
+        f"KL迟滞区间=[{config['kl_lr_low_ratio']:.2f}, {config['kl_lr_high_ratio']:.2f}] | "
+        f"紧急阈值={config['kl_lr_emergency_ratio']:.2f} | "
+        f"epoch熔断阈值={config['kl_early_stop_ratio']:.2f}"
     )
     print(
         f"observation_profile={config['observation_profile']} | "
@@ -1371,7 +1460,14 @@ def train(config: Dict = None):
         actor_lr_min=config["actor_lr_min"],
         actor_lr_max=config["actor_lr_max"],
         kl_ema_beta=config["kl_ema_beta"],
-        kl_lr_alpha=config["kl_lr_alpha"],
+        kl_lr_low_ratio=config["kl_lr_low_ratio"],
+        kl_lr_high_ratio=config["kl_lr_high_ratio"],
+        kl_lr_emergency_ratio=config["kl_lr_emergency_ratio"],
+        kl_lr_up_factor=config["kl_lr_up_factor"],
+        kl_lr_down_factor=config["kl_lr_down_factor"],
+        kl_lr_emergency_factor=config["kl_lr_emergency_factor"],
+        kl_lr_low_patience=config["kl_lr_low_patience"],
+        kl_early_stop_ratio=config["kl_early_stop_ratio"],
         gamma=config["gamma"],
         gae_lambda=config["gae_lambda"],
         clip_epsilon=config["clip_epsilon"],
@@ -1426,6 +1522,10 @@ def train(config: Dict = None):
         "approx_kl": [],
         "kl_ema": [],
         "kl_lr_action": [],
+        "target_kl": [],
+        "consecutive_low_kl": [],
+        "kl_early_stop": [],
+        "ppo_epochs_completed": [],
         "clip_fraction": [],
         "actor_lr": [],
         "critic_lr": [],
@@ -1461,6 +1561,10 @@ def train(config: Dict = None):
         "approx_kl": 0.0,
         "kl_ema": 0.0,
         "kl_lr_action": "fixed" if config["lr_adapt_mode"] == "fixed" else "keep",
+        "target_kl": config["target_kl"],
+        "consecutive_low_kl": 0,
+        "kl_early_stop": False,
+        "ppo_epochs_completed": 0,
         "clip_fraction": 0.0,
         "actor_lr": config["actor_lr"],
         "critic_lr": config["critic_lr"],
@@ -1541,6 +1645,10 @@ def train(config: Dict = None):
         training_log["approx_kl"].append(update_info.get("approx_kl", 0.0))
         training_log["kl_ema"].append(update_info.get("kl_ema", update_info.get("approx_kl", 0.0)))
         training_log["kl_lr_action"].append(update_info.get("kl_lr_action", "fixed"))
+        training_log["target_kl"].append(update_info.get("target_kl", config["target_kl"]))
+        training_log["consecutive_low_kl"].append(update_info.get("consecutive_low_kl", 0))
+        training_log["kl_early_stop"].append(bool(update_info.get("kl_early_stop", False)))
+        training_log["ppo_epochs_completed"].append(update_info.get("ppo_epochs_completed", 0))
         training_log["clip_fraction"].append(update_info.get("clip_fraction", 0.0))
         training_log["actor_lr"].append(update_info.get("actor_lr", config["actor_lr"]))
         training_log["critic_lr"].append(update_info.get("critic_lr", config["critic_lr"]))
@@ -1733,7 +1841,14 @@ def train(config: Dict = None):
                 actor_lr_min=config["actor_lr_min"],
                 actor_lr_max=config["actor_lr_max"],
                 kl_ema_beta=config["kl_ema_beta"],
-                kl_lr_alpha=config["kl_lr_alpha"],
+                kl_lr_low_ratio=config["kl_lr_low_ratio"],
+                kl_lr_high_ratio=config["kl_lr_high_ratio"],
+                kl_lr_emergency_ratio=config["kl_lr_emergency_ratio"],
+                kl_lr_up_factor=config["kl_lr_up_factor"],
+                kl_lr_down_factor=config["kl_lr_down_factor"],
+                kl_lr_emergency_factor=config["kl_lr_emergency_factor"],
+                kl_lr_low_patience=config["kl_lr_low_patience"],
+                kl_early_stop_ratio=config["kl_early_stop_ratio"],
                 gamma=config["gamma"],
                 gae_lambda=config["gae_lambda"],
                 clip_epsilon=config["clip_epsilon"],
@@ -1743,7 +1858,7 @@ def train(config: Dict = None):
                 ppo_epochs=config["ppo_epochs"],
                 batch_size=config["batch_size"],
             )
-            best_val_agent.load(checkpoint_path)
+            best_val_agent.load(checkpoint_path, restore_training_state=False)
 
             for split in config["final_eval_splits"]:
                 split_config = make_eval_config(
@@ -2104,7 +2219,6 @@ def main():
     parser.add_argument("--single-train", action="store_true")
     parser.add_argument("--lr-mode", choices=["fixed", "kl"], default=None)
     parser.add_argument("--target-kl", type=float, default=None)
-    parser.add_argument("--kl-lr-alpha", type=float, default=None)
     parser.add_argument("--init-percentile", type=float, default=None)
     parser.add_argument("--init-area-percent", type=float, default=None)
     parser.add_argument("--use-metadata-uav-params", action="store_true")
@@ -2139,8 +2253,6 @@ def main():
     if args.target_kl is not None:
         config["target_kl"] = args.target_kl
         config["quality_target_kl"] = args.target_kl
-    if args.kl_lr_alpha is not None:
-        config["kl_lr_alpha"] = args.kl_lr_alpha
     if args.init_percentile is not None:
         config["init_percentile"] = args.init_percentile
         config["init_area_percent"] = args.init_percentile
