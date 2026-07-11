@@ -1,0 +1,173 @@
+{
+  "data_dir": "./dataset",
+  "train_split": "train",
+  "eval_split": "generalization",
+  "train_scene_keys": [
+    "train_area001_scenario001",
+    "train_area001_scenario002",
+    "train_area001_scenario003",
+    "train_area001_scenario004",
+    "train_area001_scenario005",
+    "train_area001_scenario006",
+    "train_area002_scenario001",
+    "train_area002_scenario002",
+    "train_area002_scenario003",
+    "train_area002_scenario004",
+    "train_area002_scenario005",
+    "train_area002_scenario006",
+    "train_area003_scenario001",
+    "train_area003_scenario002",
+    "train_area003_scenario003",
+    "train_area003_scenario004",
+    "train_area003_scenario005",
+    "train_area003_scenario006",
+    "train_area004_scenario001",
+    "train_area004_scenario002",
+    "train_area004_scenario003",
+    "train_area004_scenario004",
+    "train_area004_scenario005",
+    "train_area004_scenario006"
+  ],
+  "num_drones": 2,
+  "vision_radius": 16,
+  "max_steps": 600,
+  "use_metadata_uav_params": false,
+  "observation_profile": "baseline",
+  "reward_profile": "boundary_coverage",
+  "norm_params_source": "scene_p99.5",
+  "init_percentile": 5.0,
+  "init_area_percent": 5.0,
+  "total_episodes": 2500,
+  "max_train_updates": null,
+  "actor_lr": 0.0002,
+  "critic_lr": 0.0005,
+  "lr_adapt_mode": "kl",
+  "target_kl": 0.0065,
+  "actor_lr_min": 0.0001,
+  "actor_lr_max": 0.00025,
+  "kl_ema_beta": 0.9,
+  "kl_lr_low_ratio": 0.8,
+  "kl_lr_high_ratio": 1.2,
+  "kl_lr_emergency_ratio": 2.0,
+  "kl_lr_up_factor": 1.03,
+  "kl_lr_down_factor": 0.85,
+  "kl_lr_emergency_factor": 0.7,
+  "kl_lr_low_patience": 3,
+  "kl_early_stop_ratio": 1.5,
+  "gamma": 0.99,
+  "gae_lambda": 0.95,
+  "clip_epsilon": 0.2,
+  "entropy_coef": 0.01,
+  "value_coef": 0.5,
+  "max_grad_norm": 0.5,
+  "ppo_epochs": 4,
+  "batch_size": 4096,
+  "save_interval": 100,
+  "log_interval": 10,
+  "seed": 42,
+  "comparison_seeds": [
+    42
+  ],
+  "stage2_success_target": 0.15,
+  "stage3_success_target": 0.6,
+  "stage3_near_prob": 0.25,
+  "validation_split": "validation",
+  "validation_interval": 100,
+  "validation_episodes_per_scene": 5,
+  "save_best_by_validation": true,
+  "eval_scene_keys": [
+    "generalization_area006_scenario001",
+    "generalization_area006_scenario002",
+    "generalization_area006_scenario003",
+    "generalization_area006_scenario004",
+    "generalization_area006_scenario005",
+    "generalization_area006_scenario006",
+    "generalization_area007_scenario001",
+    "generalization_area007_scenario002",
+    "generalization_area007_scenario003",
+    "generalization_area007_scenario004",
+    "generalization_area007_scenario005",
+    "generalization_area007_scenario006"
+  ],
+  "eval_episodes_per_scene": 50,
+  "eval_stages": [
+    3
+  ],
+  "eval_seed_stride": 100,
+  "eval_after_train": true,
+  "final_eval_splits": [
+    "validation",
+    "generalization",
+    "stress"
+  ],
+  "final_eval_episodes_per_scene": 50,
+  "evaluate_best_val_after_train": true,
+  "quality_score_threshold": 0.55,
+  "quality_window": 50,
+  "quality_tail_fraction": 0.2,
+  "quality_target_kl": 0.0065,
+  "plot_after_train": false,
+  "figure_window": 100,
+  "figure_dpi": 300,
+  "output_root_dir": "./outputs",
+  "output_subdir": "baseline_ctde_ppo",
+  "use_scene_uav_params": false,
+  "observation_profile_dims": {
+    "baseline": {
+      "local_obs_dim": 17,
+      "global_state_dim": 19
+    },
+    "static_terrain": {
+      "local_obs_dim": 24,
+      "global_state_dim": 19
+    },
+    "dynamic_front": {
+      "local_obs_dim": 23,
+      "global_state_dim": 19
+    },
+    "risk_aware": {
+      "local_obs_dim": 20,
+      "global_state_dim": 19
+    }
+  },
+  "variant_name": "KL_LR_CTDE_PPO",
+  "output_dir": "d:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260710_160025\\训练结果\\KL_LR_CTDE_PPO_seed42",
+  "experiment_metadata": {
+    "dataset_index_version": 2,
+    "scene_split_counts": {
+      "train": 24,
+      "validation": 6,
+      "generalization": 12,
+      "stress": 4
+    },
+    "observation_profile": "baseline",
+    "reward_profile": "boundary_coverage",
+    "observation_profile_dims": {
+      "baseline": {
+        "local_obs_dim": 17,
+        "global_state_dim": 19
+      },
+      "static_terrain": {
+        "local_obs_dim": 24,
+        "global_state_dim": 19
+      },
+      "dynamic_front": {
+        "local_obs_dim": 23,
+        "global_state_dim": 19
+      },
+      "risk_aware": {
+        "local_obs_dim": 20,
+        "global_state_dim": 19
+      }
+    },
+    "norm_params_source": "scene_p99.5",
+    "use_scene_uav_params": false,
+    "use_metadata_uav_params": false,
+    "vision_radius": 16,
+    "configured_vision_radius": 16,
+    "sensor_radius_cells": 15,
+    "max_steps": 600,
+    "configured_max_steps": 600,
+    "scene_key": "train_area002_scenario001"
+  }
+}
