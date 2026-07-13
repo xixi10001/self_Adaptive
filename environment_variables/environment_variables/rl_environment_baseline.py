@@ -21,6 +21,8 @@ SceneManager = _data_module.SceneManager
 class FireSearchBaselineEnvironment(gym.Env):
     """Baseline multi-drone fire boundary search environment."""
 
+    TERMINATION_MODES = {"target_stop", "full_horizon"}
+
     OBSERVATION_PROFILE_DIMS = {
         "baseline": {"local_obs_dim": 17, "global_state_dim": 19},
         "static_terrain": {"local_obs_dim": 24, "global_state_dim": 19},
@@ -64,6 +66,7 @@ class FireSearchBaselineEnvironment(gym.Env):
         stage2_target: float = 0.15,
         stage3_target: float = 0.60,
         stage3_near_prob: float = 0.25,
+        termination_mode: str = "target_stop",
     ):
         super().__init__()
 
@@ -76,6 +79,7 @@ class FireSearchBaselineEnvironment(gym.Env):
         self.max_steps = self.config_max_steps
         self.observation_profile = self._validate_observation_profile(observation_profile)
         self.reward_profile = self._validate_reward_profile(reward_profile)
+        self.termination_mode = self._validate_termination_mode(termination_mode)
         self.curriculum_stage = int(curriculum_stage)
         self.mode = mode
         self.fixed_scene_key = fixed_scene_key
@@ -140,10 +144,17 @@ class FireSearchBaselineEnvironment(gym.Env):
         self.discovered_front = set()
         self.discovered_area_mask = np.zeros(self.grid_size, dtype=np.bool_)
         self.confirmed_boundary_mask = np.zeros(self.grid_size, dtype=np.bool_)
+        self.boundary_ever_mask = np.zeros(self.grid_size, dtype=np.bool_)
+        self._mark_current_boundary_ever()
         self._coverage_gradient = 0.0
         self._episode_explore_reward_total = 0.0
         self.first_heat_step = -1
         self.first_boundary_step = -1
+        self.target_reached = False
+        self.first_target_step = -1
+        self.boundary_refreshed = False
+        self.coverage_before_boundary_refresh = 0.0
+        self.coverage_after_boundary_refresh = 0.0
         self._recent_cells: List[Tuple[int, int]] = []
 
         self.episode_reward_breakdown = self._empty_reward_breakdown()
@@ -153,7 +164,8 @@ class FireSearchBaselineEnvironment(gym.Env):
             f"模式={mode} | 本地观测维度={self.local_obs_dim} | "
             f"全局状态维度={self.global_state_dim} | "
             f"observation_profile={self.observation_profile} | "
-            f"reward_profile={self.reward_profile}"
+            f"reward_profile={self.reward_profile} | "
+            f"termination_mode={self.termination_mode}"
         )
 
     def _load_new_scene(self):
@@ -225,6 +237,16 @@ class FireSearchBaselineEnvironment(gym.Env):
             )
         return profile
 
+    @classmethod
+    def _validate_termination_mode(cls, mode: str) -> str:
+        mode = str(mode).lower()
+        if mode not in cls.TERMINATION_MODES:
+            raise ValueError(
+                f"Unknown termination_mode {mode!r}. "
+                f"Expected one of: {sorted(cls.TERMINATION_MODES)}"
+            )
+        return mode
+
     def _empty_reward_breakdown(self) -> Dict[str, float]:
         return {key: 0.0 for key in self.REWARD_BREAKDOWN_KEYS}
 
@@ -255,6 +277,23 @@ class FireSearchBaselineEnvironment(gym.Env):
 
     def _boundary_coverage_rate(self) -> float:
         return self._discovered_on_current_boundary_count() / max(self.total_boundary_points, 1)
+
+    def _mark_current_boundary_ever(self):
+        for by, bx in self.boundary_points:
+            self.boundary_ever_mask[int(by), int(bx)] = True
+
+    def _historical_boundary_union_coverage_rate(self) -> float:
+        total = int(np.count_nonzero(self.boundary_ever_mask))
+        if total == 0:
+            return 0.0
+        observed = int(np.count_nonzero(self.confirmed_boundary_mask & self.boundary_ever_mask))
+        return float(observed / total)
+
+    def _stage_target_reached(self, coverage: float) -> bool:
+        if self.curriculum_stage == 1:
+            return len(self.discovered_boundary) >= 5
+        target = self.stage_targets[2] if self.curriculum_stage == 2 else self.stage_targets[3]
+        return float(coverage) >= float(target)
 
     def _get_circular_window(self, y: int, x: int):
         y_min = max(0, y - self.vision_radius)
@@ -337,10 +376,17 @@ class FireSearchBaselineEnvironment(gym.Env):
         self.discovered_front = set()
         self.discovered_area_mask = np.zeros(self.grid_size, dtype=np.bool_)
         self.confirmed_boundary_mask = np.zeros(self.grid_size, dtype=np.bool_)
+        self.boundary_ever_mask = np.zeros(self.grid_size, dtype=np.bool_)
+        self._mark_current_boundary_ever()
         self._coverage_gradient = 0.0
         self._episode_explore_reward_total = 0.0
         self.first_heat_step = -1
         self.first_boundary_step = -1
+        self.target_reached = False
+        self.first_target_step = -1
+        self.boundary_refreshed = False
+        self.coverage_before_boundary_refresh = 0.0
+        self.coverage_after_boundary_refresh = 0.0
         self._recent_cells = []
 
         for key in self.episode_reward_breakdown:
@@ -823,17 +869,12 @@ class FireSearchBaselineEnvironment(gym.Env):
 
     def _check_done(self) -> Tuple[bool, str]:
         coverage = self._boundary_coverage_rate()
-        if self.curriculum_stage == 1:
-            if len(self.discovered_boundary) >= 5:
-                return True, "mission_complete"
-        elif self.curriculum_stage == 2:
-            if coverage >= self.stage_targets[2]:
-                return True, "mission_complete"
-        else:
-            if coverage >= self.stage_targets[3]:
-                return True, "mission_complete"
+        if self.termination_mode == "target_stop" and self._stage_target_reached(coverage):
+            return True, "mission_complete"
 
         if self.step_count >= self.max_steps:
+            if self.termination_mode == "full_horizon":
+                return True, "horizon_reached"
             return True, "max_steps_reached"
         if any(b <= 0 for b in self.drone_batteries):
             return True, "battery_depleted"
@@ -924,7 +965,11 @@ class FireSearchBaselineEnvironment(gym.Env):
         new_on_curve = self._discovered_on_current_boundary_count()
         self._coverage_gradient = (new_on_curve - prev_on_curve) / max(self.total_boundary_points, 1)
 
+        self.boundary_refreshed = False
+        self.coverage_before_boundary_refresh = self._boundary_coverage_rate()
+
         if self.step_count % 20 == 0:
+            self.boundary_refreshed = True
             new_boundary = self.env_data.detect_fire_boundary(
                 time_step=self.step_count,
                 start_sim_time=self.env_data.training_start_sim_time,
@@ -933,12 +978,18 @@ class FireSearchBaselineEnvironment(gym.Env):
             self.boundary_points = list(new_boundary)
             self.total_boundary_points = max(len(self.boundary_points), 1)
             self._build_boundary_set()
+            self._mark_current_boundary_ever()
             if self.boundary_points:
                 self.fire_centroid = np.mean(
                     np.array(self.boundary_points, dtype=np.float32), axis=0
                 )
             self.env_data._compute_thermal_field()
             self._refresh_confirmed_boundary_state()
+
+        self.coverage_after_boundary_refresh = self._boundary_coverage_rate()
+        if not self.target_reached and self._stage_target_reached(self.coverage_after_boundary_refresh):
+            self.target_reached = True
+            self.first_target_step = self.step_count
 
         done, done_reason = self._check_done()
         coverage = self._boundary_coverage_rate()
@@ -971,6 +1022,13 @@ class FireSearchBaselineEnvironment(gym.Env):
                 np.mean([np.linalg.norm(pos - self.fire_centroid) for pos in self.drone_positions])
             ),
             "done_reason": done_reason,
+            "termination_mode": self.termination_mode,
+            "target_reached": bool(self.target_reached),
+            "first_target_step": int(self.first_target_step),
+            "boundary_refreshed": bool(self.boundary_refreshed),
+            "coverage_before_boundary_refresh": float(self.coverage_before_boundary_refresh),
+            "coverage_after_boundary_refresh": float(self.coverage_after_boundary_refresh),
+            "historical_boundary_union_coverage": self._historical_boundary_union_coverage_rate(),
             "scene_id": self.scene_id,
             "scene_key": self.scene_key,
             "observation_profile": self.observation_profile,
@@ -1013,6 +1071,7 @@ class FireSearchBaselineEnvironment(gym.Env):
             "stage3_target": self.stage_targets[3],
             "init_area_percent": self.init_area_percent,
             "stage3_near_prob": self.stage3_near_prob,
+            "termination_mode": self.termination_mode,
             "local_obs_dim": self.local_obs_dim,
             "global_state_dim": self.global_state_dim,
         }

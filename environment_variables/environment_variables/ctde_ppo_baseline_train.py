@@ -149,10 +149,17 @@ DEFAULT_TRAIN_CONFIG = {
     "eval_episodes_per_scene": 50,
     "eval_stages": [3],
     "eval_seed_stride": 100,
+    "evaluation_mode": "target_stop",
     "eval_after_train": True,
     "final_eval_splits": ["validation", "generalization", "stress"],
     "final_eval_episodes_per_scene": 50,
     "evaluate_best_val_after_train": True,
+    "full_horizon_eval_after_train": True,
+    "full_horizon_eval_splits": ["validation", "generalization", "stress"],
+    "full_horizon_validation_episodes_per_scene": 20,
+    "full_horizon_final_episodes_per_scene": 50,
+    "full_horizon_curve_stride": 20,
+    "full_horizon_thresholds": [0.20, 0.40, 0.60, 0.80],
     "quality_score_threshold": 0.55,
     "quality_window": 50,
     "quality_tail_fraction": 0.2,
@@ -277,10 +284,30 @@ def normalize_training_config(config: Dict = None) -> Dict:
     normalized["eval_episodes_per_scene"] = max(1, int(normalized["eval_episodes_per_scene"]))
     normalized["eval_stages"] = [int(stage) for stage in normalized.get("eval_stages", [3])]
     normalized["eval_seed_stride"] = max(1, int(normalized["eval_seed_stride"]))
+    normalized["evaluation_mode"] = str(normalized.get("evaluation_mode", "target_stop")).lower()
+    if normalized["evaluation_mode"] not in FireSearchBaselineEnvironment.TERMINATION_MODES:
+        raise ValueError("evaluation_mode must be 'target_stop' or 'full_horizon'")
     normalized["eval_after_train"] = bool(normalized["eval_after_train"])
     normalized["final_eval_splits"] = _normalize_str_list(normalized.get("final_eval_splits", ["validation", "generalization", "stress"]))
     normalized["final_eval_episodes_per_scene"] = max(1, int(normalized["final_eval_episodes_per_scene"]))
     normalized["evaluate_best_val_after_train"] = bool(normalized["evaluate_best_val_after_train"])
+    normalized["full_horizon_eval_after_train"] = bool(normalized["full_horizon_eval_after_train"])
+    normalized["full_horizon_eval_splits"] = _normalize_str_list(
+        normalized.get("full_horizon_eval_splits", ["validation", "generalization", "stress"])
+    )
+    normalized["full_horizon_validation_episodes_per_scene"] = max(
+        1, int(normalized["full_horizon_validation_episodes_per_scene"])
+    )
+    normalized["full_horizon_final_episodes_per_scene"] = max(
+        1, int(normalized["full_horizon_final_episodes_per_scene"])
+    )
+    normalized["full_horizon_curve_stride"] = max(1, int(normalized["full_horizon_curve_stride"]))
+    normalized["full_horizon_thresholds"] = sorted(
+        {
+            float(np.clip(value, 0.0, 1.0))
+            for value in normalized.get("full_horizon_thresholds", [0.20, 0.40, 0.60, 0.80])
+        }
+    )
     normalized["quality_score_threshold"] = float(np.clip(normalized["quality_score_threshold"], 0.0, 1.0))
     normalized["quality_window"] = max(1, int(normalized["quality_window"]))
     normalized["quality_tail_fraction"] = float(np.clip(normalized["quality_tail_fraction"], 0.05, 1.0))
@@ -1242,12 +1269,14 @@ def make_eval_config(
     split: str,
     episodes_per_scene: int,
     stages: List[int],
+    evaluation_mode: str = "target_stop",
 ) -> Dict:
     eval_config = copy.deepcopy(base_config)
     eval_config["eval_split"] = str(split).lower()
     eval_config["eval_scene_keys"] = None
     eval_config["eval_episodes_per_scene"] = int(episodes_per_scene)
     eval_config["eval_stages"] = [int(stage) for stage in stages]
+    eval_config["evaluation_mode"] = str(evaluation_mode).lower()
     return eval_config
 
 
@@ -1272,6 +1301,114 @@ def _stage_summary(results: Dict, stage: int) -> Dict:
     return summary
 
 
+def _full_horizon_episode_metrics(
+    coverage_history: List[float],
+    info: Dict,
+    target: float,
+    thresholds: List[float],
+    coverage_curve: List[Dict],
+) -> Dict:
+    coverage = np.asarray(coverage_history, dtype=np.float64)
+    if coverage.size == 0:
+        coverage = np.asarray([0.0], dtype=np.float64)
+    tail = coverage[-min(100, coverage.size):]
+    first_target_step = int(info.get("first_target_step", -1))
+    if first_target_step > 0:
+        post_target = coverage[first_target_step - 1:]
+        post_target_tail = post_target[-min(100, post_target.size):]
+        target_hold_ratio = float(np.mean(post_target >= float(target)))
+        post_target_peak_gain = float(max(0.0, np.max(post_target) - float(target)))
+        post_target_tail_gain = float(np.mean(post_target_tail) - float(target))
+    else:
+        target_hold_ratio = 0.0
+        post_target_peak_gain = 0.0
+        post_target_tail_gain = 0.0
+
+    threshold_steps = {}
+    for threshold in thresholds:
+        hits = np.flatnonzero(coverage >= float(threshold))
+        threshold_steps[f"{float(threshold):.2f}"] = int(hits[0] + 1) if hits.size else -1
+
+    refresh_points = [point for point in coverage_curve if point.get("boundary_refreshed")]
+    final_refresh = refresh_points[-1] if refresh_points else {}
+
+    return {
+        "current_coverage_auc": float(np.mean(coverage)),
+        "tail100_mean_coverage": float(np.mean(tail)),
+        "final_current_coverage": float(coverage[-1]),
+        "max_current_coverage": float(np.max(coverage)),
+        "historical_boundary_union_coverage": float(
+            info.get("historical_boundary_union_coverage", 0.0)
+        ),
+        "target_reached": bool(info.get("target_reached", False)),
+        "first_target_step": first_target_step,
+        "target_hold_ratio": target_hold_ratio,
+        "post_target_peak_gain": post_target_peak_gain,
+        "post_target_tail_gain": post_target_tail_gain,
+        "last_boundary_refresh_step": int(final_refresh.get("step", -1)),
+        "coverage_before_final_refresh": float(
+            final_refresh.get("coverage_before_refresh", coverage[-1])
+        ),
+        "coverage_after_final_refresh": float(
+            final_refresh.get("coverage_after_refresh", coverage[-1])
+        ),
+        "threshold_steps": threshold_steps,
+        "coverage_curve": coverage_curve,
+    }
+
+
+def _summarize_full_horizon_records(records: List[Dict], target: float) -> Dict:
+    def mean_field(key: str) -> float:
+        return float(np.mean([float(record[key]) for record in records])) if records else 0.0
+
+    reached_steps = [
+        int(record["first_target_step"])
+        for record in records
+        if int(record.get("first_target_step", -1)) > 0
+    ]
+    threshold_keys = sorted(
+        {key for record in records for key in record.get("threshold_steps", {}).keys()}
+    )
+    threshold_reach_rate = {}
+    mean_time_to_threshold = {}
+    for key in threshold_keys:
+        steps = [int(record["threshold_steps"].get(key, -1)) for record in records]
+        reached = [step for step in steps if step > 0]
+        threshold_reach_rate[key] = float(len(reached) / len(records)) if records else 0.0
+        mean_time_to_threshold[key] = float(np.mean(reached)) if reached else None
+
+    return {
+        "evaluation_mode": "full_horizon",
+        "episodes": len(records),
+        "target": float(target),
+        "target_reach_rate": mean_field("target_reached"),
+        "mean_first_target_step": float(np.mean(reached_steps)) if reached_steps else None,
+        "mean_current_coverage_auc": mean_field("current_coverage_auc"),
+        "mean_tail100_coverage": mean_field("tail100_mean_coverage"),
+        "mean_final_current_coverage": mean_field("final_current_coverage"),
+        "mean_max_current_coverage": mean_field("max_current_coverage"),
+        "mean_historical_boundary_union_coverage": mean_field(
+            "historical_boundary_union_coverage"
+        ),
+        "mean_target_hold_ratio": mean_field("target_hold_ratio"),
+        "mean_post_target_peak_gain": mean_field("post_target_peak_gain"),
+        "mean_post_target_tail_gain": mean_field("post_target_tail_gain"),
+        "boundary_found_rate": float(
+            np.mean([int(record.get("first_boundary_step", -1)) > 0 for record in records])
+        ) if records else 0.0,
+        "horizon_completion_rate": float(
+            np.mean([record.get("done_reason") == "horizon_reached" for record in records])
+        ) if records else 0.0,
+        "battery_depleted_rate": float(
+            np.mean([record.get("done_reason") == "battery_depleted" for record in records])
+        ) if records else 0.0,
+        "mean_length": mean_field("length"),
+        "threshold_reach_rate": threshold_reach_rate,
+        "mean_time_to_threshold": mean_time_to_threshold,
+        "records": records,
+    }
+
+
 def _after_train_eval_checkpoints(config: Dict, best_model_paths: Dict) -> List[Tuple[str, str]]:
     best_val_path = best_model_paths.get("best_val")
     if (
@@ -1281,6 +1418,62 @@ def _after_train_eval_checkpoints(config: Dict, best_model_paths: Dict) -> List[
     ):
         return [("best_val", best_val_path)]
     return []
+
+
+def _make_eval_agent(config: Dict, env: FireSearchBaselineEnvironment) -> CTDE_PPO_Agent:
+    return CTDE_PPO_Agent(
+        local_obs_dim=env.local_obs_dim,
+        global_state_dim=env.global_state_dim,
+        action_dim=env.num_actions,
+        num_agents=env.num_drones,
+        actor_lr=config["actor_lr"],
+        critic_lr=config["critic_lr"],
+        lr_adapt_mode=config["lr_adapt_mode"],
+        target_kl=config["target_kl"],
+        actor_lr_min=config["actor_lr_min"],
+        actor_lr_max=config["actor_lr_max"],
+        kl_ema_beta=config["kl_ema_beta"],
+        kl_lr_low_ratio=config["kl_lr_low_ratio"],
+        kl_lr_high_ratio=config["kl_lr_high_ratio"],
+        kl_lr_emergency_ratio=config["kl_lr_emergency_ratio"],
+        kl_lr_up_factor=config["kl_lr_up_factor"],
+        kl_lr_down_factor=config["kl_lr_down_factor"],
+        kl_lr_emergency_factor=config["kl_lr_emergency_factor"],
+        kl_lr_low_patience=config["kl_lr_low_patience"],
+        kl_early_stop_ratio=config["kl_early_stop_ratio"],
+        gamma=config["gamma"],
+        gae_lambda=config["gae_lambda"],
+        clip_epsilon=config["clip_epsilon"],
+        entropy_coef=config["entropy_coef"],
+        value_coef=config["value_coef"],
+        max_grad_norm=config["max_grad_norm"],
+        ppo_epochs=config["ppo_epochs"],
+        batch_size=config["batch_size"],
+    )
+
+
+def _full_horizon_checkpoint_candidates(
+    model_dir: str,
+    final_episode: int,
+    best_val_path: str = None,
+) -> List[Tuple[str, str]]:
+    first_terminal_episode = max(
+        1, int(final_episode) - CurriculumManager.TERMINAL_FOCUS_EPISODES
+    )
+    candidates = []
+    for filename in os.listdir(model_dir):
+        if not filename.startswith("ppo_ep") or "_stage3.pth" not in filename:
+            continue
+        episode_text = filename[len("ppo_ep"):].split("_stage", 1)[0]
+        if not episode_text.isdigit():
+            continue
+        episode = int(episode_text)
+        if episode >= first_terminal_episode:
+            candidates.append((f"ep{episode}", os.path.join(model_dir, filename)))
+    candidates.sort(key=lambda item: int(item[0][2:]))
+    if not candidates and best_val_path and os.path.exists(best_val_path):
+        candidates.append(("best_val", best_val_path))
+    return candidates
 
 
 def _eval_summary_stage(eval_summary: Dict, split: str, stage_key: str) -> Dict:
@@ -1808,6 +2001,7 @@ def train(config: Dict = None):
     generalization_path = None
     eval_results_path = None
     eval_summary_path = os.path.join(log_dir, "eval_summary.json")
+    full_horizon_summary_path = None
     eval_summary = {
         "best_val": {
             "available": bool(best_model_paths.get("best_val")),
@@ -1829,35 +2023,7 @@ def train(config: Dict = None):
             print("未找到 best-val checkpoint，跳过训练后评估")
 
         for checkpoint_name, checkpoint_path in eval_checkpoints:
-            best_val_agent = CTDE_PPO_Agent(
-                local_obs_dim=env.local_obs_dim,
-                global_state_dim=env.global_state_dim,
-                action_dim=env.num_actions,
-                num_agents=env.num_drones,
-                actor_lr=config["actor_lr"],
-                critic_lr=config["critic_lr"],
-                lr_adapt_mode=config["lr_adapt_mode"],
-                target_kl=config["target_kl"],
-                actor_lr_min=config["actor_lr_min"],
-                actor_lr_max=config["actor_lr_max"],
-                kl_ema_beta=config["kl_ema_beta"],
-                kl_lr_low_ratio=config["kl_lr_low_ratio"],
-                kl_lr_high_ratio=config["kl_lr_high_ratio"],
-                kl_lr_emergency_ratio=config["kl_lr_emergency_ratio"],
-                kl_lr_up_factor=config["kl_lr_up_factor"],
-                kl_lr_down_factor=config["kl_lr_down_factor"],
-                kl_lr_emergency_factor=config["kl_lr_emergency_factor"],
-                kl_lr_low_patience=config["kl_lr_low_patience"],
-                kl_early_stop_ratio=config["kl_early_stop_ratio"],
-                gamma=config["gamma"],
-                gae_lambda=config["gae_lambda"],
-                clip_epsilon=config["clip_epsilon"],
-                entropy_coef=config["entropy_coef"],
-                value_coef=config["value_coef"],
-                max_grad_norm=config["max_grad_norm"],
-                ppo_epochs=config["ppo_epochs"],
-                batch_size=config["batch_size"],
-            )
+            best_val_agent = _make_eval_agent(config, env)
             best_val_agent.load(checkpoint_path, restore_training_state=False)
 
             for split in config["final_eval_splits"]:
@@ -1887,6 +2053,115 @@ def train(config: Dict = None):
                     print(f"eval_results={eval_results_path}")
                 print(f"{checkpoint_name}_{split}_eval={split_path}")
 
+    if config["full_horizon_eval_after_train"]:
+        print("\n" + "=" * 70)
+        print("训练后完整时域覆盖评估")
+        print(
+            f"validation选模每场景回合={config['full_horizon_validation_episodes_per_scene']} | "
+            f"最终报告每场景回合={config['full_horizon_final_episodes_per_scene']}"
+        )
+        print("=" * 70)
+
+        final_episode = int(training_log["episodes"][-1]) if training_log["episodes"] else 0
+        candidates = _full_horizon_checkpoint_candidates(
+            model_dir,
+            final_episode,
+            best_model_paths.get("best_val"),
+        )
+        selection_stage = 3 if 3 in config["eval_stages"] else int(config["eval_stages"][-1])
+        full_horizon_summary = {
+            "evaluation_mode": "full_horizon",
+            "selection_split": config["validation_split"],
+            "selection_metric": "mean_current_coverage_auc",
+            "selection_stage": selection_stage,
+            "candidates": [],
+            "selected": None,
+            "splits": {},
+        }
+
+        if not candidates:
+            print("未找到终末阶段 checkpoint，跳过完整时域评估")
+        else:
+            coverage_agent = _make_eval_agent(config, env)
+            best_candidate = None
+            best_candidate_score = (-float("inf"), -float("inf"))
+            for candidate_name, candidate_path in candidates:
+                coverage_agent.load(candidate_path, restore_training_state=False)
+                selection_config = make_eval_config(
+                    config,
+                    config["validation_split"],
+                    config["full_horizon_validation_episodes_per_scene"],
+                    [selection_stage],
+                    evaluation_mode="full_horizon",
+                )
+                print(f"\n完整时域 checkpoint 选模 | {candidate_name}")
+                candidate_results = evaluate(coverage_agent, selection_config)
+                candidate_summary = _stage_summary(candidate_results, selection_stage)
+                candidate_eval_path = os.path.join(
+                    log_dir,
+                    f"full_horizon_candidate_{candidate_name}_validation_eval.json",
+                )
+                _write_json(candidate_eval_path, candidate_results)
+                candidate_entry = {
+                    "name": candidate_name,
+                    "model_path": candidate_path,
+                    "eval_path": candidate_eval_path,
+                    "summary": candidate_summary,
+                }
+                full_horizon_summary["candidates"].append(candidate_entry)
+                candidate_score = (
+                    float(candidate_summary["mean_current_coverage_auc"]),
+                    float(candidate_summary["mean_tail100_coverage"]),
+                )
+                if candidate_score > best_candidate_score:
+                    best_candidate_score = candidate_score
+                    best_candidate = candidate_entry
+
+            selected_model_path = os.path.join(model_dir, "ppo_best_full_coverage.pth")
+            shutil.copy2(best_candidate["model_path"], selected_model_path)
+            best_model_paths["best_full_coverage"] = selected_model_path
+            full_horizon_summary["selected"] = {
+                **best_candidate,
+                "model_path": selected_model_path,
+            }
+            eval_summary["best_full_coverage"] = {
+                "available": True,
+                "model_path": selected_model_path,
+                "selection": full_horizon_summary["selected"],
+                "splits": {},
+            }
+
+            coverage_agent.load(selected_model_path, restore_training_state=False)
+            for split in config["full_horizon_eval_splits"]:
+                split_config = make_eval_config(
+                    config,
+                    split,
+                    config["full_horizon_final_episodes_per_scene"],
+                    config["eval_stages"],
+                    evaluation_mode="full_horizon",
+                )
+                print(f"\nbest_full_coverage 完整时域评估 | 数据划分={split}")
+                split_results = evaluate(coverage_agent, split_config)
+                split_path = os.path.join(
+                    log_dir,
+                    f"best_full_coverage_full_horizon_{split}_eval.json",
+                )
+                _write_json(split_path, split_results)
+                split_entry = {
+                    "path": split_path,
+                    "stages": {
+                        str(stage): _stage_summary(split_results, int(stage))
+                        for stage in config["eval_stages"]
+                    },
+                }
+                full_horizon_summary["splits"][split] = split_entry
+                eval_summary["best_full_coverage"]["splits"][split] = split_entry
+
+        full_horizon_summary_path = os.path.join(log_dir, "full_horizon_summary.json")
+        _write_json(full_horizon_summary_path, full_horizon_summary)
+        print(f"full_horizon_summary={full_horizon_summary_path}")
+
+    if config["eval_after_train"] or config["full_horizon_eval_after_train"]:
         _write_json(eval_summary_path, eval_summary)
         print(f"eval_summary={eval_summary_path}")
 
@@ -1913,6 +2188,8 @@ def train(config: Dict = None):
         if eval_results_path:
             print(f"评估结果={eval_results_path}")
         print(f"评估摘要={eval_summary_path}")
+    if full_horizon_summary_path:
+        print(f"完整时域评估摘要={full_horizon_summary_path}")
     print(f"最终模型={final_model_path}")
     print(f"控制台日志={console_log_path}")
     print(f"源码快照={source_dir}")
@@ -1933,6 +2210,10 @@ def evaluate(agent: CTDE_PPO_Agent, config: Dict, num_episodes: int = None) -> D
     config = normalize_training_config(config)
     _resolve_dataset_scene_keys(config)
     eval_episodes_per_scene = int(config["eval_episodes_per_scene"])
+    evaluation_mode = str(config["evaluation_mode"])
+    full_horizon = evaluation_mode == "full_horizon"
+    curve_stride = int(config["full_horizon_curve_stride"])
+    coverage_thresholds = list(config["full_horizon_thresholds"])
     if num_episodes is not None:
         eval_episodes_per_scene = max(1, int(num_episodes) // max(len(config["eval_scene_keys"]), 1))
 
@@ -1968,67 +2249,138 @@ def evaluate(agent: CTDE_PPO_Agent, config: Dict, num_episodes: int = None) -> D
                     stage2_target=config["stage2_success_target"],
                     stage3_target=config["stage3_success_target"],
                     stage3_near_prob=0.0,
+                    termination_mode=evaluation_mode,
                 )
 
-                for _ in range(eval_episodes_per_scene):
+                for episode_index in range(eval_episodes_per_scene):
                     obs = env.reset()
                     done = False
                     episode_reward = 0.0
                     episode_length = 0
+                    coverage_history = []
+                    coverage_curve = [
+                        {
+                            "step": 0,
+                            "coverage": 0.0,
+                            "historical_boundary_union_coverage": 0.0,
+                        }
+                    ] if full_horizon else []
                     while not done:
                         actions = agent.select_actions_deterministic(obs["local_obs"])
                         obs, rewards, done, info = env.step(actions)
                         episode_reward += float(sum(rewards))
                         episode_length += 1
+                        if full_horizon:
+                            coverage_history.append(float(info["boundary_coverage"]))
+                            if (
+                                episode_length % curve_stride == 0
+                                or info["boundary_refreshed"]
+                                or done
+                            ):
+                                if coverage_curve[-1]["step"] != episode_length:
+                                    coverage_curve.append(
+                                        {
+                                            "step": int(episode_length),
+                                            "coverage": float(info["boundary_coverage"]),
+                                            "historical_boundary_union_coverage": float(
+                                                info["historical_boundary_union_coverage"]
+                                            ),
+                                            "boundary_refreshed": bool(info["boundary_refreshed"]),
+                                            "coverage_before_refresh": float(
+                                                info["coverage_before_boundary_refresh"]
+                                            ),
+                                            "coverage_after_refresh": float(
+                                                info["coverage_after_boundary_refresh"]
+                                            ),
+                                        }
+                                    )
 
-                    success = info["done_reason"] == "mission_complete"
-                    stage_records.append(
-                        {
-                            "scene_id": int(info.get("scene_id", -1)),
-                            "scene_key": str(info.get("scene_key", scene_key)),
-                            "observation_profile": config["observation_profile"],
-                            "reward_profile": config["reward_profile"],
-                            "reward": episode_reward,
-                            "coverage": float(info["boundary_coverage"]),
-                            "success": 1.0 if success else 0.0,
-                            "length": int(episode_length),
-                            "timeout": 1.0 if info["done_reason"] == "max_steps_reached" else 0.0,
-                            "zero_coverage_timeout": 1.0 if info.get("zero_coverage_timeout", False) else 0.0,
-                            "task_score": _task_score(
-                                info["boundary_coverage"],
-                                success,
-                                episode_length,
-                                config["max_steps"],
-                            ),
-                            "done_reason": info["done_reason"],
-                            "first_heat_step": int(info.get("first_heat_step", -1)),
-                            "first_boundary_step": int(info.get("first_boundary_step", -1)),
-                            "reward_breakdown": info.get("reward_breakdown") or {},
-                        }
+                    success = (
+                        bool(info.get("target_reached", False))
+                        if full_horizon
+                        else info["done_reason"] == "mission_complete"
                     )
+                    record = {
+                        "scene_id": int(info.get("scene_id", -1)),
+                        "scene_key": str(info.get("scene_key", scene_key)),
+                        "episode_index": int(episode_index),
+                        "eval_seed": int(stage_seed),
+                        "evaluation_mode": evaluation_mode,
+                        "observation_profile": config["observation_profile"],
+                        "reward_profile": config["reward_profile"],
+                        "reward": episode_reward,
+                        "coverage": float(info["boundary_coverage"]),
+                        "success": 1.0 if success else 0.0,
+                        "length": int(episode_length),
+                        "timeout": 1.0 if info["done_reason"] == "max_steps_reached" else 0.0,
+                        "zero_coverage_timeout": 1.0 if info.get("zero_coverage_timeout", False) else 0.0,
+                        "done_reason": info["done_reason"],
+                        "first_heat_step": int(info.get("first_heat_step", -1)),
+                        "first_boundary_step": int(info.get("first_boundary_step", -1)),
+                        "reward_breakdown": info.get("reward_breakdown") or {},
+                    }
+                    if full_horizon:
+                        target = (
+                            config["stage2_success_target"]
+                            if int(stage) == 2
+                            else config["stage3_success_target"]
+                        )
+                        record.update(
+                            _full_horizon_episode_metrics(
+                                coverage_history,
+                                info,
+                                target,
+                                coverage_thresholds,
+                                coverage_curve,
+                            )
+                        )
+                    else:
+                        record["task_score"] = _task_score(
+                            info["boundary_coverage"],
+                            success,
+                            episode_length,
+                            config["max_steps"],
+                        )
+                    stage_records.append(record)
 
-            results[int(stage)] = {
-                "episodes": len(stage_records),
-                "mean_reward": float(np.mean([r["reward"] for r in stage_records])),
-                "mean_coverage": float(np.mean([r["coverage"] for r in stage_records])),
-                "success_rate": float(np.mean([r["success"] for r in stage_records])),
-                "mean_length": float(np.mean([r["length"] for r in stage_records])),
-                "timeout_rate": float(np.mean([r["timeout"] for r in stage_records])),
-                "zero_coverage_timeout_rate": float(
-                    np.mean([r["zero_coverage_timeout"] for r in stage_records])
-                ),
-                "mean_task_score": float(np.mean([r["task_score"] for r in stage_records])),
-                "records": stage_records,
-            }
+            if full_horizon:
+                target = (
+                    config["stage2_success_target"]
+                    if int(stage) == 2
+                    else config["stage3_success_target"]
+                )
+                results[int(stage)] = _summarize_full_horizon_records(stage_records, target)
+            else:
+                results[int(stage)] = {
+                    "episodes": len(stage_records),
+                    "mean_reward": float(np.mean([r["reward"] for r in stage_records])),
+                    "mean_coverage": float(np.mean([r["coverage"] for r in stage_records])),
+                    "success_rate": float(np.mean([r["success"] for r in stage_records])),
+                    "mean_length": float(np.mean([r["length"] for r in stage_records])),
+                    "timeout_rate": float(np.mean([r["timeout"] for r in stage_records])),
+                    "zero_coverage_timeout_rate": float(
+                        np.mean([r["zero_coverage_timeout"] for r in stage_records])
+                    ),
+                    "mean_task_score": float(np.mean([r["task_score"] for r in stage_records])),
+                    "records": stage_records,
+                }
 
             summary = results[int(stage)]
-            print(
-                f"评估阶段={stage} | 回合数={summary['episodes']} | "
-                f"任务得分={summary['mean_task_score'] * 100:.1f}% | "
-                f"覆盖率={summary['mean_coverage'] * 100:.1f}% | "
-                f"成功率={summary['success_rate'] * 100:.1f}% | "
-                f"平均步数={summary['mean_length']:.1f}"
-            )
+            if full_horizon:
+                print(
+                    f"完整时域评估阶段={stage} | 回合数={summary['episodes']} | "
+                    f"覆盖AUC={summary['mean_current_coverage_auc'] * 100:.1f}% | "
+                    f"末100步覆盖={summary['mean_tail100_coverage'] * 100:.1f}% | "
+                    f"60%到达率={summary['target_reach_rate'] * 100:.1f}%"
+                )
+            else:
+                print(
+                    f"评估阶段={stage} | 回合数={summary['episodes']} | "
+                    f"任务得分={summary['mean_task_score'] * 100:.1f}% | "
+                    f"覆盖率={summary['mean_coverage'] * 100:.1f}% | "
+                    f"成功率={summary['success_rate'] * 100:.1f}% | "
+                    f"平均步数={summary['mean_length']:.1f}"
+                )
     finally:
         agent.actor.train(actor_was_training)
         agent.critic.train(critic_was_training)
@@ -2117,6 +2469,16 @@ def run_lr_comparison(base_config: Dict = None) -> Dict:
                 with open(eval_summary_path, "r", encoding="utf-8") as f:
                     eval_summary = json.load(f)
 
+            full_horizon_summary_path = os.path.join(
+                output_dir,
+                "logs",
+                "full_horizon_summary.json",
+            )
+            full_horizon_summary = {}
+            if os.path.exists(full_horizon_summary_path):
+                with open(full_horizon_summary_path, "r", encoding="utf-8") as f:
+                    full_horizon_summary = json.load(f)
+
             run_name = f"{variant_name}_seed{cfg['seed']}"
             comparison_results["variants"][run_name] = {
                 "config": _to_jsonable(cfg),
@@ -2131,6 +2493,8 @@ def run_lr_comparison(base_config: Dict = None) -> Dict:
                 "generalization_eval": generalization,
                 "eval_summary_path": eval_summary_path,
                 "eval_summary": eval_summary,
+                "full_horizon_summary_path": full_horizon_summary_path,
+                "full_horizon_summary": full_horizon_summary,
                 "last_task_score": float(training_log["task_scores"][-1]) if training_log["task_scores"] else None,
                 "last_coverage": float(training_log["coverages"][-1]) if training_log["coverages"] else None,
                 "ppo_updates": int(training_log["ppo_updates"][-1]) if training_log["ppo_updates"] else 0,
@@ -2225,6 +2589,7 @@ def main():
     parser.add_argument("--observation-profile", type=str, default=None)
     parser.add_argument("--reward-profile", type=str, default=None)
     parser.add_argument("--no-eval", action="store_true")
+    parser.add_argument("--no-full-horizon-eval", action="store_true")
     parser.add_argument("--no-plot", action="store_true")
     args = parser.parse_args()
 
@@ -2267,6 +2632,9 @@ def main():
         config["reward_profile"] = args.reward_profile
     if args.no_eval:
         config["eval_after_train"] = False
+        config["full_horizon_eval_after_train"] = False
+    if args.no_full_horizon_eval:
+        config["full_horizon_eval_after_train"] = False
     if args.no_plot:
         config["plot_after_train"] = False
 
