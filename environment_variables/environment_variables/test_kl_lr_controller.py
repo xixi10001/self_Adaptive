@@ -34,6 +34,9 @@ class KLLearningRateControllerTest(unittest.TestCase):
         self.assertEqual(config["target_kl"], 0.0065)
         self.assertEqual(config["actor_lr_min"], 1e-4)
         self.assertEqual(config["actor_lr_max"], 2.5e-4)
+        self.assertEqual(config["kl_ema_beta"], 0.8)
+        self.assertEqual(config["kl_lr_low_ratio"], 0.82)
+        self.assertEqual(config["kl_lr_down_factor"], 0.90)
         self.assertEqual(config["kl_lr_low_patience"], 3)
         self.assertEqual(config["kl_early_stop_ratio"], 1.5)
 
@@ -58,6 +61,14 @@ class KLLearningRateControllerTest(unittest.TestCase):
         self.assertAlmostEqual(agent.actor_optimizer.param_groups[0]["lr"], 1.4e-4)
         self.assertAlmostEqual(agent.critic_optimizer.param_groups[0]["lr"], 5e-4)
         self.assertEqual(agent._consecutive_low_kl, 0)
+
+    def test_regular_high_kl_reduction_is_not_over_aggressive(self):
+        agent = self.make_agent()
+
+        action = agent._adapt_actor_lr_by_kl(0.013)
+
+        self.assertEqual(action, "down")
+        self.assertAlmostEqual(agent.actor_optimizer.param_groups[0]["lr"], 1.8e-4)
 
     def test_checkpoint_restores_controller_only_for_training_resume(self):
         source = self.make_agent(target_kl=0.0065)

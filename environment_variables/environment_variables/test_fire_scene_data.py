@@ -161,6 +161,7 @@ class FireSceneDataLoadingTest(unittest.TestCase):
             "static_terrain": 24,
             "dynamic_front": 23,
             "risk_aware": 20,
+            "cooperative_exploration": 24,
         }
 
         for profile, local_dim in expected_dims.items():
@@ -194,6 +195,7 @@ class FireSceneDataLoadingTest(unittest.TestCase):
             "front_detection",
             "severity_weighted",
             "exploration_balanced",
+            "novelty_search",
         ]
 
         for profile in profiles:
@@ -214,9 +216,56 @@ class FireSceneDataLoadingTest(unittest.TestCase):
                 self.assertEqual(env.reward_profile, profile)
                 self.assertEqual(info["reward_profile"], profile)
                 breakdown = info["reward_breakdown"]
-                for key in ["r_boundary", "r_front", "r_severity", "r_explore", "r_penalty"]:
+                for key in [
+                    "r_boundary",
+                    "r_front",
+                    "r_severity",
+                    "r_explore",
+                    "r_novelty",
+                    "r_revisit",
+                    "r_invalid",
+                    "r_overlap",
+                    "r_penalty",
+                ]:
                     self.assertIn(key, breakdown)
                     self.assertIsInstance(breakdown[key], float)
+
+    def test_cooperative_exploration_shares_only_in_range_and_masks_edges(self):
+        env = baseline_env_module.FireSearchBaselineEnvironment(
+            data_dir=str(DATA_DIR),
+            fixed_scene_key="train_area001_scenario001",
+            vision_radius=3,
+            max_steps=2,
+            observation_profile="cooperative_exploration",
+            reward_profile="novelty_search",
+            communication_enabled=True,
+            communication_radius_factor=4.0,
+            action_mask_enabled=True,
+        )
+        env.reset()
+
+        env.drone_positions = [
+            np.array([50, 50], dtype=np.float32),
+            np.array([50, 56], dtype=np.float32),
+        ]
+        env.agent_observed_masks = [np.zeros(env.grid_size, dtype=bool) for _ in range(2)]
+        env.agent_known_masks = [np.zeros(env.grid_size, dtype=bool) for _ in range(2)]
+        for drone_idx in range(2):
+            env._mark_agent_visible_region(drone_idx, env.drone_positions[drone_idx])
+        env._sync_exploration_knowledge(count_metrics=False)
+
+        self.assertEqual(env.communication_available, [True, True])
+        self.assertTrue(np.array_equal(env.agent_known_masks[0], env.agent_known_masks[1]))
+
+        env.drone_positions = [
+            np.array([0, 0], dtype=np.float32),
+            np.array([50, 50], dtype=np.float32),
+        ]
+        env._sync_exploration_knowledge(count_metrics=False)
+        self.assertEqual(env.communication_available, [False, False])
+
+        masks = env._get_action_masks()
+        self.assertEqual(masks[0].tolist(), [1, 0, 0, 1, 1])
 
     def test_environment_can_use_metadata_uav_params_without_per_reset_scene_log(self):
         buffer = io.StringIO()

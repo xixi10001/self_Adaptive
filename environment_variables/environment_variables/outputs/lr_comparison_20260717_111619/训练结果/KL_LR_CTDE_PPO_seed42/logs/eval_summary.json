@@ -1,0 +1,263 @@
+{
+  "best_val": {
+    "available": false,
+    "model_path": null,
+    "splits": {}
+  },
+  "best_stage4": {
+    "available": true,
+    "model_path": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260717_111619\\训练结果\\KL_LR_CTDE_PPO_seed42\\models\\ppo_best_stage4.pth",
+    "splits": {
+      "validation": {
+        "path": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260717_111619\\训练结果\\KL_LR_CTDE_PPO_seed42\\logs\\best_stage4_validation_eval.json",
+        "stages": {
+          "3": {
+            "episodes": 300,
+            "mean_reward": -2.3699756084680152,
+            "mean_coverage": 0.5389403309469478,
+            "success_rate": 0.7766666666666666,
+            "mean_length": 268.0233333333333,
+            "timeout_rate": 0.22333333333333333,
+            "zero_coverage_timeout_rate": 0.016666666666666666,
+            "boundary_found_rate": 0.99,
+            "mean_pre_boundary_revisit_ratio": 0.033182188775187874,
+            "mean_team_overlap_ratio": 0.08859051657797913,
+            "mean_communication_available_rate": 0.0,
+            "mean_invalid_action_count": 1.25,
+            "mean_task_score": 0.6131290543623629
+          }
+        }
+      },
+      "generalization": {
+        "path": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260717_111619\\训练结果\\KL_LR_CTDE_PPO_seed42\\logs\\best_stage4_generalization_eval.json",
+        "stages": {
+          "3": {
+            "episodes": 600,
+            "mean_reward": -29.169914860032975,
+            "mean_coverage": 0.5001104545587076,
+            "success_rate": 0.6233333333333333,
+            "mean_length": 316.6816666666667,
+            "timeout_rate": 0.37666666666666665,
+            "zero_coverage_timeout_rate": 0.03833333333333333,
+            "boundary_found_rate": 0.9616666666666667,
+            "mean_pre_boundary_revisit_ratio": 0.04435432790476174,
+            "mean_team_overlap_ratio": 0.10549830120205934,
+            "mean_communication_available_rate": 0.0,
+            "mean_invalid_action_count": 1.6716666666666666,
+            "mean_task_score": 0.5314946717237983
+          }
+        }
+      },
+      "stress": {
+        "path": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260717_111619\\训练结果\\KL_LR_CTDE_PPO_seed42\\logs\\best_stage4_stress_eval.json",
+        "stages": {
+          "3": {
+            "episodes": 200,
+            "mean_reward": -58.12744146669635,
+            "mean_coverage": 0.3687462142981511,
+            "success_rate": 0.33,
+            "mean_length": 441.285,
+            "timeout_rate": 0.67,
+            "zero_coverage_timeout_rate": 0.015,
+            "boundary_found_rate": 0.985,
+            "mean_pre_boundary_revisit_ratio": 0.03455445358015735,
+            "mean_team_overlap_ratio": 0.07546398057399337,
+            "mean_communication_available_rate": 0.0,
+            "mean_invalid_action_count": 4.72,
+            "mean_task_score": 0.3362781071490755
+          }
+        }
+      }
+    }
+  },
+  "best_full_coverage": {
+    "available": true,
+    "model_path": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260717_111619\\训练结果\\KL_LR_CTDE_PPO_seed42\\models\\ppo_best_full_coverage.pth",
+    "selection": {
+      "name": "best_stage4",
+      "model_path": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260717_111619\\训练结果\\KL_LR_CTDE_PPO_seed42\\models\\ppo_best_full_coverage.pth",
+      "eval_path": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260717_111619\\训练结果\\KL_LR_CTDE_PPO_seed42\\logs\\full_horizon_candidate_best_stage4_validation_eval.json",
+      "summary": {
+        "evaluation_mode": "full_horizon",
+        "episodes": 120,
+        "target": 0.6,
+        "target_reach_rate": 0.7583333333333333,
+        "mean_first_target_step": 174.37362637362637,
+        "mean_current_coverage_auc": 0.45374380993118535,
+        "mean_tail100_coverage": 0.5782488837845867,
+        "mean_final_current_coverage": 0.4590348077870695,
+        "mean_max_current_coverage": 0.7676469729318546,
+        "mean_historical_boundary_union_coverage": 0.5020577533167139,
+        "mean_target_hold_ratio": 0.42995329373987784,
+        "mean_post_target_peak_gain": 0.19619740848864275,
+        "mean_post_target_tail_gain": 0.04923940521594941,
+        "mean_pre_boundary_revisit_ratio": 0.05486017944076041,
+        "mean_team_overlap_ratio": 0.11231015954093561,
+        "mean_communication_available_rate": 0.0,
+        "mean_invalid_action_count": 1.3333333333333333,
+        "boundary_found_rate": 0.9833333333333333,
+        "horizon_completion_rate": 1.0,
+        "battery_depleted_rate": 0.0,
+        "mean_length": 600.0,
+        "threshold_reach_rate": {
+          "0.20": 0.9833333333333333,
+          "0.40": 0.9416666666666667,
+          "0.60": 0.7583333333333333,
+          "0.80": 0.4666666666666667
+        },
+        "mean_time_to_threshold": {
+          "0.20": 144.29661016949152,
+          "0.40": 164.55752212389382,
+          "0.60": 174.37362637362637,
+          "0.80": 146.33928571428572
+        },
+        "mean_hold_ratio_by_threshold": {
+          "0.20": 0.7441768839147164,
+          "0.40": 0.6672316437220185,
+          "0.60": 0.42995329373987784,
+          "0.80": 0.271785155528539
+        }
+      }
+    },
+    "splits": {
+      "validation": {
+        "path": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260717_111619\\训练结果\\KL_LR_CTDE_PPO_seed42\\logs\\best_full_coverage_full_horizon_validation_eval.json",
+        "stages": {
+          "3": {
+            "evaluation_mode": "full_horizon",
+            "episodes": 300,
+            "target": 0.6,
+            "target_reach_rate": 0.7766666666666666,
+            "mean_first_target_step": 172.56223175965664,
+            "mean_current_coverage_auc": 0.4590693453419705,
+            "mean_tail100_coverage": 0.5680219240502331,
+            "mean_final_current_coverage": 0.45018665261486374,
+            "mean_max_current_coverage": 0.7575708682414296,
+            "mean_historical_boundary_union_coverage": 0.4995205508364686,
+            "mean_target_hold_ratio": 0.43015627293181696,
+            "mean_post_target_peak_gain": 0.19230504179275237,
+            "mean_post_target_tail_gain": 0.04464043840876524,
+            "mean_pre_boundary_revisit_ratio": 0.033182188775187874,
+            "mean_team_overlap_ratio": 0.08859051657797913,
+            "mean_communication_available_rate": 0.0,
+            "mean_invalid_action_count": 1.65,
+            "boundary_found_rate": 0.99,
+            "horizon_completion_rate": 1.0,
+            "battery_depleted_rate": 0.0,
+            "mean_length": 600.0,
+            "threshold_reach_rate": {
+              "0.20": 0.9766666666666667,
+              "0.40": 0.92,
+              "0.60": 0.7766666666666666,
+              "0.80": 0.44333333333333336
+            },
+            "mean_time_to_threshold": {
+              "0.20": 126.63481228668942,
+              "0.40": 141.83333333333334,
+              "0.60": 172.56223175965664,
+              "0.80": 139.01503759398497
+            },
+            "mean_hold_ratio_by_threshold": {
+              "0.20": 0.7560436800911923,
+              "0.40": 0.6836018772788669,
+              "0.60": 0.43015627293181696,
+              "0.80": 0.26510648556055166
+            }
+          }
+        }
+      },
+      "generalization": {
+        "path": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260717_111619\\训练结果\\KL_LR_CTDE_PPO_seed42\\logs\\best_full_coverage_full_horizon_generalization_eval.json",
+        "stages": {
+          "3": {
+            "evaluation_mode": "full_horizon",
+            "episodes": 600,
+            "target": 0.6,
+            "target_reach_rate": 0.6233333333333333,
+            "mean_first_target_step": 145.47860962566844,
+            "mean_current_coverage_auc": 0.48388329758812043,
+            "mean_tail100_coverage": 0.5592353254859933,
+            "mean_final_current_coverage": 0.4827006881718402,
+            "mean_max_current_coverage": 0.7248985023315574,
+            "mean_historical_boundary_union_coverage": 0.5202546946567985,
+            "mean_target_hold_ratio": 0.4598019003101721,
+            "mean_post_target_peak_gain": 0.18689718144661022,
+            "mean_post_target_tail_gain": 0.07005208192596561,
+            "mean_pre_boundary_revisit_ratio": 0.04435432790476174,
+            "mean_team_overlap_ratio": 0.10549830120205934,
+            "mean_communication_available_rate": 0.0,
+            "mean_invalid_action_count": 2.2733333333333334,
+            "boundary_found_rate": 0.9616666666666667,
+            "horizon_completion_rate": 1.0,
+            "battery_depleted_rate": 0.0,
+            "mean_length": 600.0,
+            "threshold_reach_rate": {
+              "0.20": 0.96,
+              "0.40": 0.9016666666666666,
+              "0.60": 0.6233333333333333,
+              "0.80": 0.4483333333333333
+            },
+            "mean_time_to_threshold": {
+              "0.20": 97.73784722222223,
+              "0.40": 109.73197781885398,
+              "0.60": 145.47860962566844,
+              "0.80": 135.1078066914498
+            },
+            "mean_hold_ratio_by_threshold": {
+              "0.20": 0.619910798077164,
+              "0.40": 0.6017420486155066,
+              "0.60": 0.4598019003101721,
+              "0.80": 0.2719889830010317
+            }
+          }
+        }
+      },
+      "stress": {
+        "path": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260717_111619\\训练结果\\KL_LR_CTDE_PPO_seed42\\logs\\best_full_coverage_full_horizon_stress_eval.json",
+        "stages": {
+          "3": {
+            "evaluation_mode": "full_horizon",
+            "episodes": 200,
+            "target": 0.6,
+            "target_reach_rate": 0.33,
+            "mean_first_target_step": 119.04545454545455,
+            "mean_current_coverage_auc": 0.33626811271490736,
+            "mean_tail100_coverage": 0.36872646738173714,
+            "mean_final_current_coverage": 0.32902957868895377,
+            "mean_max_current_coverage": 0.5745927739175006,
+            "mean_historical_boundary_union_coverage": 0.3340902796945475,
+            "mean_target_hold_ratio": 0.15794475455058832,
+            "mean_post_target_peak_gain": 0.07426169664619711,
+            "mean_post_target_tail_gain": -0.01214269164502956,
+            "mean_pre_boundary_revisit_ratio": 0.03455445358015735,
+            "mean_team_overlap_ratio": 0.07546398057399337,
+            "mean_communication_available_rate": 0.0,
+            "mean_invalid_action_count": 5.75,
+            "boundary_found_rate": 0.985,
+            "horizon_completion_rate": 1.0,
+            "battery_depleted_rate": 0.0,
+            "mean_length": 600.0,
+            "threshold_reach_rate": {
+              "0.20": 0.985,
+              "0.40": 0.82,
+              "0.60": 0.33,
+              "0.80": 0.17
+            },
+            "mean_time_to_threshold": {
+              "0.20": 96.09137055837563,
+              "0.40": 141.6280487804878,
+              "0.60": 119.04545454545455,
+              "0.80": 173.58823529411765
+            },
+            "mean_hold_ratio_by_threshold": {
+              "0.20": 0.3227000973256707,
+              "0.40": 0.2987303915299395,
+              "0.60": 0.15794475455058832,
+              "0.80": 0.0535992375097743
+            }
+          }
+        }
+      }
+    }
+  }
+}

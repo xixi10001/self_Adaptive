@@ -77,6 +77,8 @@ class InitAreaPercentConfigTest(unittest.TestCase):
                 "static_terrain": {"local_obs_dim": 24, "global_state_dim": 19},
                 "dynamic_front": {"local_obs_dim": 23, "global_state_dim": 19},
                 "risk_aware": {"local_obs_dim": 20, "global_state_dim": 19},
+                "cooperative_exploration": {"local_obs_dim": 24, "global_state_dim": 19},
+                "persistent_cooperative": {"local_obs_dim": 24, "global_state_dim": 19},
             },
         )
 
@@ -88,6 +90,16 @@ class InitAreaPercentConfigTest(unittest.TestCase):
         )
         self.assertEqual(configured["observation_profile"], "dynamic_front")
         self.assertEqual(configured["reward_profile"], "front_detection")
+
+        cooperative = normalize_training_config(
+            {
+                "observation_profile": "cooperative_exploration",
+                "reward_profile": "novelty_search",
+            }
+        )
+        self.assertTrue(cooperative["communication_enabled"])
+        self.assertTrue(cooperative["action_mask_enabled"])
+        self.assertEqual(cooperative["communication_radius_factor"], 4.0)
 
         with self.assertRaisesRegex(ValueError, "observation_profile"):
             normalize_training_config({"observation_profile": "unknown"})
@@ -144,7 +156,16 @@ class CurriculumScheduleTest(unittest.TestCase):
         for _ in range(60):
             manager.update(success=True, coverage=0.25)
 
-        self.assertEqual(manager.stage3_near_prob, 0.15)
+        self.assertEqual(manager.stage3_near_prob, 0.25)
+
+        validation_summary = {
+            "boundary_found_rate": 0.90,
+            "zero_coverage_timeout_rate": 0.10,
+            "mean_pre_boundary_revisit_ratio": 0.50,
+        }
+        self.assertFalse(manager.update_stage3_validation(validation_summary))
+        self.assertTrue(manager.update_stage3_validation(validation_summary))
+        self.assertEqual(manager.stage3_near_prob, 0.10)
 
     def test_stage3_target_does_not_advance_on_coverage_without_success(self):
         manager = CurriculumManager(stage3_final_target=0.60)

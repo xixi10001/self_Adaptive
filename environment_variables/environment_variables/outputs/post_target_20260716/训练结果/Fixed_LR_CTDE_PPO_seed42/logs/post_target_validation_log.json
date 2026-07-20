@@ -1,0 +1,260 @@
+{
+  "phase": "post_target",
+  "records": [
+    {
+      "episode": 100,
+      "goal_before_validation": 0.6,
+      "goal_after_validation": 0.6,
+      "gate_passed": false,
+      "goal_advanced": false,
+      "consecutive_validation_passes": 0,
+      "summary": {
+        "evaluation_mode": "full_horizon",
+        "episodes": 30,
+        "target": 0.6,
+        "target_reach_rate": 0.6666666666666666,
+        "mean_first_target_step": 220.75,
+        "mean_current_coverage_auc": 0.4063083960989683,
+        "mean_tail100_coverage": 0.5609280248155654,
+        "mean_final_current_coverage": 0.47611208862695764,
+        "mean_max_current_coverage": 0.7391987757121604,
+        "mean_historical_boundary_union_coverage": 0.48526692109447417,
+        "mean_target_hold_ratio": 0.4421694042009099,
+        "mean_post_target_peak_gain": 0.17805165119118613,
+        "mean_post_target_tail_gain": 0.048392267832048225,
+        "boundary_found_rate": 0.9666666666666667,
+        "horizon_completion_rate": 1.0,
+        "battery_depleted_rate": 0.0,
+        "mean_length": 600.0,
+        "threshold_reach_rate": {
+          "0.20": 0.9666666666666667,
+          "0.40": 0.9666666666666667,
+          "0.60": 0.6666666666666666,
+          "0.65": 0.5666666666666667,
+          "0.70": 0.5,
+          "0.80": 0.4
+        },
+        "mean_time_to_threshold": {
+          "0.20": 163.17241379310346,
+          "0.40": 202.0344827586207,
+          "0.60": 220.75,
+          "0.65": 227.23529411764707,
+          "0.70": 229.0,
+          "0.80": 240.58333333333334
+        },
+        "mean_hold_ratio_by_threshold": {
+          "0.20": 0.6039028499763965,
+          "0.40": 0.5301558493788564,
+          "0.60": 0.4421694042009099,
+          "0.65": 0.4125376443746462,
+          "0.70": 0.39699704738445113,
+          "0.80": 0.3762810573005359
+        }
+      }
+    },
+    {
+      "episode": 200,
+      "goal_before_validation": 0.6,
+      "goal_after_validation": 0.6,
+      "gate_passed": false,
+      "goal_advanced": false,
+      "consecutive_validation_passes": 0,
+      "summary": {
+        "evaluation_mode": "full_horizon",
+        "episodes": 30,
+        "target": 0.6,
+        "target_reach_rate": 0.5333333333333333,
+        "mean_first_target_step": 186.4375,
+        "mean_current_coverage_auc": 0.3858934358699639,
+        "mean_tail100_coverage": 0.4863643815331635,
+        "mean_final_current_coverage": 0.4069706133151985,
+        "mean_max_current_coverage": 0.6439008218296817,
+        "mean_historical_boundary_union_coverage": 0.44750624707877323,
+        "mean_target_hold_ratio": 0.34990771651310276,
+        "mean_post_target_peak_gain": 0.13996119117620365,
+        "mean_post_target_tail_gain": 0.01941843725277553,
+        "boundary_found_rate": 0.9,
+        "horizon_completion_rate": 1.0,
+        "battery_depleted_rate": 0.0,
+        "mean_length": 600.0,
+        "threshold_reach_rate": {
+          "0.20": 0.9,
+          "0.40": 0.9,
+          "0.60": 0.5333333333333333,
+          "0.65": 0.36666666666666664,
+          "0.70": 0.36666666666666664,
+          "0.80": 0.3333333333333333
+        },
+        "mean_time_to_threshold": {
+          "0.20": 149.7037037037037,
+          "0.40": 177.85185185185185,
+          "0.60": 186.4375,
+          "0.65": 183.0,
+          "0.70": 183.9090909090909,
+          "0.80": 203.5
+        },
+        "mean_hold_ratio_by_threshold": {
+          "0.20": 0.47493303842949736,
+          "0.40": 0.43108693649910684,
+          "0.60": 0.34990771651310276,
+          "0.65": 0.3160515944045444,
+          "0.70": 0.30551859568697853,
+          "0.80": 0.26757907380352
+        }
+      }
+    },
+    {
+      "episode": 300,
+      "goal_before_validation": 0.6,
+      "goal_after_validation": 0.6,
+      "gate_passed": false,
+      "goal_advanced": false,
+      "consecutive_validation_passes": 0,
+      "summary": {
+        "evaluation_mode": "full_horizon",
+        "episodes": 30,
+        "target": 0.6,
+        "target_reach_rate": 0.5,
+        "mean_first_target_step": 194.13333333333333,
+        "mean_current_coverage_auc": 0.3313880648991615,
+        "mean_tail100_coverage": 0.4229653863038084,
+        "mean_final_current_coverage": 0.3525749129285283,
+        "mean_max_current_coverage": 0.5778203977702776,
+        "mean_historical_boundary_union_coverage": 0.3637894114661074,
+        "mean_target_hold_ratio": 0.33061528769896825,
+        "mean_post_target_peak_gain": 0.14040513104466593,
+        "mean_post_target_tail_gain": 0.02770309733299386,
+        "boundary_found_rate": 0.8,
+        "horizon_completion_rate": 1.0,
+        "battery_depleted_rate": 0.0,
+        "mean_length": 600.0,
+        "threshold_reach_rate": {
+          "0.20": 0.8,
+          "0.40": 0.7666666666666667,
+          "0.60": 0.5,
+          "0.65": 0.4,
+          "0.70": 0.36666666666666664,
+          "0.80": 0.3333333333333333
+        },
+        "mean_time_to_threshold": {
+          "0.20": 142.91666666666666,
+          "0.40": 182.2608695652174,
+          "0.60": 194.13333333333333,
+          "0.65": 198.25,
+          "0.70": 196.8181818181818,
+          "0.80": 217.6
+        },
+        "mean_hold_ratio_by_threshold": {
+          "0.20": 0.45580704399597927,
+          "0.40": 0.44322135179661315,
+          "0.60": 0.33061528769896825,
+          "0.65": 0.2970644683558092,
+          "0.70": 0.27326311287247906,
+          "0.80": 0.23553695530043642
+        }
+      }
+    },
+    {
+      "episode": 400,
+      "goal_before_validation": 0.6,
+      "goal_after_validation": 0.6,
+      "gate_passed": false,
+      "goal_advanced": false,
+      "consecutive_validation_passes": 0,
+      "summary": {
+        "evaluation_mode": "full_horizon",
+        "episodes": 30,
+        "target": 0.6,
+        "target_reach_rate": 0.43333333333333335,
+        "mean_first_target_step": 159.84615384615384,
+        "mean_current_coverage_auc": 0.3314855958535503,
+        "mean_tail100_coverage": 0.40638823067324387,
+        "mean_final_current_coverage": 0.3517727712575382,
+        "mean_max_current_coverage": 0.5786535044027906,
+        "mean_historical_boundary_union_coverage": 0.36031292004991733,
+        "mean_target_hold_ratio": 0.2823910822008694,
+        "mean_post_target_peak_gain": 0.12464285714285714,
+        "mean_post_target_tail_gain": 0.010552115345811262,
+        "boundary_found_rate": 0.8,
+        "horizon_completion_rate": 1.0,
+        "battery_depleted_rate": 0.0,
+        "mean_length": 600.0,
+        "threshold_reach_rate": {
+          "0.20": 0.8,
+          "0.40": 0.8,
+          "0.60": 0.43333333333333335,
+          "0.65": 0.3333333333333333,
+          "0.70": 0.3333333333333333,
+          "0.80": 0.3
+        },
+        "mean_time_to_threshold": {
+          "0.20": 138.20833333333334,
+          "0.40": 180.45833333333334,
+          "0.60": 159.84615384615384,
+          "0.65": 148.9,
+          "0.70": 155.2,
+          "0.80": 173.44444444444446
+        },
+        "mean_hold_ratio_by_threshold": {
+          "0.20": 0.3884783818152917,
+          "0.40": 0.3567891953849807,
+          "0.60": 0.2823910822008694,
+          "0.65": 0.2594939973730193,
+          "0.70": 0.24376767095049953,
+          "0.80": 0.21510203315407497
+        }
+      }
+    },
+    {
+      "episode": 500,
+      "goal_before_validation": 0.6,
+      "goal_after_validation": 0.6,
+      "gate_passed": false,
+      "goal_advanced": false,
+      "consecutive_validation_passes": 0,
+      "summary": {
+        "evaluation_mode": "full_horizon",
+        "episodes": 30,
+        "target": 0.6,
+        "target_reach_rate": 0.43333333333333335,
+        "mean_first_target_step": 166.84615384615384,
+        "mean_current_coverage_auc": 0.23484794623399186,
+        "mean_tail100_coverage": 0.2790993208318893,
+        "mean_final_current_coverage": 0.2711670990507208,
+        "mean_max_current_coverage": 0.510687370943154,
+        "mean_historical_boundary_union_coverage": 0.23251826687783003,
+        "mean_target_hold_ratio": 0.1439749033431513,
+        "mean_post_target_peak_gain": 0.1165788458042016,
+        "mean_post_target_tail_gain": -0.06751085494875197,
+        "boundary_found_rate": 0.7333333333333333,
+        "horizon_completion_rate": 1.0,
+        "battery_depleted_rate": 0.0,
+        "mean_length": 600.0,
+        "threshold_reach_rate": {
+          "0.20": 0.7333333333333333,
+          "0.40": 0.6666666666666666,
+          "0.60": 0.43333333333333335,
+          "0.65": 0.36666666666666664,
+          "0.70": 0.36666666666666664,
+          "0.80": 0.23333333333333334
+        },
+        "mean_time_to_threshold": {
+          "0.20": 170.0909090909091,
+          "0.40": 205.75,
+          "0.60": 166.84615384615384,
+          "0.65": 158.54545454545453,
+          "0.70": 159.54545454545453,
+          "0.80": 158.0
+        },
+        "mean_hold_ratio_by_threshold": {
+          "0.20": 0.41144124636772444,
+          "0.40": 0.25616731531864884,
+          "0.60": 0.1439749033431513,
+          "0.65": 0.10198999964661849,
+          "0.70": 0.0877897074995332,
+          "0.80": 0.06823198778463281
+        }
+      }
+    }
+  ]
+}
