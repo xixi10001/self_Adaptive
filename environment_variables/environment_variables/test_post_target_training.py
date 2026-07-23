@@ -86,12 +86,12 @@ class PostTargetEnvironmentTest(unittest.TestCase):
         env._get_observation = lambda: {"local_obs": [], "global_state": np.zeros(1)}
         return env
 
-    def test_target_stop_keeps_old_terminal_bonus(self):
+    def test_target_stop_uses_bounded_terminal_bonus(self):
         env = self.make_step_env(mode="target_stop")
 
         _, _, done, info = env.step([4])
 
-        expected = 20.0 + 10.0 * (1.0 - 99.0 / 600.0)
+        expected = 5.0 + 2.0 * (1.0 - 99.0 / 600.0)
         self.assertTrue(done)
         self.assertEqual(info["done_reason"], "mission_complete")
         self.assertAlmostEqual(info["reward_breakdown"]["r_terminal"], expected)
@@ -187,7 +187,7 @@ class PostTargetEnvironmentTest(unittest.TestCase):
         env.target_reached = True
         after, _ = env._compute_reward(0, np.array([0, 0]), np.array([0, 0]), 0)
 
-        self.assertAlmostEqual(after - before, 0.06)
+        self.assertAlmostEqual(after - before, 0.005)
 
 
 class PostTargetTrainingControlTest(unittest.TestCase):

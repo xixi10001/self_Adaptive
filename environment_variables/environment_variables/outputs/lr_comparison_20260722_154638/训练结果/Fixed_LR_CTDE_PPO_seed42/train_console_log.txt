@@ -1,0 +1,461 @@
+
+============================================================
+Dataset Preflight: validate scenes (46)
+============================================================
+Loading scene train_area001_scenario001...
+Scene train_area001_scenario001 norm_params | intensity_max=500, length_max=3.276, speedRate_max=15.87, heat_per_unit_area_max=261.7, crown_fire_max=1, wind_speed_max=7
+Scene train_area001_scenario001 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario001 t=0 boundary points: 1
+  train_area001_scenario001: t=0 boundary points = 1 | init_area5% boundary points = 17 | actual_area=5.00%
+Loading scene train_area001_scenario002...
+Scene train_area001_scenario002 norm_params | intensity_max=500, length_max=4.386, speedRate_max=30.62, heat_per_unit_area_max=311.1, crown_fire_max=1, wind_speed_max=11
+Scene train_area001_scenario002 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario002 t=0 boundary points: 1
+  train_area001_scenario002: t=0 boundary points = 1 | init_area5% boundary points = 30 | actual_area=5.14%
+Loading scene train_area001_scenario003...
+Scene train_area001_scenario003 norm_params | intensity_max=1639, length_max=7.657, speedRate_max=41.87, heat_per_unit_area_max=873.6, crown_fire_max=1, wind_speed_max=13
+Scene train_area001_scenario003 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario003 t=0 boundary points: 1
+  train_area001_scenario003: t=0 boundary points = 1 | init_area5% boundary points = 32 | actual_area=5.04%
+Loading scene train_area001_scenario004...
+Scene train_area001_scenario004 norm_params | intensity_max=2493, length_max=9.284, speedRate_max=47.68, heat_per_unit_area_max=1277, crown_fire_max=1, wind_speed_max=15
+Scene train_area001_scenario004 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario004 t=0 boundary points: 1
+  train_area001_scenario004: t=0 boundary points = 1 | init_area5% boundary points = 26 | actual_area=5.01%
+Loading scene train_area001_scenario005...
+Scene train_area001_scenario005 norm_params | intensity_max=2503, length_max=9.351, speedRate_max=46.38, heat_per_unit_area_max=902.4, crown_fire_max=2, wind_speed_max=15
+Scene train_area001_scenario005 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario005 t=0 boundary points: 1
+  train_area001_scenario005: t=0 boundary points = 1 | init_area5% boundary points = 49 | actual_area=5.01%
+Loading scene train_area001_scenario006...
+Scene train_area001_scenario006 norm_params | intensity_max=1058, length_max=6.259, speedRate_max=20.81, heat_per_unit_area_max=803.4, crown_fire_max=1, wind_speed_max=9
+Scene train_area001_scenario006 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario006 t=0 boundary points: 1
+  train_area001_scenario006: t=0 boundary points = 1 | init_area5% boundary points = 39 | actual_area=5.02%
+Loading scene train_area002_scenario001...
+Scene train_area002_scenario001 norm_params | intensity_max=692.9, length_max=5.367, speedRate_max=37.46, heat_per_unit_area_max=1276, crown_fire_max=2, wind_speed_max=10
+Scene train_area002_scenario001 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario001 t=0 boundary points: 1
+  train_area002_scenario001: t=0 boundary points = 1 | init_area5% boundary points = 16 | actual_area=5.01%
+Loading scene train_area002_scenario002...
+Scene train_area002_scenario002 norm_params | intensity_max=2900, length_max=16.7, speedRate_max=33.56, heat_per_unit_area_max=3213, crown_fire_max=2, wind_speed_max=13
+Scene train_area002_scenario002 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario002 t=0 boundary points: 1
+  train_area002_scenario002: t=0 boundary points = 1 | init_area5% boundary points = 21 | actual_area=5.12%
+Loading scene train_area002_scenario003...
+Scene train_area002_scenario003 norm_params | intensity_max=2506, length_max=16.13, speedRate_max=37.84, heat_per_unit_area_max=3790, crown_fire_max=2, wind_speed_max=13
+Scene train_area002_scenario003 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario003 t=0 boundary points: 1
+  train_area002_scenario003: t=0 boundary points = 1 | init_area5% boundary points = 25 | actual_area=5.00%
+Loading scene train_area002_scenario004...
+Scene train_area002_scenario004 norm_params | intensity_max=4268, length_max=23, speedRate_max=42.52, heat_per_unit_area_max=2431, crown_fire_max=2, wind_speed_max=15
+Scene train_area002_scenario004 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario004 t=0 boundary points: 1
+  train_area002_scenario004: t=0 boundary points = 1 | init_area5% boundary points = 34 | actual_area=5.10%
+Loading scene train_area002_scenario005...
+Scene train_area002_scenario005 norm_params | intensity_max=3970, length_max=21.92, speedRate_max=36.56, heat_per_unit_area_max=3371, crown_fire_max=2, wind_speed_max=15
+Scene train_area002_scenario005 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario005 t=0 boundary points: 1
+  train_area002_scenario005: t=0 boundary points = 1 | init_area5% boundary points = 39 | actual_area=5.05%
+Loading scene train_area002_scenario006...
+Scene train_area002_scenario006 norm_params | intensity_max=2598, length_max=16.52, speedRate_max=29.6, heat_per_unit_area_max=2231, crown_fire_max=2, wind_speed_max=13
+Scene train_area002_scenario006 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario006 t=0 boundary points: 1
+  train_area002_scenario006: t=0 boundary points = 1 | init_area5% boundary points = 29 | actual_area=5.05%
+Loading scene train_area003_scenario001...
+Scene train_area003_scenario001 norm_params | intensity_max=866.5, length_max=5.709, speedRate_max=17.55, heat_per_unit_area_max=846.2, crown_fire_max=2, wind_speed_max=9
+Scene train_area003_scenario001 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario001 t=0 boundary points: 1
+  train_area003_scenario001: t=0 boundary points = 1 | init_area5% boundary points = 14 | actual_area=5.20%
+Loading scene train_area003_scenario002...
+Scene train_area003_scenario002 norm_params | intensity_max=979.2, length_max=7.114, speedRate_max=28.41, heat_per_unit_area_max=1217, crown_fire_max=2, wind_speed_max=13
+Scene train_area003_scenario002 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario002 t=0 boundary points: 1
+  train_area003_scenario002: t=0 boundary points = 1 | init_area5% boundary points = 17 | actual_area=5.01%
+Loading scene train_area003_scenario003...
+Scene train_area003_scenario003 norm_params | intensity_max=5583, length_max=27.51, speedRate_max=26.05, heat_per_unit_area_max=7313, crown_fire_max=2, wind_speed_max=14
+Scene train_area003_scenario003 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario003 t=0 boundary points: 1
+  train_area003_scenario003: t=0 boundary points = 1 | init_area5% boundary points = 24 | actual_area=5.08%
+Loading scene train_area003_scenario004...
+Scene train_area003_scenario004 norm_params | intensity_max=8000, length_max=35.34, speedRate_max=46.75, heat_per_unit_area_max=7640, crown_fire_max=2, wind_speed_max=16
+Scene train_area003_scenario004 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario004 t=0 boundary points: 1
+  train_area003_scenario004: t=0 boundary points = 1 | init_area5% boundary points = 28 | actual_area=5.09%
+Loading scene train_area003_scenario005...
+Scene train_area003_scenario005 norm_params | intensity_max=8000, length_max=39.78, speedRate_max=29.58, heat_per_unit_area_max=7703, crown_fire_max=2, wind_speed_max=17
+Scene train_area003_scenario005 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario005 t=0 boundary points: 1
+  train_area003_scenario005: t=0 boundary points = 1 | init_area5% boundary points = 34 | actual_area=5.11%
+Loading scene train_area003_scenario006...
+Scene train_area003_scenario006 norm_params | intensity_max=5060, length_max=25.75, speedRate_max=32.57, heat_per_unit_area_max=3331, crown_fire_max=2, wind_speed_max=15
+Scene train_area003_scenario006 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario006 t=0 boundary points: 1
+  train_area003_scenario006: t=0 boundary points = 1 | init_area5% boundary points = 31 | actual_area=5.11%
+Loading scene train_area004_scenario001...
+Scene train_area004_scenario001 norm_params | intensity_max=536, length_max=4.578, speedRate_max=22.18, heat_per_unit_area_max=780.2, crown_fire_max=2, wind_speed_max=9
+Scene train_area004_scenario001 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario001 t=0 boundary points: 1
+  train_area004_scenario001: t=0 boundary points = 1 | init_area5% boundary points = 15 | actual_area=5.13%
+Loading scene train_area004_scenario002...
+Scene train_area004_scenario002 norm_params | intensity_max=8000, length_max=43.24, speedRate_max=25.29, heat_per_unit_area_max=7545, crown_fire_max=2, wind_speed_max=13
+Scene train_area004_scenario002 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario002 t=0 boundary points: 1
+  train_area004_scenario002: t=0 boundary points = 1 | init_area5% boundary points = 21 | actual_area=5.13%
+Loading scene train_area004_scenario003...
+Scene train_area004_scenario003 norm_params | intensity_max=7909, length_max=34.67, speedRate_max=23.96, heat_per_unit_area_max=6057, crown_fire_max=2, wind_speed_max=14
+Scene train_area004_scenario003 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario003 t=0 boundary points: 1
+  train_area004_scenario003: t=0 boundary points = 1 | init_area5% boundary points = 22 | actual_area=5.12%
+Loading scene train_area004_scenario004...
+Scene train_area004_scenario004 norm_params | intensity_max=4591, length_max=24.14, speedRate_max=18.83, heat_per_unit_area_max=5353, crown_fire_max=2, wind_speed_max=16
+Scene train_area004_scenario004 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario004 t=0 boundary points: 1
+  train_area004_scenario004: t=0 boundary points = 1 | init_area5% boundary points = 35 | actual_area=5.02%
+Loading scene train_area004_scenario005...
+Scene train_area004_scenario005 norm_params | intensity_max=8000, length_max=35.38, speedRate_max=27.16, heat_per_unit_area_max=6388, crown_fire_max=2, wind_speed_max=17
+Scene train_area004_scenario005 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario005 t=0 boundary points: 1
+  train_area004_scenario005: t=0 boundary points = 1 | init_area5% boundary points = 36 | actual_area=5.00%
+Loading scene train_area004_scenario006...
+Scene train_area004_scenario006 norm_params | intensity_max=8000, length_max=43.07, speedRate_max=32.97, heat_per_unit_area_max=5879, crown_fire_max=2, wind_speed_max=15
+Scene train_area004_scenario006 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario006 t=0 boundary points: 1
+  train_area004_scenario006: t=0 boundary points = 1 | init_area5% boundary points = 26 | actual_area=5.10%
+Loading scene validation_area005_scenario001...
+Scene validation_area005_scenario001 norm_params | intensity_max=500, length_max=3.889, speedRate_max=16.07, heat_per_unit_area_max=514.6, crown_fire_max=1, wind_speed_max=7
+Scene validation_area005_scenario001 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario001 t=0 boundary points: 1
+  validation_area005_scenario001: t=0 boundary points = 1 | init_area5% boundary points = 14 | actual_area=5.13%
+Loading scene validation_area005_scenario002...
+Scene validation_area005_scenario002 norm_params | intensity_max=2868, length_max=9.893, speedRate_max=34.24, heat_per_unit_area_max=1838, crown_fire_max=2, wind_speed_max=13
+Scene validation_area005_scenario002 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario002 t=0 boundary points: 1
+  validation_area005_scenario002: t=0 boundary points = 1 | init_area5% boundary points = 22 | actual_area=5.15%
+Loading scene validation_area005_scenario003...
+Scene validation_area005_scenario003 norm_params | intensity_max=1227, length_max=6.908, speedRate_max=15.86, heat_per_unit_area_max=1816, crown_fire_max=2, wind_speed_max=10
+Scene validation_area005_scenario003 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario003 t=0 boundary points: 1
+  validation_area005_scenario003: t=0 boundary points = 1 | init_area5% boundary points = 25 | actual_area=5.02%
+Loading scene validation_area005_scenario004...
+Scene validation_area005_scenario004 norm_params | intensity_max=4343, length_max=12.22, speedRate_max=31.47, heat_per_unit_area_max=2265, crown_fire_max=2, wind_speed_max=10
+Scene validation_area005_scenario004 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario004 t=0 boundary points: 1
+  validation_area005_scenario004: t=0 boundary points = 1 | init_area5% boundary points = 41 | actual_area=5.01%
+Loading scene validation_area005_scenario005...
+Scene validation_area005_scenario005 norm_params | intensity_max=4258, length_max=14.69, speedRate_max=30.92, heat_per_unit_area_max=2341, crown_fire_max=2, wind_speed_max=10
+Scene validation_area005_scenario005 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario005 t=0 boundary points: 1
+  validation_area005_scenario005: t=0 boundary points = 1 | init_area5% boundary points = 37 | actual_area=5.02%
+Loading scene validation_area005_scenario006...
+Scene validation_area005_scenario006 norm_params | intensity_max=3361, length_max=11.08, speedRate_max=23.91, heat_per_unit_area_max=2228, crown_fire_max=2, wind_speed_max=10
+Scene validation_area005_scenario006 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario006 t=0 boundary points: 1
+  validation_area005_scenario006: t=0 boundary points = 1 | init_area5% boundary points = 42 | actual_area=5.02%
+Loading scene generalization_area006_scenario001...
+Scene generalization_area006_scenario001 norm_params | intensity_max=2852, length_max=14.79, speedRate_max=25.58, heat_per_unit_area_max=2000, crown_fire_max=2, wind_speed_max=8
+Scene generalization_area006_scenario001 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario001 t=0 boundary points: 1
+  generalization_area006_scenario001: t=0 boundary points = 1 | init_area5% boundary points = 16 | actual_area=5.25%
+Loading scene generalization_area006_scenario002...
+Scene generalization_area006_scenario002 norm_params | intensity_max=2553, length_max=16.33, speedRate_max=18.36, heat_per_unit_area_max=2769, crown_fire_max=2, wind_speed_max=11
+Scene generalization_area006_scenario002 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario002 t=0 boundary points: 1
+  generalization_area006_scenario002: t=0 boundary points = 1 | init_area5% boundary points = 21 | actual_area=5.12%
+Loading scene generalization_area006_scenario003...
+Scene generalization_area006_scenario003 norm_params | intensity_max=1928, length_max=13.53, speedRate_max=21.81, heat_per_unit_area_max=2055, crown_fire_max=2, wind_speed_max=13
+Scene generalization_area006_scenario003 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario003 t=0 boundary points: 1
+  generalization_area006_scenario003: t=0 boundary points = 1 | init_area5% boundary points = 27 | actual_area=5.02%
+Loading scene generalization_area006_scenario004...
+Scene generalization_area006_scenario004 norm_params | intensity_max=3023, length_max=18.27, speedRate_max=27.79, heat_per_unit_area_max=3134, crown_fire_max=2, wind_speed_max=11
+Scene generalization_area006_scenario004 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario004 t=0 boundary points: 1
+  generalization_area006_scenario004: t=0 boundary points = 1 | init_area5% boundary points = 36 | actual_area=5.09%
+Loading scene generalization_area006_scenario005...
+Scene generalization_area006_scenario005 norm_params | intensity_max=3837, length_max=21.41, speedRate_max=23.1, heat_per_unit_area_max=3296, crown_fire_max=2, wind_speed_max=8
+Scene generalization_area006_scenario005 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario005 t=0 boundary points: 1
+  generalization_area006_scenario005: t=0 boundary points = 1 | init_area5% boundary points = 34 | actual_area=5.01%
+Loading scene generalization_area006_scenario006...
+Scene generalization_area006_scenario006 norm_params | intensity_max=2478, length_max=16, speedRate_max=16.08, heat_per_unit_area_max=3114, crown_fire_max=2, wind_speed_max=9
+Scene generalization_area006_scenario006 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario006 t=0 boundary points: 1
+  generalization_area006_scenario006: t=0 boundary points = 1 | init_area5% boundary points = 29 | actual_area=5.13%
+Loading scene generalization_area007_scenario001...
+Scene generalization_area007_scenario001 norm_params | intensity_max=500, length_max=3.68, speedRate_max=17.67, heat_per_unit_area_max=415.9, crown_fire_max=2, wind_speed_max=9
+Scene generalization_area007_scenario001 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario001 t=0 boundary points: 1
+  generalization_area007_scenario001: t=0 boundary points = 1 | init_area5% boundary points = 18 | actual_area=5.09%
+Loading scene generalization_area007_scenario002...
+Scene generalization_area007_scenario002 norm_params | intensity_max=642.2, length_max=6.506, speedRate_max=8.942, heat_per_unit_area_max=1162, crown_fire_max=2, wind_speed_max=9
+Scene generalization_area007_scenario002 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario002 t=0 boundary points: 1
+  generalization_area007_scenario002: t=0 boundary points = 1 | init_area5% boundary points = 24 | actual_area=5.18%
+Loading scene generalization_area007_scenario003...
+Scene generalization_area007_scenario003 norm_params | intensity_max=500, length_max=3.86, speedRate_max=16.09, heat_per_unit_area_max=371.7, crown_fire_max=2, wind_speed_max=8
+Scene generalization_area007_scenario003 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario003 t=0 boundary points: 1
+  generalization_area007_scenario003: t=0 boundary points = 1 | init_area5% boundary points = 34 | actual_area=5.06%
+Loading scene generalization_area007_scenario004...
+Scene generalization_area007_scenario004 norm_params | intensity_max=1179, length_max=9.751, speedRate_max=17.83, heat_per_unit_area_max=1598, crown_fire_max=2, wind_speed_max=10
+Scene generalization_area007_scenario004 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario004 t=0 boundary points: 1
+  generalization_area007_scenario004: t=0 boundary points = 1 | init_area5% boundary points = 32 | actual_area=5.04%
+Loading scene generalization_area007_scenario005...
+Scene generalization_area007_scenario005 norm_params | intensity_max=500, length_max=4.332, speedRate_max=12.68, heat_per_unit_area_max=1079, crown_fire_max=2, wind_speed_max=9
+Scene generalization_area007_scenario005 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario005 t=0 boundary points: 1
+  generalization_area007_scenario005: t=0 boundary points = 1 | init_area5% boundary points = 43 | actual_area=5.02%
+Loading scene generalization_area007_scenario006...
+Scene generalization_area007_scenario006 norm_params | intensity_max=500, length_max=4.926, speedRate_max=15.28, heat_per_unit_area_max=1147, crown_fire_max=2, wind_speed_max=10
+Scene generalization_area007_scenario006 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario006 t=0 boundary points: 1
+  generalization_area007_scenario006: t=0 boundary points = 1 | init_area5% boundary points = 29 | actual_area=5.04%
+Loading scene stress_area008_scenario001...
+Scene stress_area008_scenario001 norm_params | intensity_max=8000, length_max=27.5, speedRate_max=64.75, heat_per_unit_area_max=3963, crown_fire_max=2, wind_speed_max=16
+Scene stress_area008_scenario001 loaded | shape=(283, 285) | rasters=8
+Scene stress_area008_scenario001 t=0 boundary points: 1
+  stress_area008_scenario001: t=0 boundary points = 1 | init_area5% boundary points = 45 | actual_area=5.04%
+Loading scene stress_area008_scenario002...
+Scene stress_area008_scenario002 norm_params | intensity_max=7048, length_max=16.01, speedRate_max=48.91, heat_per_unit_area_max=3154, crown_fire_max=2, wind_speed_max=13
+Scene stress_area008_scenario002 loaded | shape=(283, 285) | rasters=8
+Scene stress_area008_scenario002 t=0 boundary points: 1
+  stress_area008_scenario002: t=0 boundary points = 1 | init_area5% boundary points = 90 | actual_area=5.01%
+Loading scene stress_area008_scenario003...
+Scene stress_area008_scenario003 norm_params | intensity_max=7965, length_max=28.76, speedRate_max=53.49, heat_per_unit_area_max=5432, crown_fire_max=2, wind_speed_max=14
+Scene stress_area008_scenario003 loaded | shape=(283, 285) | rasters=8
+Scene stress_area008_scenario003 t=0 boundary points: 1
+  stress_area008_scenario003: t=0 boundary points = 1 | init_area5% boundary points = 63 | actual_area=5.01%
+Loading scene stress_area008_scenario004...
+Scene stress_area008_scenario004 norm_params | intensity_max=8000, length_max=34.91, speedRate_max=65.01, heat_per_unit_area_max=4693, crown_fire_max=2, wind_speed_max=18
+Scene stress_area008_scenario004 loaded | shape=(283, 285) | rasters=8
+Scene stress_area008_scenario004 t=0 boundary points: 1
+  stress_area008_scenario004: t=0 boundary points = 1 | init_area5% boundary points = 84 | actual_area=5.03%
+Loading scene train_area001_scenario001...
+Scene train_area001_scenario001 norm_params | intensity_max=500, length_max=3.276, speedRate_max=15.87, heat_per_unit_area_max=261.7, crown_fire_max=1, wind_speed_max=7
+Scene train_area001_scenario001 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario001 t=0 boundary points: 1
+Loading scene train_area001_scenario002...
+Scene train_area001_scenario002 norm_params | intensity_max=500, length_max=4.386, speedRate_max=30.62, heat_per_unit_area_max=311.1, crown_fire_max=1, wind_speed_max=11
+Scene train_area001_scenario002 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario002 t=0 boundary points: 1
+Loading scene train_area001_scenario003...
+Scene train_area001_scenario003 norm_params | intensity_max=1639, length_max=7.657, speedRate_max=41.87, heat_per_unit_area_max=873.6, crown_fire_max=1, wind_speed_max=13
+Scene train_area001_scenario003 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario003 t=0 boundary points: 1
+Loading scene train_area001_scenario004...
+Scene train_area001_scenario004 norm_params | intensity_max=2493, length_max=9.284, speedRate_max=47.68, heat_per_unit_area_max=1277, crown_fire_max=1, wind_speed_max=15
+Scene train_area001_scenario004 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario004 t=0 boundary points: 1
+Loading scene train_area001_scenario005...
+Scene train_area001_scenario005 norm_params | intensity_max=2503, length_max=9.351, speedRate_max=46.38, heat_per_unit_area_max=902.4, crown_fire_max=2, wind_speed_max=15
+Scene train_area001_scenario005 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario005 t=0 boundary points: 1
+Loading scene train_area001_scenario006...
+Scene train_area001_scenario006 norm_params | intensity_max=1058, length_max=6.259, speedRate_max=20.81, heat_per_unit_area_max=803.4, crown_fire_max=1, wind_speed_max=9
+Scene train_area001_scenario006 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario006 t=0 boundary points: 1
+Loading scene train_area002_scenario001...
+Scene train_area002_scenario001 norm_params | intensity_max=692.9, length_max=5.367, speedRate_max=37.46, heat_per_unit_area_max=1276, crown_fire_max=2, wind_speed_max=10
+Scene train_area002_scenario001 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario001 t=0 boundary points: 1
+Loading scene train_area002_scenario002...
+Scene train_area002_scenario002 norm_params | intensity_max=2900, length_max=16.7, speedRate_max=33.56, heat_per_unit_area_max=3213, crown_fire_max=2, wind_speed_max=13
+Scene train_area002_scenario002 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario002 t=0 boundary points: 1
+Loading scene train_area002_scenario003...
+Scene train_area002_scenario003 norm_params | intensity_max=2506, length_max=16.13, speedRate_max=37.84, heat_per_unit_area_max=3790, crown_fire_max=2, wind_speed_max=13
+Scene train_area002_scenario003 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario003 t=0 boundary points: 1
+Loading scene train_area002_scenario004...
+Scene train_area002_scenario004 norm_params | intensity_max=4268, length_max=23, speedRate_max=42.52, heat_per_unit_area_max=2431, crown_fire_max=2, wind_speed_max=15
+Scene train_area002_scenario004 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario004 t=0 boundary points: 1
+Loading scene train_area002_scenario005...
+Scene train_area002_scenario005 norm_params | intensity_max=3970, length_max=21.92, speedRate_max=36.56, heat_per_unit_area_max=3371, crown_fire_max=2, wind_speed_max=15
+Scene train_area002_scenario005 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario005 t=0 boundary points: 1
+Loading scene train_area002_scenario006...
+Scene train_area002_scenario006 norm_params | intensity_max=2598, length_max=16.52, speedRate_max=29.6, heat_per_unit_area_max=2231, crown_fire_max=2, wind_speed_max=13
+Scene train_area002_scenario006 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario006 t=0 boundary points: 1
+Loading scene train_area003_scenario001...
+Scene train_area003_scenario001 norm_params | intensity_max=866.5, length_max=5.709, speedRate_max=17.55, heat_per_unit_area_max=846.2, crown_fire_max=2, wind_speed_max=9
+Scene train_area003_scenario001 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario001 t=0 boundary points: 1
+Loading scene train_area003_scenario002...
+Scene train_area003_scenario002 norm_params | intensity_max=979.2, length_max=7.114, speedRate_max=28.41, heat_per_unit_area_max=1217, crown_fire_max=2, wind_speed_max=13
+Scene train_area003_scenario002 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario002 t=0 boundary points: 1
+Loading scene train_area003_scenario003...
+Scene train_area003_scenario003 norm_params | intensity_max=5583, length_max=27.51, speedRate_max=26.05, heat_per_unit_area_max=7313, crown_fire_max=2, wind_speed_max=14
+Scene train_area003_scenario003 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario003 t=0 boundary points: 1
+Loading scene train_area003_scenario004...
+Scene train_area003_scenario004 norm_params | intensity_max=8000, length_max=35.34, speedRate_max=46.75, heat_per_unit_area_max=7640, crown_fire_max=2, wind_speed_max=16
+Scene train_area003_scenario004 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario004 t=0 boundary points: 1
+Loading scene train_area003_scenario005...
+Scene train_area003_scenario005 norm_params | intensity_max=8000, length_max=39.78, speedRate_max=29.58, heat_per_unit_area_max=7703, crown_fire_max=2, wind_speed_max=17
+Scene train_area003_scenario005 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario005 t=0 boundary points: 1
+Loading scene train_area003_scenario006...
+Scene train_area003_scenario006 norm_params | intensity_max=5060, length_max=25.75, speedRate_max=32.57, heat_per_unit_area_max=3331, crown_fire_max=2, wind_speed_max=15
+Scene train_area003_scenario006 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario006 t=0 boundary points: 1
+Loading scene train_area004_scenario001...
+Scene train_area004_scenario001 norm_params | intensity_max=536, length_max=4.578, speedRate_max=22.18, heat_per_unit_area_max=780.2, crown_fire_max=2, wind_speed_max=9
+Scene train_area004_scenario001 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario001 t=0 boundary points: 1
+Loading scene train_area004_scenario002...
+Scene train_area004_scenario002 norm_params | intensity_max=8000, length_max=43.24, speedRate_max=25.29, heat_per_unit_area_max=7545, crown_fire_max=2, wind_speed_max=13
+Scene train_area004_scenario002 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario002 t=0 boundary points: 1
+Loading scene train_area004_scenario003...
+Scene train_area004_scenario003 norm_params | intensity_max=7909, length_max=34.67, speedRate_max=23.96, heat_per_unit_area_max=6057, crown_fire_max=2, wind_speed_max=14
+Scene train_area004_scenario003 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario003 t=0 boundary points: 1
+Loading scene train_area004_scenario004...
+Scene train_area004_scenario004 norm_params | intensity_max=4591, length_max=24.14, speedRate_max=18.83, heat_per_unit_area_max=5353, crown_fire_max=2, wind_speed_max=16
+Scene train_area004_scenario004 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario004 t=0 boundary points: 1
+Loading scene train_area004_scenario005...
+Scene train_area004_scenario005 norm_params | intensity_max=8000, length_max=35.38, speedRate_max=27.16, heat_per_unit_area_max=6388, crown_fire_max=2, wind_speed_max=17
+Scene train_area004_scenario005 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario005 t=0 boundary points: 1
+Loading scene train_area004_scenario006...
+Scene train_area004_scenario006 norm_params | intensity_max=8000, length_max=43.07, speedRate_max=32.97, heat_per_unit_area_max=5879, crown_fire_max=2, wind_speed_max=15
+Scene train_area004_scenario006 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario006 t=0 boundary points: 1
+Loading scene validation_area005_scenario001...
+Scene validation_area005_scenario001 norm_params | intensity_max=500, length_max=3.889, speedRate_max=16.07, heat_per_unit_area_max=514.6, crown_fire_max=1, wind_speed_max=7
+Scene validation_area005_scenario001 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario001 t=0 boundary points: 1
+Loading scene validation_area005_scenario002...
+Scene validation_area005_scenario002 norm_params | intensity_max=2868, length_max=9.893, speedRate_max=34.24, heat_per_unit_area_max=1838, crown_fire_max=2, wind_speed_max=13
+Scene validation_area005_scenario002 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario002 t=0 boundary points: 1
+Loading scene validation_area005_scenario003...
+Scene validation_area005_scenario003 norm_params | intensity_max=1227, length_max=6.908, speedRate_max=15.86, heat_per_unit_area_max=1816, crown_fire_max=2, wind_speed_max=10
+Scene validation_area005_scenario003 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario003 t=0 boundary points: 1
+Loading scene validation_area005_scenario004...
+Scene validation_area005_scenario004 norm_params | intensity_max=4343, length_max=12.22, speedRate_max=31.47, heat_per_unit_area_max=2265, crown_fire_max=2, wind_speed_max=10
+Scene validation_area005_scenario004 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario004 t=0 boundary points: 1
+Loading scene validation_area005_scenario005...
+Scene validation_area005_scenario005 norm_params | intensity_max=4258, length_max=14.69, speedRate_max=30.92, heat_per_unit_area_max=2341, crown_fire_max=2, wind_speed_max=10
+Scene validation_area005_scenario005 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario005 t=0 boundary points: 1
+Loading scene validation_area005_scenario006...
+Scene validation_area005_scenario006 norm_params | intensity_max=3361, length_max=11.08, speedRate_max=23.91, heat_per_unit_area_max=2228, crown_fire_max=2, wind_speed_max=10
+Scene validation_area005_scenario006 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario006 t=0 boundary points: 1
+Loading scene generalization_area006_scenario001...
+Scene generalization_area006_scenario001 norm_params | intensity_max=2852, length_max=14.79, speedRate_max=25.58, heat_per_unit_area_max=2000, crown_fire_max=2, wind_speed_max=8
+Scene generalization_area006_scenario001 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario001 t=0 boundary points: 1
+Loading scene generalization_area006_scenario002...
+Scene generalization_area006_scenario002 norm_params | intensity_max=2553, length_max=16.33, speedRate_max=18.36, heat_per_unit_area_max=2769, crown_fire_max=2, wind_speed_max=11
+Scene generalization_area006_scenario002 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario002 t=0 boundary points: 1
+Loading scene generalization_area006_scenario003...
+Scene generalization_area006_scenario003 norm_params | intensity_max=1928, length_max=13.53, speedRate_max=21.81, heat_per_unit_area_max=2055, crown_fire_max=2, wind_speed_max=13
+Scene generalization_area006_scenario003 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario003 t=0 boundary points: 1
+Loading scene generalization_area006_scenario004...
+Scene generalization_area006_scenario004 norm_params | intensity_max=3023, length_max=18.27, speedRate_max=27.79, heat_per_unit_area_max=3134, crown_fire_max=2, wind_speed_max=11
+Scene generalization_area006_scenario004 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario004 t=0 boundary points: 1
+Loading scene generalization_area006_scenario005...
+Scene generalization_area006_scenario005 norm_params | intensity_max=3837, length_max=21.41, speedRate_max=23.1, heat_per_unit_area_max=3296, crown_fire_max=2, wind_speed_max=8
+Scene generalization_area006_scenario005 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario005 t=0 boundary points: 1
+Loading scene generalization_area006_scenario006...
+Scene generalization_area006_scenario006 norm_params | intensity_max=2478, length_max=16, speedRate_max=16.08, heat_per_unit_area_max=3114, crown_fire_max=2, wind_speed_max=9
+Scene generalization_area006_scenario006 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario006 t=0 boundary points: 1
+Loading scene generalization_area007_scenario001...
+Scene generalization_area007_scenario001 norm_params | intensity_max=500, length_max=3.68, speedRate_max=17.67, heat_per_unit_area_max=415.9, crown_fire_max=2, wind_speed_max=9
+Scene generalization_area007_scenario001 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario001 t=0 boundary points: 1
+Loading scene generalization_area007_scenario002...
+Scene generalization_area007_scenario002 norm_params | intensity_max=642.2, length_max=6.506, speedRate_max=8.942, heat_per_unit_area_max=1162, crown_fire_max=2, wind_speed_max=9
+Scene generalization_area007_scenario002 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario002 t=0 boundary points: 1
+Loading scene generalization_area007_scenario003...
+Scene generalization_area007_scenario003 norm_params | intensity_max=500, length_max=3.86, speedRate_max=16.09, heat_per_unit_area_max=371.7, crown_fire_max=2, wind_speed_max=8
+Scene generalization_area007_scenario003 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario003 t=0 boundary points: 1
+Loading scene generalization_area007_scenario004...
+Scene generalization_area007_scenario004 norm_params | intensity_max=1179, length_max=9.751, speedRate_max=17.83, heat_per_unit_area_max=1598, crown_fire_max=2, wind_speed_max=10
+Scene generalization_area007_scenario004 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario004 t=0 boundary points: 1
+Loading scene generalization_area007_scenario005...
+Scene generalization_area007_scenario005 norm_params | intensity_max=500, length_max=4.332, speedRate_max=12.68, heat_per_unit_area_max=1079, crown_fire_max=2, wind_speed_max=9
+Scene generalization_area007_scenario005 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario005 t=0 boundary points: 1
+Loading scene generalization_area007_scenario006...
+Scene generalization_area007_scenario006 norm_params | intensity_max=500, length_max=4.926, speedRate_max=15.28, heat_per_unit_area_max=1147, crown_fire_max=2, wind_speed_max=10
+Scene generalization_area007_scenario006 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario006 t=0 boundary points: 1
+Loading scene stress_area008_scenario001...
+Scene stress_area008_scenario001 norm_params | intensity_max=8000, length_max=27.5, speedRate_max=64.75, heat_per_unit_area_max=3963, crown_fire_max=2, wind_speed_max=16
+Scene stress_area008_scenario001 loaded | shape=(283, 285) | rasters=8
+Scene stress_area008_scenario001 t=0 boundary points: 1
+Loading scene stress_area008_scenario002...
+Scene stress_area008_scenario002 norm_params | intensity_max=7048, length_max=16.01, speedRate_max=48.91, heat_per_unit_area_max=3154, crown_fire_max=2, wind_speed_max=13
+Scene stress_area008_scenario002 loaded | shape=(283, 285) | rasters=8
+Scene stress_area008_scenario002 t=0 boundary points: 1
+Loading scene stress_area008_scenario003...
+Scene stress_area008_scenario003 norm_params | intensity_max=7965, length_max=28.76, speedRate_max=53.49, heat_per_unit_area_max=5432, crown_fire_max=2, wind_speed_max=14
+Scene stress_area008_scenario003 loaded | shape=(283, 285) | rasters=8
+Scene stress_area008_scenario003 t=0 boundary points: 1
+Loading scene stress_area008_scenario004...
+Scene stress_area008_scenario004 norm_params | intensity_max=8000, length_max=34.91, speedRate_max=65.01, heat_per_unit_area_max=4693, crown_fire_max=2, wind_speed_max=18
+Scene stress_area008_scenario004 loaded | shape=(283, 285) | rasters=8
+Scene stress_area008_scenario004 t=0 boundary points: 1
+
+======================================================================
+CTDE-PPO 基线训练开始
+======================================================================
+输出目录=D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260722_154638\训练结果\Fixed_LR_CTDE_PPO_seed42
+随机种子=42
+学习率策略=fixed | target_kl=0.0065 | actor_lr=2.00e-04 | actor_lr范围=[1.00e-04, 2.50e-04]
+KL迟滞区间=[0.82, 1.20] | 紧急阈值=2.00 | epoch熔断阈值=1.50
+observation_profile=persistent_cooperative | reward_profile=persistent_boundary | norm_params_source=scene_p99.5
+初始位置百分位=5.0
+基线环境已初始化 | 模式=train | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+CTDE-PPO 基线已初始化 | 设备=cuda | 本地观测=24 | 全局状态=19 | lr_adapt_mode=fixed
+回合   10 | 场景=train_area004_scenario001 | 阶段=1 | 奖励=   -1.4 | 步数=301.2 | 覆盖率= 25.9% | 成功率=  80% | 任务得分= 46.9% | 超时率=  20% | 零覆盖超时=  20% | KL=0.0000 | KLema=0.0000 | clip=0.000 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合   20 | 场景=train_area004_scenario003 | 阶段=1 | 奖励=   -1.2 | 步数=306.6 | 覆盖率= 24.1% | 成功率=  75% | 任务得分= 44.4% | 超时率=  25% | 零覆盖超时=  20% | KL=0.0068 | KLema=0.0068 | clip=0.043 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合   30 | 场景=train_area003_scenario001 | 阶段=1 | 奖励=   -0.2 | 步数=284.9 | 覆盖率= 25.8% | 成功率=  73% | 任务得分= 45.4% | 超时率=  27% | 零覆盖超时=  17% | KL=0.0068 | KLema=0.0068 | clip=0.043 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合   40 | 场景=train_area001_scenario005 | 阶段=1 | 奖励=   -0.4 | 步数=283.2 | 覆盖率= 24.6% | 成功率=  72% | 任务得分= 44.6% | 超时率=  28% | 零覆盖超时=  18% | KL=0.0056 | KLema=0.0066 | clip=0.032 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合   50 | 场景=train_area004_scenario004 | 阶段=1 | 奖励=   -1.1 | 步数=285.0 | 覆盖率= 24.5% | 成功率=  70% | 任务得分= 43.7% | 超时率=  30% | 零覆盖超时=  22% | KL=0.0057 | KLema=0.0064 | clip=0.036 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=50 | 阶段=1 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=1 | 回合数=30 | 任务得分=54.1% | 覆盖率=40.0% | 成功率=70.0% | 平均步数=208.5
+  回报分离 | success=17.12842621516256 | found_failed=-0.5579037321616711 | margin=17.68632994732423 | negative_action_gain=0
+Traceback (most recent call last):
+  File "D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\ctde_ppo_baseline_train.py", line 4993, in <module>
+    main()
+  File "D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\ctde_ppo_baseline_train.py", line 4989, in main
+    run_lr_comparison(config)
+  File "D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\ctde_ppo_baseline_train.py", line 4777, in run_lr_comparison
+    trained_agent, curriculum, training_log, output_dir, best_model_paths = train(cfg)
+  File "D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\ctde_ppo_baseline_train.py", line 3521, in train
+    if curriculum._validation_passed(stage1_gate):
+  File "D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\ctde_ppo_baseline_train.py", line 1477, in _validation_passed
+    status = self.validation_gate_status(summary)
+  File "D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\ctde_ppo_baseline_train.py", line 1424, in validation_gate_status
+    contact_value = None if median_contact is None else float(median_contact)
+TypeError: float() argument must be a string or a real number, not 'dict'

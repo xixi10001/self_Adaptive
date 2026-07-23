@@ -40,6 +40,25 @@ def _coordinator_env():
 
 
 class MessageTtlTest(unittest.TestCase):
+    def test_future_message_and_report_are_hard_cleared(self):
+        coordinator = CooperativeTaskCoordinator(_coordinator_env(), 4, 6, 8, 10, 2)
+        coordinator.peer_messages[0] = {
+            "peer": 1,
+            "position": np.array([2, 3]),
+            "role": coordinator.TRACK,
+            "received_step": 6,
+            "source_step": 6,
+        }
+        coordinator.boundary_last_seen[0][1, 1] = 6
+
+        coordinator.refresh_candidates(5)
+
+        self.assertIsNone(coordinator.peer_messages[0])
+        self.assertEqual(int(coordinator.boundary_last_seen[0][1, 1]), -1)
+        role_obs = coordinator.role_observations(5)[0]
+        self.assertEqual(float(role_obs[21]), 0.0)
+        self.assertEqual(float(role_obs[22]), 0.0)
+
     def test_expired_message_and_spatial_report_are_physically_cleared(self):
         coordinator = CooperativeTaskCoordinator(_coordinator_env(), 4, 6, 8, 10, 2)
         coordinator.peer_messages[0] = {
@@ -84,6 +103,47 @@ class MessageTtlTest(unittest.TestCase):
         first = coordinator._candidate(0, coordinator.SEARCH, 0)
         second = coordinator._candidate(1, coordinator.SEARCH, 0)
         self.assertFalse(np.allclose(first[1:3], second[1:3]))
+
+    def test_connected_search_targets_are_jointly_separated(self):
+        env = _coordinator_env()
+        env.communication_available = [True, True]
+        coordinator = CooperativeTaskCoordinator(env, 4, 6, 8, 10, 2)
+
+        coordinator.refresh_candidates(0)
+
+        target0 = coordinator._absolute_candidate_target(0, coordinator.SEARCH)
+        target1 = coordinator._absolute_candidate_target(1, coordinator.SEARCH)
+        self.assertEqual(coordinator._search_target_overlap(target0, target1), 0.0)
+
+    def test_search_target_stays_stable_between_refreshes(self):
+        env = _coordinator_env()
+        env.communication_available = [True, True]
+        coordinator = CooperativeTaskCoordinator(env, 4, 6, 8, 10, 2)
+        coordinator.refresh_candidates(0)
+        first = [target.copy() for target in coordinator.search_targets]
+
+        coordinator.refresh_candidates(1)
+
+        for expected, actual in zip(first, coordinator.search_targets):
+            np.testing.assert_allclose(actual, expected)
+
+    def test_search_candidates_do_not_depend_on_hidden_fire_geometry(self):
+        env_a = _coordinator_env()
+        env_b = _coordinator_env()
+        env_a.fire_centroid = np.array([0.0, 0.0])
+        env_b.fire_centroid = np.array([7.0, 7.0])
+        env_a.boundary_points = [(0, 0)]
+        env_b.boundary_points = [(7, 7)]
+        coordinator_a = CooperativeTaskCoordinator(env_a, 4, 6, 8, 10, 2)
+        coordinator_b = CooperativeTaskCoordinator(env_b, 4, 6, 8, 10, 2)
+
+        coordinator_a.refresh_candidates(0)
+        coordinator_b.refresh_candidates(0)
+
+        np.testing.assert_allclose(
+            coordinator_a.candidates[:, coordinator_a.SEARCH],
+            coordinator_b.candidates[:, coordinator_b.SEARCH],
+        )
 
     def test_disconnected_local_event_locks_unaffected_peer_role(self):
         env = _coordinator_env()
@@ -159,6 +219,18 @@ class PersistentCoverageTest(unittest.TestCase):
         tolerant, fresh = env._boundary_freshness_metrics()
         self.assertEqual(tolerant, 1.0)
         self.assertEqual(fresh, 1.0)
+
+    def test_future_episode_timestamp_is_not_treated_as_fresh(self):
+        env = FireSearchBaselineEnvironment.__new__(FireSearchBaselineEnvironment)
+        env.boundary_points = [(3, 3)]
+        env.boundary_last_seen_step = np.full((8, 8), -1, dtype=np.int32)
+        env.boundary_last_seen_step[3, 3] = 50
+        env.boundary_match_radius = 1
+        env.boundary_freshness_tau = 40.0
+        env.grid_size = (8, 8)
+        env.step_count = 0
+
+        self.assertEqual(env._boundary_freshness_metrics(), (0.0, 0.0))
 
     def test_persistent_reward_selects_matching_observation_profile(self):
         config = normalize_training_config({"reward_profile": "persistent_boundary"})

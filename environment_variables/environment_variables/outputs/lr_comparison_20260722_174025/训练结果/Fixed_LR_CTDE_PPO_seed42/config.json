@@ -1,0 +1,321 @@
+{
+  "data_dir": "./dataset",
+  "train_split": "train",
+  "eval_split": "generalization",
+  "train_scene_keys": [
+    "train_area001_scenario001",
+    "train_area001_scenario002",
+    "train_area001_scenario003",
+    "train_area001_scenario004",
+    "train_area001_scenario005",
+    "train_area001_scenario006",
+    "train_area002_scenario001",
+    "train_area002_scenario002",
+    "train_area002_scenario003",
+    "train_area002_scenario004",
+    "train_area002_scenario005",
+    "train_area002_scenario006",
+    "train_area003_scenario001",
+    "train_area003_scenario002",
+    "train_area003_scenario003",
+    "train_area003_scenario004",
+    "train_area003_scenario005",
+    "train_area003_scenario006",
+    "train_area004_scenario001",
+    "train_area004_scenario002",
+    "train_area004_scenario003",
+    "train_area004_scenario004",
+    "train_area004_scenario005",
+    "train_area004_scenario006"
+  ],
+  "num_drones": 2,
+  "vision_radius": 16,
+  "max_steps": 600,
+  "use_metadata_uav_params": false,
+  "observation_profile": "persistent_cooperative",
+  "reward_profile": "persistent_boundary",
+  "communication_enabled": true,
+  "communication_radius_factor": 4.0,
+  "action_mask_enabled": true,
+  "novelty_reward_weight": 0.12,
+  "novelty_step_penalty": -0.04,
+  "novelty_revisit_penalty": 0.08,
+  "invalid_action_penalty": 0.25,
+  "team_overlap_penalty": 0.05,
+  "hierarchical_roles_enabled": true,
+  "peer_state_ttl": 8,
+  "track_report_ttl": 20,
+  "reacquire_report_ttl": 60,
+  "role_decision_interval": 20,
+  "role_min_dwell_steps": 10,
+  "boundary_match_radius": 2,
+  "boundary_freshness_tau": 40.0,
+  "fresh_coverage_gain_weight": 20.0,
+  "assigned_boundary_gain_weight": 6.0,
+  "role_switch_penalty": 0.02,
+  "mask_thermal_below_signal": true,
+  "search_target_overlap_weight": 1.0,
+  "search_target_stickiness_weight": 0.1,
+  "search_target_min_novelty": 0.05,
+  "search_target_refresh_steps": 40,
+  "pre_boundary_team_novelty_weight": 0.2,
+  "pre_boundary_unique_novelty_weight": 0.1,
+  "pre_boundary_overlap_weight": 0.1,
+  "pre_boundary_revisit_weight": 0.06,
+  "pre_boundary_reward_episode_cap": 4.0,
+  "role_actor_lr": 0.0002,
+  "role_critic_lr": 0.0005,
+  "role_batch_size": 128,
+  "norm_params_source": "scene_p99.5",
+  "init_percentile": 5.0,
+  "init_area_percent": 5.0,
+  "total_episodes": 3100,
+  "max_environment_steps": null,
+  "max_train_updates": null,
+  "actor_lr": 0.0002,
+  "critic_lr": 0.0005,
+  "lr_adapt_mode": "fixed",
+  "target_kl": 0.0065,
+  "actor_lr_min": 0.0001,
+  "actor_lr_max": 0.00025,
+  "kl_ema_beta": 0.8,
+  "kl_lr_low_ratio": 0.82,
+  "kl_lr_high_ratio": 1.2,
+  "kl_lr_emergency_ratio": 2.0,
+  "kl_lr_up_factor": 1.03,
+  "kl_lr_down_factor": 0.9,
+  "kl_lr_emergency_factor": 0.7,
+  "kl_lr_low_patience": 3,
+  "kl_early_stop_ratio": 1.5,
+  "gamma": 0.99,
+  "gae_lambda": 0.95,
+  "clip_epsilon": 0.2,
+  "entropy_coef": 0.01,
+  "value_coef": 0.5,
+  "max_grad_norm": 0.5,
+  "ppo_epochs": 4,
+  "batch_size": 4096,
+  "save_interval": 100,
+  "log_interval": 10,
+  "seed": 42,
+  "comparison_seeds": [
+    42
+  ],
+  "stage2_success_target": 0.2,
+  "stage3_success_target": 0.6,
+  "stage3_near_prob": 0.0,
+  "validation_split": "validation",
+  "validation_interval": 50,
+  "validation_episodes_per_scene": 5,
+  "save_best_by_validation": true,
+  "eval_scene_keys": [
+    "generalization_area006_scenario001",
+    "generalization_area006_scenario002",
+    "generalization_area006_scenario003",
+    "generalization_area006_scenario004",
+    "generalization_area006_scenario005",
+    "generalization_area006_scenario006",
+    "generalization_area007_scenario001",
+    "generalization_area007_scenario002",
+    "generalization_area007_scenario003",
+    "generalization_area007_scenario004",
+    "generalization_area007_scenario005",
+    "generalization_area007_scenario006"
+  ],
+  "eval_episodes_per_scene": 50,
+  "eval_stages": [
+    3
+  ],
+  "eval_seed_stride": 100,
+  "evaluation_mode": "target_stop",
+  "eval_after_train": true,
+  "final_eval_splits": [
+    "validation",
+    "generalization",
+    "stress"
+  ],
+  "final_eval_episodes_per_scene": 50,
+  "evaluate_best_val_after_train": true,
+  "full_horizon_eval_after_train": true,
+  "full_horizon_eval_splits": [
+    "validation",
+    "generalization",
+    "stress"
+  ],
+  "full_horizon_validation_episodes_per_scene": 20,
+  "full_horizon_final_episodes_per_scene": 50,
+  "full_horizon_curve_stride": 20,
+  "full_horizon_thresholds": [
+    0.2,
+    0.4,
+    0.6,
+    0.8
+  ],
+  "post_target_train": false,
+  "post_target_resume_checkpoint": null,
+  "post_target_episodes": 500,
+  "post_target_goal_ladder": [
+    0.6,
+    0.65,
+    0.7
+  ],
+  "post_target_validation_patience": 2,
+  "post_target_step_penalty": -0.005,
+  "post_target_step_cost_fraction": 0.25,
+  "post_target_hold_weight": 0.1,
+  "post_target_tail_weight": 20.0,
+  "post_target_milestone_70": 5.0,
+  "post_target_milestone_80": 10.0,
+  "post_target_actor_lr": 0.0001,
+  "post_target_critic_lr": 0.00025,
+  "post_target_warmup_updates": 15,
+  "post_target_initial_clip_epsilon": 0.15,
+  "post_target_initial_max_grad_norm": 0.25,
+  "quality_score_threshold": 0.55,
+  "quality_window": 50,
+  "quality_tail_fraction": 0.2,
+  "quality_target_kl": 0.0065,
+  "plot_after_train": false,
+  "figure_window": 100,
+  "figure_dpi": 300,
+  "output_root_dir": "./outputs",
+  "output_subdir": "baseline_ctde_ppo",
+  "use_scene_uav_params": false,
+  "observation_profile_dims": {
+    "baseline": {
+      "local_obs_dim": 17,
+      "global_state_dim": 19
+    },
+    "static_terrain": {
+      "local_obs_dim": 24,
+      "global_state_dim": 19
+    },
+    "dynamic_front": {
+      "local_obs_dim": 23,
+      "global_state_dim": 19
+    },
+    "risk_aware": {
+      "local_obs_dim": 20,
+      "global_state_dim": 19
+    },
+    "cooperative_exploration": {
+      "local_obs_dim": 24,
+      "global_state_dim": 19
+    },
+    "persistent_cooperative": {
+      "local_obs_dim": 24,
+      "global_state_dim": 19
+    }
+  },
+  "variant_name": "Fixed_LR_CTDE_PPO",
+  "output_dir": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260722_174025\\训练结果\\Fixed_LR_CTDE_PPO_seed42",
+  "experiment_metadata": {
+    "dataset_index_version": 2,
+    "scene_split_counts": {
+      "train": 24,
+      "validation": 6,
+      "generalization": 12,
+      "stress": 4
+    },
+    "observation_profile": "persistent_cooperative",
+    "reward_profile": "persistent_boundary",
+    "communication_enabled": true,
+    "communication_radius_factor": 4.0,
+    "communication_radius": 64.0,
+    "action_mask_enabled": true,
+    "hierarchical_roles_enabled": true,
+    "peer_state_ttl": 8,
+    "track_report_ttl": 20,
+    "reacquire_report_ttl": 60,
+    "role_decision_interval": 20,
+    "role_min_dwell_steps": 10,
+    "boundary_match_radius": 2,
+    "boundary_freshness_tau": 40.0,
+    "cooperative_search": {
+      "target_overlap_weight": 1.0,
+      "target_stickiness_weight": 0.1,
+      "target_min_novelty": 0.05,
+      "target_refresh_steps": 40,
+      "team_novelty_weight": 0.2,
+      "unique_novelty_weight": 0.1,
+      "overlap_weight": 0.1,
+      "revisit_weight": 0.06,
+      "episode_positive_cap": 4.0,
+      "thermal_reward_requires_sensor_signal": true
+    },
+    "curriculum_budget": {
+      "total_episodes": 3100,
+      "stage1_max": 400,
+      "stage2_max": [
+        150,
+        200,
+        250
+      ],
+      "stage2_far_spawn_ratios": [
+        0.5,
+        0.8,
+        1.0
+      ],
+      "stage3_max": [
+        200,
+        250,
+        350,
+        500
+      ],
+      "stage4_max": [
+        200,
+        250,
+        350
+      ],
+      "stage4_reserved": 800,
+      "unused_budget_transfer": true
+    },
+    "stage1_tracking_gate": {
+      "window": 15,
+      "required_visible_steps": 11,
+      "minimum_unique_boundary_cells": 8,
+      "minimum_post_contact_progress": 4
+    },
+    "stage2_contact_gate": {
+      "window": 10,
+      "required_visible_steps": 8,
+      "reacquire_minimum_visible_steps": 5
+    },
+    "mask_thermal_below_signal": true,
+    "observation_profile_dims": {
+      "baseline": {
+        "local_obs_dim": 17,
+        "global_state_dim": 19
+      },
+      "static_terrain": {
+        "local_obs_dim": 24,
+        "global_state_dim": 19
+      },
+      "dynamic_front": {
+        "local_obs_dim": 23,
+        "global_state_dim": 19
+      },
+      "risk_aware": {
+        "local_obs_dim": 20,
+        "global_state_dim": 19
+      },
+      "cooperative_exploration": {
+        "local_obs_dim": 24,
+        "global_state_dim": 19
+      },
+      "persistent_cooperative": {
+        "local_obs_dim": 24,
+        "global_state_dim": 19
+      }
+    },
+    "norm_params_source": "scene_p99.5",
+    "use_scene_uav_params": false,
+    "use_metadata_uav_params": false,
+    "vision_radius": 16,
+    "configured_vision_radius": 16,
+    "sensor_radius_cells": 15,
+    "max_steps": 600,
+    "configured_max_steps": 600,
+    "scene_key": "train_area002_scenario001"
+  }
+}

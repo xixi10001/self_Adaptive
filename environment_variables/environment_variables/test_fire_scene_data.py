@@ -155,6 +155,19 @@ class FireSceneDataLoadingTest(unittest.TestCase):
         self.assertIsInstance(done, bool)
         self.assertEqual(info["scene_key"], "train_area001_scenario001")
 
+    def test_reset_restores_pre_boundary_positive_reward_budget(self):
+        env = baseline_env_module.FireSearchBaselineEnvironment(
+            data_dir=str(DATA_DIR),
+            fixed_scene_key="train_area001_scenario001",
+            max_steps=5,
+            init_area_percent=5.0,
+        )
+        env._episode_pre_boundary_reward_total = env.pre_boundary_reward_episode_cap
+
+        env.reset()
+
+        self.assertEqual(env._episode_pre_boundary_reward_total, 0.0)
+
     def test_observation_profiles_have_fixed_shapes_and_step(self):
         expected_dims = {
             "baseline": 17,
@@ -267,6 +280,102 @@ class FireSceneDataLoadingTest(unittest.TestCase):
         masks = env._get_action_masks()
         self.assertEqual(masks[0].tolist(), [1, 0, 0, 1, 1])
 
+    def test_reset_clears_episode_boundary_timestamps(self):
+        env = baseline_env_module.FireSearchBaselineEnvironment(
+            data_dir=str(DATA_DIR),
+            fixed_scene_key="train_area001_scenario001",
+            vision_radius=3,
+            max_steps=2,
+        )
+        env.reset()
+        env.boundary_last_seen_step[0, 0] = 99
+
+        env.reset()
+
+        self.assertTrue(np.all(env.boundary_last_seen_step == -1))
+        self.assertEqual(env._boundary_freshness_metrics(), (0.0, 0.0))
+
+    def test_persistent_action_gain_uses_same_transition_time_and_is_nonnegative(self):
+        env = baseline_env_module.FireSearchBaselineEnvironment(
+            data_dir=str(DATA_DIR),
+            fixed_scene_key="train_area001_scenario001",
+            vision_radius=3,
+            max_steps=3,
+            init_area_percent=5.0,
+            curriculum_stage=1,
+            observation_profile="persistent_cooperative",
+            reward_profile="persistent_boundary",
+            communication_enabled=True,
+            hierarchical_roles_enabled=True,
+        )
+        env.reset()
+        boundary = np.array(env.boundary_points[0], dtype=np.float32)
+        env.drone_positions = [
+            boundary.copy(),
+            np.array([env.grid_size[0] - 1, env.grid_size[1] - 1], dtype=np.float32),
+        ]
+
+        _, _, done, info = env.step([4, 4])
+
+        self.assertFalse(done)
+        self.assertGreater(info["fresh_after_action"], info["fresh_before_transition"])
+        self.assertGreaterEqual(info["coverage_action_gain"], 0.0)
+        self.assertEqual(info["negative_action_gain_count"], 0)
+        self.assertGreaterEqual(env.episode_reward_breakdown["r_fresh_gain"], 0.0)
+        self.assertLessEqual(
+            env.episode_reward_breakdown["r_fresh_gain"],
+            env.STAGE1_FRESH_REWARD_STEP_CAP,
+        )
+
+        env.drone_positions = [
+            np.array([env.grid_size[0] - 1, env.grid_size[1] - 1], dtype=np.float32),
+            np.array([env.grid_size[0] - 1, 0], dtype=np.float32),
+        ]
+        _, _, _, info = env.step([4, 4])
+
+        self.assertAlmostEqual(info["coverage_action_gain"], 0.0, places=8)
+        self.assertEqual(info["negative_action_gain_count"], 0)
+
+    def test_boundary_refresh_drop_is_separate_from_action_reward(self):
+        env = baseline_env_module.FireSearchBaselineEnvironment(
+            data_dir=str(DATA_DIR),
+            fixed_scene_key="train_area001_scenario001",
+            vision_radius=3,
+            max_steps=25,
+            init_area_percent=5.0,
+            curriculum_stage=1,
+            observation_profile="persistent_cooperative",
+            reward_profile="persistent_boundary",
+            communication_enabled=True,
+            hierarchical_roles_enabled=True,
+        )
+        env.reset()
+        boundary = np.array(env.boundary_points[0], dtype=np.float32)
+        env.step_count = 19
+        env.drone_positions = [
+            boundary.copy(),
+            np.array([env.grid_size[0] - 1, env.grid_size[1] - 1], dtype=np.float32),
+        ]
+
+        _, _, _, info = env.step([4, 4])
+
+        self.assertTrue(info["boundary_refreshed"])
+        self.assertGreaterEqual(info["coverage_action_gain"], 0.0)
+        self.assertAlmostEqual(
+            info["coverage_refresh_drop"],
+            info["fresh_after_refresh"] - info["fresh_after_action"],
+        )
+        self.assertGreaterEqual(env.episode_reward_breakdown["r_fresh_gain"], 0.0)
+
+    def test_stage2_cannot_succeed_without_boundary_detection(self):
+        env = baseline_env_module.FireSearchBaselineEnvironment.__new__(
+            baseline_env_module.FireSearchBaselineEnvironment
+        )
+        env.curriculum_stage = 2
+        env.stage2_contact_success = False
+
+        self.assertFalse(env._stage_target_reached(coverage=1.0))
+
     def test_environment_can_use_metadata_uav_params_without_per_reset_scene_log(self):
         buffer = io.StringIO()
         with contextlib.redirect_stdout(buffer):
@@ -304,6 +413,17 @@ class FireSceneDataLoadingTest(unittest.TestCase):
                 scene_record=record,
                 dataset_index=self.dataset_index,
             )
+
+    def test_stage2a_spawn_ratio_mix_keeps_validation_fully_far(self):
+        env = object.__new__(baseline_env_module.FireSearchBaselineEnvironment)
+        env.curriculum_stage = 2
+        env.curriculum_substage = "2A"
+
+        env.stage2_far_spawn_ratio = 0.0
+        self.assertEqual(env._spawn_distance_profile(), (1.0, 2.0, "stage2a_rehearsal"))
+
+        env.stage2_far_spawn_ratio = 1.0
+        self.assertEqual(env._spawn_distance_profile(), (1.5, 3.0, "stage2a"))
 
 
 if __name__ == "__main__":

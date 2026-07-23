@@ -1,0 +1,808 @@
+{
+  "episodes": [
+    50,
+    100,
+    150,
+    200,
+    250,
+    300,
+    350,
+    400,
+    450,
+    500,
+    550,
+    600
+  ],
+  "stage": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "substage": [
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "2A",
+    "2A",
+    "2A",
+    "2A",
+    "2A",
+    "2A",
+    "2A"
+  ],
+  "stage2_far_spawn_ratio": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.8
+  ],
+  "train_task_score": [
+    0.43313387387623126,
+    0.41407784234372585,
+    0.4351364273127196,
+    0.4527278807876434,
+    0.4700079033722143,
+    0.461598627995283,
+    0.461772387140609,
+    0.5375060483712479,
+    0.5466498029364302,
+    0.5865010960804473,
+    0.6433089234045013,
+    0.6482063871490851
+  ],
+  "val_mean_task_score": [
+    0.3738690831447549,
+    0.5675913831395286,
+    0.5688702868479673,
+    0.5761473184084137,
+    0.6445663399971914,
+    0.4645512177380546,
+    0.457640489348746,
+    0.5385247016650062,
+    0.5710409153296225,
+    0.5689756090469554,
+    0.6252533051258474,
+    0.6589924021189297
+  ],
+  "val_mean_coverage": [
+    0.32149372184506547,
+    0.45238276627905727,
+    0.42409612925149,
+    0.4387835257057164,
+    0.48422156888327167,
+    0.380991324364998,
+    0.36899208980860304,
+    0.44016051444112364,
+    0.4734373862148006,
+    0.4661956625383553,
+    0.48912883247391703,
+    0.5244292486823037
+  ],
+  "val_success_rate": [
+    0.43333333333333335,
+    0.7,
+    0.7333333333333333,
+    0.7333333333333333,
+    0.8333333333333334,
+    0.5666666666666667,
+    0.5666666666666667,
+    0.6666666666666666,
+    0.7,
+    0.7,
+    0.8,
+    0.8333333333333334
+  ],
+  "val_mean_length": [
+    350.6333333333333,
+    205.8,
+    189.53333333333333,
+    189.73333333333332,
+    142.63333333333333,
+    287.8333333333333,
+    290.56666666666666,
+    244.66666666666666,
+    227.03333333333333,
+    222.36666666666667,
+    177.93333333333334,
+    159.66666666666666
+  ],
+  "val_timeout_rate": [
+    0.5666666666666667,
+    0.3,
+    0.26666666666666666,
+    0.26666666666666666,
+    0.16666666666666666,
+    0.43333333333333335,
+    0.43333333333333335,
+    0.3333333333333333,
+    0.3,
+    0.3,
+    0.2,
+    0.16666666666666666
+  ],
+  "val_zero_coverage_timeout_rate": [
+    0.5666666666666667,
+    0.2,
+    0.13333333333333333,
+    0.16666666666666666,
+    0.06666666666666667,
+    0.43333333333333335,
+    0.4,
+    0.3333333333333333,
+    0.3,
+    0.26666666666666666,
+    0.2,
+    0.16666666666666666
+  ],
+  "val_zero_discovery_timeout_rate": [
+    0.5666666666666667,
+    0.16666666666666666,
+    0.1,
+    0.13333333333333333,
+    0.03333333333333333,
+    0.43333333333333335,
+    0.4,
+    0.3333333333333333,
+    0.3,
+    0.26666666666666666,
+    0.2,
+    0.16666666666666666
+  ],
+  "val_boundary_found_rate": [
+    0.43333333333333335,
+    0.8333333333333334,
+    0.9,
+    0.8666666666666667,
+    0.9666666666666667,
+    0.5666666666666667,
+    0.6,
+    0.6666666666666666,
+    0.7,
+    0.7333333333333333,
+    0.8,
+    0.8333333333333334
+  ],
+  "val_stable_tracking_success_rate": [
+    0.43333333333333335,
+    0.7,
+    0.7333333333333333,
+    0.7333333333333333,
+    0.8333333333333334,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "val_stage2_reacquire_success_rate": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.03333333333333333,
+    0.06666666666666667,
+    0.03333333333333333,
+    0.03333333333333333,
+    0.0,
+    0.0
+  ],
+  "val_median_first_boundary_step": [
+    9.0,
+    15.0,
+    16.0,
+    14.5,
+    15.0,
+    30.0,
+    33.0,
+    29.0,
+    26.0,
+    25.0,
+    25.0,
+    26.0
+  ],
+  "val_median_unique_boundary_cells": [
+    0.0,
+    15.0,
+    12.5,
+    14.0,
+    14.5,
+    10.5,
+    10.5,
+    16.0,
+    16.0,
+    16.0,
+    17.0,
+    17.0
+  ],
+  "val_median_unique_boundary_cells_given_found": [
+    16.0,
+    16.0,
+    14.0,
+    15.5,
+    15.0,
+    17.0,
+    16.5,
+    18.0,
+    18.0,
+    17.0,
+    20.5,
+    21.0
+  ],
+  "val_mean_return_success": [
+    20.388810440359652,
+    19.448744742597217,
+    18.486213951777017,
+    18.66316618398083,
+    18.020877730407307,
+    15.80526913493256,
+    15.219411322029263,
+    12.374716450445884,
+    8.442895914091187,
+    8.723076764412426,
+    6.934397744620266,
+    7.264697805405864
+  ],
+  "val_mean_return_found_failed": [
+    null,
+    1.0413346625189004,
+    1.8758510852364196,
+    1.6839344650508163,
+    1.949952119674605,
+    null,
+    12.613677673400748,
+    null,
+    null,
+    9.046486486486383,
+    null,
+    null
+  ],
+  "val_success_found_failed_return_margin": [
+    null,
+    18.407410080078318,
+    16.610362866540598,
+    16.979231718930016,
+    16.0709256107327,
+    null,
+    2.605733648628515,
+    null,
+    null,
+    -0.3234097220739578,
+    null,
+    null
+  ],
+  "val_negative_action_gain_count": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "curriculum_gate": [
+    {
+      "boundary_found": {
+        "actual": 0.43333333333333335,
+        "threshold": 0.9,
+        "operator": ">=",
+        "passed": false
+      },
+      "stable_tracking": {
+        "actual": 0.43333333333333335,
+        "threshold": 0.7,
+        "operator": ">=",
+        "passed": false
+      },
+      "zero_discovery_timeout": {
+        "actual": 0.5666666666666667,
+        "threshold": 0.1,
+        "operator": "<=",
+        "passed": false
+      },
+      "median_first_boundary_step": {
+        "actual": 9.0,
+        "threshold": 100.0,
+        "operator": "<=",
+        "passed": true
+      },
+      "median_unique_boundary_cells": {
+        "actual": 16.0,
+        "threshold": 8.0,
+        "operator": ">=",
+        "passed": true
+      }
+    },
+    {
+      "boundary_found": {
+        "actual": 0.8333333333333334,
+        "threshold": 0.9,
+        "operator": ">=",
+        "passed": false
+      },
+      "stable_tracking": {
+        "actual": 0.7,
+        "threshold": 0.7,
+        "operator": ">=",
+        "passed": true
+      },
+      "zero_discovery_timeout": {
+        "actual": 0.16666666666666666,
+        "threshold": 0.1,
+        "operator": "<=",
+        "passed": false
+      },
+      "median_first_boundary_step": {
+        "actual": 15.0,
+        "threshold": 100.0,
+        "operator": "<=",
+        "passed": true
+      },
+      "median_unique_boundary_cells": {
+        "actual": 16.0,
+        "threshold": 8.0,
+        "operator": ">=",
+        "passed": true
+      }
+    },
+    {
+      "boundary_found": {
+        "actual": 0.9,
+        "threshold": 0.9,
+        "operator": ">=",
+        "passed": true
+      },
+      "stable_tracking": {
+        "actual": 0.7333333333333333,
+        "threshold": 0.7,
+        "operator": ">=",
+        "passed": true
+      },
+      "zero_discovery_timeout": {
+        "actual": 0.1,
+        "threshold": 0.1,
+        "operator": "<=",
+        "passed": true
+      },
+      "median_first_boundary_step": {
+        "actual": 16.0,
+        "threshold": 100.0,
+        "operator": "<=",
+        "passed": true
+      },
+      "median_unique_boundary_cells": {
+        "actual": 14.0,
+        "threshold": 8.0,
+        "operator": ">=",
+        "passed": true
+      }
+    },
+    {
+      "boundary_found": {
+        "actual": 0.8666666666666667,
+        "threshold": 0.9,
+        "operator": ">=",
+        "passed": false
+      },
+      "stable_tracking": {
+        "actual": 0.7333333333333333,
+        "threshold": 0.7,
+        "operator": ">=",
+        "passed": true
+      },
+      "zero_discovery_timeout": {
+        "actual": 0.13333333333333333,
+        "threshold": 0.1,
+        "operator": "<=",
+        "passed": false
+      },
+      "median_first_boundary_step": {
+        "actual": 14.5,
+        "threshold": 100.0,
+        "operator": "<=",
+        "passed": true
+      },
+      "median_unique_boundary_cells": {
+        "actual": 15.5,
+        "threshold": 8.0,
+        "operator": ">=",
+        "passed": true
+      }
+    },
+    {
+      "boundary_found": {
+        "actual": 0.9666666666666667,
+        "threshold": 0.9,
+        "operator": ">=",
+        "passed": true
+      },
+      "stable_tracking": {
+        "actual": 0.8333333333333334,
+        "threshold": 0.7,
+        "operator": ">=",
+        "passed": true
+      },
+      "zero_discovery_timeout": {
+        "actual": 0.03333333333333333,
+        "threshold": 0.1,
+        "operator": "<=",
+        "passed": true
+      },
+      "median_first_boundary_step": {
+        "actual": 15.0,
+        "threshold": 100.0,
+        "operator": "<=",
+        "passed": true
+      },
+      "median_unique_boundary_cells": {
+        "actual": 15.0,
+        "threshold": 8.0,
+        "operator": ">=",
+        "passed": true
+      }
+    },
+    {
+      "boundary_found": {
+        "actual": 0.5666666666666667,
+        "threshold": 0.85,
+        "operator": ">=",
+        "passed": false
+      },
+      "stable_contact_or_reacquire": {
+        "actual": 0.5666666666666667,
+        "threshold": 0.75,
+        "operator": ">=",
+        "passed": false
+      },
+      "zero_discovery_timeout": {
+        "actual": 0.43333333333333335,
+        "threshold": 0.1,
+        "operator": "<=",
+        "passed": false
+      },
+      "median_first_boundary_step": {
+        "actual": 30.0,
+        "threshold": 150.0,
+        "operator": "<=",
+        "passed": true
+      }
+    },
+    {
+      "boundary_found": {
+        "actual": 0.6,
+        "threshold": 0.85,
+        "operator": ">=",
+        "passed": false
+      },
+      "stable_contact_or_reacquire": {
+        "actual": 0.5666666666666667,
+        "threshold": 0.75,
+        "operator": ">=",
+        "passed": false
+      },
+      "zero_discovery_timeout": {
+        "actual": 0.4,
+        "threshold": 0.1,
+        "operator": "<=",
+        "passed": false
+      },
+      "median_first_boundary_step": {
+        "actual": 33.0,
+        "threshold": 150.0,
+        "operator": "<=",
+        "passed": true
+      }
+    },
+    {
+      "boundary_found": {
+        "actual": 0.6666666666666666,
+        "threshold": 0.85,
+        "operator": ">=",
+        "passed": false
+      },
+      "stable_contact_or_reacquire": {
+        "actual": 0.6666666666666666,
+        "threshold": 0.75,
+        "operator": ">=",
+        "passed": false
+      },
+      "zero_discovery_timeout": {
+        "actual": 0.3333333333333333,
+        "threshold": 0.1,
+        "operator": "<=",
+        "passed": false
+      },
+      "median_first_boundary_step": {
+        "actual": 29.0,
+        "threshold": 150.0,
+        "operator": "<=",
+        "passed": true
+      }
+    },
+    {
+      "boundary_found": {
+        "actual": 0.7,
+        "threshold": 0.85,
+        "operator": ">=",
+        "passed": false
+      },
+      "stable_contact_or_reacquire": {
+        "actual": 0.7,
+        "threshold": 0.75,
+        "operator": ">=",
+        "passed": false
+      },
+      "zero_discovery_timeout": {
+        "actual": 0.3,
+        "threshold": 0.1,
+        "operator": "<=",
+        "passed": false
+      },
+      "median_first_boundary_step": {
+        "actual": 26.0,
+        "threshold": 150.0,
+        "operator": "<=",
+        "passed": true
+      }
+    },
+    {
+      "boundary_found": {
+        "actual": 0.7333333333333333,
+        "threshold": 0.85,
+        "operator": ">=",
+        "passed": false
+      },
+      "stable_contact_or_reacquire": {
+        "actual": 0.7,
+        "threshold": 0.75,
+        "operator": ">=",
+        "passed": false
+      },
+      "zero_discovery_timeout": {
+        "actual": 0.26666666666666666,
+        "threshold": 0.1,
+        "operator": "<=",
+        "passed": false
+      },
+      "median_first_boundary_step": {
+        "actual": 25.0,
+        "threshold": 150.0,
+        "operator": "<=",
+        "passed": true
+      }
+    },
+    {
+      "boundary_found": {
+        "actual": 0.8,
+        "threshold": 0.85,
+        "operator": ">=",
+        "passed": false
+      },
+      "stable_contact_or_reacquire": {
+        "actual": 0.8,
+        "threshold": 0.75,
+        "operator": ">=",
+        "passed": true
+      },
+      "zero_discovery_timeout": {
+        "actual": 0.2,
+        "threshold": 0.1,
+        "operator": "<=",
+        "passed": false
+      },
+      "median_first_boundary_step": {
+        "actual": 25.0,
+        "threshold": 150.0,
+        "operator": "<=",
+        "passed": true
+      }
+    },
+    {
+      "boundary_found": {
+        "actual": 0.8333333333333334,
+        "threshold": 0.85,
+        "operator": ">=",
+        "passed": false
+      },
+      "stable_contact_or_reacquire": {
+        "actual": 0.8333333333333334,
+        "threshold": 0.75,
+        "operator": ">=",
+        "passed": true
+      },
+      "zero_discovery_timeout": {
+        "actual": 0.16666666666666666,
+        "threshold": 0.1,
+        "operator": "<=",
+        "passed": false
+      },
+      "median_first_boundary_step": {
+        "actual": 26.0,
+        "threshold": 150.0,
+        "operator": "<=",
+        "passed": true
+      }
+    }
+  ],
+  "val_pre_boundary_revisit_ratio": [
+    0.4165294612794617,
+    0.20050261704710867,
+    0.15094488448937599,
+    0.1753196490611103,
+    0.13628098766750513,
+    0.35650841971701575,
+    0.36010188111411984,
+    0.31106931443594893,
+    0.2962523111235183,
+    0.2509328813550457,
+    0.22752652243062735,
+    0.2170808177029713
+  ],
+  "val_team_overlap_ratio": [
+    0.30127222847989615,
+    0.14984817724407618,
+    0.12173387978533308,
+    0.0834161226607268,
+    0.09079527865110384,
+    0.138709381238382,
+    0.12980054406408786,
+    0.08619327132063716,
+    0.11750759745435166,
+    0.08250910761736432,
+    0.06837197380170347,
+    0.11131333025345562
+  ],
+  "val_invalid_action_count": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "generalization_gap": [
+    0.059264790731476336,
+    -0.15351354079580276,
+    -0.13373385953524763,
+    -0.12341943762077029,
+    -0.17455843662497705,
+    -0.002952589742771572,
+    0.00413189779186296,
+    -0.001018653293758276,
+    -0.02439111239319236,
+    0.017525487033491882,
+    0.018055618278653873,
+    -0.01078601496984466
+  ],
+  "is_best_val": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "stage4_level": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "stage4_boundary_found_rate": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "stage4_target_reach_rate": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "stage4_auc": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "stage4_tail100": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "stage4_hold60": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ]
+}

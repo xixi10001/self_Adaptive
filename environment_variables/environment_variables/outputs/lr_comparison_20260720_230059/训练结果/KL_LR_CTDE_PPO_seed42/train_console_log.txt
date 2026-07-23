@@ -1,0 +1,1293 @@
+
+============================================================
+Dataset Preflight: validate scenes (46)
+============================================================
+Loading scene train_area001_scenario001...
+Scene train_area001_scenario001 norm_params | intensity_max=500, length_max=3.276, speedRate_max=15.87, heat_per_unit_area_max=261.7, crown_fire_max=1, wind_speed_max=7
+Scene train_area001_scenario001 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario001 t=0 boundary points: 1
+  train_area001_scenario001: t=0 boundary points = 1 | init_area5% boundary points = 17 | actual_area=5.00%
+Loading scene train_area001_scenario002...
+Scene train_area001_scenario002 norm_params | intensity_max=500, length_max=4.386, speedRate_max=30.62, heat_per_unit_area_max=311.1, crown_fire_max=1, wind_speed_max=11
+Scene train_area001_scenario002 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario002 t=0 boundary points: 1
+  train_area001_scenario002: t=0 boundary points = 1 | init_area5% boundary points = 30 | actual_area=5.14%
+Loading scene train_area001_scenario003...
+Scene train_area001_scenario003 norm_params | intensity_max=1639, length_max=7.657, speedRate_max=41.87, heat_per_unit_area_max=873.6, crown_fire_max=1, wind_speed_max=13
+Scene train_area001_scenario003 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario003 t=0 boundary points: 1
+  train_area001_scenario003: t=0 boundary points = 1 | init_area5% boundary points = 32 | actual_area=5.04%
+Loading scene train_area001_scenario004...
+Scene train_area001_scenario004 norm_params | intensity_max=2493, length_max=9.284, speedRate_max=47.68, heat_per_unit_area_max=1277, crown_fire_max=1, wind_speed_max=15
+Scene train_area001_scenario004 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario004 t=0 boundary points: 1
+  train_area001_scenario004: t=0 boundary points = 1 | init_area5% boundary points = 26 | actual_area=5.01%
+Loading scene train_area001_scenario005...
+Scene train_area001_scenario005 norm_params | intensity_max=2503, length_max=9.351, speedRate_max=46.38, heat_per_unit_area_max=902.4, crown_fire_max=2, wind_speed_max=15
+Scene train_area001_scenario005 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario005 t=0 boundary points: 1
+  train_area001_scenario005: t=0 boundary points = 1 | init_area5% boundary points = 49 | actual_area=5.01%
+Loading scene train_area001_scenario006...
+Scene train_area001_scenario006 norm_params | intensity_max=1058, length_max=6.259, speedRate_max=20.81, heat_per_unit_area_max=803.4, crown_fire_max=1, wind_speed_max=9
+Scene train_area001_scenario006 loaded | shape=(284, 285) | rasters=8
+Scene train_area001_scenario006 t=0 boundary points: 1
+  train_area001_scenario006: t=0 boundary points = 1 | init_area5% boundary points = 39 | actual_area=5.02%
+Loading scene train_area002_scenario001...
+Scene train_area002_scenario001 norm_params | intensity_max=692.9, length_max=5.367, speedRate_max=37.46, heat_per_unit_area_max=1276, crown_fire_max=2, wind_speed_max=10
+Scene train_area002_scenario001 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario001 t=0 boundary points: 1
+  train_area002_scenario001: t=0 boundary points = 1 | init_area5% boundary points = 16 | actual_area=5.01%
+Loading scene train_area002_scenario002...
+Scene train_area002_scenario002 norm_params | intensity_max=2900, length_max=16.7, speedRate_max=33.56, heat_per_unit_area_max=3213, crown_fire_max=2, wind_speed_max=13
+Scene train_area002_scenario002 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario002 t=0 boundary points: 1
+  train_area002_scenario002: t=0 boundary points = 1 | init_area5% boundary points = 21 | actual_area=5.12%
+Loading scene train_area002_scenario003...
+Scene train_area002_scenario003 norm_params | intensity_max=2506, length_max=16.13, speedRate_max=37.84, heat_per_unit_area_max=3790, crown_fire_max=2, wind_speed_max=13
+Scene train_area002_scenario003 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario003 t=0 boundary points: 1
+  train_area002_scenario003: t=0 boundary points = 1 | init_area5% boundary points = 25 | actual_area=5.00%
+Loading scene train_area002_scenario004...
+Scene train_area002_scenario004 norm_params | intensity_max=4268, length_max=23, speedRate_max=42.52, heat_per_unit_area_max=2431, crown_fire_max=2, wind_speed_max=15
+Scene train_area002_scenario004 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario004 t=0 boundary points: 1
+  train_area002_scenario004: t=0 boundary points = 1 | init_area5% boundary points = 34 | actual_area=5.10%
+Loading scene train_area002_scenario005...
+Scene train_area002_scenario005 norm_params | intensity_max=3970, length_max=21.92, speedRate_max=36.56, heat_per_unit_area_max=3371, crown_fire_max=2, wind_speed_max=15
+Scene train_area002_scenario005 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario005 t=0 boundary points: 1
+  train_area002_scenario005: t=0 boundary points = 1 | init_area5% boundary points = 39 | actual_area=5.05%
+Loading scene train_area002_scenario006...
+Scene train_area002_scenario006 norm_params | intensity_max=2598, length_max=16.52, speedRate_max=29.6, heat_per_unit_area_max=2231, crown_fire_max=2, wind_speed_max=13
+Scene train_area002_scenario006 loaded | shape=(271, 289) | rasters=8
+Scene train_area002_scenario006 t=0 boundary points: 1
+  train_area002_scenario006: t=0 boundary points = 1 | init_area5% boundary points = 29 | actual_area=5.05%
+Loading scene train_area003_scenario001...
+Scene train_area003_scenario001 norm_params | intensity_max=866.5, length_max=5.709, speedRate_max=17.55, heat_per_unit_area_max=846.2, crown_fire_max=2, wind_speed_max=9
+Scene train_area003_scenario001 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario001 t=0 boundary points: 1
+  train_area003_scenario001: t=0 boundary points = 1 | init_area5% boundary points = 14 | actual_area=5.20%
+Loading scene train_area003_scenario002...
+Scene train_area003_scenario002 norm_params | intensity_max=979.2, length_max=7.114, speedRate_max=28.41, heat_per_unit_area_max=1217, crown_fire_max=2, wind_speed_max=13
+Scene train_area003_scenario002 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario002 t=0 boundary points: 1
+  train_area003_scenario002: t=0 boundary points = 1 | init_area5% boundary points = 17 | actual_area=5.01%
+Loading scene train_area003_scenario003...
+Scene train_area003_scenario003 norm_params | intensity_max=5583, length_max=27.51, speedRate_max=26.05, heat_per_unit_area_max=7313, crown_fire_max=2, wind_speed_max=14
+Scene train_area003_scenario003 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario003 t=0 boundary points: 1
+  train_area003_scenario003: t=0 boundary points = 1 | init_area5% boundary points = 24 | actual_area=5.08%
+Loading scene train_area003_scenario004...
+Scene train_area003_scenario004 norm_params | intensity_max=8000, length_max=35.34, speedRate_max=46.75, heat_per_unit_area_max=7640, crown_fire_max=2, wind_speed_max=16
+Scene train_area003_scenario004 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario004 t=0 boundary points: 1
+  train_area003_scenario004: t=0 boundary points = 1 | init_area5% boundary points = 28 | actual_area=5.09%
+Loading scene train_area003_scenario005...
+Scene train_area003_scenario005 norm_params | intensity_max=8000, length_max=39.78, speedRate_max=29.58, heat_per_unit_area_max=7703, crown_fire_max=2, wind_speed_max=17
+Scene train_area003_scenario005 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario005 t=0 boundary points: 1
+  train_area003_scenario005: t=0 boundary points = 1 | init_area5% boundary points = 34 | actual_area=5.11%
+Loading scene train_area003_scenario006...
+Scene train_area003_scenario006 norm_params | intensity_max=5060, length_max=25.75, speedRate_max=32.57, heat_per_unit_area_max=3331, crown_fire_max=2, wind_speed_max=15
+Scene train_area003_scenario006 loaded | shape=(284, 285) | rasters=8
+Scene train_area003_scenario006 t=0 boundary points: 1
+  train_area003_scenario006: t=0 boundary points = 1 | init_area5% boundary points = 31 | actual_area=5.11%
+Loading scene train_area004_scenario001...
+Scene train_area004_scenario001 norm_params | intensity_max=536, length_max=4.578, speedRate_max=22.18, heat_per_unit_area_max=780.2, crown_fire_max=2, wind_speed_max=9
+Scene train_area004_scenario001 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario001 t=0 boundary points: 1
+  train_area004_scenario001: t=0 boundary points = 1 | init_area5% boundary points = 15 | actual_area=5.13%
+Loading scene train_area004_scenario002...
+Scene train_area004_scenario002 norm_params | intensity_max=8000, length_max=43.24, speedRate_max=25.29, heat_per_unit_area_max=7545, crown_fire_max=2, wind_speed_max=13
+Scene train_area004_scenario002 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario002 t=0 boundary points: 1
+  train_area004_scenario002: t=0 boundary points = 1 | init_area5% boundary points = 21 | actual_area=5.13%
+Loading scene train_area004_scenario003...
+Scene train_area004_scenario003 norm_params | intensity_max=7909, length_max=34.67, speedRate_max=23.96, heat_per_unit_area_max=6057, crown_fire_max=2, wind_speed_max=14
+Scene train_area004_scenario003 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario003 t=0 boundary points: 1
+  train_area004_scenario003: t=0 boundary points = 1 | init_area5% boundary points = 22 | actual_area=5.12%
+Loading scene train_area004_scenario004...
+Scene train_area004_scenario004 norm_params | intensity_max=4591, length_max=24.14, speedRate_max=18.83, heat_per_unit_area_max=5353, crown_fire_max=2, wind_speed_max=16
+Scene train_area004_scenario004 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario004 t=0 boundary points: 1
+  train_area004_scenario004: t=0 boundary points = 1 | init_area5% boundary points = 35 | actual_area=5.02%
+Loading scene train_area004_scenario005...
+Scene train_area004_scenario005 norm_params | intensity_max=8000, length_max=35.38, speedRate_max=27.16, heat_per_unit_area_max=6388, crown_fire_max=2, wind_speed_max=17
+Scene train_area004_scenario005 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario005 t=0 boundary points: 1
+  train_area004_scenario005: t=0 boundary points = 1 | init_area5% boundary points = 36 | actual_area=5.00%
+Loading scene train_area004_scenario006...
+Scene train_area004_scenario006 norm_params | intensity_max=8000, length_max=43.07, speedRate_max=32.97, heat_per_unit_area_max=5879, crown_fire_max=2, wind_speed_max=15
+Scene train_area004_scenario006 loaded | shape=(283, 291) | rasters=8
+Scene train_area004_scenario006 t=0 boundary points: 1
+  train_area004_scenario006: t=0 boundary points = 1 | init_area5% boundary points = 26 | actual_area=5.10%
+Loading scene validation_area005_scenario001...
+Scene validation_area005_scenario001 norm_params | intensity_max=500, length_max=3.889, speedRate_max=16.07, heat_per_unit_area_max=514.6, crown_fire_max=1, wind_speed_max=7
+Scene validation_area005_scenario001 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario001 t=0 boundary points: 1
+  validation_area005_scenario001: t=0 boundary points = 1 | init_area5% boundary points = 14 | actual_area=5.13%
+Loading scene validation_area005_scenario002...
+Scene validation_area005_scenario002 norm_params | intensity_max=2868, length_max=9.893, speedRate_max=34.24, heat_per_unit_area_max=1838, crown_fire_max=2, wind_speed_max=13
+Scene validation_area005_scenario002 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario002 t=0 boundary points: 1
+  validation_area005_scenario002: t=0 boundary points = 1 | init_area5% boundary points = 22 | actual_area=5.15%
+Loading scene validation_area005_scenario003...
+Scene validation_area005_scenario003 norm_params | intensity_max=1227, length_max=6.908, speedRate_max=15.86, heat_per_unit_area_max=1816, crown_fire_max=2, wind_speed_max=10
+Scene validation_area005_scenario003 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario003 t=0 boundary points: 1
+  validation_area005_scenario003: t=0 boundary points = 1 | init_area5% boundary points = 25 | actual_area=5.02%
+Loading scene validation_area005_scenario004...
+Scene validation_area005_scenario004 norm_params | intensity_max=4343, length_max=12.22, speedRate_max=31.47, heat_per_unit_area_max=2265, crown_fire_max=2, wind_speed_max=10
+Scene validation_area005_scenario004 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario004 t=0 boundary points: 1
+  validation_area005_scenario004: t=0 boundary points = 1 | init_area5% boundary points = 41 | actual_area=5.01%
+Loading scene validation_area005_scenario005...
+Scene validation_area005_scenario005 norm_params | intensity_max=4258, length_max=14.69, speedRate_max=30.92, heat_per_unit_area_max=2341, crown_fire_max=2, wind_speed_max=10
+Scene validation_area005_scenario005 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario005 t=0 boundary points: 1
+  validation_area005_scenario005: t=0 boundary points = 1 | init_area5% boundary points = 37 | actual_area=5.02%
+Loading scene validation_area005_scenario006...
+Scene validation_area005_scenario006 norm_params | intensity_max=3361, length_max=11.08, speedRate_max=23.91, heat_per_unit_area_max=2228, crown_fire_max=2, wind_speed_max=10
+Scene validation_area005_scenario006 loaded | shape=(283, 285) | rasters=8
+Scene validation_area005_scenario006 t=0 boundary points: 1
+  validation_area005_scenario006: t=0 boundary points = 1 | init_area5% boundary points = 42 | actual_area=5.02%
+Loading scene generalization_area006_scenario001...
+Scene generalization_area006_scenario001 norm_params | intensity_max=2852, length_max=14.79, speedRate_max=25.58, heat_per_unit_area_max=2000, crown_fire_max=2, wind_speed_max=8
+Scene generalization_area006_scenario001 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario001 t=0 boundary points: 1
+  generalization_area006_scenario001: t=0 boundary points = 1 | init_area5% boundary points = 16 | actual_area=5.25%
+Loading scene generalization_area006_scenario002...
+Scene generalization_area006_scenario002 norm_params | intensity_max=2553, length_max=16.33, speedRate_max=18.36, heat_per_unit_area_max=2769, crown_fire_max=2, wind_speed_max=11
+Scene generalization_area006_scenario002 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario002 t=0 boundary points: 1
+  generalization_area006_scenario002: t=0 boundary points = 1 | init_area5% boundary points = 21 | actual_area=5.12%
+Loading scene generalization_area006_scenario003...
+Scene generalization_area006_scenario003 norm_params | intensity_max=1928, length_max=13.53, speedRate_max=21.81, heat_per_unit_area_max=2055, crown_fire_max=2, wind_speed_max=13
+Scene generalization_area006_scenario003 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario003 t=0 boundary points: 1
+  generalization_area006_scenario003: t=0 boundary points = 1 | init_area5% boundary points = 27 | actual_area=5.02%
+Loading scene generalization_area006_scenario004...
+Scene generalization_area006_scenario004 norm_params | intensity_max=3023, length_max=18.27, speedRate_max=27.79, heat_per_unit_area_max=3134, crown_fire_max=2, wind_speed_max=11
+Scene generalization_area006_scenario004 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario004 t=0 boundary points: 1
+  generalization_area006_scenario004: t=0 boundary points = 1 | init_area5% boundary points = 36 | actual_area=5.09%
+Loading scene generalization_area006_scenario005...
+Scene generalization_area006_scenario005 norm_params | intensity_max=3837, length_max=21.41, speedRate_max=23.1, heat_per_unit_area_max=3296, crown_fire_max=2, wind_speed_max=8
+Scene generalization_area006_scenario005 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario005 t=0 boundary points: 1
+  generalization_area006_scenario005: t=0 boundary points = 1 | init_area5% boundary points = 34 | actual_area=5.01%
+Loading scene generalization_area006_scenario006...
+Scene generalization_area006_scenario006 norm_params | intensity_max=2478, length_max=16, speedRate_max=16.08, heat_per_unit_area_max=3114, crown_fire_max=2, wind_speed_max=9
+Scene generalization_area006_scenario006 loaded | shape=(283, 285) | rasters=8
+Scene generalization_area006_scenario006 t=0 boundary points: 1
+  generalization_area006_scenario006: t=0 boundary points = 1 | init_area5% boundary points = 29 | actual_area=5.13%
+Loading scene generalization_area007_scenario001...
+Scene generalization_area007_scenario001 norm_params | intensity_max=500, length_max=3.68, speedRate_max=17.67, heat_per_unit_area_max=415.9, crown_fire_max=2, wind_speed_max=9
+Scene generalization_area007_scenario001 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario001 t=0 boundary points: 1
+  generalization_area007_scenario001: t=0 boundary points = 1 | init_area5% boundary points = 18 | actual_area=5.09%
+Loading scene generalization_area007_scenario002...
+Scene generalization_area007_scenario002 norm_params | intensity_max=642.2, length_max=6.506, speedRate_max=8.942, heat_per_unit_area_max=1162, crown_fire_max=2, wind_speed_max=9
+Scene generalization_area007_scenario002 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario002 t=0 boundary points: 1
+  generalization_area007_scenario002: t=0 boundary points = 1 | init_area5% boundary points = 24 | actual_area=5.18%
+Loading scene generalization_area007_scenario003...
+Scene generalization_area007_scenario003 norm_params | intensity_max=500, length_max=3.86, speedRate_max=16.09, heat_per_unit_area_max=371.7, crown_fire_max=2, wind_speed_max=8
+Scene generalization_area007_scenario003 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario003 t=0 boundary points: 1
+  generalization_area007_scenario003: t=0 boundary points = 1 | init_area5% boundary points = 34 | actual_area=5.06%
+Loading scene generalization_area007_scenario004...
+Scene generalization_area007_scenario004 norm_params | intensity_max=1179, length_max=9.751, speedRate_max=17.83, heat_per_unit_area_max=1598, crown_fire_max=2, wind_speed_max=10
+Scene generalization_area007_scenario004 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario004 t=0 boundary points: 1
+  generalization_area007_scenario004: t=0 boundary points = 1 | init_area5% boundary points = 32 | actual_area=5.04%
+Loading scene generalization_area007_scenario005...
+Scene generalization_area007_scenario005 norm_params | intensity_max=500, length_max=4.332, speedRate_max=12.68, heat_per_unit_area_max=1079, crown_fire_max=2, wind_speed_max=9
+Scene generalization_area007_scenario005 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario005 t=0 boundary points: 1
+  generalization_area007_scenario005: t=0 boundary points = 1 | init_area5% boundary points = 43 | actual_area=5.02%
+Loading scene generalization_area007_scenario006...
+Scene generalization_area007_scenario006 norm_params | intensity_max=500, length_max=4.926, speedRate_max=15.28, heat_per_unit_area_max=1147, crown_fire_max=2, wind_speed_max=10
+Scene generalization_area007_scenario006 loaded | shape=(257, 257) | rasters=8
+Scene generalization_area007_scenario006 t=0 boundary points: 1
+  generalization_area007_scenario006: t=0 boundary points = 1 | init_area5% boundary points = 29 | actual_area=5.04%
+Loading scene stress_area008_scenario001...
+Scene stress_area008_scenario001 norm_params | intensity_max=8000, length_max=27.5, speedRate_max=64.75, heat_per_unit_area_max=3963, crown_fire_max=2, wind_speed_max=16
+Scene stress_area008_scenario001 loaded | shape=(283, 285) | rasters=8
+Scene stress_area008_scenario001 t=0 boundary points: 1
+  stress_area008_scenario001: t=0 boundary points = 1 | init_area5% boundary points = 45 | actual_area=5.04%
+Loading scene stress_area008_scenario002...
+Scene stress_area008_scenario002 norm_params | intensity_max=7048, length_max=16.01, speedRate_max=48.91, heat_per_unit_area_max=3154, crown_fire_max=2, wind_speed_max=13
+Scene stress_area008_scenario002 loaded | shape=(283, 285) | rasters=8
+Scene stress_area008_scenario002 t=0 boundary points: 1
+  stress_area008_scenario002: t=0 boundary points = 1 | init_area5% boundary points = 90 | actual_area=5.01%
+Loading scene stress_area008_scenario003...
+Scene stress_area008_scenario003 norm_params | intensity_max=7965, length_max=28.76, speedRate_max=53.49, heat_per_unit_area_max=5432, crown_fire_max=2, wind_speed_max=14
+Scene stress_area008_scenario003 loaded | shape=(283, 285) | rasters=8
+Scene stress_area008_scenario003 t=0 boundary points: 1
+  stress_area008_scenario003: t=0 boundary points = 1 | init_area5% boundary points = 63 | actual_area=5.01%
+Loading scene stress_area008_scenario004...
+Scene stress_area008_scenario004 norm_params | intensity_max=8000, length_max=34.91, speedRate_max=65.01, heat_per_unit_area_max=4693, crown_fire_max=2, wind_speed_max=18
+Scene stress_area008_scenario004 loaded | shape=(283, 285) | rasters=8
+Scene stress_area008_scenario004 t=0 boundary points: 1
+  stress_area008_scenario004: t=0 boundary points = 1 | init_area5% boundary points = 84 | actual_area=5.03%
+
+======================================================================
+CTDE-PPO 基线训练开始
+======================================================================
+输出目录=D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260720_230059\训练结果\KL_LR_CTDE_PPO_seed42
+随机种子=42
+学习率策略=kl | target_kl=0.0065 | actor_lr=2.00e-04 | actor_lr范围=[1.00e-04, 2.50e-04]
+KL迟滞区间=[0.82, 1.20] | 紧急阈值=2.00 | epoch熔断阈值=1.50
+observation_profile=persistent_cooperative | reward_profile=persistent_boundary | norm_params_source=scene_p99.5
+初始位置百分位=5.0
+基线环境已初始化 | 模式=train | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+CTDE-PPO 基线已初始化 | 设备=cuda | 本地观测=24 | 全局状态=19 | lr_adapt_mode=kl
+回合   10 | 场景=train_area004_scenario001 | 阶段=1 | 奖励=  -10.3 | 步数=215.1 | 覆盖率= 46.8% | 成功率=  80% | 任务得分= 60.3% | 超时率=  20% | 零覆盖超时=  20% | KL=0.0000 | KLema=0.0000 | clip=0.000 | lr=2.00e-04 | lr_action=keep | 状态=mission_complete
+回合   20 | 场景=train_area004_scenario003 | 阶段=1 | 奖励=  -20.7 | 步数=312.2 | 覆盖率= 33.0% | 成功率=  65% | 任务得分= 45.6% | 超时率=  35% | 零覆盖超时=  10% | KL=0.0101 | KLema=0.0101 | clip=0.097 | lr=1.80e-04 | lr_action=down | 状态=max_steps_reached
+回合   30 | 场景=train_area003_scenario001 | 阶段=1 | 奖励=  -15.8 | 步数=295.0 | 覆盖率= 33.2% | 成功率=  67% | 任务得分= 46.8% | 超时率=  33% | 零覆盖超时=   7% | KL=0.0029 | KLema=0.0087 | clip=0.023 | lr=1.62e-04 | lr_action=down | 状态=mission_complete
+回合   40 | 场景=train_area001_scenario005 | 阶段=1 | 奖励=  -17.8 | 步数=306.2 | 覆盖率= 35.5% | 成功率=  65% | 任务得分= 47.1% | 超时率=  35% | 零覆盖超时=   5% | KL=0.0029 | KLema=0.0087 | clip=0.023 | lr=1.62e-04 | lr_action=down | 状态=max_steps_reached
+回合   50 | 场景=train_area004_scenario004 | 阶段=1 | 奖励=  -16.9 | 步数=309.8 | 覆盖率= 35.8% | 成功率=  64% | 任务得分= 46.8% | 超时率=  36% | 零覆盖超时=   6% | KL=0.0071 | KLema=0.0084 | clip=0.070 | lr=1.46e-04 | lr_action=down | 状态=max_steps_reached
+
+======================================================================
+验证评估 | 回合=50 | 阶段=1 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=1 | 回合数=30 | 任务得分=28.8% | 覆盖率=28.3% | 成功率=30.0% | 平均步数=430.0
+回合   60 | 场景=train_area003_scenario006 | 阶段=1 | 奖励=  -17.5 | 步数=315.4 | 覆盖率= 36.4% | 成功率=  62% | 任务得分= 46.2% | 超时率=  38% | 零覆盖超时=   5% | KL=0.0042 | KLema=0.0075 | clip=0.036 | lr=1.46e-04 | lr_action=keep | 状态=max_steps_reached
+回合   70 | 场景=train_area002_scenario005 | 阶段=1 | 奖励=  -20.2 | 步数=318.6 | 覆盖率= 37.0% | 成功率=  60% | 任务得分= 45.9% | 超时率=  40% | 零覆盖超时=   4% | KL=0.0053 | KLema=0.0071 | clip=0.046 | lr=1.46e-04 | lr_action=keep | 状态=max_steps_reached
+回合   80 | 场景=train_area004_scenario005 | 阶段=1 | 奖励=  -20.5 | 步数=321.1 | 覆盖率= 36.4% | 成功率=  59% | 任务得分= 45.1% | 超时率=  41% | 零覆盖超时=   4% | KL=0.0053 | KLema=0.0071 | clip=0.046 | lr=1.46e-04 | lr_action=keep | 状态=mission_complete
+回合   90 | 场景=train_area001_scenario004 | 阶段=1 | 奖励=  -20.3 | 步数=317.2 | 覆盖率= 38.6% | 成功率=  59% | 任务得分= 46.4% | 超时率=  41% | 零覆盖超时=   3% | KL=0.0062 | KLema=0.0069 | clip=0.069 | lr=1.46e-04 | lr_action=keep | 状态=max_steps_reached
+回合  100 | 场景=train_area001_scenario005 | 阶段=1 | 奖励=  -17.2 | 步数=302.1 | 覆盖率= 41.8% | 成功率=  61% | 任务得分= 49.1% | 超时率=  39% | 零覆盖超时=   3% | KL=0.0062 | KLema=0.0069 | clip=0.069 | lr=1.46e-04 | lr_action=keep | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=100 | 阶段=1 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=1 | 回合数=30 | 任务得分=37.1% | 覆盖率=35.1% | 成功率=40.0% | 平均步数=374.0
+  -> 最佳训练滚动任务得分: 49.1%
+回合  110 | 场景=train_area004_scenario004 | 阶段=1 | 奖励=  -17.2 | 步数=298.4 | 覆盖率= 43.7% | 成功率=  61% | 任务得分= 50.2% | 超时率=  39% | 零覆盖超时=   1% | KL=0.0058 | KLema=0.0067 | clip=0.059 | lr=1.46e-04 | lr_action=keep | 状态=mission_complete
+回合  120 | 场景=train_area002_scenario001 | 阶段=1 | 奖励=  -16.9 | 步数=300.4 | 覆盖率= 44.8% | 成功率=  59% | 任务得分= 50.1% | 超时率=  41% | 零覆盖超时=   1% | KL=0.0050 | KLema=0.0063 | clip=0.049 | lr=1.46e-04 | lr_action=keep | 状态=mission_complete
+回合  130 | 场景=train_area003_scenario001 | 阶段=1 | 奖励=  -19.3 | 步数=311.9 | 覆盖率= 45.5% | 成功率=  56% | 任务得分= 49.2% | 超时率=  44% | 零覆盖超时=   1% | KL=0.0029 | KLema=0.0057 | clip=0.018 | lr=1.46e-04 | lr_action=keep | 状态=max_steps_reached
+回合  140 | 场景=train_area003_scenario005 | 阶段=1 | 奖励=  -18.4 | 步数=304.5 | 覆盖率= 46.4% | 成功率=  56% | 任务得分= 49.8% | 超时率=  44% | 零覆盖超时=   1% | KL=0.0029 | KLema=0.0057 | clip=0.018 | lr=1.46e-04 | lr_action=keep | 状态=mission_complete
+回合  150 | 场景=train_area002_scenario001 | 阶段=1 | 奖励=  -17.1 | 步数=287.4 | 覆盖率= 50.5% | 成功率=  58% | 任务得分= 53.1% | 超时率=  42% | 零覆盖超时=   0% | KL=0.0055 | KLema=0.0056 | clip=0.064 | lr=1.46e-04 | lr_action=keep | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=150 | 阶段=1 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=1 | 回合数=30 | 任务得分=70.2% | 覆盖率=62.4% | 成功率=80.0% | 平均步数=149.8
+回合  160 | 场景=train_area004_scenario001 | 阶段=1 | 奖励=  -14.2 | 步数=269.5 | 覆盖率= 53.4% | 成功率=  61% | 任务得分= 56.0% | 超时率=  39% | 零覆盖超时=   0% | KL=0.0055 | KLema=0.0056 | clip=0.064 | lr=1.46e-04 | lr_action=keep | 状态=mission_complete
+回合  170 | 场景=train_area001_scenario003 | 阶段=1 | 奖励=   -8.9 | 步数=249.2 | 覆盖率= 57.5% | 成功率=  65% | 任务得分= 59.9% | 超时率=  35% | 零覆盖超时=   0% | KL=0.0055 | KLema=0.0056 | clip=0.064 | lr=1.46e-04 | lr_action=keep | 状态=mission_complete
+回合  180 | 场景=train_area001_scenario004 | 阶段=1 | 奖励=   -9.7 | 步数=248.3 | 覆盖率= 58.6% | 成功率=  65% | 任务得分= 60.5% | 超时率=  35% | 零覆盖超时=   0% | KL=0.0058 | KLema=0.0057 | clip=0.071 | lr=1.46e-04 | lr_action=keep | 状态=max_steps_reached
+回合  190 | 场景=train_area002_scenario005 | 阶段=1 | 奖励=  -10.7 | 步数=257.6 | 覆盖率= 57.5% | 成功率=  64% | 任务得分= 59.3% | 超时率=  36% | 零覆盖超时=   0% | KL=0.0060 | KLema=0.0057 | clip=0.064 | lr=1.46e-04 | lr_action=keep | 状态=max_steps_reached
+回合  200 | 场景=train_area002_scenario006 | 阶段=1 | 奖励=  -10.4 | 步数=256.7 | 覆盖率= 57.5% | 成功率=  64% | 任务得分= 59.4% | 超时率=  36% | 零覆盖超时=   0% | KL=0.0060 | KLema=0.0057 | clip=0.064 | lr=1.46e-04 | lr_action=keep | 状态=max_steps_reached
+
+======================================================================
+验证评估 | 回合=200 | 阶段=1 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=1 | 回合数=30 | 任务得分=60.4% | 覆盖率=52.7% | 成功率=70.0% | 平均步数=206.7
+  -> 最佳训练滚动任务得分: 59.4%
+回合  210 | 场景=train_area004_scenario004 | 阶段=1 | 奖励=   -9.5 | 步数=255.0 | 覆盖率= 58.3% | 成功率=  64% | 任务得分= 59.9% | 超时率=  36% | 零覆盖超时=   0% | KL=0.0050 | KLema=0.0056 | clip=0.053 | lr=1.46e-04 | lr_action=keep | 状态=mission_complete
+回合  220 | 场景=train_area001_scenario006 | 阶段=1 | 奖励=   -7.0 | 步数=238.8 | 覆盖率= 61.5% | 成功率=  67% | 任务得分= 62.9% | 超时率=  33% | 零覆盖超时=   0% | KL=0.0050 | KLema=0.0056 | clip=0.053 | lr=1.46e-04 | lr_action=keep | 状态=mission_complete
+回合  230 | 场景=train_area003_scenario006 | 阶段=1 | 奖励=   -2.8 | 步数=217.4 | 覆盖率= 65.1% | 成功率=  71% | 任务得分= 66.6% | 超时率=  29% | 零覆盖超时=   0% | KL=0.0037 | KLema=0.0052 | clip=0.025 | lr=1.46e-04 | lr_action=low_wait | 状态=mission_complete
+回合  240 | 场景=train_area001_scenario003 | 阶段=1 | 奖励=   -2.8 | 步数=212.3 | 覆盖率= 66.3% | 成功率=  72% | 任务得分= 67.7% | 超时率=  28% | 零覆盖超时=   0% | KL=0.0037 | KLema=0.0052 | clip=0.025 | lr=1.46e-04 | lr_action=low_wait | 状态=mission_complete
+回合  250 | 场景=train_area002_scenario005 | 阶段=1 | 奖励=   -4.7 | 步数=228.8 | 覆盖率= 63.5% | 成功率=  70% | 任务得分= 65.1% | 超时率=  30% | 零覆盖超时=   0% | KL=0.0047 | KLema=0.0051 | clip=0.037 | lr=1.46e-04 | lr_action=low_wait | 状态=max_steps_reached
+
+======================================================================
+验证评估 | 回合=250 | 阶段=1 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=1 | 回合数=30 | 任务得分=71.7% | 覆盖率=66.1% | 成功率=80.0% | 平均步数=159.8
+回合  260 | 场景=train_area002_scenario006 | 阶段=1 | 奖励=   -8.8 | 步数=239.2 | 覆盖率= 62.4% | 成功率=  68% | 任务得分= 63.6% | 超时率=  32% | 零覆盖超时=   0% | KL=0.0047 | KLema=0.0051 | clip=0.037 | lr=1.46e-04 | lr_action=low_wait | 状态=mission_complete
+回合  270 | 场景=train_area004_scenario003 | 阶段=1 | 奖励=   -9.3 | 步数=247.3 | 覆盖率= 60.3% | 成功率=  67% | 任务得分= 62.0% | 超时率=  33% | 零覆盖超时=   0% | KL=0.0062 | KLema=0.0053 | clip=0.060 | lr=1.50e-04 | lr_action=up | 状态=mission_complete
+回合  280 | 场景=train_area004_scenario006 | 阶段=1 | 奖励=   -5.9 | 步数=239.2 | 覆盖率= 62.2% | 成功率=  69% | 任务得分= 63.8% | 超时率=  31% | 零覆盖超时=   0% | KL=0.0062 | KLema=0.0053 | clip=0.060 | lr=1.50e-04 | lr_action=up | 状态=mission_complete
+回合  290 | 场景=train_area004_scenario006 | 阶段=1 | 奖励=   -3.5 | 步数=223.1 | 覆盖率= 64.3% | 成功率=  71% | 任务得分= 66.0% | 超时率=  29% | 零覆盖超时=   0% | KL=0.0051 | KLema=0.0053 | clip=0.052 | lr=1.50e-04 | lr_action=low_wait | 状态=max_steps_reached
+回合  300 | 场景=train_area001_scenario006 | 阶段=1 | 奖励=   -5.9 | 步数=230.0 | 覆盖率= 63.6% | 成功率=  70% | 任务得分= 65.1% | 超时率=  30% | 零覆盖超时=   0% | KL=0.0051 | KLema=0.0053 | clip=0.052 | lr=1.50e-04 | lr_action=low_wait | 状态=max_steps_reached
+
+======================================================================
+验证评估 | 回合=300 | 阶段=1 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=1 | 回合数=30 | 任务得分=59.9% | 覆盖率=51.9% | 成功率=70.0% | 平均步数=211.0
+  -> 最佳训练滚动任务得分: 65.1%
+回合  310 | 场景=train_area002_scenario005 | 阶段=1 | 奖励=   -5.2 | 步数=231.4 | 覆盖率= 63.9% | 成功率=  70% | 任务得分= 65.2% | 超时率=  30% | 零覆盖超时=   0% | KL=0.0059 | KLema=0.0054 | clip=0.070 | lr=1.50e-04 | lr_action=keep | 状态=max_steps_reached
+回合  320 | 场景=train_area002_scenario003 | 阶段=1 | 奖励=   -4.4 | 步数=229.4 | 覆盖率= 64.2% | 成功率=  71% | 任务得分= 65.7% | 超时率=  29% | 零覆盖超时=   0% | KL=0.0059 | KLema=0.0054 | clip=0.070 | lr=1.50e-04 | lr_action=keep | 状态=mission_complete
+回合  330 | 场景=train_area002_scenario002 | 阶段=1 | 奖励=   -6.3 | 步数=234.8 | 覆盖率= 63.7% | 成功率=  70% | 任务得分= 65.0% | 超时率=  30% | 零覆盖超时=   0% | KL=0.0048 | KLema=0.0053 | clip=0.047 | lr=1.50e-04 | lr_action=low_wait | 状态=mission_complete
+回合  340 | 场景=train_area002_scenario005 | 阶段=1 | 奖励=   -4.4 | 步数=236.4 | 覆盖率= 63.5% | 成功率=  70% | 任务得分= 64.9% | 超时率=  30% | 零覆盖超时=   0% | KL=0.0048 | KLema=0.0053 | clip=0.047 | lr=1.50e-04 | lr_action=low_wait | 状态=mission_complete
+回合  350 | 场景=train_area003_scenario002 | 阶段=1 | 奖励=   -1.0 | 步数=219.9 | 覆盖率= 66.5% | 成功率=  72% | 任务得分= 67.5% | 超时率=  28% | 零覆盖超时=   0% | KL=0.0057 | KLema=0.0054 | clip=0.075 | lr=1.50e-04 | lr_action=keep | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=350 | 阶段=1 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=1 | 回合数=30 | 任务得分=70.7% | 覆盖率=61.3% | 成功率=83.3% | 平均步数=147.5
+回合  360 | 场景=train_area002_scenario004 | 阶段=1 | 奖励=    3.4 | 步数=206.6 | 覆盖率= 69.6% | 成功率=  75% | 任务得分= 70.4% | 超时率=  25% | 零覆盖超时=   0% | KL=0.0057 | KLema=0.0054 | clip=0.075 | lr=1.50e-04 | lr_action=keep | 状态=mission_complete
+回合  370 | 场景=train_area002_scenario002 | 阶段=1 | 奖励=    1.8 | 步数=200.4 | 覆盖率= 71.6% | 成功率=  75% | 任务得分= 71.6% | 超时率=  25% | 零覆盖超时=   0% | KL=0.0057 | KLema=0.0054 | clip=0.075 | lr=1.50e-04 | lr_action=keep | 状态=mission_complete
+回合  380 | 场景=train_area002_scenario003 | 阶段=1 | 奖励=    2.2 | 步数=197.3 | 覆盖率= 71.3% | 成功率=  76% | 任务得分= 71.9% | 超时率=  24% | 零覆盖超时=   0% | KL=0.0058 | KLema=0.0054 | clip=0.040 | lr=1.50e-04 | lr_action=keep | 状态=mission_complete
+回合  390 | 场景=train_area002_scenario005 | 阶段=1 | 奖励=    2.3 | 步数=202.4 | 覆盖率= 70.6% | 成功率=  75% | 任务得分= 71.0% | 超时率=  25% | 零覆盖超时=   0% | KL=0.0057 | KLema=0.0055 | clip=0.072 | lr=1.50e-04 | lr_action=keep | 状态=max_steps_reached
+回合  400 | 场景=train_area004_scenario004 | 阶段=1 | 奖励=    5.2 | 步数=193.3 | 覆盖率= 72.7% | 成功率=  77% | 任务得分= 73.0% | 超时率=  23% | 零覆盖超时=   0% | KL=0.0057 | KLema=0.0055 | clip=0.072 | lr=1.50e-04 | lr_action=keep | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=400 | 阶段=1 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=1 | 回合数=30 | 任务得分=72.8% | 覆盖率=65.6% | 成功率=83.3% | 平均步数=149.9
+  -> 最佳训练滚动任务得分: 73.0%
+回合  410 | 场景=train_area002_scenario004 | 阶段=1 | 奖励=    3.7 | 步数=193.2 | 覆盖率= 72.4% | 成功率=  77% | 任务得分= 72.8% | 超时率=  23% | 零覆盖超时=   0% | KL=0.0057 | KLema=0.0055 | clip=0.072 | lr=1.50e-04 | lr_action=keep | 状态=mission_complete
+回合  420 | 场景=train_area003_scenario003 | 阶段=1 | 奖励=    4.8 | 步数=178.2 | 覆盖率= 74.8% | 成功率=  79% | 任务得分= 75.2% | 超时率=  21% | 零覆盖超时=   0% | KL=0.0057 | KLema=0.0055 | clip=0.072 | lr=1.50e-04 | lr_action=keep | 状态=mission_complete
+回合  430 | 场景=train_area004_scenario002 | 阶段=1 | 奖励=    8.0 | 步数=166.9 | 覆盖率= 76.4% | 成功率=  82% | 任务得分= 77.3% | 超时率=  18% | 零覆盖超时=   0% | KL=0.0062 | KLema=0.0056 | clip=0.075 | lr=1.50e-04 | lr_action=keep | 状态=mission_complete
+回合  440 | 场景=train_area003_scenario003 | 阶段=1 | 奖励=    7.2 | 步数=164.2 | 覆盖率= 77.4% | 成功率=  82% | 任务得分= 77.8% | 超时率=  18% | 零覆盖超时=   0% | KL=0.0062 | KLema=0.0056 | clip=0.075 | lr=1.50e-04 | lr_action=keep | 状态=max_steps_reached
+回合  450 | 场景=train_area002_scenario002 | 阶段=1 | 奖励=    7.0 | 步数=158.5 | 覆盖率= 78.0% | 成功率=  83% | 任务得分= 78.6% | 超时率=  17% | 零覆盖超时=   0% | KL=0.0062 | KLema=0.0056 | clip=0.075 | lr=1.50e-04 | lr_action=keep | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=450 | 阶段=1 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=1 | 回合数=30 | 任务得分=73.4% | 覆盖率=66.8% | 成功率=83.3% | 平均步数=150.5
+回合  460 | 场景=train_area003_scenario005 | 阶段=1 | 奖励=    6.1 | 步数=155.3 | 覆盖率= 77.9% | 成功率=  83% | 任务得分= 78.7% | 超时率=  17% | 零覆盖超时=   0% | KL=0.0053 | KLema=0.0056 | clip=0.065 | lr=1.50e-04 | lr_action=keep | 状态=mission_complete
+回合  470 | 场景=train_area004_scenario005 | 阶段=1 | 奖励=    9.4 | 步数=144.0 | 覆盖率= 79.8% | 成功率=  85% | 任务得分= 80.6% | 超时率=  15% | 零覆盖超时=   0% | KL=0.0053 | KLema=0.0056 | clip=0.065 | lr=1.50e-04 | lr_action=keep | 状态=mission_complete
+回合  480 | 场景=train_area003_scenario005 | 阶段=1 | 奖励=   11.1 | 步数=134.3 | 覆盖率= 82.5% | 成功率=  86% | 任务得分= 82.6% | 超时率=  14% | 零覆盖超时=   0% | KL=0.0053 | KLema=0.0056 | clip=0.065 | lr=1.50e-04 | lr_action=keep | 状态=mission_complete
+回合  490 | 场景=train_area001_scenario002 | 阶段=1 | 奖励=   12.4 | 步数=117.6 | 覆盖率= 85.4% | 成功率=  89% | 任务得分= 85.5% | 超时率=  11% | 零覆盖超时=   0% | KL=0.0053 | KLema=0.0056 | clip=0.065 | lr=1.50e-04 | lr_action=keep | 状态=mission_complete
+回合  500 | 场景=train_area004_scenario006 | 阶段=1 | 奖励=   13.2 | 步数=109.7 | 覆盖率= 86.4% | 成功率=  90% | 任务得分= 86.5% | 超时率=  10% | 零覆盖超时=   0% | KL=0.0053 | KLema=0.0056 | clip=0.065 | lr=1.50e-04 | lr_action=keep | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=500 | 阶段=1 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=1 | 回合数=30 | 任务得分=79.4% | 覆盖率=69.4% | 成功率=93.3% | 平均步数=99.6
+  -> 最佳训练滚动任务得分: 86.5%
+回合  510 | 场景=train_area002_scenario006 | 阶段=1 | 奖励=   14.4 | 步数=114.6 | 覆盖率= 85.6% | 成功率=  89% | 任务得分= 85.7% | 超时率=  11% | 零覆盖超时=   0% | KL=0.0041 | KLema=0.0053 | clip=0.048 | lr=1.50e-04 | lr_action=low_wait | 状态=max_steps_reached
+回合  520 | 场景=train_area002_scenario003 | 阶段=1 | 奖励=   16.0 | 步数=109.7 | 覆盖率= 86.5% | 成功率=  90% | 任务得分= 86.6% | 超时率=  10% | 零覆盖超时=   0% | KL=0.0041 | KLema=0.0053 | clip=0.048 | lr=1.50e-04 | lr_action=low_wait | 状态=mission_complete
+回合  530 | 场景=train_area002_scenario002 | 阶段=1 | 奖励=   15.4 | 步数=109.5 | 覆盖率= 86.7% | 成功率=  89% | 任务得分= 86.4% | 超时率=  11% | 零覆盖超时=   0% | KL=0.0041 | KLema=0.0053 | clip=0.048 | lr=1.50e-04 | lr_action=low_wait | 状态=mission_complete
+回合  540 | 场景=train_area002_scenario005 | 阶段=1 | 奖励=   16.0 | 步数=104.1 | 覆盖率= 87.6% | 成功率=  90% | 任务得分= 87.3% | 超时率=  10% | 零覆盖超时=   0% | KL=0.0044 | KLema=0.0051 | clip=0.044 | lr=1.50e-04 | lr_action=low_wait | 状态=mission_complete
+回合  550 | 场景=train_area003_scenario005 | 阶段=1 | 奖励=   16.6 | 步数=109.8 | 覆盖率= 87.2% | 成功率=  90% | 任务得分= 86.9% | 超时率=  10% | 零覆盖超时=   0% | KL=0.0044 | KLema=0.0051 | clip=0.044 | lr=1.50e-04 | lr_action=low_wait | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=550 | 阶段=1 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=1 | 回合数=30 | 任务得分=82.6% | 覆盖率=72.6% | 成功率=96.7% | 平均步数=81.7
+
+  [验证课程] 1 -> 2A | validation_passes=2/3
+课程阶段已切换为 2
+回合  560 | 场景=train_area003_scenario002 | 阶段=2 | 奖励=   19.3 | 步数= 99.6 | 覆盖率= 88.4% | 成功率=  91% | 任务得分= 88.2% | 超时率=   9% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  570 | 场景=train_area003_scenario001 | 阶段=2 | 奖励=   19.6 | 步数= 95.6 | 覆盖率= 88.5% | 成功率=  91% | 任务得分= 88.3% | 超时率=   9% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  580 | 场景=train_area004_scenario003 | 阶段=2 | 奖励=   20.1 | 步数= 83.6 | 覆盖率= 90.0% | 成功率=  92% | 任务得分= 89.8% | 超时率=   8% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  590 | 场景=train_area001_scenario004 | 阶段=2 | 奖励=   22.2 | 步数= 73.6 | 覆盖率= 91.1% | 成功率=  93% | 任务得分= 91.0% | 超时率=   7% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  600 | 场景=train_area004_scenario002 | 阶段=2 | 奖励=   22.4 | 步数= 68.0 | 覆盖率= 91.6% | 成功率=  93% | 任务得分= 91.4% | 超时率=   7% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=600 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+  -> 最佳训练滚动任务得分: 91.4%
+回合  610 | 场景=train_area001_scenario006 | 阶段=2 | 奖励=   25.1 | 步数= 45.8 | 覆盖率= 95.1% | 成功率=  96% | 任务得分= 94.8% | 超时率=   4% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  620 | 场景=train_area003_scenario005 | 阶段=2 | 奖励=   25.0 | 步数= 41.1 | 覆盖率= 95.2% | 成功率=  96% | 任务得分= 95.0% | 超时率=   4% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  630 | 场景=train_area003_scenario005 | 阶段=2 | 奖励=   26.1 | 步数= 31.2 | 覆盖率= 96.2% | 成功率=  97% | 任务得分= 96.2% | 超时率=   3% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  640 | 场景=train_area001_scenario006 | 阶段=2 | 奖励=   28.8 | 步数= 16.2 | 覆盖率= 98.3% | 成功率=  99% | 任务得分= 98.3% | 超时率=   1% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  650 | 场景=train_area001_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=650 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合  660 | 场景=train_area004_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  670 | 场景=train_area002_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  680 | 场景=train_area001_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  690 | 场景=train_area003_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  700 | 场景=train_area001_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=700 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+  -> 最佳训练滚动任务得分: 100.0%
+回合  710 | 场景=train_area001_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  720 | 场景=train_area003_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  730 | 场景=train_area001_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  740 | 场景=train_area002_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  750 | 场景=train_area002_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=750 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合  760 | 场景=train_area001_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  770 | 场景=train_area004_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  780 | 场景=train_area002_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  790 | 场景=train_area004_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  800 | 场景=train_area003_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=800 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合  810 | 场景=train_area003_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  820 | 场景=train_area004_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  830 | 场景=train_area004_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  840 | 场景=train_area002_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  850 | 场景=train_area004_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=850 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合  860 | 场景=train_area004_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  870 | 场景=train_area004_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  880 | 场景=train_area003_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  890 | 场景=train_area001_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  900 | 场景=train_area001_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=900 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合  910 | 场景=train_area003_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  920 | 场景=train_area004_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  930 | 场景=train_area001_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  940 | 场景=train_area001_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  950 | 场景=train_area002_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=950 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合  960 | 场景=train_area002_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  970 | 场景=train_area002_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  980 | 场景=train_area003_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合  990 | 场景=train_area004_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1000 | 场景=train_area002_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=1000 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 1010 | 场景=train_area004_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1020 | 场景=train_area003_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1030 | 场景=train_area002_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1040 | 场景=train_area004_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1050 | 场景=train_area002_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=1050 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 1060 | 场景=train_area002_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1070 | 场景=train_area004_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1080 | 场景=train_area001_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1090 | 场景=train_area003_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1100 | 场景=train_area004_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=1100 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 1110 | 场景=train_area002_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1120 | 场景=train_area003_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1130 | 场景=train_area003_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1140 | 场景=train_area001_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1150 | 场景=train_area004_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=1150 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 1160 | 场景=train_area003_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1170 | 场景=train_area004_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1180 | 场景=train_area003_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1190 | 场景=train_area004_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1200 | 场景=train_area002_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=1200 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 1210 | 场景=train_area001_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1220 | 场景=train_area002_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1230 | 场景=train_area001_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1240 | 场景=train_area004_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1250 | 场景=train_area002_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=1250 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 1260 | 场景=train_area003_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1270 | 场景=train_area001_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1280 | 场景=train_area001_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1290 | 场景=train_area003_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1300 | 场景=train_area004_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=1300 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 1310 | 场景=train_area001_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1320 | 场景=train_area002_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1330 | 场景=train_area001_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1340 | 场景=train_area001_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1350 | 场景=train_area002_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=1350 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 1360 | 场景=train_area004_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1370 | 场景=train_area002_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1380 | 场景=train_area001_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1390 | 场景=train_area004_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1400 | 场景=train_area003_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=1400 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 1410 | 场景=train_area003_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1420 | 场景=train_area002_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1430 | 场景=train_area001_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1440 | 场景=train_area004_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1450 | 场景=train_area004_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=1450 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 1460 | 场景=train_area002_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1470 | 场景=train_area004_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1480 | 场景=train_area003_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1490 | 场景=train_area004_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1500 | 场景=train_area001_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=1500 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 1510 | 场景=train_area004_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1520 | 场景=train_area002_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1530 | 场景=train_area001_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1540 | 场景=train_area001_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1550 | 场景=train_area001_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=1550 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 1560 | 场景=train_area004_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1570 | 场景=train_area001_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1580 | 场景=train_area001_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1590 | 场景=train_area001_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1600 | 场景=train_area003_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=1600 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 1610 | 场景=train_area001_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1620 | 场景=train_area001_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1630 | 场景=train_area002_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1640 | 场景=train_area003_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1650 | 场景=train_area001_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=1650 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 1660 | 场景=train_area002_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1670 | 场景=train_area001_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1680 | 场景=train_area003_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1690 | 场景=train_area004_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1700 | 场景=train_area002_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=1700 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 1710 | 场景=train_area003_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1720 | 场景=train_area003_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1730 | 场景=train_area004_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1740 | 场景=train_area003_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1750 | 场景=train_area002_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=1750 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 1760 | 场景=train_area003_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1770 | 场景=train_area003_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1780 | 场景=train_area004_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1790 | 场景=train_area004_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1800 | 场景=train_area003_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=1800 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 1810 | 场景=train_area003_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1820 | 场景=train_area004_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1830 | 场景=train_area002_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1840 | 场景=train_area002_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1850 | 场景=train_area004_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=1850 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 1860 | 场景=train_area002_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1870 | 场景=train_area004_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1880 | 场景=train_area004_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1890 | 场景=train_area004_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1900 | 场景=train_area003_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=1900 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 1910 | 场景=train_area003_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1920 | 场景=train_area003_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1930 | 场景=train_area004_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1940 | 场景=train_area001_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1950 | 场景=train_area002_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=1950 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 1960 | 场景=train_area001_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1970 | 场景=train_area004_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1980 | 场景=train_area003_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 1990 | 场景=train_area002_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2000 | 场景=train_area002_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=2000 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 2010 | 场景=train_area003_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2020 | 场景=train_area001_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2030 | 场景=train_area004_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2040 | 场景=train_area001_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2050 | 场景=train_area004_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=2050 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 2060 | 场景=train_area001_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2070 | 场景=train_area004_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2080 | 场景=train_area001_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2090 | 场景=train_area001_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2100 | 场景=train_area003_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=2100 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 2110 | 场景=train_area002_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2120 | 场景=train_area004_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2130 | 场景=train_area003_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2140 | 场景=train_area003_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2150 | 场景=train_area002_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=2150 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 2160 | 场景=train_area002_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2170 | 场景=train_area003_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2180 | 场景=train_area004_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2190 | 场景=train_area001_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2200 | 场景=train_area003_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=2200 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 2210 | 场景=train_area001_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2220 | 场景=train_area002_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2230 | 场景=train_area002_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2240 | 场景=train_area001_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2250 | 场景=train_area004_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=2250 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 2260 | 场景=train_area004_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2270 | 场景=train_area001_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2280 | 场景=train_area004_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2290 | 场景=train_area002_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2300 | 场景=train_area001_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=2300 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 2310 | 场景=train_area003_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2320 | 场景=train_area004_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2330 | 场景=train_area002_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2340 | 场景=train_area003_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2350 | 场景=train_area002_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=2350 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 2360 | 场景=train_area001_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2370 | 场景=train_area001_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2380 | 场景=train_area004_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2390 | 场景=train_area003_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2400 | 场景=train_area002_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=2400 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 2410 | 场景=train_area003_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2420 | 场景=train_area001_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2430 | 场景=train_area001_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2440 | 场景=train_area004_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2450 | 场景=train_area002_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=2450 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 2460 | 场景=train_area004_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2470 | 场景=train_area003_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2480 | 场景=train_area002_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2490 | 场景=train_area004_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2500 | 场景=train_area004_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=2500 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 2510 | 场景=train_area003_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2520 | 场景=train_area002_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2530 | 场景=train_area003_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2540 | 场景=train_area002_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2550 | 场景=train_area004_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=2550 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 2560 | 场景=train_area001_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2570 | 场景=train_area002_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2580 | 场景=train_area003_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2590 | 场景=train_area001_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2600 | 场景=train_area002_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=2600 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 2610 | 场景=train_area003_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2620 | 场景=train_area001_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2630 | 场景=train_area002_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2640 | 场景=train_area001_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2650 | 场景=train_area004_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=2650 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 2660 | 场景=train_area002_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2670 | 场景=train_area003_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2680 | 场景=train_area003_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2690 | 场景=train_area004_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2700 | 场景=train_area002_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=2700 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 2710 | 场景=train_area003_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2720 | 场景=train_area001_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2730 | 场景=train_area002_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2740 | 场景=train_area004_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2750 | 场景=train_area002_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=2750 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 2760 | 场景=train_area004_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2770 | 场景=train_area004_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2780 | 场景=train_area003_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2790 | 场景=train_area002_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2800 | 场景=train_area002_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=2800 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 2810 | 场景=train_area004_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2820 | 场景=train_area003_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2830 | 场景=train_area001_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2840 | 场景=train_area004_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2850 | 场景=train_area002_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=2850 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 2860 | 场景=train_area002_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2870 | 场景=train_area003_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2880 | 场景=train_area001_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2890 | 场景=train_area001_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2900 | 场景=train_area002_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=2900 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 2910 | 场景=train_area002_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2920 | 场景=train_area004_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2930 | 场景=train_area003_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2940 | 场景=train_area004_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2950 | 场景=train_area004_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=2950 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 2960 | 场景=train_area002_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2970 | 场景=train_area002_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2980 | 场景=train_area002_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 2990 | 场景=train_area002_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 3000 | 场景=train_area001_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=3000 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 3010 | 场景=train_area001_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 3020 | 场景=train_area001_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 3030 | 场景=train_area003_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 3040 | 场景=train_area002_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 3050 | 场景=train_area003_scenario002 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=3050 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+回合 3060 | 场景=train_area003_scenario006 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 3070 | 场景=train_area001_scenario004 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 3080 | 场景=train_area004_scenario001 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 3090 | 场景=train_area002_scenario005 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+回合 3100 | 场景=train_area002_scenario003 | 阶段=2 | 奖励=   30.0 | 步数=  1.0 | 覆盖率=100.0% | 成功率= 100% | 任务得分=100.0% | 超时率=   0% | 零覆盖超时=   0% | KL=0.0042 | KLema=0.0049 | clip=0.041 | lr=1.55e-04 | lr_action=up | 状态=mission_complete
+
+======================================================================
+验证评估 | 回合=3100 | 阶段=2 | 每场景回合=5
+======================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=63.6% | 覆盖率=27.6% | 成功率=100.0% | 平均步数=7.9
+
+======================================================================
+训练后最佳验证模型评估
+数据划分=['validation', 'generalization', 'stress'] | 评估阶段=[3] | 每场景回合=50
+======================================================================
+未找到 best-val checkpoint，跳过训练后评估
+
+======================================================================
+训练后完整时域覆盖评估
+validation选模每场景回合=20 | 最终报告每场景回合=50
+======================================================================
+未找到终末阶段 checkpoint，跳过完整时域评估
+full_horizon_summary=D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260720_230059\训练结果\KL_LR_CTDE_PPO_seed42\logs\full_horizon_summary.json
+eval_summary=D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260720_230059\训练结果\KL_LR_CTDE_PPO_seed42\logs\eval_summary.json
+
+======================================================================
+训练完成
+总步数=118484 | PPO更新=28 | 用时=17.8 分钟
+最终阶段=2
+训练日志=D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260720_230059\训练结果\KL_LR_CTDE_PPO_seed42\logs\training_log.json
+验证日志=D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260720_230059\训练结果\KL_LR_CTDE_PPO_seed42\logs\validation_log.json
+质量指标=D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260720_230059\训练结果\KL_LR_CTDE_PPO_seed42\logs\model_quality_metrics.json
+评估摘要=D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260720_230059\训练结果\KL_LR_CTDE_PPO_seed42\logs\eval_summary.json
+完整时域评估摘要=D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260720_230059\训练结果\KL_LR_CTDE_PPO_seed42\logs\full_horizon_summary.json
+最终模型=D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260720_230059\训练结果\KL_LR_CTDE_PPO_seed42\models\ppo_final.pth
+控制台日志=D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260720_230059\训练结果\KL_LR_CTDE_PPO_seed42\train_console_log.txt
+源码快照=D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260720_230059\训练结果\训练源码
+质量摘要 | AUC=0.4395757216785077 | tail得分标准差=3.3306690738754696e-16 | KL超限率=0.0
+======================================================================
+
+正在生成训练图表...
+
+正在生成泛化评估图表...
+Traceback (most recent call last):
+  File "D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\ctde_ppo_baseline_train.py", line 4664, in <module>
+    main()
+  File "D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\ctde_ppo_baseline_train.py", line 4660, in main
+    run_lr_comparison(config)
+  File "D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\ctde_ppo_baseline_train.py", line 4517, in run_lr_comparison
+    figure_paths[seed_key] = _run_figure_scripts(
+  File "D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\ctde_ppo_baseline_train.py", line 2190, in _run_figure_scripts
+    subprocess.run(cmd, check=True)
+  File "C:\Users\cameliar\.conda\envs\pytorch\lib\subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['C:\\Users\\cameliar\\.conda\\envs\\pytorch\\python.exe', 'D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\make_generalization_figures.py', '--results-dir', 'D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260720_230059\\训练结果', '--window', '10', '--dpi', '300', '--max-steps', '600', '--out-dir', 'D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260720_230059\\figures\\seed42\\generalization_figures', '--run-filter', 'seed42']' returned non-zero exit status 1.

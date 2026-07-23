@@ -1,0 +1,12 @@
+{
+  "best_val": {
+    "available": false,
+    "model_path": null,
+    "splits": {}
+  },
+  "best_stage4": {
+    "available": false,
+    "model_path": null,
+    "splits": {}
+  }
+}

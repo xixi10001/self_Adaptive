@@ -99,15 +99,14 @@ class Stage4SchedulerTest(unittest.TestCase):
 
 
 class Stage4ProgressionTest(unittest.TestCase):
-    def test_stage4_requires_two_protected_validation_passes(self):
+    def test_stage4_requires_two_of_three_protected_validation_passes(self):
         manager = CurriculumManager(stage3_final_target=0.60)
         manager.current_stage = 3
-        manager.stage_episodes[3] = 300
         manager._s3_target_idx = len(manager.STAGE3_TARGET_LADDER) - 1
-        manager._s3_near_idx = len(manager.STAGE3_NEAR_LADDER) - 1
+        manager._stage3_ready_for_stage4 = True
         self.assertTrue(
             manager.can_enter_stage4(
-                {"success_rate": 0.60, "zero_coverage_timeout_rate": 0.10}
+                {"success_rate": 0.65, "zero_coverage_timeout_rate": 0.10}
             )
         )
 
@@ -119,6 +118,7 @@ class Stage4ProgressionTest(unittest.TestCase):
             "mean_hold_ratio_by_threshold": {"0.60": 0.46},
         }
         manager.enter_stage4(baseline)
+        manager.substage_episodes["4A"] = manager.STAGE4_MIN_EPISODES[0]
         passing = {
             "boundary_found_rate": 0.94,
             "target_reach_rate": 0.62,
@@ -128,8 +128,30 @@ class Stage4ProgressionTest(unittest.TestCase):
         }
 
         self.assertFalse(manager.update_stage4_validation(passing))
+        self.assertFalse(manager.update_stage4_validation(passing))
         self.assertTrue(manager.update_stage4_validation(passing))
         self.assertEqual(manager.stage4_level, "4B")
+
+    def test_three_guard_failures_request_recovery_without_global_stop(self):
+        manager = CurriculumManager(stage3_final_target=0.60)
+        manager.enter_stage4(
+            {
+                "boundary_found_rate": 0.95,
+                "target_reach_rate": 0.70,
+                "mean_tail100_coverage": 0.55,
+                "mean_current_coverage_auc": 0.45,
+                "mean_hold_ratio_by_threshold": {"0.60": 0.40},
+            }
+        )
+        manager.substage_episodes["4A"] = manager.STAGE4_MIN_EPISODES[0]
+        failed = {
+            "boundary_found_rate": 0.80,
+            "target_reach_rate": 0.50,
+        }
+        for _ in range(3):
+            self.assertFalse(manager.update_stage4_validation(failed))
+        self.assertTrue(manager._stage4_recovery_requested)
+        self.assertFalse(manager._stage4_stop_requested)
 
 
 if __name__ == "__main__":

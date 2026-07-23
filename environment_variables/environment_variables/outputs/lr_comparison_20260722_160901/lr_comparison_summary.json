@@ -1,0 +1,499 @@
+{
+  "package_dir": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260722_160901",
+  "results_root": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260722_160901\\训练结果",
+  "seeds": [
+    42
+  ],
+  "variants": {
+    "Fixed_LR_CTDE_PPO_seed42": {
+      "config": {
+        "data_dir": "./dataset",
+        "train_split": "train",
+        "eval_split": "generalization",
+        "train_scene_keys": null,
+        "num_drones": 2,
+        "vision_radius": 16,
+        "max_steps": 600,
+        "use_metadata_uav_params": false,
+        "observation_profile": "persistent_cooperative",
+        "reward_profile": "persistent_boundary",
+        "communication_enabled": true,
+        "communication_radius_factor": 4.0,
+        "action_mask_enabled": true,
+        "novelty_reward_weight": 0.12,
+        "novelty_step_penalty": -0.04,
+        "novelty_revisit_penalty": 0.08,
+        "invalid_action_penalty": 0.25,
+        "team_overlap_penalty": 0.05,
+        "hierarchical_roles_enabled": true,
+        "peer_state_ttl": 8,
+        "track_report_ttl": 20,
+        "reacquire_report_ttl": 60,
+        "role_decision_interval": 20,
+        "role_min_dwell_steps": 10,
+        "boundary_match_radius": 2,
+        "boundary_freshness_tau": 40.0,
+        "fresh_coverage_gain_weight": 20.0,
+        "assigned_boundary_gain_weight": 6.0,
+        "role_switch_penalty": 0.02,
+        "mask_thermal_below_signal": true,
+        "role_actor_lr": 0.0002,
+        "role_critic_lr": 0.0005,
+        "role_batch_size": 128,
+        "norm_params_source": "scene_p99.5",
+        "init_percentile": 5.0,
+        "init_area_percent": 5.0,
+        "total_episodes": 3100,
+        "max_environment_steps": null,
+        "max_train_updates": null,
+        "actor_lr": 0.0002,
+        "critic_lr": 0.0005,
+        "lr_adapt_mode": "fixed",
+        "target_kl": 0.0065,
+        "actor_lr_min": 0.0001,
+        "actor_lr_max": 0.00025,
+        "kl_ema_beta": 0.8,
+        "kl_lr_low_ratio": 0.82,
+        "kl_lr_high_ratio": 1.2,
+        "kl_lr_emergency_ratio": 2.0,
+        "kl_lr_up_factor": 1.03,
+        "kl_lr_down_factor": 0.9,
+        "kl_lr_emergency_factor": 0.7,
+        "kl_lr_low_patience": 3,
+        "kl_early_stop_ratio": 1.5,
+        "gamma": 0.99,
+        "gae_lambda": 0.95,
+        "clip_epsilon": 0.2,
+        "entropy_coef": 0.01,
+        "value_coef": 0.5,
+        "max_grad_norm": 0.5,
+        "ppo_epochs": 4,
+        "batch_size": 4096,
+        "save_interval": 100,
+        "log_interval": 10,
+        "seed": 42,
+        "comparison_seeds": [
+          42
+        ],
+        "stage2_success_target": 0.2,
+        "stage3_success_target": 0.6,
+        "stage3_near_prob": 0.0,
+        "validation_split": "validation",
+        "validation_interval": 50,
+        "validation_episodes_per_scene": 5,
+        "save_best_by_validation": true,
+        "eval_scene_keys": null,
+        "eval_episodes_per_scene": 50,
+        "eval_stages": [
+          3
+        ],
+        "eval_seed_stride": 100,
+        "evaluation_mode": "target_stop",
+        "eval_after_train": true,
+        "final_eval_splits": [
+          "validation",
+          "generalization",
+          "stress"
+        ],
+        "final_eval_episodes_per_scene": 50,
+        "evaluate_best_val_after_train": true,
+        "full_horizon_eval_after_train": true,
+        "full_horizon_eval_splits": [
+          "validation",
+          "generalization",
+          "stress"
+        ],
+        "full_horizon_validation_episodes_per_scene": 20,
+        "full_horizon_final_episodes_per_scene": 50,
+        "full_horizon_curve_stride": 20,
+        "full_horizon_thresholds": [
+          0.2,
+          0.4,
+          0.6,
+          0.8
+        ],
+        "post_target_train": false,
+        "post_target_resume_checkpoint": null,
+        "post_target_episodes": 500,
+        "post_target_goal_ladder": [
+          0.6,
+          0.65,
+          0.7
+        ],
+        "post_target_validation_patience": 2,
+        "post_target_step_penalty": -0.005,
+        "post_target_step_cost_fraction": 0.25,
+        "post_target_hold_weight": 0.1,
+        "post_target_tail_weight": 20.0,
+        "post_target_milestone_70": 5.0,
+        "post_target_milestone_80": 10.0,
+        "post_target_actor_lr": 0.0001,
+        "post_target_critic_lr": 0.00025,
+        "post_target_warmup_updates": 15,
+        "post_target_initial_clip_epsilon": 0.15,
+        "post_target_initial_max_grad_norm": 0.25,
+        "quality_score_threshold": 0.55,
+        "quality_window": 50,
+        "quality_tail_fraction": 0.2,
+        "quality_target_kl": 0.0065,
+        "plot_after_train": false,
+        "figure_window": 100,
+        "figure_dpi": 300,
+        "output_root_dir": "./outputs",
+        "output_subdir": "baseline_ctde_ppo",
+        "use_scene_uav_params": false,
+        "observation_profile_dims": {
+          "baseline": {
+            "local_obs_dim": 17,
+            "global_state_dim": 19
+          },
+          "static_terrain": {
+            "local_obs_dim": 24,
+            "global_state_dim": 19
+          },
+          "dynamic_front": {
+            "local_obs_dim": 23,
+            "global_state_dim": 19
+          },
+          "risk_aware": {
+            "local_obs_dim": 20,
+            "global_state_dim": 19
+          },
+          "cooperative_exploration": {
+            "local_obs_dim": 24,
+            "global_state_dim": 19
+          },
+          "persistent_cooperative": {
+            "local_obs_dim": 24,
+            "global_state_dim": 19
+          }
+        },
+        "variant_name": "Fixed_LR_CTDE_PPO",
+        "output_dir": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260722_160901\\训练结果\\Fixed_LR_CTDE_PPO_seed42"
+      },
+      "variant_name": "Fixed_LR_CTDE_PPO",
+      "seed": 42,
+      "output_dir": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260722_160901\\训练结果\\Fixed_LR_CTDE_PPO_seed42",
+      "final_stage": 2,
+      "best_model_paths": {
+        "best": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260722_160901\\训练结果\\Fixed_LR_CTDE_PPO_seed42\\models\\ppo_best_train.pth",
+        "best_train": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260722_160901\\训练结果\\Fixed_LR_CTDE_PPO_seed42\\models\\ppo_best_train.pth",
+        "best_val": null,
+        "stage3_source": null,
+        "best_stage4": null,
+        "final": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260722_160901\\训练结果\\Fixed_LR_CTDE_PPO_seed42\\models\\ppo_final.pth",
+        "stage1_gate_candidate": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260722_160901\\训练结果\\Fixed_LR_CTDE_PPO_seed42\\models\\ppo_stage1_gate_candidate.pth",
+        "stage1_best": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260722_160901\\训练结果\\Fixed_LR_CTDE_PPO_seed42\\models\\ppo_stage1_best.pth"
+      },
+      "quality_metrics_path": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260722_160901\\训练结果\\Fixed_LR_CTDE_PPO_seed42\\logs\\model_quality_metrics.json",
+      "quality_metrics": {
+        "settings": {
+          "score_threshold": 0.55,
+          "window": 50,
+          "tail_fraction": 0.2,
+          "target_kl": 0.0065
+        },
+        "convergence_efficiency": {
+          "auc_task_score_by_steps": 0.2967966410509425,
+          "steps_to_threshold": 25815.0,
+          "updates_to_threshold": 5.0
+        },
+        "reward_stability": {
+          "reward_std_tail": 31.9305211498966,
+          "task_score_std_tail": 0.3467529727462909,
+          "mean_performance_drop": 0.003971457272272294,
+          "max_performance_drop": 0.01985333333333339
+        },
+        "kl_stability": {
+          "mean_kl": 0.006108624496084217,
+          "kl_std": 0.0007806534108109964,
+          "mean_abs_kl_error": 0.0007218398223327212,
+          "kl_overshoot_rate": 0.0,
+          "clip_fraction_mean": 0.06469460466369079,
+          "clip_fraction_std": 0.018295360795280977,
+          "actor_lr_mean": 0.0002,
+          "actor_lr_min": 0.0002,
+          "actor_lr_max": 0.0002,
+          "num_ppo_updates_measured": 18
+        }
+      },
+      "generalization_eval_path": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260722_160901\\训练结果\\Fixed_LR_CTDE_PPO_seed42\\logs\\best_val_generalization_eval.json",
+      "generalization_eval": {},
+      "eval_summary_path": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260722_160901\\训练结果\\Fixed_LR_CTDE_PPO_seed42\\logs\\eval_summary.json",
+      "eval_summary": {
+        "best_val": {
+          "available": false,
+          "model_path": null,
+          "splits": {}
+        },
+        "best_stage4": {
+          "available": false,
+          "model_path": null,
+          "splits": {}
+        }
+      },
+      "full_horizon_summary_path": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260722_160901\\训练结果\\Fixed_LR_CTDE_PPO_seed42\\logs\\full_horizon_summary.json",
+      "full_horizon_summary": {
+        "evaluation_mode": "full_horizon",
+        "selection_split": "validation",
+        "selection_metric": "mean_current_coverage_auc",
+        "selection_stage": 3,
+        "candidates": [],
+        "selected": null,
+        "splits": {}
+      },
+      "last_task_score": 0.988,
+      "last_coverage": 1.0,
+      "ppo_updates": 18
+    },
+    "KL_LR_CTDE_PPO_seed42": {
+      "config": {
+        "data_dir": "./dataset",
+        "train_split": "train",
+        "eval_split": "generalization",
+        "train_scene_keys": null,
+        "num_drones": 2,
+        "vision_radius": 16,
+        "max_steps": 600,
+        "use_metadata_uav_params": false,
+        "observation_profile": "persistent_cooperative",
+        "reward_profile": "persistent_boundary",
+        "communication_enabled": true,
+        "communication_radius_factor": 4.0,
+        "action_mask_enabled": true,
+        "novelty_reward_weight": 0.12,
+        "novelty_step_penalty": -0.04,
+        "novelty_revisit_penalty": 0.08,
+        "invalid_action_penalty": 0.25,
+        "team_overlap_penalty": 0.05,
+        "hierarchical_roles_enabled": true,
+        "peer_state_ttl": 8,
+        "track_report_ttl": 20,
+        "reacquire_report_ttl": 60,
+        "role_decision_interval": 20,
+        "role_min_dwell_steps": 10,
+        "boundary_match_radius": 2,
+        "boundary_freshness_tau": 40.0,
+        "fresh_coverage_gain_weight": 20.0,
+        "assigned_boundary_gain_weight": 6.0,
+        "role_switch_penalty": 0.02,
+        "mask_thermal_below_signal": true,
+        "role_actor_lr": 0.0002,
+        "role_critic_lr": 0.0005,
+        "role_batch_size": 128,
+        "norm_params_source": "scene_p99.5",
+        "init_percentile": 5.0,
+        "init_area_percent": 5.0,
+        "total_episodes": 3100,
+        "max_environment_steps": null,
+        "max_train_updates": null,
+        "actor_lr": 0.0002,
+        "critic_lr": 0.0005,
+        "lr_adapt_mode": "kl",
+        "target_kl": 0.0065,
+        "actor_lr_min": 0.0001,
+        "actor_lr_max": 0.00025,
+        "kl_ema_beta": 0.8,
+        "kl_lr_low_ratio": 0.82,
+        "kl_lr_high_ratio": 1.2,
+        "kl_lr_emergency_ratio": 2.0,
+        "kl_lr_up_factor": 1.03,
+        "kl_lr_down_factor": 0.9,
+        "kl_lr_emergency_factor": 0.7,
+        "kl_lr_low_patience": 3,
+        "kl_early_stop_ratio": 1.5,
+        "gamma": 0.99,
+        "gae_lambda": 0.95,
+        "clip_epsilon": 0.2,
+        "entropy_coef": 0.01,
+        "value_coef": 0.5,
+        "max_grad_norm": 0.5,
+        "ppo_epochs": 4,
+        "batch_size": 4096,
+        "save_interval": 100,
+        "log_interval": 10,
+        "seed": 42,
+        "comparison_seeds": [
+          42
+        ],
+        "stage2_success_target": 0.2,
+        "stage3_success_target": 0.6,
+        "stage3_near_prob": 0.0,
+        "validation_split": "validation",
+        "validation_interval": 50,
+        "validation_episodes_per_scene": 5,
+        "save_best_by_validation": true,
+        "eval_scene_keys": null,
+        "eval_episodes_per_scene": 50,
+        "eval_stages": [
+          3
+        ],
+        "eval_seed_stride": 100,
+        "evaluation_mode": "target_stop",
+        "eval_after_train": true,
+        "final_eval_splits": [
+          "validation",
+          "generalization",
+          "stress"
+        ],
+        "final_eval_episodes_per_scene": 50,
+        "evaluate_best_val_after_train": true,
+        "full_horizon_eval_after_train": true,
+        "full_horizon_eval_splits": [
+          "validation",
+          "generalization",
+          "stress"
+        ],
+        "full_horizon_validation_episodes_per_scene": 20,
+        "full_horizon_final_episodes_per_scene": 50,
+        "full_horizon_curve_stride": 20,
+        "full_horizon_thresholds": [
+          0.2,
+          0.4,
+          0.6,
+          0.8
+        ],
+        "post_target_train": false,
+        "post_target_resume_checkpoint": null,
+        "post_target_episodes": 500,
+        "post_target_goal_ladder": [
+          0.6,
+          0.65,
+          0.7
+        ],
+        "post_target_validation_patience": 2,
+        "post_target_step_penalty": -0.005,
+        "post_target_step_cost_fraction": 0.25,
+        "post_target_hold_weight": 0.1,
+        "post_target_tail_weight": 20.0,
+        "post_target_milestone_70": 5.0,
+        "post_target_milestone_80": 10.0,
+        "post_target_actor_lr": 0.0001,
+        "post_target_critic_lr": 0.00025,
+        "post_target_warmup_updates": 15,
+        "post_target_initial_clip_epsilon": 0.15,
+        "post_target_initial_max_grad_norm": 0.25,
+        "quality_score_threshold": 0.55,
+        "quality_window": 50,
+        "quality_tail_fraction": 0.2,
+        "quality_target_kl": 0.0065,
+        "plot_after_train": false,
+        "figure_window": 100,
+        "figure_dpi": 300,
+        "output_root_dir": "./outputs",
+        "output_subdir": "baseline_ctde_ppo",
+        "use_scene_uav_params": false,
+        "observation_profile_dims": {
+          "baseline": {
+            "local_obs_dim": 17,
+            "global_state_dim": 19
+          },
+          "static_terrain": {
+            "local_obs_dim": 24,
+            "global_state_dim": 19
+          },
+          "dynamic_front": {
+            "local_obs_dim": 23,
+            "global_state_dim": 19
+          },
+          "risk_aware": {
+            "local_obs_dim": 20,
+            "global_state_dim": 19
+          },
+          "cooperative_exploration": {
+            "local_obs_dim": 24,
+            "global_state_dim": 19
+          },
+          "persistent_cooperative": {
+            "local_obs_dim": 24,
+            "global_state_dim": 19
+          }
+        },
+        "variant_name": "KL_LR_CTDE_PPO",
+        "output_dir": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260722_160901\\训练结果\\KL_LR_CTDE_PPO_seed42"
+      },
+      "variant_name": "KL_LR_CTDE_PPO",
+      "seed": 42,
+      "output_dir": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260722_160901\\训练结果\\KL_LR_CTDE_PPO_seed42",
+      "final_stage": 2,
+      "best_model_paths": {
+        "best": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260722_160901\\训练结果\\KL_LR_CTDE_PPO_seed42\\models\\ppo_best_train.pth",
+        "best_train": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260722_160901\\训练结果\\KL_LR_CTDE_PPO_seed42\\models\\ppo_best_train.pth",
+        "best_val": null,
+        "stage3_source": null,
+        "best_stage4": null,
+        "final": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260722_160901\\训练结果\\KL_LR_CTDE_PPO_seed42\\models\\ppo_final.pth",
+        "stage1_gate_candidate": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260722_160901\\训练结果\\KL_LR_CTDE_PPO_seed42\\models\\ppo_stage1_gate_candidate.pth",
+        "stage1_best": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260722_160901\\训练结果\\KL_LR_CTDE_PPO_seed42\\models\\ppo_stage1_best.pth"
+      },
+      "quality_metrics_path": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260722_160901\\训练结果\\KL_LR_CTDE_PPO_seed42\\logs\\model_quality_metrics.json",
+      "quality_metrics": {
+        "settings": {
+          "score_threshold": 0.55,
+          "window": 50,
+          "tail_fraction": 0.2,
+          "target_kl": 0.0065
+        },
+        "convergence_efficiency": {
+          "auc_task_score_by_steps": 0.2947921350215996,
+          "steps_to_threshold": 25815.0,
+          "updates_to_threshold": 5.0
+        },
+        "reward_stability": {
+          "reward_std_tail": 29.997148016925628,
+          "task_score_std_tail": 0.34635676410962096,
+          "mean_performance_drop": 0.0037667110511778157,
+          "max_performance_drop": 0.01984666666666679
+        },
+        "kl_stability": {
+          "mean_kl": 0.005485918277399176,
+          "kl_std": 0.0009084812612986189,
+          "mean_abs_kl_error": 0.0012097231567392988,
+          "kl_overshoot_rate": 0.0,
+          "clip_fraction_mean": 0.05451621611247815,
+          "clip_fraction_std": 0.01392026194003165,
+          "actor_lr_mean": 0.0001880777777777778,
+          "actor_lr_min": 0.00018,
+          "actor_lr_max": 0.0002,
+          "num_ppo_updates_measured": 18
+        }
+      },
+      "generalization_eval_path": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260722_160901\\训练结果\\KL_LR_CTDE_PPO_seed42\\logs\\best_val_generalization_eval.json",
+      "generalization_eval": {},
+      "eval_summary_path": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260722_160901\\训练结果\\KL_LR_CTDE_PPO_seed42\\logs\\eval_summary.json",
+      "eval_summary": {
+        "best_val": {
+          "available": false,
+          "model_path": null,
+          "splits": {}
+        },
+        "best_stage4": {
+          "available": false,
+          "model_path": null,
+          "splits": {}
+        }
+      },
+      "full_horizon_summary_path": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260722_160901\\训练结果\\KL_LR_CTDE_PPO_seed42\\logs\\full_horizon_summary.json",
+      "full_horizon_summary": {
+        "evaluation_mode": "full_horizon",
+        "selection_split": "validation",
+        "selection_metric": "mean_current_coverage_auc",
+        "selection_stage": 3,
+        "candidates": [],
+        "selected": null,
+        "splits": {}
+      },
+      "last_task_score": 0.9883333333333334,
+      "last_coverage": 1.0,
+      "ppo_updates": 18
+    }
+  },
+  "figure_paths": {
+    "seed42": {
+      "training_figures": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260722_160901\\figures\\seed42\\training_figures"
+    },
+    "summary_curves": {
+      "training_figures": "D:\\DestopMoren\\Desktop\\Pyproject\\Self-adaptive parameters\\environment_variables\\environment_variables\\outputs\\lr_comparison_20260722_160901\\figures\\summary_curves\\training_figures"
+    }
+  }
+}
