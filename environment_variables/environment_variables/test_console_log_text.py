@@ -13,7 +13,11 @@ class ConsoleLogTextTest(unittest.TestCase):
         manager = CurriculumManager()
         manager.substage_episodes["1"] = 200
         passing = {
+            "episodes": 20,
             "boundary_found_rate": 0.95,
+            "stage1_discovery_within_deadline_rate": 0.95,
+            "stage1_deadline_found_count": 19,
+            "stage1_tracking_success_count": 17,
             "zero_discovery_timeout_rate": 0.05,
             "stable_tracking_success_rate": 0.85,
             "median_first_boundary_step": 70,
@@ -27,8 +31,8 @@ class ConsoleLogTextTest(unittest.TestCase):
 
         text = output.getvalue()
         self.assertIn("验证课程", text)
-        self.assertIn("1 -> 2A", text)
-        self.assertIn("validation_passes=2/3", text)
+        self.assertIn("1 -> 2", text)
+        self.assertIn("pooled_validations=3/3", text)
         self.assertNotIn("Curriculum stage", text)
 
     def test_figure_runner_skips_missing_generalization_data(self):

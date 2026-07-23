@@ -46,16 +46,27 @@ class BoundaryRewardDesignTest(unittest.TestCase):
         env.boundary_points = [(0, 0)]
         env.drone_positions = [np.array([0, 0])]
         env.discovered_boundary = {(0, i) for i in range(8)}
+        env.stage1_discovered_within_deadline = True
         env.stage1_tracking_window = []
-        env.stage1_contact_boundary_cells = 4
         env.stage1_tracking_success = False
         env._check_boundary_in_vision = lambda pos: True
 
-        for _ in range(15):
+        env.step_count = env.first_boundary_step
+        env._update_contact_curriculum_state()
+        self.assertEqual(env.stage1_tracking_window, [])
+
+        for step in range(
+            env.first_boundary_step + 1,
+            env.first_boundary_step + env.STAGE1_TRACK_WINDOW + 1,
+        ):
+            env.step_count = step
             env._update_contact_curriculum_state()
 
         self.assertTrue(env.stage1_tracking_success)
-        self.assertEqual(len(env.stage1_tracking_window), 15)
+        self.assertEqual(
+            len(env.stage1_tracking_window),
+            env.STAGE1_TRACK_WINDOW,
+        )
 
     def test_boundary_coverage_reward_dominates_area_exploration_reward(self):
         env = object.__new__(FireSearchBaselineEnvironment)

@@ -7,6 +7,7 @@ import torch.nn as nn
 from ctde_ppo_baseline_train import (
     CTDE_PPO_Agent,
     CurriculumManager,
+    Stage4HorizonMixScheduler,
     Stage4StepMixScheduler,
 )
 from rl_environment_baseline import FireSearchBaselineEnvironment
@@ -97,16 +98,42 @@ class Stage4SchedulerTest(unittest.TestCase):
         self.assertEqual(scheduler.choose_mode(10), "rehearsal")
         self.assertAlmostEqual(scheduler.stats(10)["realized_post_target_ratio"], 0.20)
 
+    def test_horizon_scheduler_uses_agreed_step_mixes(self):
+        scheduler = Stage4HorizonMixScheduler()
+        self.assertEqual(
+            scheduler.stats()["target_step_mix"],
+            {"extra150": 0.50, "extra300": 0.30, "full": 0.20},
+        )
+        first = scheduler.choose_mode()
+        self.assertEqual(first, "extra150")
+        scheduler.record(first, 200, first_target_step=50)
+        self.assertIn(scheduler.choose_mode(), {"extra300", "full"})
+
+        scheduler.set_phase("late")
+        self.assertEqual(
+            scheduler.stats()["target_step_mix"],
+            {"extra300": 0.20, "full": 0.80},
+        )
+
 
 class Stage4ProgressionTest(unittest.TestCase):
-    def test_stage4_requires_two_of_three_protected_validation_passes(self):
+    def test_stage4_final_gate_requires_two_of_three_full_horizon_passes(self):
         manager = CurriculumManager(stage3_final_target=0.60)
         manager.current_stage = 3
         manager._s3_target_idx = len(manager.STAGE3_TARGET_LADDER) - 1
         manager._stage3_ready_for_stage4 = True
+        manager._last_pooled_summary = {
+            "success_rate": 0.55,
+            "boundary_found_rate": 0.80,
+            "zero_discovery_timeout_rate": 0.20,
+        }
         self.assertTrue(
             manager.can_enter_stage4(
-                {"success_rate": 0.65, "zero_coverage_timeout_rate": 0.10}
+                {
+                    "success_rate": 0.55,
+                    "boundary_found_rate": 0.80,
+                    "zero_discovery_timeout_rate": 0.20,
+                }
             )
         )
 
@@ -118,19 +145,23 @@ class Stage4ProgressionTest(unittest.TestCase):
             "mean_hold_ratio_by_threshold": {"0.60": 0.46},
         }
         manager.enter_stage4(baseline)
-        manager.substage_episodes["4A"] = manager.STAGE4_MIN_EPISODES[0]
+        manager.stage_episodes[4] = manager.STAGE4_FINAL_GATE_MIN_EPISODES
+        manager.substage_episodes["4"] = manager.STAGE4_FINAL_GATE_MIN_EPISODES
         passing = {
-            "boundary_found_rate": 0.94,
-            "target_reach_rate": 0.62,
-            "mean_tail100_coverage": 0.58,
+            "boundary_found_rate": 0.85,
+            "zero_discovery_timeout_rate": 0.15,
+            "target_reach_rate": 0.55,
+            "mean_tail100_coverage": 0.55,
             "mean_current_coverage_auc": 0.45,
             "mean_hold_ratio_by_threshold": {"0.60": 0.47},
+            "controlled_refresh_opportunities": 30,
+            "controlled_refresh_recovery_rate": 0.60,
         }
 
         self.assertFalse(manager.update_stage4_validation(passing))
         self.assertFalse(manager.update_stage4_validation(passing))
-        self.assertTrue(manager.update_stage4_validation(passing))
-        self.assertEqual(manager.stage4_level, "4B")
+        self.assertFalse(manager.update_stage4_validation(passing))
+        self.assertTrue(manager._stage4_stop_requested)
 
     def test_three_guard_failures_request_recovery_without_global_stop(self):
         manager = CurriculumManager(stage3_final_target=0.60)
@@ -143,9 +174,9 @@ class Stage4ProgressionTest(unittest.TestCase):
                 "mean_hold_ratio_by_threshold": {"0.60": 0.40},
             }
         )
-        manager.substage_episodes["4A"] = manager.STAGE4_MIN_EPISODES[0]
         failed = {
             "boundary_found_rate": 0.80,
+            "zero_discovery_timeout_rate": 0.30,
             "target_reach_rate": 0.50,
         }
         for _ in range(3):

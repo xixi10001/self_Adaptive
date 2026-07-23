@@ -393,9 +393,12 @@ class FireSceneDataLoadingTest(unittest.TestCase):
 
         self.assertEqual(env.vision_radius, env.env_data.sensor_radius_cells)
         self.assertEqual(env.vision_radius, 15)
-        self.assertEqual(env.max_steps, env.env_data.max_steps)
-        self.assertEqual(env.max_steps, 800)
-        self.assertEqual(env.max_battery, 1600)
+        self.assertEqual(
+            env.max_steps,
+            min(env.env_data.max_steps, env.STAGE1_MAX_STEPS),
+        )
+        self.assertEqual(env.max_steps, 200)
+        self.assertEqual(env.max_battery, 400)
         self.assertNotIn("Scene loaded |", log_output)
         self.assertNotIn("scene_key=train_area001_scenario001", log_output)
 
@@ -414,16 +417,58 @@ class FireSceneDataLoadingTest(unittest.TestCase):
                 dataset_index=self.dataset_index,
             )
 
-    def test_stage2a_spawn_ratio_mix_keeps_validation_fully_far(self):
+    def test_stage2_spawn_mix_uses_distance_quantile_strata(self):
         env = object.__new__(baseline_env_module.FireSearchBaselineEnvironment)
-        env.curriculum_stage = 2
-        env.curriculum_substage = "2A"
+        env.set_stage2_spawn_mix((10.0, 25.0, 65.0))
 
-        env.stage2_far_spawn_ratio = 0.0
-        self.assertEqual(env._spawn_distance_profile(), (1.0, 2.0, "stage2a_rehearsal"))
+        self.assertEqual(env.stage2_spawn_mix, (0.10, 0.25, 0.65))
+        self.assertEqual(
+            env.STAGE2_SPAWN_QUANTILES,
+            {
+                "near": (0.20, 0.50),
+                "medium": (0.40, 0.75),
+                "far": (0.65, 1.00),
+            },
+        )
 
-        env.stage2_far_spawn_ratio = 1.0
-        self.assertEqual(env._spawn_distance_profile(), (1.5, 3.0, "stage2a"))
+    def test_stage1_horizon_and_tracking_contract_match_curriculum(self):
+        env = object.__new__(baseline_env_module.FireSearchBaselineEnvironment)
+        env.curriculum_stage = 1
+        env.use_metadata_uav_params = False
+        env.config_vision_radius = 16
+        env.config_max_steps = 600
+
+        env._apply_uav_params()
+
+        self.assertEqual(env.max_steps, 200)
+        self.assertEqual(env.STAGE1_DISCOVERY_DEADLINE, 150)
+        self.assertEqual(env.STAGE1_TRACK_WINDOW, 20)
+        self.assertEqual(env.STAGE1_TRACK_REQUIRED, 14)
+
+    def test_stage3_objective_uses_historical_unique_boundary_coverage(self):
+        env = object.__new__(baseline_env_module.FireSearchBaselineEnvironment)
+        env.coverage_objective = "historical_unique"
+        env.boundary_ever_mask = np.array([[True, True, True, True]])
+        env.confirmed_boundary_mask = np.array([[True, False, True, False]])
+
+        self.assertEqual(env._objective_coverage_rate(), 0.5)
+
+    def test_controlled_refresh_is_scheduled_with_recovery_horizon(self):
+        env = baseline_env_module.FireSearchBaselineEnvironment(
+            data_dir=str(DATA_DIR),
+            fixed_scene_key="train_area001_scenario001",
+            vision_radius=3,
+            max_steps=600,
+            init_area_percent=5.0,
+            curriculum_stage=3,
+            coverage_objective="fresh",
+            controlled_refresh_enabled=True,
+        )
+        env.reset()
+
+        self.assertGreaterEqual(env.controlled_refresh_step, 300)
+        self.assertLessEqual(env.controlled_refresh_step, 420)
+        self.assertGreaterEqual(600 - env.controlled_refresh_step, 150)
 
 
 if __name__ == "__main__":

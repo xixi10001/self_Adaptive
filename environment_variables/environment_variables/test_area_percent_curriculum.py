@@ -6,11 +6,26 @@ import numpy as np
 from ctde_ppo_baseline_train import (
     CurriculumManager,
     _build_experiment_metadata,
+    _new_validation_log,
     normalize_training_config,
 )
 
 
 FireEnvironmentData = importlib.import_module("\u4fe1\u606f\u8f6c\u6362").FireEnvironmentData
+
+
+class ValidationLogSchemaTest(unittest.TestCase):
+    def test_first_validation_can_record_stage2_curriculum_context(self):
+        validation_log = _new_validation_log()
+
+        validation_log["stage2_spawn_mix"].append([0.60, 0.30, 0.10])
+        validation_log["stage2_phase"].append("early")
+
+        self.assertEqual(
+            validation_log["stage2_spawn_mix"],
+            [[0.60, 0.30, 0.10]],
+        )
+        self.assertEqual(validation_log["stage2_phase"], ["early"])
 
 
 class AreaPercentInitializationTest(unittest.TestCase):
@@ -142,196 +157,139 @@ class InitAreaPercentConfigTest(unittest.TestCase):
 
 
 class CurriculumScheduleTest(unittest.TestCase):
-    def test_stage1_gate_uses_unique_cells_conditioned_on_boundary_found(self):
+    def stage1_summary(self, passing=True):
+        return {
+            "episodes": 30,
+            "boundary_found_rate": 0.90 if passing else 0.70,
+            "stage1_discovery_within_deadline_rate": 0.90 if passing else 0.70,
+            "stage1_deadline_found_count": 27 if passing else 21,
+            "stage1_tracking_success_count": 21 if passing else 10,
+            "stage1_tracking_given_found_rate": 21 / 27 if passing else 10 / 21,
+            "zero_discovery_timeout_rate": 0.10 if passing else 0.30,
+            "median_unique_boundary_cells_given_found": 10.0 if passing else 5.0,
+        }
+
+    def stage2_summary(self, passing=True):
+        return {
+            "episodes": 30,
+            "boundary_found_rate": 0.80 if passing else 0.70,
+            "boundary_found_count": 24 if passing else 21,
+            "stage2_found_count": 24 if passing else 21,
+            "stage2_contact_success_count": 18 if passing else 12,
+            "stage2_contact_given_found_rate": 0.75 if passing else 12 / 21,
+            "zero_discovery_timeout_rate": 0.20 if passing else 0.30,
+            "median_first_boundary_step": 200.0,
+            "median_first_boundary_step_far": 230.0 if passing else 260.0,
+        }
+
+    def stage3_summary(self, rate):
+        return {
+            "episodes": 30,
+            "boundary_found_rate": 0.85,
+            "zero_discovery_timeout_rate": 0.15,
+            "success_rate": rate,
+            "mean_team_overlap_ratio": 0.15,
+            "mean_invalid_action_count": 0.0,
+        }
+
+    def test_stage1_gate_uses_conditional_tracking_and_deadline(self):
         manager = CurriculumManager()
-        gate = manager.validation_gate_status(
-            {
-                "boundary_found_rate": 0.95,
-                "zero_discovery_timeout_rate": 0.05,
-                "stable_tracking_success_rate": 0.80,
-                "median_first_boundary_step": 70,
-                "median_unique_boundary_cells": 0.0,
-                "median_unique_boundary_cells_given_found": 12.0,
-            }
-        )
+        gate = manager.validation_gate_status(self.stage1_summary())
 
+        self.assertTrue(gate["boundary_found_by_150"]["passed"])
+        self.assertTrue(gate["tracking_given_found"]["passed"])
         self.assertTrue(gate["median_unique_boundary_cells"]["passed"])
-        self.assertEqual(gate["median_unique_boundary_cells"]["actual"], 12.0)
 
-    def test_curriculum_hard_budgets_fit_3100_episode_run(self):
-        total = (
-            CurriculumManager.STAGE1_MAX_EPISODES
-            + sum(CurriculumManager.STAGE2_MAX_EPISODES)
-            + sum(CurriculumManager.STAGE3_TARGET_MAX_EPS)
-            + sum(CurriculumManager.STAGE4_MAX_EPISODES)
-        )
-        self.assertEqual(total, 3100)
+    def test_curriculum_soft_and_hard_paths_fit_3100_episode_run(self):
+        normal = 300 + 700 + 1100 + 800
+        hard = 400 + 1000 + 900 + 800
+
+        self.assertEqual(normal, 2900)
+        self.assertEqual(hard, CurriculumManager.GLOBAL_EPISODE_BUDGET)
         self.assertEqual(CurriculumManager.STAGE4_MIN_REMAINING_EPISODES, 800)
 
-    def test_stage1_budget_exhaustion_fails_instead_of_starving_later_stages(self):
-        manager = CurriculumManager(stage3_final_target=0.60)
+    def test_stage1_budget_exhaustion_fails_without_starving_later_stages(self):
+        manager = CurriculumManager()
+        manager.stage_episodes[1] = manager.STAGE1_MAX_EPISODES
         manager.substage_episodes["1"] = manager.STAGE1_MAX_EPISODES
-        failed = {
-            "boundary_found_rate": 0.60,
-            "zero_discovery_timeout_rate": 0.40,
-            "stable_tracking_success_rate": 0.30,
-            "median_first_boundary_step": 200,
-            "median_unique_boundary_cells": 4,
-        }
 
-        manager.update_validation(failed)
+        manager.update_validation(self.stage1_summary(False))
 
         self.assertTrue(manager.curriculum_failed)
-        self.assertIn("exhausted", manager.curriculum_failure_reason)
+        self.assertIn("hard budget", manager.curriculum_failure_reason)
 
-    def test_passing_validations_reach_stage4_entry_state(self):
-        manager = CurriculumManager(stage3_final_target=0.60)
-        summary = {
-            "boundary_found_rate": 0.95,
-            "zero_discovery_timeout_rate": 0.05,
-            "zero_coverage_timeout_rate": 0.05,
-            "success_rate": 0.80,
-            "stable_tracking_success_rate": 0.80,
-            "median_first_boundary_step": 70,
-            "median_unique_boundary_cells": 12,
-        }
-
+    def test_three_pooled_stage1_validations_enter_single_stage2(self):
+        manager = CurriculumManager()
+        manager.stage_episodes[1] = manager.STAGE1_MIN_EPISODES
         manager.substage_episodes["1"] = manager.STAGE1_MIN_EPISODES
+
+        self.assertFalse(manager.update_validation(self.stage1_summary()))
+        self.assertFalse(manager.update_validation(self.stage1_summary()))
+        self.assertTrue(manager.update_validation(self.stage1_summary()))
+        self.assertEqual(manager.current_stage, 2)
+        self.assertEqual(manager.current_substage, "2")
+
+    def test_stage2_spawn_mix_changes_smoothly_by_episode(self):
+        manager = CurriculumManager()
+        manager.current_stage = 2
+
+        self.assertEqual(manager.stage2_spawn_mix, (0.60, 0.30, 0.10))
+        manager.stage_episodes[2] = 300
+        self.assertEqual(manager.stage2_spawn_mix, (0.25, 0.50, 0.25))
+        manager.stage_episodes[2] = 600
+        self.assertEqual(manager.stage2_spawn_mix, (0.10, 0.25, 0.65))
+
+    def test_stage2_does_not_stop_at_soft_800_but_fails_at_hard_1000(self):
+        manager = CurriculumManager()
+        manager.current_stage = 2
+        manager.stage_episodes[2] = manager.STAGE2_SOFT_EPISODES
+        manager.substage_episodes["2"] = manager.STAGE2_SOFT_EPISODES
+        failed = self.stage2_summary(False)
         for _ in range(3):
-            manager.update_validation(summary)
-        self.assertEqual(manager.current_substage, "2A")
+            manager.update_validation(failed)
+        self.assertFalse(manager.curriculum_failed)
 
-        for name, minimum in zip(manager.STAGE2_SUBSTAGES, manager.STAGE2_MIN_EPISODES):
-            manager.substage_episodes[name] = minimum
-            for _ in range(3):
-                manager.update_validation(summary)
-        self.assertEqual(manager.current_substage, "3A")
+        manager.stage_episodes[2] = manager.STAGE2_MAX_EPISODES
+        manager.substage_episodes["2"] = manager.STAGE2_MAX_EPISODES
+        manager.update_validation(failed)
+        self.assertTrue(manager.curriculum_failed)
 
-        for name, minimum in zip(manager.STAGE3_SUBSTAGES, manager.STAGE3_TARGET_MIN_EPS):
-            manager.substage_episodes[name] = minimum
+    def test_stage2_pass_enters_stage3_and_preserves_stage4_reserve(self):
+        manager = CurriculumManager()
+        manager.current_stage = 2
+        manager.stage_episodes[1] = 400
+        manager.stage_episodes[2] = 1000
+        manager.substage_episodes["2"] = manager.STAGE2_MIN_EPISODES
+
+        for _ in range(2):
+            self.assertFalse(manager.update_validation(self.stage2_summary()))
+        self.assertTrue(manager.update_validation(self.stage2_summary()))
+
+        self.assertEqual(manager.current_stage, 3)
+        self.assertEqual(sum(manager._stage3_budget_caps), 900)
+        self.assertEqual(manager._stage3_budget_caps, [150, 200, 250, 300])
+
+    def test_stage3_target_ladder_uses_decreasing_reach_rates(self):
+        manager = CurriculumManager()
+        manager.current_stage = 3
+        manager.substage_episodes["3A"] = manager.STAGE3_TARGET_MIN_EPS[0]
+
+        for _ in range(2):
+            self.assertFalse(manager.update_validation(self.stage3_summary(0.70)))
+        self.assertTrue(manager.update_validation(self.stage3_summary(0.70)))
+        self.assertEqual(manager.current_stage3_target, 0.35)
+
+    def test_passing_all_stage3_targets_reaches_stage4_entry_state(self):
+        manager = CurriculumManager()
+        manager.current_stage = 3
+        for index, name in enumerate(manager.STAGE3_SUBSTAGES):
+            manager.substage_episodes[name] = manager.STAGE3_TARGET_MIN_EPS[index]
+            rate = manager.STAGE3_TARGET_REACH_RATES[index]
             for _ in range(3):
-                manager.update_validation(summary)
+                manager.update_validation(self.stage3_summary(rate))
 
         self.assertTrue(manager._stage3_ready_for_stage4)
-        self.assertTrue(manager.can_enter_stage4(summary))
-
-    def test_unused_stage1_budget_transfers_to_stage2a(self):
-        manager = CurriculumManager(stage3_final_target=0.60)
-        manager.substage_episodes["1"] = manager.STAGE1_MIN_EPISODES
-        summary = {
-            "boundary_found_rate": 0.95,
-            "zero_discovery_timeout_rate": 0.05,
-            "success_rate": 0.80,
-            "stable_tracking_success_rate": 0.80,
-            "median_first_boundary_step": 70,
-            "median_unique_boundary_cells_given_found": 12,
-        }
-
-        for _ in range(3):
-            manager.update_validation(summary)
-
-        expected_slack = manager.STAGE1_MAX_EPISODES - manager.STAGE1_MIN_EPISODES
-        self.assertEqual(manager.current_substage, "2A")
-        self.assertEqual(manager._transferable_budget, expected_slack)
-        self.assertEqual(
-            manager.current_budget_cap,
-            manager.STAGE2_MAX_EPISODES[0] + expected_slack,
-        )
-
-    def test_stage2a_far_ratio_advances_only_on_capability_gate(self):
-        manager = CurriculumManager(stage3_final_target=0.60)
-        manager.current_stage = 2
-        manager.substage_episodes["2A"] = manager.STAGE2_MIN_EPISODES[0]
-        failed = {
-            "boundary_found_rate": 0.73,
-            "zero_discovery_timeout_rate": 0.27,
-            "success_rate": 0.73,
-            "median_first_boundary_step": 24,
-        }
-        passed = dict(
-            failed,
-            boundary_found_rate=0.85,
-            zero_discovery_timeout_rate=0.10,
-            success_rate=0.75,
-        )
-
-        manager.update_validation(failed)
-        self.assertEqual(manager.stage2_far_spawn_ratio, 0.50)
-        manager.update_validation(passed)
-        self.assertEqual(manager.stage2_far_spawn_ratio, 0.80)
-        manager.update_validation(passed)
-        self.assertEqual(manager.stage2_far_spawn_ratio, 1.00)
-
-    def test_stage2a_can_complete_ramp_within_base_budget(self):
-        manager = CurriculumManager(stage3_final_target=0.60)
-        manager.current_stage = 2
-        manager.substage_episodes["2A"] = manager.STAGE2_MAX_EPISODES[0]
-        passed = {
-            "boundary_found_rate": 0.90,
-            "zero_discovery_timeout_rate": 0.05,
-            "success_rate": 0.80,
-            "median_first_boundary_step": 24,
-        }
-
-        self.assertFalse(manager.update_validation(passed))
-        self.assertFalse(manager.update_validation(passed))
-        self.assertTrue(manager.update_validation(passed))
-        self.assertEqual(manager.current_substage, "2B")
-
-    def test_stage3_target_advances_only_after_two_of_three_validation_passes(self):
-        manager = CurriculumManager(stage3_final_target=0.60)
-        manager.current_stage = 3
-
-        self.assertEqual(manager.current_stage3_target, 0.20)
-        self.assertEqual(manager.stage3_near_prob, 0.0)
-        self.assertEqual(manager.current_substage, "3A")
-
-        for _ in range(150):
-            manager.update(success=True, coverage=0.20)
-
-        validation_summary = {
-            "boundary_found_rate": 0.90,
-            "zero_coverage_timeout_rate": 0.05,
-            "success_rate": 0.75,
-        }
-        self.assertFalse(manager.update_validation(validation_summary))
-        self.assertFalse(manager.update_validation(validation_summary))
-        self.assertTrue(manager.update_validation(validation_summary))
-        self.assertEqual(manager.current_stage3_target, 0.35)
-        self.assertEqual(manager.current_substage, "3B")
-
-    def test_stage3_target_does_not_advance_on_failed_validation(self):
-        manager = CurriculumManager(stage3_final_target=0.60)
-        manager.current_stage = 3
-
-        for _ in range(150):
-            manager.update(success=True, coverage=0.20)
-        failed = {
-            "boundary_found_rate": 0.90,
-            "zero_coverage_timeout_rate": 0.05,
-            "success_rate": 0.50,
-        }
-        for _ in range(3):
-            self.assertFalse(manager.update_validation(failed))
-
-        self.assertEqual(manager.current_stage3_target, 0.20)
-
-    def test_stage1_validation_enters_stage2a_without_forced_episode_advance(self):
-        manager = CurriculumManager(stage3_final_target=0.60)
-        for _ in range(200):
-            manager.update(success=True, coverage=0.05)
-        passing = {
-            "boundary_found_rate": 0.95,
-            "zero_coverage_timeout_rate": 0.05,
-            "stable_tracking_success_rate": 0.85,
-            "median_first_boundary_step": 70,
-            "median_unique_boundary_cells": 15,
-        }
-        for _ in range(2):
-            self.assertFalse(manager.update_validation(passing))
-        self.assertTrue(manager.update_validation(passing))
-        self.assertEqual(manager.current_stage, 2)
-        self.assertEqual(manager.current_substage, "2A")
+        self.assertTrue(manager.can_enter_stage4(self.stage3_summary(0.55)))
 
 
 if __name__ == "__main__":

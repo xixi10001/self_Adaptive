@@ -1,0 +1,664 @@
+{
+  "episodes": [
+    50,
+    100,
+    150,
+    200,
+    250,
+    300,
+    350,
+    400
+  ],
+  "stage": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "substage": [
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+  ],
+  "stage2_far_spawn_ratio": [
+    0.1,
+    0.1,
+    0.1,
+    0.1,
+    0.1,
+    0.1,
+    0.1,
+    0.1
+  ],
+  "stage2_spawn_mix": [
+    [
+      0.6,
+      0.3,
+      0.1
+    ],
+    [
+      0.6,
+      0.3,
+      0.1
+    ],
+    [
+      0.6,
+      0.3,
+      0.1
+    ],
+    [
+      0.6,
+      0.3,
+      0.1
+    ],
+    [
+      0.6,
+      0.3,
+      0.1
+    ],
+    [
+      0.6,
+      0.3,
+      0.1
+    ],
+    [
+      0.6,
+      0.3,
+      0.1
+    ],
+    [
+      0.6,
+      0.3,
+      0.1
+    ]
+  ],
+  "stage2_phase": [
+    "early",
+    "early",
+    "early",
+    "early",
+    "early",
+    "early",
+    "early",
+    "early"
+  ],
+  "train_task_score": [
+    0.2997843149088714,
+    0.31591145503033147,
+    0.341928066591518,
+    0.4130729680405301,
+    0.47269604172776236,
+    0.4452453642628491,
+    0.41039815322196493,
+    0.39560131521012715
+  ],
+  "val_mean_task_score": [
+    0.37150283638488446,
+    0.4618329685027454,
+    0.429879957905502,
+    0.4288399903383191,
+    0.505389142956897,
+    0.42357878769052537,
+    0.49320679146210955,
+    0.5745118574967611
+  ],
+  "val_mean_coverage": [
+    0.30833900610310216,
+    0.42366593700549066,
+    0.3921599158110039,
+    0.3896799806766383,
+    0.45157828591379384,
+    0.3780242420477174,
+    0.4308802495908857,
+    0.49649038166018883
+  ],
+  "val_success_rate": [
+    0.5,
+    0.5333333333333333,
+    0.5,
+    0.5,
+    0.6,
+    0.5,
+    0.6,
+    0.7
+  ],
+  "val_mean_length": [
+    132.66666666666666,
+    110.0,
+    116.2,
+    116.0,
+    100.4,
+    115.43333333333334,
+    102.23333333333333,
+    83.73333333333333
+  ],
+  "val_timeout_rate": [
+    0.5,
+    0.4666666666666667,
+    0.5,
+    0.5,
+    0.4,
+    0.5,
+    0.4,
+    0.3
+  ],
+  "val_zero_coverage_timeout_rate": [
+    0.36666666666666664,
+    0.43333333333333335,
+    0.43333333333333335,
+    0.4666666666666667,
+    0.3,
+    0.4666666666666667,
+    0.3333333333333333,
+    0.23333333333333334
+  ],
+  "val_zero_discovery_timeout_rate": [
+    0.36666666666666664,
+    0.43333333333333335,
+    0.43333333333333335,
+    0.4666666666666667,
+    0.3,
+    0.4666666666666667,
+    0.3333333333333333,
+    0.23333333333333334
+  ],
+  "val_boundary_found_rate": [
+    0.6333333333333333,
+    0.5666666666666667,
+    0.5666666666666667,
+    0.5333333333333333,
+    0.7,
+    0.5333333333333333,
+    0.6666666666666666,
+    0.7666666666666667
+  ],
+  "val_stable_tracking_success_rate": [
+    0.5,
+    0.5333333333333333,
+    0.5,
+    0.5,
+    0.6,
+    0.5,
+    0.6,
+    0.7
+  ],
+  "val_stage1_discovery_within_deadline_rate": [
+    0.6333333333333333,
+    0.5666666666666667,
+    0.5666666666666667,
+    0.5333333333333333,
+    0.7,
+    0.5333333333333333,
+    0.6666666666666666,
+    0.7666666666666667
+  ],
+  "val_stage1_tracking_given_found_rate": [
+    0.7894736842105263,
+    0.9411764705882353,
+    0.8823529411764706,
+    0.9375,
+    0.8571428571428571,
+    0.9375,
+    0.9,
+    0.9130434782608695
+  ],
+  "val_stage2_contact_given_found_rate": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "val_stage2_reacquire_success_rate": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "val_median_first_boundary_step": [
+    64.0,
+    12.0,
+    13.0,
+    12.5,
+    13.0,
+    12.5,
+    13.5,
+    10.0
+  ],
+  "val_median_first_boundary_step_far": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "val_median_unique_boundary_cells": [
+    7.0,
+    8.5,
+    8.5,
+    6.0,
+    13.5,
+    6.5,
+    16.0,
+    17.5
+  ],
+  "val_median_unique_boundary_cells_given_found": [
+    16.0,
+    28.0,
+    21.0,
+    22.5,
+    18.0,
+    17.5,
+    19.5,
+    18.0
+  ],
+  "val_mean_return_success": [
+    17.79234781197801,
+    22.634075796000673,
+    22.74877936939996,
+    22.329161994932,
+    22.0281358036232,
+    22.48954772949204,
+    22.274954130719358,
+    21.80457371411678
+  ],
+  "val_mean_return_found_failed": [
+    -7.567364137100379,
+    6.105940905457453,
+    8.73410349331371,
+    6.105940905457453,
+    5.123621916436831,
+    6.105940905457453,
+    4.574153986176405,
+    4.574153986176405
+  ],
+  "val_success_found_failed_return_margin": [
+    25.359711949078388,
+    16.52813489054322,
+    14.01467587608625,
+    16.22322108947455,
+    16.90451388718637,
+    16.383606824034587,
+    17.700800144542953,
+    17.230419727940376
+  ],
+  "val_negative_action_gain_count": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "curriculum_gate": [
+    {
+      "boundary_found_by_150": {
+        "actual": 0.6333333333333333,
+        "threshold": 0.85,
+        "operator": ">=",
+        "passed": false
+      },
+      "tracking_given_found": {
+        "actual": 0.7894736842105263,
+        "threshold": 0.7,
+        "operator": ">=",
+        "passed": true
+      },
+      "zero_discovery_timeout": {
+        "actual": 0.36666666666666664,
+        "threshold": 0.15,
+        "operator": "<=",
+        "passed": false
+      },
+      "median_unique_boundary_cells": {
+        "actual": 16.0,
+        "threshold": 8.0,
+        "operator": ">=",
+        "passed": true
+      }
+    },
+    {
+      "boundary_found_by_150": {
+        "actual": 0.6,
+        "threshold": 0.85,
+        "operator": ">=",
+        "passed": false
+      },
+      "tracking_given_found": {
+        "actual": 0.8611111111111112,
+        "threshold": 0.7,
+        "operator": ">=",
+        "passed": true
+      },
+      "zero_discovery_timeout": {
+        "actual": 0.4,
+        "threshold": 0.15,
+        "operator": "<=",
+        "passed": false
+      },
+      "median_unique_boundary_cells": {
+        "actual": 22.0,
+        "threshold": 8.0,
+        "operator": ">=",
+        "passed": true
+      }
+    },
+    {
+      "boundary_found_by_150": {
+        "actual": 0.5888888888888889,
+        "threshold": 0.85,
+        "operator": ">=",
+        "passed": false
+      },
+      "tracking_given_found": {
+        "actual": 0.8679245283018868,
+        "threshold": 0.7,
+        "operator": ">=",
+        "passed": true
+      },
+      "zero_discovery_timeout": {
+        "actual": 0.4111111111111111,
+        "threshold": 0.15,
+        "operator": "<=",
+        "passed": false
+      },
+      "median_unique_boundary_cells": {
+        "actual": 21.0,
+        "threshold": 8.0,
+        "operator": ">=",
+        "passed": true
+      }
+    },
+    {
+      "boundary_found_by_150": {
+        "actual": 0.5555555555555556,
+        "threshold": 0.85,
+        "operator": ">=",
+        "passed": false
+      },
+      "tracking_given_found": {
+        "actual": 0.92,
+        "threshold": 0.7,
+        "operator": ">=",
+        "passed": true
+      },
+      "zero_discovery_timeout": {
+        "actual": 0.4444444444444444,
+        "threshold": 0.15,
+        "operator": "<=",
+        "passed": false
+      },
+      "median_unique_boundary_cells": {
+        "actual": 22.5,
+        "threshold": 8.0,
+        "operator": ">=",
+        "passed": true
+      }
+    },
+    {
+      "boundary_found_by_150": {
+        "actual": 0.6,
+        "threshold": 0.85,
+        "operator": ">=",
+        "passed": false
+      },
+      "tracking_given_found": {
+        "actual": 0.8888888888888888,
+        "threshold": 0.7,
+        "operator": ">=",
+        "passed": true
+      },
+      "zero_discovery_timeout": {
+        "actual": 0.4,
+        "threshold": 0.15,
+        "operator": "<=",
+        "passed": false
+      },
+      "median_unique_boundary_cells": {
+        "actual": 21.0,
+        "threshold": 8.0,
+        "operator": ">=",
+        "passed": true
+      }
+    },
+    {
+      "boundary_found_by_150": {
+        "actual": 0.5888888888888889,
+        "threshold": 0.85,
+        "operator": ">=",
+        "passed": false
+      },
+      "tracking_given_found": {
+        "actual": 0.9056603773584906,
+        "threshold": 0.7,
+        "operator": ">=",
+        "passed": true
+      },
+      "zero_discovery_timeout": {
+        "actual": 0.4111111111111111,
+        "threshold": 0.15,
+        "operator": "<=",
+        "passed": false
+      },
+      "median_unique_boundary_cells": {
+        "actual": 18.0,
+        "threshold": 8.0,
+        "operator": ">=",
+        "passed": true
+      }
+    },
+    {
+      "boundary_found_by_150": {
+        "actual": 0.6333333333333333,
+        "threshold": 0.85,
+        "operator": ">=",
+        "passed": false
+      },
+      "tracking_given_found": {
+        "actual": 0.8947368421052632,
+        "threshold": 0.7,
+        "operator": ">=",
+        "passed": true
+      },
+      "zero_discovery_timeout": {
+        "actual": 0.36666666666666664,
+        "threshold": 0.15,
+        "operator": "<=",
+        "passed": false
+      },
+      "median_unique_boundary_cells": {
+        "actual": 18.0,
+        "threshold": 8.0,
+        "operator": ">=",
+        "passed": true
+      }
+    },
+    {
+      "boundary_found_by_150": {
+        "actual": 0.6555555555555556,
+        "threshold": 0.85,
+        "operator": ">=",
+        "passed": false
+      },
+      "tracking_given_found": {
+        "actual": 0.9152542372881356,
+        "threshold": 0.7,
+        "operator": ">=",
+        "passed": true
+      },
+      "zero_discovery_timeout": {
+        "actual": 0.34444444444444444,
+        "threshold": 0.15,
+        "operator": "<=",
+        "passed": false
+      },
+      "median_unique_boundary_cells": {
+        "actual": 18.0,
+        "threshold": 8.0,
+        "operator": ">=",
+        "passed": true
+      }
+    }
+  ],
+  "val_pre_boundary_revisit_ratio": [
+    0.6016807415302929,
+    0.20195143139108693,
+    0.21590098186837353,
+    0.2352025813692484,
+    0.235169385072374,
+    0.22185714285714328,
+    0.23047523805619924,
+    0.20682734086900792
+  ],
+  "val_team_overlap_ratio": [
+    0.07759164152284329,
+    0.1372667726942507,
+    0.1445199649830992,
+    0.17651359478870568,
+    0.17767936198090753,
+    0.13356005939279775,
+    0.16689135285287976,
+    0.11781458817291188
+  ],
+  "val_invalid_action_count": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "generalization_gap": [
+    -0.07171852147601304,
+    -0.14592151347241394,
+    -0.08795189131398401,
+    -0.01576702229778898,
+    -0.0326931012291346,
+    0.021666576572323737,
+    -0.08280863824014462,
+    -0.178910542286634
+  ],
+  "is_best_val": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "stage4_level": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "stage4_boundary_found_rate": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "stage4_target_reach_rate": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "stage4_auc": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "stage4_tail100": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "stage4_hold60": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "stage4_controlled_refresh_opportunities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "stage4_controlled_refresh_recovery_rate": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "stage4_controlled_refresh_mean_recovery_time": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ]
+}
