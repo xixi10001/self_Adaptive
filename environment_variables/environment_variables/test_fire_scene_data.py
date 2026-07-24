@@ -29,6 +29,36 @@ class FireSceneDataLoadingTest(unittest.TestCase):
     def setUp(self):
         self.dataset_index = fire_data_module.DatasetIndex(str(DATA_DIR))
 
+    def test_environment_rng_is_reproducible_and_isolated_from_global_numpy(self):
+        kwargs = {
+            "data_dir": str(DATA_DIR),
+            "fixed_scene_key": "train_area001_scenario001",
+            "max_steps": 5,
+            "init_area_percent": 5.0,
+            "random_seed": 73,
+        }
+        with contextlib.redirect_stdout(io.StringIO()):
+            env_a = baseline_env_module.FireSearchBaselineEnvironment(**kwargs)
+            env_a.reset()
+
+        np.random.seed(999)
+        np.random.random(10000)
+
+        with contextlib.redirect_stdout(io.StringIO()):
+            env_b = baseline_env_module.FireSearchBaselineEnvironment(**kwargs)
+            env_b.reset()
+
+        for position_a, position_b in zip(
+            env_a.drone_positions, env_b.drone_positions
+        ):
+            np.testing.assert_allclose(position_a, position_b)
+
+        state = env_a.get_rng_state()
+        expected = env_a._env_rng.randint(0, 2**31, size=16)
+        env_a.set_rng_state(state)
+        actual = env_a._env_rng.randint(0, 2**31, size=16)
+        np.testing.assert_array_equal(actual, expected)
+
     def test_scene_key_loads_complete_scene_data_from_index(self):
         scene = fire_data_module.FireSceneData(
             str(DATA_DIR),
@@ -397,8 +427,8 @@ class FireSceneDataLoadingTest(unittest.TestCase):
             env.max_steps,
             min(env.env_data.max_steps, env.STAGE1_MAX_STEPS),
         )
-        self.assertEqual(env.max_steps, 200)
-        self.assertEqual(env.max_battery, 400)
+        self.assertEqual(env.max_steps, 300)
+        self.assertEqual(env.max_battery, 600)
         self.assertNotIn("Scene loaded |", log_output)
         self.assertNotIn("scene_key=train_area001_scenario001", log_output)
 
@@ -440,7 +470,7 @@ class FireSceneDataLoadingTest(unittest.TestCase):
 
         env._apply_uav_params()
 
-        self.assertEqual(env.max_steps, 200)
+        self.assertEqual(env.max_steps, 300)
         self.assertEqual(env.STAGE1_DISCOVERY_DEADLINE, 150)
         self.assertEqual(env.STAGE1_TRACK_WINDOW, 20)
         self.assertEqual(env.STAGE1_TRACK_REQUIRED, 14)

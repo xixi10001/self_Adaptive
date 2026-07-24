@@ -28,6 +28,19 @@ def _coordinator_env():
     env.communication_radius = 4.0
     env.drone_batteries = [100.0, 100.0]
     env.max_battery = 100.0
+    env.search_direction_mode = "octants"
+    env.search_target_overlap_weight = 1.0
+    env.search_target_stickiness_weight = 0.10
+    env.search_target_min_novelty = 0.05
+    env.search_target_refresh_steps = 40
+    env.search_sector_switch_steps_first = 40
+    env.search_sector_switch_steps = 80
+    env.search_sector_cooldown_steps = 80
+    env.search_min_pair_angle_deg = 90.0
+    env.search_heat_pair_angle_deg = 45.0
+    env.search_min_target_distance_factor = 2.0
+    env.search_fallback_distance_factor = 1.5
+    env.search_tie_tolerance = 1e-6
 
     def circular_window(y, x):
         y0, y1 = max(0, y - 2), min(8, y + 3)
@@ -98,11 +111,53 @@ class MessageTtlTest(unittest.TestCase):
         coordinator._refresh_joint_mask()
         self.assertEqual(int(coordinator.joint_role_mask[track_track]), 0)
 
-    def test_equal_search_scores_use_agent_index_only_as_tie_breaker(self):
-        coordinator = CooperativeTaskCoordinator(_coordinator_env(), 4, 6, 8, 10, 2)
-        first = coordinator._candidate(0, coordinator.SEARCH, 0)
-        second = coordinator._candidate(1, coordinator.SEARCH, 0)
-        self.assertFalse(np.allclose(first[1:3], second[1:3]))
+    def test_search_directions_are_eight_equal_length_octants(self):
+        coordinator = CooperativeTaskCoordinator(
+            _coordinator_env(), 4, 6, 8, 10, 2, random_seed=7
+        )
+        directions, sectors = coordinator._search_directions()
+
+        self.assertEqual(directions.shape, (8, 2))
+        np.testing.assert_array_equal(sectors, np.arange(8))
+        np.testing.assert_allclose(
+            np.linalg.norm(directions, axis=1),
+            np.ones(8),
+            atol=1e-6,
+        )
+
+    def test_equal_search_scores_use_reproducible_private_rng(self):
+        coordinator_a = CooperativeTaskCoordinator(
+            _coordinator_env(), 4, 6, 8, 10, 2, random_seed=17
+        )
+        coordinator_b = CooperativeTaskCoordinator(
+            _coordinator_env(), 4, 6, 8, 10, 2, random_seed=17
+        )
+
+        sequence_a = [
+            coordinator_a._random_best_index([1.0] * 8) for _ in range(24)
+        ]
+        np.random.seed(999)
+        np.random.random(10000)
+        sequence_b = [
+            coordinator_b._random_best_index([1.0] * 8) for _ in range(24)
+        ]
+
+        self.assertEqual(sequence_a, sequence_b)
+        self.assertGreater(len(set(sequence_a)), 1)
+
+    def test_coordinator_rng_state_round_trip_replays_choices(self):
+        coordinator = CooperativeTaskCoordinator(
+            _coordinator_env(), 4, 6, 8, 10, 2, random_seed=23
+        )
+        state = coordinator.get_rng_state()
+        expected = [
+            coordinator._random_best_index([1.0] * 8) for _ in range(12)
+        ]
+        coordinator.set_rng_state(state)
+        actual = [
+            coordinator._random_best_index([1.0] * 8) for _ in range(12)
+        ]
+        self.assertEqual(actual, expected)
 
     def test_connected_search_targets_are_jointly_separated(self):
         env = _coordinator_env()
@@ -127,6 +182,69 @@ class MessageTtlTest(unittest.TestCase):
         for expected, actual in zip(first, coordinator.search_targets):
             np.testing.assert_allclose(actual, expected)
 
+    def test_forced_sector_switch_uses_40_then_80_step_schedule(self):
+        env = _coordinator_env()
+        coordinator = CooperativeTaskCoordinator(
+            env, 4, 6, 8, 10, 2, random_seed=31
+        )
+        coordinator.refresh_candidates(0)
+        initial_sectors = list(coordinator.search_target_sectors)
+
+        coordinator.refresh_candidates(39)
+        self.assertEqual(coordinator.forced_sector_switch_counts, [0, 0])
+
+        coordinator.refresh_candidates(40)
+        self.assertEqual(coordinator.forced_sector_switch_counts, [1, 1])
+        for drone_idx, old_sector in enumerate(initial_sectors):
+            self.assertNotEqual(
+                coordinator.search_target_sectors[drone_idx], old_sector
+            )
+            self.assertGreater(
+                int(coordinator.sector_cooldown_until[drone_idx][old_sector]),
+                40,
+            )
+            self.assertEqual(coordinator.search_target_steps[drone_idx], 40)
+
+        coordinator.refresh_candidates(119)
+        self.assertEqual(coordinator.forced_sector_switch_counts, [1, 1])
+        coordinator.refresh_candidates(120)
+        self.assertEqual(coordinator.forced_sector_switch_counts, [2, 2])
+
+    def test_visible_heat_relaxes_connected_pair_angle_to_45_degrees(self):
+        env = _coordinator_env()
+        env.communication_available = [True, True]
+        coordinator = CooperativeTaskCoordinator(
+            env, 4, 6, 8, 10, 2, random_seed=37
+        )
+        candidate = np.array([1.0, 0.0, 0.0, 1.0, 0.0], dtype=np.float32)
+        options = [
+            [(np.array([0.0, 3.0], dtype=np.float32), candidate, 1)],
+            [(np.array([0.0, 7.0], dtype=np.float32), candidate, 2)],
+        ]
+        angle, distance = coordinator._pair_angle_distance(
+            options[0][0][0], options[1][0][0]
+        )
+        self.assertGreaterEqual(angle, 45.0)
+        self.assertLess(angle, 90.0)
+        self.assertGreaterEqual(distance, 2.0 * env.vision_radius)
+
+        coordinator.observe_heat_signal(0, True, 5)
+        selected = coordinator._select_connected_search_pair(options, 5)
+
+        self.assertEqual(len(selected), 2)
+        self.assertEqual(coordinator.heat_separation_relaxation_count, 1)
+        self.assertEqual(coordinator.edge_separation_fallback_count, 0)
+        self.assertEqual(coordinator.connected_separation_violation_count, 0)
+
+    def test_observed_boundary_disables_search_sector_timer(self):
+        coordinator = CooperativeTaskCoordinator(
+            _coordinator_env(), 4, 6, 8, 10, 2, random_seed=41
+        )
+        coordinator.refresh_candidates(0)
+        coordinator.observe_boundary(0, [(1, 1)], 20)
+        coordinator.refresh_candidates(120)
+        self.assertEqual(coordinator.forced_sector_switch_counts[0], 0)
+
     def test_search_candidates_do_not_depend_on_hidden_fire_geometry(self):
         env_a = _coordinator_env()
         env_b = _coordinator_env()
@@ -137,13 +255,17 @@ class MessageTtlTest(unittest.TestCase):
         coordinator_a = CooperativeTaskCoordinator(env_a, 4, 6, 8, 10, 2)
         coordinator_b = CooperativeTaskCoordinator(env_b, 4, 6, 8, 10, 2)
 
-        coordinator_a.refresh_candidates(0)
-        coordinator_b.refresh_candidates(0)
-
-        np.testing.assert_allclose(
-            coordinator_a.candidates[:, coordinator_a.SEARCH],
-            coordinator_b.candidates[:, coordinator_b.SEARCH],
-        )
+        for step in [0, 40, 120]:
+            coordinator_a.refresh_candidates(step)
+            coordinator_b.refresh_candidates(step)
+            np.testing.assert_allclose(
+                coordinator_a.candidates[:, coordinator_a.SEARCH],
+                coordinator_b.candidates[:, coordinator_b.SEARCH],
+            )
+            self.assertEqual(
+                coordinator_a.search_target_sectors,
+                coordinator_b.search_target_sectors,
+            )
 
     def test_disconnected_local_event_locks_unaffected_peer_role(self):
         env = _coordinator_env()
@@ -239,6 +361,11 @@ class PersistentCoverageTest(unittest.TestCase):
         self.assertTrue(config["communication_enabled"])
         self.assertTrue(config["action_mask_enabled"])
         self.assertTrue(config["mask_thermal_below_signal"])
+        self.assertEqual(config["search_direction_mode"], "octants")
+        self.assertEqual(config["search_sector_switch_steps_first"], 40)
+        self.assertEqual(config["search_sector_switch_steps"], 80)
+        self.assertEqual(config["search_min_pair_angle_deg"], 90.0)
+        self.assertEqual(config["search_heat_pair_angle_deg"], 45.0)
 
 
 if __name__ == "__main__":

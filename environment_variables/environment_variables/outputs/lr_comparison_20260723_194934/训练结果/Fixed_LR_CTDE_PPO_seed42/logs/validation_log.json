@@ -1,0 +1,664 @@
+{
+  "episodes": [
+    50,
+    100,
+    150,
+    200,
+    250,
+    300,
+    350,
+    400
+  ],
+  "stage": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "substage": [
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+  ],
+  "stage2_far_spawn_ratio": [
+    0.1,
+    0.1,
+    0.1,
+    0.1,
+    0.1,
+    0.1,
+    0.1,
+    0.1
+  ],
+  "stage2_spawn_mix": [
+    [
+      0.6,
+      0.3,
+      0.1
+    ],
+    [
+      0.6,
+      0.3,
+      0.1
+    ],
+    [
+      0.6,
+      0.3,
+      0.1
+    ],
+    [
+      0.6,
+      0.3,
+      0.1
+    ],
+    [
+      0.6,
+      0.3,
+      0.1
+    ],
+    [
+      0.6,
+      0.3,
+      0.1
+    ],
+    [
+      0.6,
+      0.3,
+      0.1
+    ],
+    [
+      0.6,
+      0.3,
+      0.1
+    ]
+  ],
+  "stage2_phase": [
+    "early",
+    "early",
+    "early",
+    "early",
+    "early",
+    "early",
+    "early",
+    "early"
+  ],
+  "train_task_score": [
+    0.32185055856817363,
+    0.3494691093412371,
+    0.38318788369092543,
+    0.44272123513842254,
+    0.45438490419905053,
+    0.47105555664029874,
+    0.5078453161113368,
+    0.5106509851772322
+  ],
+  "val_mean_task_score": [
+    0.5905489157314114,
+    0.5615503244931616,
+    0.5447047672897445,
+    0.5191337282101258,
+    0.5261618272690954,
+    0.5308547304726644,
+    0.513752954635917,
+    0.46721703826988586
+  ],
+  "val_mean_coverage": [
+    0.4834978314628228,
+    0.45678953787521187,
+    0.45598731235726675,
+    0.43622301197580704,
+    0.45027921009374633,
+    0.45770946094532877,
+    0.42550590927183396,
+    0.39221185431754946
+  ],
+  "val_success_rate": [
+    0.7333333333333333,
+    0.7,
+    0.6666666666666666,
+    0.6333333333333333,
+    0.6333333333333333,
+    0.6333333333333333,
+    0.6333333333333333,
+    0.5666666666666667
+  ],
+  "val_mean_length": [
+    106.8,
+    115.26666666666667,
+    124.93333333333334,
+    133.46666666666667,
+    133.46666666666667,
+    132.0,
+    133.5,
+    148.33333333333334
+  ],
+  "val_timeout_rate": [
+    0.26666666666666666,
+    0.3,
+    0.3333333333333333,
+    0.36666666666666664,
+    0.36666666666666664,
+    0.36666666666666664,
+    0.36666666666666664,
+    0.43333333333333335
+  ],
+  "val_zero_coverage_timeout_rate": [
+    0.16666666666666666,
+    0.2,
+    0.26666666666666666,
+    0.26666666666666666,
+    0.26666666666666666,
+    0.3,
+    0.3,
+    0.4
+  ],
+  "val_zero_discovery_timeout_rate": [
+    0.16666666666666666,
+    0.16666666666666666,
+    0.26666666666666666,
+    0.26666666666666666,
+    0.26666666666666666,
+    0.3,
+    0.3,
+    0.4
+  ],
+  "val_boundary_found_rate": [
+    0.8333333333333334,
+    0.8333333333333334,
+    0.7333333333333333,
+    0.7333333333333333,
+    0.7333333333333333,
+    0.7,
+    0.7,
+    0.6
+  ],
+  "val_stable_tracking_success_rate": [
+    0.7333333333333333,
+    0.7,
+    0.6666666666666666,
+    0.6333333333333333,
+    0.6333333333333333,
+    0.6333333333333333,
+    0.6333333333333333,
+    0.5666666666666667
+  ],
+  "val_stage1_discovery_within_deadline_rate": [
+    0.8333333333333334,
+    0.8333333333333334,
+    0.7333333333333333,
+    0.7333333333333333,
+    0.7333333333333333,
+    0.7,
+    0.7,
+    0.6
+  ],
+  "val_stage1_tracking_given_found_rate": [
+    0.88,
+    0.84,
+    0.9090909090909091,
+    0.8636363636363636,
+    0.8636363636363636,
+    0.9047619047619048,
+    0.9047619047619048,
+    0.9444444444444444
+  ],
+  "val_stage2_contact_given_found_rate": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "val_stage2_reacquire_success_rate": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "val_median_first_boundary_step": [
+    11.0,
+    13.0,
+    12.0,
+    12.0,
+    12.0,
+    11.0,
+    14.0,
+    12.0
+  ],
+  "val_median_first_boundary_step_far": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "val_median_unique_boundary_cells": [
+    17.0,
+    15.0,
+    15.5,
+    14.0,
+    15.0,
+    15.0,
+    14.0,
+    11.0
+  ],
+  "val_median_unique_boundary_cells_given_found": [
+    18.0,
+    16.0,
+    18.0,
+    18.0,
+    18.0,
+    18.0,
+    18.0,
+    17.0
+  ],
+  "val_mean_return_success": [
+    21.590835487639126,
+    21.319854721422615,
+    21.887429312955064,
+    21.894358783048553,
+    22.143478486873896,
+    22.039664974107,
+    21.50930523823302,
+    21.793976594734605
+  ],
+  "val_mean_return_found_failed": [
+    4.724883994043458,
+    4.718412007514601,
+    3.1177316547990976,
+    5.788188278553452,
+    5.945717212270385,
+    6.730600060175198,
+    6.730600060175198,
+    5.329101526062145
+  ],
+  "val_success_found_failed_return_margin": [
+    16.865951493595666,
+    16.601442713908014,
+    18.769697658155966,
+    16.1061705044951,
+    16.19776127460351,
+    15.309064913931802,
+    14.77870517805782,
+    16.464875068672463
+  ],
+  "val_negative_action_gain_count": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "curriculum_gate": [
+    {
+      "boundary_found_by_150": {
+        "actual": 0.8333333333333334,
+        "threshold": 0.85,
+        "operator": ">=",
+        "passed": false
+      },
+      "tracking_given_found": {
+        "actual": 0.88,
+        "threshold": 0.7,
+        "operator": ">=",
+        "passed": true
+      },
+      "zero_discovery_timeout": {
+        "actual": 0.16666666666666666,
+        "threshold": 0.15,
+        "operator": "<=",
+        "passed": false
+      },
+      "median_unique_boundary_cells": {
+        "actual": 18.0,
+        "threshold": 8.0,
+        "operator": ">=",
+        "passed": true
+      }
+    },
+    {
+      "boundary_found_by_150": {
+        "actual": 0.8333333333333334,
+        "threshold": 0.85,
+        "operator": ">=",
+        "passed": false
+      },
+      "tracking_given_found": {
+        "actual": 0.86,
+        "threshold": 0.7,
+        "operator": ">=",
+        "passed": true
+      },
+      "zero_discovery_timeout": {
+        "actual": 0.16666666666666666,
+        "threshold": 0.15,
+        "operator": "<=",
+        "passed": false
+      },
+      "median_unique_boundary_cells": {
+        "actual": 17.0,
+        "threshold": 8.0,
+        "operator": ">=",
+        "passed": true
+      }
+    },
+    {
+      "boundary_found_by_150": {
+        "actual": 0.8,
+        "threshold": 0.85,
+        "operator": ">=",
+        "passed": false
+      },
+      "tracking_given_found": {
+        "actual": 0.875,
+        "threshold": 0.7,
+        "operator": ">=",
+        "passed": true
+      },
+      "zero_discovery_timeout": {
+        "actual": 0.2,
+        "threshold": 0.15,
+        "operator": "<=",
+        "passed": false
+      },
+      "median_unique_boundary_cells": {
+        "actual": 18.0,
+        "threshold": 8.0,
+        "operator": ">=",
+        "passed": true
+      }
+    },
+    {
+      "boundary_found_by_150": {
+        "actual": 0.7666666666666667,
+        "threshold": 0.85,
+        "operator": ">=",
+        "passed": false
+      },
+      "tracking_given_found": {
+        "actual": 0.8695652173913043,
+        "threshold": 0.7,
+        "operator": ">=",
+        "passed": true
+      },
+      "zero_discovery_timeout": {
+        "actual": 0.23333333333333334,
+        "threshold": 0.15,
+        "operator": "<=",
+        "passed": false
+      },
+      "median_unique_boundary_cells": {
+        "actual": 18.0,
+        "threshold": 8.0,
+        "operator": ">=",
+        "passed": true
+      }
+    },
+    {
+      "boundary_found_by_150": {
+        "actual": 0.7333333333333333,
+        "threshold": 0.85,
+        "operator": ">=",
+        "passed": false
+      },
+      "tracking_given_found": {
+        "actual": 0.8787878787878788,
+        "threshold": 0.7,
+        "operator": ">=",
+        "passed": true
+      },
+      "zero_discovery_timeout": {
+        "actual": 0.26666666666666666,
+        "threshold": 0.15,
+        "operator": "<=",
+        "passed": false
+      },
+      "median_unique_boundary_cells": {
+        "actual": 18.0,
+        "threshold": 8.0,
+        "operator": ">=",
+        "passed": true
+      }
+    },
+    {
+      "boundary_found_by_150": {
+        "actual": 0.7222222222222222,
+        "threshold": 0.85,
+        "operator": ">=",
+        "passed": false
+      },
+      "tracking_given_found": {
+        "actual": 0.8769230769230769,
+        "threshold": 0.7,
+        "operator": ">=",
+        "passed": true
+      },
+      "zero_discovery_timeout": {
+        "actual": 0.2777777777777778,
+        "threshold": 0.15,
+        "operator": "<=",
+        "passed": false
+      },
+      "median_unique_boundary_cells": {
+        "actual": 18.0,
+        "threshold": 8.0,
+        "operator": ">=",
+        "passed": true
+      }
+    },
+    {
+      "boundary_found_by_150": {
+        "actual": 0.7111111111111111,
+        "threshold": 0.85,
+        "operator": ">=",
+        "passed": false
+      },
+      "tracking_given_found": {
+        "actual": 0.890625,
+        "threshold": 0.7,
+        "operator": ">=",
+        "passed": true
+      },
+      "zero_discovery_timeout": {
+        "actual": 0.28888888888888886,
+        "threshold": 0.15,
+        "operator": "<=",
+        "passed": false
+      },
+      "median_unique_boundary_cells": {
+        "actual": 18.0,
+        "threshold": 8.0,
+        "operator": ">=",
+        "passed": true
+      }
+    },
+    {
+      "boundary_found_by_150": {
+        "actual": 0.6666666666666666,
+        "threshold": 0.85,
+        "operator": ">=",
+        "passed": false
+      },
+      "tracking_given_found": {
+        "actual": 0.9166666666666666,
+        "threshold": 0.7,
+        "operator": ">=",
+        "passed": true
+      },
+      "zero_discovery_timeout": {
+        "actual": 0.3333333333333333,
+        "threshold": 0.15,
+        "operator": "<=",
+        "passed": false
+      },
+      "median_unique_boundary_cells": {
+        "actual": 18.0,
+        "threshold": 8.0,
+        "operator": ">=",
+        "passed": true
+      }
+    }
+  ],
+  "val_pre_boundary_revisit_ratio": [
+    0.15506101418222673,
+    0.14195600576471806,
+    0.20732700744821997,
+    0.20541960004081242,
+    0.2037066370778495,
+    0.23311909499030742,
+    0.23799528442084467,
+    0.28024816345270925
+  ],
+  "val_team_overlap_ratio": [
+    0.11297416315743716,
+    0.07637569267202261,
+    0.09789129396751976,
+    0.10058507221540072,
+    0.09365212893535522,
+    0.11844559973372498,
+    0.12533606826370475,
+    0.13324511921613874
+  ],
+  "val_invalid_action_count": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "generalization_gap": [
+    -0.2686983571632378,
+    -0.21208121515192446,
+    -0.16151688359881905,
+    -0.07641249307170328,
+    -0.0717769230700449,
+    -0.05979917383236566,
+    -0.0059076385245802054,
+    0.04343394690734631
+  ],
+  "is_best_val": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "stage4_level": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "stage4_boundary_found_rate": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "stage4_target_reach_rate": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "stage4_auc": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "stage4_tail100": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "stage4_hold60": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "stage4_controlled_refresh_opportunities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "stage4_controlled_refresh_recovery_rate": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "stage4_controlled_refresh_mean_recovery_time": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ]
+}

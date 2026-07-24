@@ -38,7 +38,6 @@ class CooperativeTaskCoordinator:
         reacquire_report_ttl: int,
         role_decision_interval: int,
         role_min_dwell_steps: int,
-        random_seed: int = 0,
     ):
         self.env = env
         self.peer_state_ttl = max(1, int(peer_state_ttl))
@@ -48,7 +47,6 @@ class CooperativeTaskCoordinator:
         )
         self.role_decision_interval = max(1, int(role_decision_interval))
         self.role_min_dwell_steps = max(0, int(role_min_dwell_steps))
-        self._coordinator_rng = np.random.RandomState(int(random_seed))
         self.reset()
 
     def reset(self) -> None:
@@ -65,17 +63,6 @@ class CooperativeTaskCoordinator:
         self.assigned_task_valid = [False for _ in range(num_drones)]
         self.search_targets = [None for _ in range(num_drones)]
         self.search_target_steps = [0 for _ in range(num_drones)]
-        self.search_target_sectors = [-1 for _ in range(num_drones)]
-        self.sector_cooldown_until = [
-            np.zeros(8, dtype=np.int32) for _ in range(num_drones)
-        ]
-        self.disable_stickiness_once = [False for _ in range(num_drones)]
-        self.forced_previous_sectors = [-1 for _ in range(num_drones)]
-        self.last_boundary_evidence_steps = [-1 for _ in range(num_drones)]
-        self.last_forced_sector_switch_steps = [0 for _ in range(num_drones)]
-        self.forced_sector_switch_counts = [0 for _ in range(num_drones)]
-        self.heat_signal_steps = [-1 for _ in range(num_drones)]
-        self.disconnected_sector_phase = int(self._coordinator_rng.randint(0, 8))
         self.fire_ever_seen = [False for _ in range(num_drones)]
         self.candidates = np.zeros(
             (num_drones, self.NUM_ROLES, self.CANDIDATE_FEATURES),
@@ -91,23 +78,6 @@ class CooperativeTaskCoordinator:
         self.task_conflict_count = 0
         self.expired_message_count = 0
         self.expired_boundary_report_count = 0
-        self.search_heading_histogram = np.zeros(8, dtype=np.int64)
-        self.search_tie_break_count = 0
-        self.heat_separation_relaxation_count = 0
-        self.edge_separation_fallback_count = 0
-        self.soft_separation_fallback_count = 0
-        self.connected_separation_violation_count = 0
-        self.pair_target_angle_sum = 0.0
-        self.pair_target_angle_min = float("inf")
-        self.pair_target_distance_sum = 0.0
-        self.pair_target_distance_min = float("inf")
-        self.pair_target_metric_count = 0
-
-    def get_rng_state(self):
-        return self._coordinator_rng.get_state()
-
-    def set_rng_state(self, state) -> None:
-        self._coordinator_rng.set_state(state)
 
     def request_role_decision(
         self, reason: str, drone_idx: Optional[int] = None
@@ -137,13 +107,6 @@ class CooperativeTaskCoordinator:
                 "local_fire_detected",
                 None if self.env.communication_available[drone_idx] else drone_idx,
             )
-        self.last_boundary_evidence_steps[drone_idx] = int(step)
-
-    def observe_heat_signal(
-        self, drone_idx: int, has_heat_signal: bool, step: int
-    ) -> None:
-        if has_heat_signal:
-            self.heat_signal_steps[int(drone_idx)] = int(step)
 
     def expire_messages(self, step: int) -> None:
         for drone_idx, message in enumerate(self.peer_messages):
@@ -195,10 +158,6 @@ class CooperativeTaskCoordinator:
                 "role": int(self.current_roles[peer]),
                 "received_step": int(step),
                 "source_step": int(step),
-                "heat_signal_step": int(self.heat_signal_steps[peer]),
-                "boundary_evidence_step": int(
-                    self.last_boundary_evidence_steps[peer]
-                ),
             }
             merged = np.maximum(
                 self.boundary_last_seen[drone_idx],
@@ -209,58 +168,23 @@ class CooperativeTaskCoordinator:
             if self.fire_ever_seen[peer] and not self.fire_ever_seen[drone_idx]:
                 self.fire_ever_seen[drone_idx] = True
                 self.request_role_decision("fire_report_received")
-            self.last_boundary_evidence_steps[drone_idx] = max(
-                self.last_boundary_evidence_steps[drone_idx],
-                self.last_boundary_evidence_steps[peer],
-            )
-            self.heat_signal_steps[drone_idx] = max(
-                self.heat_signal_steps[drone_idx],
-                self.heat_signal_steps[peer],
-            )
             if previous is None:
                 self.request_role_decision("communication_restored")
 
-    def _search_directions(self) -> Tuple[np.ndarray, np.ndarray]:
-        mode = str(getattr(self.env, "search_direction_mode", "octants"))
-        inv_sqrt2 = float(1.0 / np.sqrt(2.0))
-        octants = np.array(
-            [
-                [-1.0, 0.0],
-                [-inv_sqrt2, inv_sqrt2],
-                [0.0, 1.0],
-                [inv_sqrt2, inv_sqrt2],
-                [1.0, 0.0],
-                [inv_sqrt2, -inv_sqrt2],
-                [0.0, -1.0],
-                [-inv_sqrt2, -inv_sqrt2],
-            ],
-            dtype=np.float32,
-        )
-        if mode == "cardinal":
-            sector_ids = np.array([0, 4, 6, 2], dtype=np.int32)
-            return octants[sector_ids], sector_ids
-        return octants, np.arange(8, dtype=np.int32)
-
-    def _directional_novelty(
-        self, drone_idx: int
-    ) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
+    def _directional_novelty(self, drone_idx: int) -> Tuple[np.ndarray, np.ndarray]:
         env = self.env
         y, x = (int(v) for v in env.drone_positions[drone_idx])
         known = env.agent_known_masks[drone_idx]
         radius = max(1, env.vision_radius * 2)
-        directions, sector_ids = self._search_directions()
-        novelty = np.zeros(len(directions), dtype=np.float32)
+        directions = np.array([[-1, 0], [1, 0], [0, -1], [0, 1]], dtype=np.int32)
+        novelty = np.zeros(4, dtype=np.float32)
         for idx, (dy, dx) in enumerate(directions):
-            cy = int(
-                round(np.clip(y + dy * radius, 0, env.grid_size[0] - 1))
-            )
-            cx = int(
-                round(np.clip(x + dx * radius, 0, env.grid_size[1] - 1))
-            )
+            cy = int(np.clip(y + dy * radius, 0, env.grid_size[0] - 1))
+            cx = int(np.clip(x + dx * radius, 0, env.grid_size[1] - 1))
             y0, y1, x0, x1, mask = env._get_circular_window(cy, cx)
             patch = known[y0:y1, x0:x1]
             novelty[idx] = float(np.count_nonzero(~patch & mask) / max(np.count_nonzero(mask), 1))
-        return directions, sector_ids, novelty
+        return directions, novelty
 
     def _search_candidate_for_target(
         self, drone_idx: int, target: np.ndarray
@@ -291,104 +215,41 @@ class CooperativeTaskCoordinator:
             [float(valid), delta[0], delta[1], novelty, 0.0], dtype=np.float32
         )
 
-    def _sector_angle_deg(self, sector0: int, sector1: int) -> float:
-        if sector0 < 0 or sector1 < 0:
-            return 180.0
-        delta = abs(int(sector0) - int(sector1)) % 8
-        return float(min(delta, 8 - delta) * 45.0)
-
-    def _search_options(
-        self, drone_idx: int, step: int
-    ) -> List[Tuple[np.ndarray, np.ndarray, int]]:
+    def _search_options(self, drone_idx: int, step: int) -> List[Tuple[np.ndarray, np.ndarray]]:
         env = self.env
         pos = env.drone_positions[drone_idx].astype(np.float32)
         distance = max(1, env.vision_radius * 2)
-        directions, sector_ids, _ = self._directional_novelty(drone_idx)
-        targets = []
-        for direction, sector_id in zip(directions, sector_ids):
-            if int(step) < int(
-                self.sector_cooldown_until[drone_idx][int(sector_id)]
-            ):
-                continue
-            forced_previous = self.forced_previous_sectors[drone_idx]
-            if (
-                forced_previous >= 0
-                and self._sector_angle_deg(int(sector_id), forced_previous)
-                < float(getattr(env, "search_min_pair_angle_deg", 90.0))
-            ):
-                continue
-            targets.append(
-                (
-                    np.array(
-                        [
-                            np.clip(
-                                pos[0] + direction[0] * distance,
-                                0,
-                                env.grid_size[0] - 1,
-                            ),
-                            np.clip(
-                                pos[1] + direction[1] * distance,
-                                0,
-                                env.grid_size[1] - 1,
-                            ),
-                        ],
-                        dtype=np.float32,
-                    ),
-                    int(sector_id),
-                )
+        directions, _ = self._directional_novelty(drone_idx)
+        targets = [
+            np.array(
+                [
+                    np.clip(pos[0] + direction[0] * distance, 0, env.grid_size[0] - 1),
+                    np.clip(pos[1] + direction[1] * distance, 0, env.grid_size[1] - 1),
+                ],
+                dtype=np.float32,
             )
-
-        if not targets:
-            for direction, sector_id in zip(directions, sector_ids):
-                targets.append(
-                    (
-                        np.array(
-                            [
-                                np.clip(
-                                    pos[0] + direction[0] * distance,
-                                    0,
-                                    env.grid_size[0] - 1,
-                                ),
-                                np.clip(
-                                    pos[1] + direction[1] * distance,
-                                    0,
-                                    env.grid_size[1] - 1,
-                                ),
-                            ],
-                            dtype=np.float32,
-                        ),
-                        int(sector_id),
-                    )
-                )
+            for direction in directions
+        ]
 
         previous = self.search_targets[drone_idx]
         max_age = int(getattr(env, "search_target_refresh_steps", 40))
-        if (
-            previous is not None
-            and not self.disable_stickiness_once[drone_idx]
-            and int(step) - self.search_target_steps[drone_idx] < max_age
-        ):
-            targets.append(
-                (
-                    np.asarray(previous, dtype=np.float32),
-                    int(self.search_target_sectors[drone_idx]),
-                )
-            )
+        if previous is not None and int(step) - self.search_target_steps[drone_idx] < max_age:
+            targets.append(np.asarray(previous, dtype=np.float32))
 
-        options: List[Tuple[np.ndarray, np.ndarray, int]] = []
-        for target, sector_id in targets:
+        options: List[Tuple[np.ndarray, np.ndarray]] = []
+        for target in targets:
             candidate = self._search_candidate_for_target(drone_idx, target)
             if candidate[0] <= 0.0:
                 continue
             if any(np.linalg.norm(target - existing[0]) < 0.5 for existing in options):
                 continue
-            options.append((target, candidate, int(sector_id)))
+            options.append((target, candidate))
         if options:
             return options
 
         fallback_target = pos.copy()
         fallback = np.array([1.0, 0.0, 0.0, 0.0, 0.0], dtype=np.float32)
-        return [(fallback_target, fallback, -1)]
+        return [(fallback_target, fallback)]
 
     def _search_target_overlap(self, target0: np.ndarray, target1: np.ndarray) -> float:
         """Normalized overlap of two circular sensor footprints."""
@@ -403,268 +264,8 @@ class CooperativeTaskCoordinator:
         )
         return float(np.clip(intersection / (np.pi * radius * radius), 0.0, 1.0))
 
-    def _random_best_index(self, scores: List[float]) -> int:
-        values = np.asarray(scores, dtype=np.float64)
-        tolerance = float(getattr(self.env, "search_tie_tolerance", 1e-6))
-        best = float(np.max(values))
-        ties = np.flatnonzero(
-            np.isclose(values, best, rtol=0.0, atol=tolerance)
-        )
-        if ties.size > 1:
-            self.search_tie_break_count += 1
-        return int(self._coordinator_rng.choice(ties))
-
-    def _pair_angle_distance(
-        self, target0: np.ndarray, target1: np.ndarray
-    ) -> Tuple[float, float]:
-        team_center = np.mean(
-            np.asarray(self.env.drone_positions, dtype=np.float32), axis=0
-        )
-        vector0 = np.asarray(target0, dtype=np.float32) - team_center
-        vector1 = np.asarray(target1, dtype=np.float32) - team_center
-        norm0 = float(np.linalg.norm(vector0))
-        norm1 = float(np.linalg.norm(vector1))
-        if norm0 <= 1e-8 or norm1 <= 1e-8:
-            angle = 0.0
-        else:
-            cosine = float(
-                np.clip(np.dot(vector0, vector1) / (norm0 * norm1), -1.0, 1.0)
-            )
-            angle = float(np.degrees(np.arccos(cosine)))
-        distance = float(np.linalg.norm(target0 - target1))
-        return angle, distance
-
-    def _has_recent_heat_signal(self, step: int) -> bool:
-        for signal_step in self.heat_signal_steps:
-            age = int(step) - int(signal_step)
-            if int(signal_step) >= 0 and 0 <= age < self.peer_state_ttl:
-                return True
-        return False
-
-    def _force_sector_switch(self, drone_idx: int, step: int) -> None:
-        old_sector = int(self.search_target_sectors[drone_idx])
-        if old_sector >= 0:
-            cooldown = int(
-                getattr(self.env, "search_sector_cooldown_steps", 80)
-            )
-            self.sector_cooldown_until[drone_idx][old_sector] = max(
-                int(self.sector_cooldown_until[drone_idx][old_sector]),
-                int(step) + cooldown,
-            )
-        self.forced_previous_sectors[drone_idx] = old_sector
-        self.search_targets[drone_idx] = None
-        self.search_target_steps[drone_idx] = int(step)
-        self.search_target_sectors[drone_idx] = -1
-        self.assigned_targets[drone_idx] = None
-        self.assigned_priorities[drone_idx] = 0.0
-        self.assigned_task_valid[drone_idx] = False
-        self.disable_stickiness_once[drone_idx] = True
-        self.last_forced_sector_switch_steps[drone_idx] = int(step)
-        self.forced_sector_switch_counts[drone_idx] += 1
-
-    def _maybe_force_sector_switch(self, step: int) -> None:
-        if int(step) <= 0:
-            return
-        due = []
-        for drone_idx in range(self.env.num_drones):
-            if (
-                self.current_roles[drone_idx] != self.SEARCH
-                or self.fire_ever_seen[drone_idx]
-            ):
-                continue
-            first = self.forced_sector_switch_counts[drone_idx] == 0
-            interval = int(
-                getattr(
-                    self.env,
-                    "search_sector_switch_steps_first"
-                    if first
-                    else "search_sector_switch_steps",
-                    40 if first else 80,
-                )
-            )
-            reference = max(
-                0,
-                int(self.last_boundary_evidence_steps[drone_idx]),
-                int(self.last_forced_sector_switch_steps[drone_idx]),
-            )
-            if int(step) - reference >= interval:
-                due.append(drone_idx)
-        if not due:
-            return
-
-        connected = bool(
-            self.env.num_drones == 2
-            and self.env.communication_available[0]
-            and self.env.communication_available[1]
-        )
-        if connected:
-            due = [
-                drone_idx
-                for drone_idx in range(self.env.num_drones)
-                if self.current_roles[drone_idx] == self.SEARCH
-                and not self.fire_ever_seen[drone_idx]
-            ]
-        for drone_idx in due:
-            self._force_sector_switch(drone_idx, step)
-        self.request_role_decision("search_sector_switch")
-
-    def _search_pair_score(
-        self,
-        option0: Tuple[np.ndarray, np.ndarray, int],
-        option1: Tuple[np.ndarray, np.ndarray, int],
-    ) -> float:
-        target0, candidate0, _ = option0
-        target1, candidate1, _ = option1
-        overlap_weight = float(
-            getattr(self.env, "search_target_overlap_weight", 1.0)
-        )
-        stickiness_weight = float(
-            getattr(self.env, "search_target_stickiness_weight", 0.10)
-        )
-        score = float(
-            candidate0[3]
-            + candidate1[3]
-            - overlap_weight * self._search_target_overlap(target0, target1)
-        )
-        for drone_idx, target in enumerate((target0, target1)):
-            previous = self.search_targets[drone_idx]
-            if (
-                previous is not None
-                and not self.disable_stickiness_once[drone_idx]
-                and np.linalg.norm(target - previous) < 0.5
-            ):
-                score += stickiness_weight
-        return score
-
-    def _select_connected_search_pair(
-        self,
-        options: List[List[Tuple[np.ndarray, np.ndarray, int]]],
-        step: int,
-    ) -> List[Tuple[np.ndarray, np.ndarray, int]]:
-        env = self.env
-        heat_relaxed = self._has_recent_heat_signal(step)
-        primary_angle = float(
-            getattr(
-                env,
-                "search_heat_pair_angle_deg"
-                if heat_relaxed
-                else "search_min_pair_angle_deg",
-                45.0 if heat_relaxed else 90.0,
-            )
-        )
-        primary_distance = (
-            float(getattr(env, "search_min_target_distance_factor", 2.0))
-            * env.vision_radius
-        )
-        fallback_distance = (
-            float(getattr(env, "search_fallback_distance_factor", 1.5))
-            * env.vision_radius
-        )
-        tiers = [
-            (primary_angle, primary_distance, "heat" if heat_relaxed else "normal"),
-            (
-                float(getattr(env, "search_heat_pair_angle_deg", 45.0)),
-                fallback_distance,
-                "edge",
-            ),
-            (0.0, 0.0, "soft"),
-        ]
-
-        selected_pair = None
-        selected_metrics = (0.0, 0.0)
-        selected_tier = "soft"
-        for min_angle, min_distance, tier_name in tiers:
-            feasible = []
-            scores = []
-            metrics = []
-            for option0 in options[0]:
-                for option1 in options[1]:
-                    angle, distance = self._pair_angle_distance(
-                        option0[0], option1[0]
-                    )
-                    if angle + 1e-9 < min_angle or distance + 1e-9 < min_distance:
-                        continue
-                    feasible.append((option0, option1))
-                    scores.append(self._search_pair_score(option0, option1))
-                    metrics.append((angle, distance))
-            if feasible:
-                best = self._random_best_index(scores)
-                selected_pair = feasible[best]
-                selected_metrics = metrics[best]
-                selected_tier = tier_name
-                break
-
-        if selected_pair is None:
-            selected_pair = (options[0][0], options[1][0])
-            selected_metrics = self._pair_angle_distance(
-                selected_pair[0][0], selected_pair[1][0]
-            )
-            selected_tier = "soft"
-
-        if selected_tier == "heat":
-            self.heat_separation_relaxation_count += 1
-        elif selected_tier == "edge":
-            self.edge_separation_fallback_count += 1
-        elif selected_tier == "soft":
-            self.soft_separation_fallback_count += 1
-
-        angle, distance = selected_metrics
-        if angle + 1e-9 < primary_angle or distance + 1e-9 < primary_distance:
-            self.connected_separation_violation_count += 1
-        self.pair_target_angle_sum += angle
-        self.pair_target_distance_sum += distance
-        self.pair_target_angle_min = min(self.pair_target_angle_min, angle)
-        self.pair_target_distance_min = min(
-            self.pair_target_distance_min, distance
-        )
-        self.pair_target_metric_count += 1
-        return [selected_pair[0], selected_pair[1]]
-
-    def _select_disconnected_search_option(
-        self,
-        drone_idx: int,
-        options: List[Tuple[np.ndarray, np.ndarray, int]],
-    ) -> Tuple[np.ndarray, np.ndarray, int]:
-        desired_sector = (
-            self.disconnected_sector_phase
-            + 4 * int(drone_idx)
-            + 2 * int(self.forced_sector_switch_counts[drone_idx])
-        ) % 8
-        valid_sectors = [option[2] for option in options if option[2] >= 0]
-        if valid_sectors:
-            nearest_angle = min(
-                self._sector_angle_deg(sector, desired_sector)
-                for sector in valid_sectors
-            )
-            reserved = [
-                option
-                for option in options
-                if option[2] >= 0
-                and self._sector_angle_deg(option[2], desired_sector)
-                <= nearest_angle + 1e-9
-            ]
-            if reserved:
-                options = reserved
-
-        stickiness_weight = float(
-            getattr(self.env, "search_target_stickiness_weight", 0.10)
-        )
-        scores = []
-        for target, candidate, _ in options:
-            score = float(candidate[3])
-            previous = self.search_targets[drone_idx]
-            if (
-                previous is not None
-                and not self.disable_stickiness_once[drone_idx]
-                and np.linalg.norm(target - previous) < 0.5
-            ):
-                score += stickiness_weight
-            scores.append(score)
-        return options[self._random_best_index(scores)]
-
     def _refresh_search_candidates(self, step: int) -> None:
         """Assign non-conflicting frontier targets when current peer state is available."""
-        self._maybe_force_sector_switch(step)
         options = [
             self._search_options(drone_idx, step)
             for drone_idx in range(self.env.num_drones)
@@ -674,34 +275,47 @@ class CooperativeTaskCoordinator:
             and self.env.communication_available[0]
             and self.env.communication_available[1]
         )
+        stickiness_weight = float(
+            getattr(self.env, "search_target_stickiness_weight", 0.10)
+        )
 
         if connected:
-            selected = self._select_connected_search_pair(options, step)
+            best_pair = None
+            best_score = -float("inf")
+            overlap_weight = float(
+                getattr(self.env, "search_target_overlap_weight", 1.0)
+            )
+            for target0, candidate0 in options[0]:
+                for target1, candidate1 in options[1]:
+                    overlap = self._search_target_overlap(target0, target1)
+                    score = float(candidate0[3] + candidate1[3] - overlap_weight * overlap)
+                    for drone_idx, target in enumerate((target0, target1)):
+                        previous = self.search_targets[drone_idx]
+                        if previous is not None and np.linalg.norm(target - previous) < 0.5:
+                            score += stickiness_weight
+                    if score > best_score + 1e-12:
+                        best_score = score
+                        best_pair = ((target0, candidate0), (target1, candidate1))
+            selected = list(best_pair) if best_pair is not None else [row[0] for row in options]
         else:
-            selected = [
-                self._select_disconnected_search_option(
-                    drone_idx, drone_options
-                )
-                for drone_idx, drone_options in enumerate(options)
-            ]
+            selected = []
+            for drone_idx, drone_options in enumerate(options):
+                scored = []
+                for option_idx, (target, candidate) in enumerate(drone_options):
+                    score = float(candidate[3])
+                    previous = self.search_targets[drone_idx]
+                    if previous is not None and np.linalg.norm(target - previous) < 0.5:
+                        score += stickiness_weight
+                    scored.append((score, -abs(option_idx - drone_idx), target, candidate))
+                _, _, target, candidate = max(scored, key=lambda item: (item[0], item[1]))
+                selected.append((target, candidate))
 
-        for drone_idx, (target, candidate, sector_id) in enumerate(selected):
+        for drone_idx, (target, candidate) in enumerate(selected):
             previous = self.search_targets[drone_idx]
             if previous is None or np.linalg.norm(target - previous) >= 0.5:
                 self.search_target_steps[drone_idx] = int(step)
-                if sector_id >= 0:
-                    self.search_heading_histogram[int(sector_id)] += 1
             self.search_targets[drone_idx] = np.asarray(target, dtype=np.float32).copy()
-            self.search_target_sectors[drone_idx] = int(sector_id)
             self.candidates[drone_idx, self.SEARCH] = candidate
-            self.disable_stickiness_once[drone_idx] = False
-            self.forced_previous_sectors[drone_idx] = -1
-            if self.current_roles[drone_idx] == self.SEARCH:
-                self.assigned_targets[drone_idx] = np.asarray(
-                    target, dtype=np.float32
-                ).copy()
-                self.assigned_priorities[drone_idx] = float(candidate[3])
-                self.assigned_task_valid[drone_idx] = bool(candidate[0])
 
     def _candidate(self, drone_idx: int, role: int, step: int) -> np.ndarray:
         env = self.env
@@ -711,8 +325,9 @@ class CooperativeTaskCoordinator:
 
         if role == self.SEARCH:
             options = self._search_options(drone_idx, step)
-            scores = [float(candidate[3]) for _, candidate, _ in options]
-            best = self._random_best_index(scores)
+            scores = np.array([candidate[3] for _, candidate in options], dtype=np.float32)
+            best_candidates = np.flatnonzero(np.isclose(scores, float(np.max(scores))))
+            best = int(best_candidates[drone_idx % len(best_candidates)])
             return options[best][1].copy()
 
         seen = self.boundary_last_seen[drone_idx]
@@ -1020,15 +635,6 @@ class FireSearchBaselineEnvironment(gym.Env):
         search_target_stickiness_weight: float = 0.10,
         search_target_min_novelty: float = 0.05,
         search_target_refresh_steps: int = 40,
-        search_direction_mode: str = "octants",
-        search_sector_switch_steps_first: int = 40,
-        search_sector_switch_steps: int = 80,
-        search_sector_cooldown_steps: int = 80,
-        search_min_pair_angle_deg: float = 90.0,
-        search_heat_pair_angle_deg: float = 45.0,
-        search_min_target_distance_factor: float = 2.0,
-        search_fallback_distance_factor: float = 1.5,
-        search_tie_tolerance: float = 1e-6,
         pre_boundary_team_novelty_weight: float = 0.20,
         pre_boundary_unique_novelty_weight: float = 0.10,
         pre_boundary_overlap_weight: float = 0.10,
@@ -1038,17 +644,9 @@ class FireSearchBaselineEnvironment(gym.Env):
         stage2_spawn_mix: Tuple[float, float, float] = STAGE2_FINAL_SPAWN_MIX,
         coverage_objective: str = "auto",
         controlled_refresh_enabled: bool = False,
-        random_seed: int = 0,
     ):
         super().__init__()
 
-        self.random_seed = int(random_seed)
-        seed_sequence = np.random.SeedSequence(self.random_seed)
-        env_seed, coordinator_seed = seed_sequence.generate_state(
-            2, dtype=np.uint32
-        )
-        self._env_rng = np.random.RandomState(int(env_seed))
-        self._coordinator_seed = int(coordinator_seed)
         self.data_dir = data_dir
         self.num_drones = int(num_drones)
         self.config_vision_radius = int(vision_radius)
@@ -1131,41 +729,6 @@ class FireSearchBaselineEnvironment(gym.Env):
             np.clip(search_target_min_novelty, 0.0, 1.0)
         )
         self.search_target_refresh_steps = max(1, int(search_target_refresh_steps))
-        self.search_direction_mode = str(search_direction_mode).lower()
-        if self.search_direction_mode not in {"cardinal", "octants"}:
-            raise ValueError(
-                "search_direction_mode must be 'cardinal' or 'octants'"
-            )
-        self.search_sector_switch_steps_first = max(
-            1, int(search_sector_switch_steps_first)
-        )
-        self.search_sector_switch_steps = max(
-            1, int(search_sector_switch_steps)
-        )
-        self.search_sector_cooldown_steps = max(
-            1, int(search_sector_cooldown_steps)
-        )
-        self.search_min_pair_angle_deg = float(
-            np.clip(search_min_pair_angle_deg, 0.0, 180.0)
-        )
-        self.search_heat_pair_angle_deg = float(
-            np.clip(search_heat_pair_angle_deg, 0.0, 180.0)
-        )
-        self.search_min_target_distance_factor = max(
-            0.0, float(search_min_target_distance_factor)
-        )
-        self.search_fallback_distance_factor = max(
-            0.0, float(search_fallback_distance_factor)
-        )
-        if (
-            self.search_fallback_distance_factor
-            > self.search_min_target_distance_factor
-        ):
-            raise ValueError(
-                "search_fallback_distance_factor cannot exceed "
-                "search_min_target_distance_factor"
-            )
-        self.search_tie_tolerance = max(0.0, float(search_tie_tolerance))
         self.pre_boundary_team_novelty_weight = max(
             0.0, float(pre_boundary_team_novelty_weight)
         )
@@ -1325,7 +888,6 @@ class FireSearchBaselineEnvironment(gym.Env):
                 reacquire_report_ttl=self.reacquire_report_ttl,
                 role_decision_interval=self.role_decision_interval,
                 role_min_dwell_steps=self.role_min_dwell_steps,
-                random_seed=self._coordinator_seed,
             )
             if self.hierarchical_roles_enabled
             else None
@@ -1344,13 +906,7 @@ class FireSearchBaselineEnvironment(gym.Env):
 
     def _load_new_scene(self):
         if self.fixed_scene_key is None:
-            split = self.scene_manager.dataset_index.normalize_mode(self.mode)
-            scene_key = str(
-                self._env_rng.choice(
-                    self.scene_manager.scene_keys_by_split[split]
-                )
-            )
-            self.env_data = self.scene_manager.get_specific_scene(scene_key)
+            self.env_data = self.scene_manager.get_scene(self.mode)
         else:
             self.env_data = self.scene_manager.get_specific_scene(str(self.fixed_scene_key))
 
@@ -1916,9 +1472,7 @@ class FireSearchBaselineEnvironment(gym.Env):
                 self.max_steps - self.CONTROLLED_REFRESH_MIN_REMAINING,
             )
             self.controlled_refresh_step = int(
-                self._env_rng.randint(
-                    self.CONTROLLED_REFRESH_MIN_STEP, latest + 1
-                )
+                np.random.randint(self.CONTROLLED_REFRESH_MIN_STEP, latest + 1)
             )
         self.post_target_milestones = {"0.60": False, "0.70": False, "0.80": False}
         self._recent_cells = []
@@ -1951,13 +1505,6 @@ class FireSearchBaselineEnvironment(gym.Env):
 
         if self.task_coordinator is not None:
             self.task_coordinator.reset()
-            for drone_idx, pos in enumerate(self.drone_positions):
-                heat_signal = self._get_heat_signal_features(pos)
-                self.task_coordinator.observe_heat_signal(
-                    drone_idx,
-                    heat_signal["has_heat_signal"],
-                    self.step_count,
-                )
             self.task_coordinator.sync_connected_agents(self.step_count)
 
         if np.any(self.boundary_last_seen_step != -1):
@@ -1968,7 +1515,7 @@ class FireSearchBaselineEnvironment(gym.Env):
     def _spawn_randomly(self, drone_idx: int) -> np.ndarray:
         if self.curriculum_stage == 2:
             stratum = str(
-                self._env_rng.choice(
+                np.random.choice(
                     ("near", "medium", "far"),
                     p=np.asarray(self.stage2_spawn_mix, dtype=np.float64),
                 )
@@ -2020,7 +1567,7 @@ class FireSearchBaselineEnvironment(gym.Env):
             raise RuntimeError(
                 f"No legal stage-2 spawn for quantile=[{q_min:.2f}, {q_max:.2f}]"
             )
-        order = self._env_rng.permutation(len(candidates))
+        order = np.random.permutation(len(candidates))
         for index in order:
             pos = candidates[int(index)].astype(np.float32)
             if not self._too_close_to_existing_drones(pos):
@@ -2046,8 +1593,8 @@ class FireSearchBaselineEnvironment(gym.Env):
         for _ in range(200):
             pos = np.array(
                 [
-                    self._env_rng.randint(margin, h - margin),
-                    self._env_rng.randint(margin, w - margin),
+                    np.random.randint(margin, h - margin),
+                    np.random.randint(margin, w - margin),
                 ],
                 dtype=np.float32,
             )
@@ -2079,7 +1626,7 @@ class FireSearchBaselineEnvironment(gym.Env):
                 f"No legal spawn for stage={self.curriculum_stage} "
                 f"substage={self.curriculum_substage} distance=[{min_factor}, {max_factor}]R"
             )
-        return candidates[self._env_rng.randint(0, len(candidates))]
+        return candidates[np.random.randint(0, len(candidates))]
 
     def _too_close_to_existing_drones(self, pos: np.ndarray) -> bool:
         min_spacing = float(self.vision_radius * 0.8)
@@ -2745,12 +2292,6 @@ class FireSearchBaselineEnvironment(gym.Env):
             heat_signal = self._get_heat_signal_features(new_pos)
             if self.first_heat_step < 0 and heat_signal["has_heat_signal"]:
                 self.first_heat_step = transition_step
-            if coordinator is not None:
-                coordinator.observe_heat_signal(
-                    i,
-                    heat_signal["has_heat_signal"],
-                    transition_step,
-                )
 
             severity_mean = 0.0
             severity_max = 0.0
@@ -3308,65 +2849,6 @@ class FireSearchBaselineEnvironment(gym.Env):
                 if coordinator is not None
                 else "disabled"
             ),
-            "search_heading_histogram": (
-                coordinator.search_heading_histogram.astype(int).tolist()
-                if coordinator is not None
-                else [0] * 8
-            ),
-            "search_tie_break_count": int(
-                coordinator.search_tie_break_count
-                if coordinator is not None
-                else 0
-            ),
-            "forced_sector_switch_count": int(
-                sum(coordinator.forced_sector_switch_counts)
-                if coordinator is not None
-                else 0
-            ),
-            "pair_target_angle_mean": float(
-                coordinator.pair_target_angle_sum
-                / max(coordinator.pair_target_metric_count, 1)
-                if coordinator is not None
-                else 0.0
-            ),
-            "pair_target_angle_min": float(
-                coordinator.pair_target_angle_min
-                if coordinator is not None
-                and np.isfinite(coordinator.pair_target_angle_min)
-                else 0.0
-            ),
-            "pair_target_distance_mean": float(
-                coordinator.pair_target_distance_sum
-                / max(coordinator.pair_target_metric_count, 1)
-                if coordinator is not None
-                else 0.0
-            ),
-            "pair_target_distance_min": float(
-                coordinator.pair_target_distance_min
-                if coordinator is not None
-                and np.isfinite(coordinator.pair_target_distance_min)
-                else 0.0
-            ),
-            "heat_separation_relaxation_count": int(
-                coordinator.heat_separation_relaxation_count
-                if coordinator is not None
-                else 0
-            ),
-            "edge_separation_fallback_count": int(
-                coordinator.edge_separation_fallback_count
-                if coordinator is not None
-                else 0
-            ),
-            "soft_separation_fallback_count": int(
-                coordinator.soft_separation_fallback_count
-                if coordinator is not None
-                else 0
-            ),
-            "connected_separation_violation_count": int(
-                coordinator.connected_separation_violation_count
-                if coordinator is not None
-                else 0
-            ),
             "reward_breakdown": self.episode_reward_breakdown.copy() if done else None,
             "stage_target": 0.0
             if self.curriculum_stage == 1
@@ -3438,24 +2920,6 @@ class FireSearchBaselineEnvironment(gym.Env):
     def set_controlled_refresh_enabled(self, enabled: bool):
         self.controlled_refresh_enabled = bool(enabled)
 
-    def get_rng_state(self) -> Dict:
-        return {
-            "environment": self._env_rng.get_state(),
-            "coordinator": (
-                self.task_coordinator.get_rng_state()
-                if self.task_coordinator is not None
-                else None
-            ),
-        }
-
-    def set_rng_state(self, state: Dict) -> None:
-        self._env_rng.set_state(state["environment"])
-        if (
-            self.task_coordinator is not None
-            and state.get("coordinator") is not None
-        ):
-            self.task_coordinator.set_rng_state(state["coordinator"])
-
     def set_post_target_goal(self, goal: float):
         self.post_target_goal = float(np.clip(float(goal), 0.20, 0.80))
 
@@ -3501,16 +2965,6 @@ class FireSearchBaselineEnvironment(gym.Env):
             "search_target_stickiness_weight": self.search_target_stickiness_weight,
             "search_target_min_novelty": self.search_target_min_novelty,
             "search_target_refresh_steps": self.search_target_refresh_steps,
-            "search_direction_mode": self.search_direction_mode,
-            "search_sector_switch_steps_first": self.search_sector_switch_steps_first,
-            "search_sector_switch_steps": self.search_sector_switch_steps,
-            "search_sector_cooldown_steps": self.search_sector_cooldown_steps,
-            "search_min_pair_angle_deg": self.search_min_pair_angle_deg,
-            "search_heat_pair_angle_deg": self.search_heat_pair_angle_deg,
-            "search_min_target_distance_factor": self.search_min_target_distance_factor,
-            "search_fallback_distance_factor": self.search_fallback_distance_factor,
-            "search_tie_tolerance": self.search_tie_tolerance,
-            "random_seed": self.random_seed,
             "pre_boundary_team_novelty_weight": self.pre_boundary_team_novelty_weight,
             "pre_boundary_unique_novelty_weight": self.pre_boundary_unique_novelty_weight,
             "pre_boundary_overlap_weight": self.pre_boundary_overlap_weight,

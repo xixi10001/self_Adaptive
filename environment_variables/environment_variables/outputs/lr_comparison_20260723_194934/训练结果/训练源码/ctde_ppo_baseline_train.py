@@ -130,15 +130,6 @@ DEFAULT_TRAIN_CONFIG = {
     "search_target_stickiness_weight": 0.10,
     "search_target_min_novelty": 0.05,
     "search_target_refresh_steps": 40,
-    "search_direction_mode": "octants",
-    "search_sector_switch_steps_first": 40,
-    "search_sector_switch_steps": 80,
-    "search_sector_cooldown_steps": 80,
-    "search_min_pair_angle_deg": 90.0,
-    "search_heat_pair_angle_deg": 45.0,
-    "search_min_target_distance_factor": 2.0,
-    "search_fallback_distance_factor": 1.5,
-    "search_tie_tolerance": 1e-6,
     "pre_boundary_team_novelty_weight": 0.20,
     "pre_boundary_unique_novelty_weight": 0.10,
     "pre_boundary_overlap_weight": 0.10,
@@ -364,38 +355,6 @@ def normalize_training_config(config: Dict = None) -> Dict:
     )
     normalized["search_target_refresh_steps"] = max(
         1, int(normalized["search_target_refresh_steps"])
-    )
-    normalized["search_direction_mode"] = str(
-        normalized["search_direction_mode"]
-    ).lower()
-    if normalized["search_direction_mode"] not in {"cardinal", "octants"}:
-        raise ValueError(
-            "search_direction_mode must be 'cardinal' or 'octants'"
-        )
-    for key in [
-        "search_sector_switch_steps_first",
-        "search_sector_switch_steps",
-        "search_sector_cooldown_steps",
-    ]:
-        normalized[key] = max(1, int(normalized[key]))
-    for key in ["search_min_pair_angle_deg", "search_heat_pair_angle_deg"]:
-        normalized[key] = float(np.clip(normalized[key], 0.0, 180.0))
-    normalized["search_min_target_distance_factor"] = max(
-        0.0, float(normalized["search_min_target_distance_factor"])
-    )
-    normalized["search_fallback_distance_factor"] = max(
-        0.0, float(normalized["search_fallback_distance_factor"])
-    )
-    if (
-        normalized["search_fallback_distance_factor"]
-        > normalized["search_min_target_distance_factor"]
-    ):
-        raise ValueError(
-            "search_fallback_distance_factor cannot exceed "
-            "search_min_target_distance_factor"
-        )
-    normalized["search_tie_tolerance"] = max(
-        0.0, float(normalized["search_tie_tolerance"])
     )
     normalized["role_actor_lr"] = float(normalized["role_actor_lr"])
     normalized["role_critic_lr"] = float(normalized["role_critic_lr"])
@@ -736,9 +695,6 @@ def _append_episode_diagnostics(training_log: Dict, info: Dict) -> None:
     training_log.setdefault("invalid_action_count", []).append(
         int(info.get("invalid_action_count", 0))
     )
-    training_log.setdefault("search_heading_histogram", []).append(
-        list(info.get("search_heading_histogram", [0] * 8))
-    )
     for key in [
         "objective_coverage",
         "fresh_boundary_coverage",
@@ -770,16 +726,6 @@ def _append_episode_diagnostics(training_log: Dict, info: Dict) -> None:
         "controlled_refresh_recovery_time",
         "controlled_refresh_pre_coverage",
         "controlled_refresh_post_coverage",
-        "search_tie_break_count",
-        "forced_sector_switch_count",
-        "pair_target_angle_mean",
-        "pair_target_angle_min",
-        "pair_target_distance_mean",
-        "pair_target_distance_min",
-        "heat_separation_relaxation_count",
-        "edge_separation_fallback_count",
-        "soft_separation_fallback_count",
-        "connected_separation_violation_count",
     ]:
         training_log.setdefault(key, []).append(info.get(key, 0))
     training_log["reward_breakdown"].append(info.get("reward_breakdown") or {})
@@ -2729,25 +2675,6 @@ def _build_experiment_metadata(
             ),
             "target_min_novelty": float(config["search_target_min_novelty"]),
             "target_refresh_steps": int(config["search_target_refresh_steps"]),
-            "direction_mode": str(config["search_direction_mode"]),
-            "sector_switch_steps_first": int(
-                config["search_sector_switch_steps_first"]
-            ),
-            "sector_switch_steps": int(config["search_sector_switch_steps"]),
-            "sector_cooldown_steps": int(
-                config["search_sector_cooldown_steps"]
-            ),
-            "min_pair_angle_deg": float(config["search_min_pair_angle_deg"]),
-            "heat_pair_angle_deg": float(
-                config["search_heat_pair_angle_deg"]
-            ),
-            "min_target_distance_factor": float(
-                config["search_min_target_distance_factor"]
-            ),
-            "fallback_distance_factor": float(
-                config["search_fallback_distance_factor"]
-            ),
-            "tie_tolerance": float(config["search_tie_tolerance"]),
             "team_novelty_weight": float(
                 config["pre_boundary_team_novelty_weight"]
             ),
@@ -3088,13 +3015,8 @@ def _after_train_eval_checkpoints(config: Dict, best_model_paths: Dict) -> List[
     return []
 
 
-def _persistent_env_kwargs(
-    config: Dict, random_seed: int = None
-) -> Dict:
+def _persistent_env_kwargs(config: Dict) -> Dict:
     return {
-        "random_seed": int(
-            config["seed"] if random_seed is None else random_seed
-        ),
         "hierarchical_roles_enabled": config["hierarchical_roles_enabled"],
         "peer_state_ttl": config["peer_state_ttl"],
         "track_report_ttl": config["track_report_ttl"],
@@ -3111,23 +3033,6 @@ def _persistent_env_kwargs(
         "search_target_stickiness_weight": config["search_target_stickiness_weight"],
         "search_target_min_novelty": config["search_target_min_novelty"],
         "search_target_refresh_steps": config["search_target_refresh_steps"],
-        "search_direction_mode": config["search_direction_mode"],
-        "search_sector_switch_steps_first": config[
-            "search_sector_switch_steps_first"
-        ],
-        "search_sector_switch_steps": config["search_sector_switch_steps"],
-        "search_sector_cooldown_steps": config[
-            "search_sector_cooldown_steps"
-        ],
-        "search_min_pair_angle_deg": config["search_min_pair_angle_deg"],
-        "search_heat_pair_angle_deg": config["search_heat_pair_angle_deg"],
-        "search_min_target_distance_factor": config[
-            "search_min_target_distance_factor"
-        ],
-        "search_fallback_distance_factor": config[
-            "search_fallback_distance_factor"
-        ],
-        "search_tie_tolerance": config["search_tie_tolerance"],
         "pre_boundary_team_novelty_weight": config["pre_boundary_team_novelty_weight"],
         "pre_boundary_unique_novelty_weight": config["pre_boundary_unique_novelty_weight"],
         "pre_boundary_overlap_weight": config["pre_boundary_overlap_weight"],
@@ -3511,7 +3416,6 @@ def train(config: Dict = None):
         "pre_boundary_revisit_ratio": [],
         "team_overlap_ratio": [],
         "invalid_action_count": [],
-        "search_heading_histogram": [],
         "reward_breakdown": [],
         "stage": [],
         "substage": [],
@@ -3588,7 +3492,6 @@ def train(config: Dict = None):
             "episode": int(episode_number),
             "total_environment_steps": int(total_steps),
             "curriculum": curriculum.state_dict(),
-            "environment_rng_state": env.get_rng_state(),
         }
 
     for episode in range(1, config["total_episodes"] + 1):
@@ -4895,10 +4798,7 @@ def evaluate(agent: CTDE_PPO_Agent, config: Dict, num_episodes: int = None) -> D
             np.random.seed(stage_seed)
             random.seed(stage_seed)
 
-            for scene_index, scene_key in enumerate(config["eval_scene_keys"]):
-                eval_env_seed = (
-                    int(stage_seed) + int(scene_index) * 1009
-                )
+            for scene_key in config["eval_scene_keys"]:
                 env = FireSearchBaselineEnvironment(
                     data_dir=config["data_dir"],
                     num_drones=config["num_drones"],
@@ -4924,9 +4824,7 @@ def evaluate(agent: CTDE_PPO_Agent, config: Dict, num_episodes: int = None) -> D
                     stage3_target=config["stage3_success_target"],
                     stage3_near_prob=0.0,
                     termination_mode=evaluation_mode,
-                    **_persistent_env_kwargs(
-                        config, random_seed=eval_env_seed
-                    ),
+                    **_persistent_env_kwargs(config),
                 )
                 env.set_curriculum_substage(str(config.get("curriculum_substage", stage)))
                 env.set_stage2_far_spawn_ratio(1.0)
@@ -5035,7 +4933,7 @@ def evaluate(agent: CTDE_PPO_Agent, config: Dict, num_episodes: int = None) -> D
                         "scene_id": int(info.get("scene_id", -1)),
                         "scene_key": str(info.get("scene_key", scene_key)),
                         "episode_index": int(episode_index),
-                        "eval_seed": int(eval_env_seed),
+                        "eval_seed": int(stage_seed),
                         "evaluation_mode": evaluation_mode,
                         "observation_profile": config["observation_profile"],
                         "reward_profile": config["reward_profile"],
@@ -5109,41 +5007,6 @@ def evaluate(agent: CTDE_PPO_Agent, config: Dict, num_episodes: int = None) -> D
                         ),
                         "boundary_report_expirations": int(
                             info.get("boundary_report_expirations", 0)
-                        ),
-                        "search_heading_histogram": list(
-                            info.get("search_heading_histogram", [0] * 8)
-                        ),
-                        "search_tie_break_count": int(
-                            info.get("search_tie_break_count", 0)
-                        ),
-                        "forced_sector_switch_count": int(
-                            info.get("forced_sector_switch_count", 0)
-                        ),
-                        "pair_target_angle_mean": float(
-                            info.get("pair_target_angle_mean", 0.0)
-                        ),
-                        "pair_target_angle_min": float(
-                            info.get("pair_target_angle_min", 0.0)
-                        ),
-                        "pair_target_distance_mean": float(
-                            info.get("pair_target_distance_mean", 0.0)
-                        ),
-                        "pair_target_distance_min": float(
-                            info.get("pair_target_distance_min", 0.0)
-                        ),
-                        "heat_separation_relaxation_count": int(
-                            info.get("heat_separation_relaxation_count", 0)
-                        ),
-                        "edge_separation_fallback_count": int(
-                            info.get("edge_separation_fallback_count", 0)
-                        ),
-                        "soft_separation_fallback_count": int(
-                            info.get("soft_separation_fallback_count", 0)
-                        ),
-                        "connected_separation_violation_count": int(
-                            info.get(
-                                "connected_separation_violation_count", 0
-                            )
                         ),
                         "coverage_action_gain_min": float(
                             info.get("coverage_action_gain_min", 0.0)
@@ -5361,38 +5224,6 @@ def evaluate(agent: CTDE_PPO_Agent, config: Dict, num_episodes: int = None) -> D
                     ),
                     "mean_invalid_action_count": float(
                         np.mean([r["invalid_action_count"] for r in stage_records])
-                    ),
-                    "mean_forced_sector_switch_count": float(
-                        np.mean(
-                            [
-                                r["forced_sector_switch_count"]
-                                for r in stage_records
-                            ]
-                        )
-                    ),
-                    "mean_pair_target_angle": float(
-                        np.mean(
-                            [r["pair_target_angle_mean"] for r in stage_records]
-                        )
-                    ),
-                    "min_pair_target_angle": float(
-                        np.min(
-                            [r["pair_target_angle_min"] for r in stage_records]
-                        )
-                    ),
-                    "mean_pair_target_distance": float(
-                        np.mean(
-                            [
-                                r["pair_target_distance_mean"]
-                                for r in stage_records
-                            ]
-                        )
-                    ),
-                    "connected_separation_violation_count": int(
-                        sum(
-                            r["connected_separation_violation_count"]
-                            for r in stage_records
-                        )
                     ),
                     "mean_task_score": float(np.mean([r["task_score"] for r in stage_records])),
                     "records": stage_records,
