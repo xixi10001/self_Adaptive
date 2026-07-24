@@ -200,11 +200,11 @@ class CurriculumScheduleTest(unittest.TestCase):
         self.assertTrue(gate["tracking_given_found"]["passed"])
         self.assertTrue(gate["median_unique_boundary_cells"]["passed"])
 
-    def test_curriculum_soft_and_hard_paths_fit_3100_episode_run(self):
-        normal = 300 + 700 + 1100 + 800
-        hard = 400 + 1000 + 900 + 800
+    def test_curriculum_soft_and_hard_paths_preserve_stage4_budget(self):
+        normal = 400 + 800 + 1100 + 800
+        hard = 600 + 1000 + 900 + 800
 
-        self.assertEqual(normal, 2900)
+        self.assertEqual(normal, 3100)
         self.assertEqual(hard, CurriculumManager.GLOBAL_EPISODE_BUDGET)
         self.assertEqual(CurriculumManager.STAGE4_MIN_REMAINING_EPISODES, 800)
 
@@ -213,7 +213,8 @@ class CurriculumScheduleTest(unittest.TestCase):
         manager.stage_episodes[1] = manager.STAGE1_MAX_EPISODES
         manager.substage_episodes["1"] = manager.STAGE1_MAX_EPISODES
 
-        manager.update_validation(self.stage1_summary(False))
+        for _ in range(manager.VALIDATION_POOL_SIZE):
+            manager.update_validation(self.stage1_summary(False))
 
         self.assertTrue(manager.curriculum_failed)
         self.assertIn("hard budget", manager.curriculum_failure_reason)
@@ -266,8 +267,8 @@ class CurriculumScheduleTest(unittest.TestCase):
         self.assertTrue(manager.update_validation(self.stage2_summary()))
 
         self.assertEqual(manager.current_stage, 3)
-        self.assertEqual(sum(manager._stage3_budget_caps), 900)
-        self.assertEqual(manager._stage3_budget_caps, [150, 200, 250, 300])
+        self.assertEqual(sum(manager._stage3_budget_caps), 1100)
+        self.assertEqual(manager._stage3_budget_caps, [200, 250, 300, 350])
 
     def test_stage3_target_ladder_uses_decreasing_reach_rates(self):
         manager = CurriculumManager()

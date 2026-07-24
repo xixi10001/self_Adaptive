@@ -420,7 +420,7 @@ Scene stress_area008_scenario004 t=0 boundary points: 1
 ======================================================================
 CTDE-PPO 基线训练开始
 ======================================================================
-输出目录=D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260724_154437\训练结果\Fixed_LR_CTDE_PPO_seed42
+输出目录=D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260724_163948\训练结果\Fixed_LR_CTDE_PPO_seed42
 随机种子=42
 学习率策略=fixed | target_kl=0.0065 | actor_lr=2.00e-04 | actor_lr范围=[1.00e-04, 2.50e-04]
 KL迟滞区间=[0.82, 1.20] | 紧急阈值=2.00 | epoch熔断阈值=1.50
@@ -428,11 +428,11 @@ observation_profile=persistent_cooperative | reward_profile=persistent_boundary 
 初始位置百分位=5.0
 基线环境已初始化 | 模式=train | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
 CTDE-PPO 基线已初始化 | 设备=cuda | 本地观测=24 | 全局状态=19 | lr_adapt_mode=fixed
-回合   10 | 场景=train_area003_scenario006 | 阶段=1 | 奖励=   -4.1 | 步数=184.0 | 覆盖率= 18.6% | 成功率=  60% | 任务得分= 35.0% | 超时率=  40% | 零覆盖超时=  20% | KL=0.0000 | KLema=0.0000 | clip=0.000 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
-回合   20 | 场景=train_area002_scenario004 | 阶段=1 | 奖励=   -8.9 | 步数=193.3 | 覆盖率= 15.6% | 成功率=  60% | 任务得分= 32.9% | 超时率=  40% | 零覆盖超时=  25% | KL=0.0000 | KLema=0.0000 | clip=0.000 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
-回合   30 | 场景=train_area002_scenario004 | 阶段=1 | 奖励=   -9.8 | 步数=178.2 | 覆盖率= 21.5% | 成功率=  60% | 任务得分= 36.9% | 超时率=  40% | 零覆盖超时=  30% | KL=0.0072 | KLema=0.0072 | clip=0.059 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
-回合   40 | 场景=train_area002_scenario002 | 阶段=1 | 奖励=  -11.1 | 步数=182.9 | 覆盖率= 23.1% | 成功率=  60% | 任务得分= 37.4% | 超时率=  40% | 零覆盖超时=  32% | KL=0.0072 | KLema=0.0072 | clip=0.059 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
-回合   50 | 场景=train_area002_scenario004 | 阶段=1 | 奖励=  -11.0 | 步数=183.3 | 覆盖率= 24.0% | 成功率=  60% | 任务得分= 37.8% | 超时率=  40% | 零覆盖超时=  30% | KL=0.0064 | KLema=0.0070 | clip=0.036 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合   10 | 场景=train_area003_scenario006 | 阶段=1 | 奖励=    4.7 | 步数=184.1 | 覆盖率= 17.1% | 成功率=  60% | 任务得分= 34.3% | 超时率=  40% | 零覆盖超时=  20% | KL=0.0000 | KLema=0.0000 | clip=0.000 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合   20 | 场景=train_area002_scenario004 | 阶段=1 | 奖励=    1.3 | 步数=193.3 | 覆盖率= 15.3% | 成功率=  60% | 任务得分= 32.8% | 超时率=  40% | 零覆盖超时=  25% | KL=0.0000 | KLema=0.0000 | clip=0.000 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合   30 | 场景=train_area002_scenario004 | 阶段=1 | 奖励=    1.2 | 步数=178.2 | 覆盖率= 21.7% | 成功率=  60% | 任务得分= 37.0% | 超时率=  40% | 零覆盖超时=  30% | KL=0.0083 | KLema=0.0083 | clip=0.073 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合   40 | 场景=train_area002_scenario002 | 阶段=1 | 奖励=    0.6 | 步数=191.5 | 覆盖率= 21.5% | 成功率=  57% | 任务得分= 35.2% | 超时率=  42% | 零覆盖超时=  30% | KL=0.0083 | KLema=0.0083 | clip=0.073 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合   50 | 场景=train_area002_scenario004 | 阶段=1 | 奖励=    1.4 | 步数=192.2 | 覆盖率= 23.1% | 成功率=  56% | 任务得分= 35.5% | 超时率=  44% | 零覆盖超时=  28% | KL=0.0065 | KLema=0.0080 | clip=0.045 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
 
 ======================================================================
 验证评估 | 回合=50 | 阶段=1 | 每场景回合=5
@@ -443,19 +443,20 @@ CTDE-PPO 基线已初始化 | 设备=cuda | 本地观测=24 | 全局状态=19 | 
 基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
 基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
 基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
-评估阶段=1 | 回合数=30 | 任务得分=43.2% | 覆盖率=36.6% | 成功率=53.3% | 平均步数=167.2
-  回报分离 | success=22.07632968577975 | found_failed=7.775340085778012 | margin=14.300989600001738 | negative_action_gain=0
+评估阶段=1 | 回合数=30 | 任务得分=45.8% | 覆盖率=41.1% | 成功率=53.3% | 平均步数=160.9
+  回报分离 | success=23.28036510723307 | found_failed=9.205199291373177 | margin=14.075165815859894 | negative_action_gain=0
   [课程门槛] substage=1 | pooled_validations=1/3
     boundary_found_by_150: 60.0% >= 85.0% | FAIL
     tracking_given_found: 88.9% >= 70.0% | PASS
     zero_discovery_timeout: 40.0% <= 15.0% | FAIL
-    median_unique_boundary_cells: 26.0 >= 8.0 | PASS
-    episodes=50/400 | stage2_phase=early | stage2_mix=(0.6, 0.3, 0.1)
-回合   60 | 场景=train_area002_scenario001 | 阶段=1 | 奖励=   -9.8 | 步数=182.0 | 覆盖率= 23.7% | 成功率=  60% | 任务得分= 37.7% | 超时率=  40% | 零覆盖超时=  28% | KL=0.0064 | KLema=0.0070 | clip=0.036 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
-回合   70 | 场景=train_area003_scenario004 | 阶段=1 | 奖励=  -10.7 | 步数=185.8 | 覆盖率= 23.4% | 成功率=  57% | 任务得分= 36.5% | 超时率=  43% | 零覆盖超时=  30% | KL=0.0054 | KLema=0.0067 | clip=0.046 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
-回合   80 | 场景=train_area004_scenario003 | 阶段=1 | 奖励=   -9.2 | 步数=182.3 | 覆盖率= 24.5% | 成功率=  57% | 任务得分= 37.4% | 超时率=  42% | 零覆盖超时=  28% | KL=0.0054 | KLema=0.0067 | clip=0.046 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
-回合   90 | 场景=train_area002_scenario005 | 阶段=1 | 奖励=   -7.3 | 步数=171.0 | 覆盖率= 26.8% | 成功率=  61% | 任务得分= 40.3% | 超时率=  39% | 零覆盖超时=  26% | KL=0.0054 | KLema=0.0067 | clip=0.046 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
-回合  100 | 场景=train_area002_scenario004 | 阶段=1 | 奖励=   -7.9 | 步数=171.9 | 覆盖率= 26.2% | 成功率=  60% | 任务得分= 39.7% | 超时率=  40% | 零覆盖超时=  27% | KL=0.0068 | KLema=0.0067 | clip=0.066 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+    median_unique_boundary_cells: 21.5 >= 8.0 | PASS
+    episodes=50/600 | stage2_phase=early | stage2_mix=(0.6, 0.3, 0.1)
+  -> 最佳Stage 1综合验证分数: 72.7%
+回合   60 | 场景=train_area002_scenario001 | 阶段=1 | 奖励=    2.1 | 步数=186.4 | 覆盖率= 23.3% | 成功率=  57% | 任务得分= 36.2% | 超时率=  43% | 零覆盖超时=  27% | KL=0.0065 | KLema=0.0080 | clip=0.045 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合   70 | 场景=train_area003_scenario004 | 阶段=1 | 奖励=    2.0 | 步数=188.0 | 覆盖率= 23.7% | 成功率=  56% | 任务得分= 36.0% | 超时率=  44% | 零覆盖超时=  29% | KL=0.0062 | KLema=0.0076 | clip=0.056 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合   80 | 场景=train_area004_scenario003 | 阶段=1 | 奖励=    3.3 | 步数=176.4 | 覆盖率= 25.8% | 成功率=  60% | 任务得分= 39.1% | 超时率=  40% | 零覆盖超时=  26% | KL=0.0062 | KLema=0.0076 | clip=0.056 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合   90 | 场景=train_area002_scenario005 | 阶段=1 | 奖励=    4.3 | 步数=169.4 | 覆盖率= 27.9% | 成功率=  62% | 任务得分= 41.3% | 超时率=  38% | 零覆盖超时=  24% | KL=0.0062 | KLema=0.0076 | clip=0.056 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  100 | 场景=train_area002_scenario004 | 阶段=1 | 奖励=    4.1 | 步数=168.7 | 覆盖率= 28.7% | 成功率=  62% | 任务得分= 41.7% | 超时率=  38% | 零覆盖超时=  26% | KL=0.0062 | KLema=0.0076 | clip=0.056 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
 
 ======================================================================
 验证评估 | 回合=100 | 阶段=1 | 每场景回合=5
@@ -466,20 +467,21 @@ CTDE-PPO 基线已初始化 | 设备=cuda | 本地观测=24 | 全局状态=19 | 
 基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
 基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
 基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
-评估阶段=1 | 回合数=30 | 任务得分=35.7% | 覆盖率=30.0% | 成功率=43.3% | 平均步数=184.8
-  回报分离 | success=22.63374410632296 | found_failed=4.122612511825241 | margin=18.51113159449772 | negative_action_gain=0
+评估阶段=1 | 回合数=30 | 任务得分=50.0% | 覆盖率=43.8% | 成功率=60.0% | 平均步数=148.9
+  回报分离 | success=23.13938038480778 | found_failed=7.93503638767912 | margin=15.20434399712866 | negative_action_gain=0
   [课程门槛] substage=1 | pooled_validations=2/3
-    boundary_found_by_150: 53.3% >= 85.0% | FAIL
-    tracking_given_found: 90.6% >= 70.0% | PASS
-    zero_discovery_timeout: 46.7% <= 15.0% | FAIL
-    median_unique_boundary_cells: 22.2 >= 8.0 | PASS
-    episodes=100/400 | stage2_phase=early | stage2_mix=(0.6, 0.3, 0.1)
-  -> 最佳训练滚动任务得分: 39.7%
-回合  110 | 场景=train_area003_scenario002 | 阶段=1 | 奖励=  -10.0 | 步数=174.4 | 覆盖率= 26.7% | 成功率=  58% | 任务得分= 39.1% | 超时率=  42% | 零覆盖超时=  31% | KL=0.0068 | KLema=0.0067 | clip=0.066 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
-回合  120 | 场景=train_area001_scenario005 | 阶段=1 | 奖励=   -8.5 | 步数=168.2 | 覆盖率= 29.4% | 成功率=  59% | 任务得分= 41.2% | 超时率=  41% | 零覆盖超时=  30% | KL=0.0068 | KLema=0.0067 | clip=0.066 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
-回合  130 | 场景=train_area001_scenario003 | 阶段=1 | 奖励=   -9.5 | 步数=172.7 | 覆盖率= 28.6% | 成功率=  57% | 任务得分= 39.9% | 超时率=  43% | 零覆盖超时=  32% | KL=0.0055 | KLema=0.0065 | clip=0.047 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
-回合  140 | 场景=train_area004_scenario006 | 阶段=1 | 奖励=   -7.8 | 步数=167.8 | 覆盖率= 29.8% | 成功率=  58% | 任务得分= 41.1% | 超时率=  42% | 零覆盖超时=  31% | KL=0.0055 | KLema=0.0065 | clip=0.047 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
-回合  150 | 场景=train_area002_scenario001 | 阶段=1 | 奖励=   -8.8 | 步数=170.0 | 覆盖率= 29.2% | 成功率=  56% | 任务得分= 40.1% | 超时率=  44% | 零覆盖超时=  34% | KL=0.0044 | KLema=0.0061 | clip=0.034 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+    boundary_found_by_150: 63.3% >= 85.0% | FAIL
+    tracking_given_found: 89.5% >= 70.0% | PASS
+    zero_discovery_timeout: 36.7% <= 15.0% | FAIL
+    median_unique_boundary_cells: 21.8 >= 8.0 | PASS
+    episodes=100/600 | stage2_phase=early | stage2_mix=(0.6, 0.3, 0.1)
+  -> 最佳Stage 1综合验证分数: 74.8%
+  -> 最佳训练滚动任务得分: 41.7%
+回合  110 | 场景=train_area003_scenario002 | 阶段=1 | 奖励=    2.7 | 步数=173.6 | 覆盖率= 29.3% | 成功率=  59% | 任务得分= 40.8% | 超时率=  41% | 零覆盖超时=  31% | KL=0.0042 | KLema=0.0069 | clip=0.031 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  120 | 场景=train_area001_scenario005 | 阶段=1 | 奖励=    3.5 | 步数=167.1 | 覆盖率= 31.2% | 成功率=  60% | 任务得分= 42.5% | 超时率=  40% | 零覆盖超时=  31% | KL=0.0042 | KLema=0.0069 | clip=0.031 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  130 | 场景=train_area001_scenario003 | 阶段=1 | 奖励=    4.0 | 步数=166.4 | 覆盖率= 32.1% | 成功率=  60% | 任务得分= 42.9% | 超时率=  40% | 零覆盖超时=  30% | KL=0.0047 | KLema=0.0065 | clip=0.047 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  140 | 场景=train_area004_scenario006 | 阶段=1 | 奖励=    5.1 | 步数=155.4 | 覆盖率= 34.3% | 成功率=  62% | 任务得分= 45.4% | 超时率=  38% | 零覆盖超时=  30% | KL=0.0047 | KLema=0.0065 | clip=0.047 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  150 | 场景=train_area002_scenario001 | 阶段=1 | 奖励=    5.7 | 步数=146.7 | 覆盖率= 35.5% | 成功率=  65% | 任务得分= 47.5% | 超时率=  35% | 零覆盖超时=  30% | KL=0.0047 | KLema=0.0065 | clip=0.047 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
 
 ======================================================================
 验证评估 | 回合=150 | 阶段=1 | 每场景回合=5
@@ -490,19 +492,20 @@ CTDE-PPO 基线已初始化 | 设备=cuda | 本地观测=24 | 全局状态=19 | 
 基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
 基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
 基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
-评估阶段=1 | 回合数=30 | 任务得分=26.9% | 覆盖率=21.8% | 成功率=33.3% | 平均步数=210.5
-  回报分离 | success=22.548388475800234 | found_failed=-3.2773874881747806 | margin=25.825775963975016 | negative_action_gain=0
+评估阶段=1 | 回合数=30 | 任务得分=49.3% | 覆盖率=40.3% | 成功率=63.3% | 平均步数=147.7
+  回报分离 | success=23.135697808105466 | found_failed=9.205199291373177 | margin=13.930498516732289 | negative_action_gain=0
   [课程门槛] substage=1 | pooled_validations=3/3
-    boundary_found_by_150: 47.8% >= 85.0% | FAIL
-    tracking_given_found: 90.7% >= 70.0% | PASS
-    zero_discovery_timeout: 52.2% <= 15.0% | FAIL
-    median_unique_boundary_cells: 18.5 >= 8.0 | PASS
-    episodes=150/400 | stage2_phase=early | stage2_mix=(0.6, 0.3, 0.1)
-回合  160 | 场景=train_area004_scenario005 | 阶段=1 | 奖励=   -8.8 | 步数=170.8 | 覆盖率= 29.2% | 成功率=  55% | 任务得分= 39.7% | 超时率=  45% | 零覆盖超时=  34% | KL=0.0044 | KLema=0.0061 | clip=0.034 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
-回合  170 | 场景=train_area004_scenario005 | 阶段=1 | 奖励=   -7.0 | 步数=160.9 | 覆盖率= 32.3% | 成功率=  59% | 任务得分= 43.1% | 超时率=  41% | 零覆盖超时=  32% | KL=0.0044 | KLema=0.0061 | clip=0.034 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
-回合  180 | 场景=train_area004_scenario002 | 阶段=1 | 奖励=   -6.0 | 步数=151.6 | 覆盖率= 34.4% | 成功率=  62% | 任务得分= 45.7% | 超时率=  38% | 零覆盖超时=  32% | KL=0.0044 | KLema=0.0057 | clip=0.053 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
-回合  190 | 场景=train_area001_scenario006 | 阶段=1 | 奖励=   -5.7 | 步数=151.8 | 覆盖率= 34.0% | 成功率=  62% | 任务得分= 45.5% | 超时率=  38% | 零覆盖超时=  32% | KL=0.0044 | KLema=0.0057 | clip=0.053 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
-回合  200 | 场景=train_area003_scenario005 | 阶段=1 | 奖励=   -4.2 | 步数=146.1 | 覆盖率= 35.8% | 成功率=  64% | 任务得分= 47.4% | 超时率=  36% | 零覆盖超时=  31% | KL=0.0044 | KLema=0.0057 | clip=0.053 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+    boundary_found_by_150: 65.6% >= 85.0% | FAIL
+    tracking_given_found: 89.8% >= 70.0% | PASS
+    zero_discovery_timeout: 34.4% <= 15.0% | FAIL
+    median_unique_boundary_cells: 22.0 >= 8.0 | PASS
+    episodes=150/600 | stage2_phase=early | stage2_mix=(0.6, 0.3, 0.1)
+  -> 最佳Stage 1综合验证分数: 76.3%
+回合  160 | 场景=train_area004_scenario005 | 阶段=1 | 奖励=    6.0 | 步数=146.3 | 覆盖率= 36.8% | 成功率=  65% | 任务得分= 48.2% | 超时率=  35% | 零覆盖超时=  31% | KL=0.0055 | KLema=0.0063 | clip=0.056 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  170 | 场景=train_area004_scenario005 | 阶段=1 | 奖励=    7.1 | 步数=141.8 | 覆盖率= 37.5% | 成功率=  66% | 任务得分= 49.1% | 超时率=  34% | 零覆盖超时=  28% | KL=0.0055 | KLema=0.0063 | clip=0.056 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  180 | 场景=train_area004_scenario002 | 阶段=1 | 奖励=    7.9 | 步数=136.8 | 覆盖率= 39.6% | 成功率=  67% | 任务得分= 50.8% | 超时率=  33% | 零覆盖超时=  27% | KL=0.0055 | KLema=0.0063 | clip=0.056 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  190 | 场景=train_area001_scenario006 | 阶段=1 | 奖励=    7.7 | 步数=136.8 | 覆盖率= 39.2% | 成功率=  66% | 任务得分= 50.3% | 超时率=  34% | 零覆盖超时=  27% | KL=0.0055 | KLema=0.0063 | clip=0.056 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  200 | 场景=train_area003_scenario005 | 阶段=1 | 奖励=    8.4 | 步数=132.7 | 覆盖率= 39.4% | 成功率=  67% | 任务得分= 51.0% | 超时率=  33% | 零覆盖超时=  26% | KL=0.0057 | KLema=0.0062 | clip=0.076 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
 
 ======================================================================
 验证评估 | 回合=200 | 阶段=1 | 每场景回合=5
@@ -513,20 +516,21 @@ CTDE-PPO 基线已初始化 | 设备=cuda | 本地观测=24 | 全局状态=19 | 
 基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
 基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
 基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
-评估阶段=1 | 回合数=30 | 任务得分=26.9% | 覆盖率=21.8% | 成功率=33.3% | 平均步数=210.5
-  回报分离 | success=22.756305577182943 | found_failed=-3.2773874881747806 | margin=26.033693065357724 | negative_action_gain=0
+评估阶段=1 | 回合数=30 | 任务得分=47.7% | 覆盖率=39.7% | 成功率=60.0% | 平均步数=153.3
+  回报分离 | success=23.14355854341745 | found_failed=9.10190727964362 | margin=14.04165126377383 | negative_action_gain=0
   [课程门槛] substage=1 | pooled_validations=3/3
-    boundary_found_by_150: 40.0% >= 85.0% | FAIL
-    tracking_given_found: 91.7% >= 70.0% | PASS
-    zero_discovery_timeout: 60.0% <= 15.0% | FAIL
-    median_unique_boundary_cells: 18.0 >= 8.0 | PASS
-    episodes=200/400 | stage2_phase=early | stage2_mix=(0.6, 0.3, 0.1)
-  -> 最佳训练滚动任务得分: 47.4%
-回合  210 | 场景=train_area002_scenario006 | 阶段=1 | 奖励=   -2.2 | 步数=140.0 | 覆盖率= 37.7% | 成功率=  66% | 任务得分= 49.3% | 超时率=  34% | 零覆盖超时=  29% | KL=0.0044 | KLema=0.0057 | clip=0.053 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
-回合  220 | 场景=train_area001_scenario002 | 阶段=1 | 奖励=   -2.8 | 步数=141.0 | 覆盖率= 37.9% | 成功率=  65% | 任务得分= 49.0% | 超时率=  35% | 零覆盖超时=  31% | KL=0.0077 | KLema=0.0061 | clip=0.090 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
-回合  230 | 场景=train_area003_scenario002 | 阶段=1 | 奖励=   -0.6 | 步数=134.0 | 覆盖率= 40.2% | 成功率=  68% | 任务得分= 51.6% | 超时率=  32% | 零覆盖超时=  28% | KL=0.0077 | KLema=0.0061 | clip=0.090 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
-回合  240 | 场景=train_area004_scenario001 | 阶段=1 | 奖励=   -0.2 | 步数=131.1 | 覆盖率= 40.5% | 成功率=  69% | 任务得分= 52.2% | 超时率=  31% | 零覆盖超时=  27% | KL=0.0077 | KLema=0.0061 | clip=0.090 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
-回合  250 | 场景=train_area001_scenario002 | 阶段=1 | 奖励=    1.8 | 步数=122.2 | 覆盖率= 43.9% | 成功率=  72% | 任务得分= 55.4% | 超时率=  28% | 零覆盖超时=  25% | KL=0.0055 | KLema=0.0060 | clip=0.064 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+    boundary_found_by_150: 67.8% >= 85.0% | FAIL
+    tracking_given_found: 90.2% >= 70.0% | PASS
+    zero_discovery_timeout: 32.2% <= 15.0% | FAIL
+    median_unique_boundary_cells: 22.0 >= 8.0 | PASS
+    episodes=200/600 | stage2_phase=early | stage2_mix=(0.6, 0.3, 0.1)
+  -> 最佳Stage 1综合验证分数: 77.7%
+  -> 最佳训练滚动任务得分: 51.0%
+回合  210 | 场景=train_area002_scenario006 | 阶段=1 | 奖励=   10.3 | 步数=122.5 | 覆盖率= 41.3% | 成功率=  71% | 任务得分= 53.8% | 超时率=  29% | 零覆盖超时=  22% | KL=0.0057 | KLema=0.0062 | clip=0.076 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  220 | 场景=train_area001_scenario002 | 阶段=1 | 奖励=   10.6 | 步数=120.4 | 覆盖率= 43.4% | 成功率=  71% | 任务得分= 55.0% | 超时率=  29% | 零覆盖超时=  22% | KL=0.0057 | KLema=0.0062 | clip=0.076 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  230 | 场景=train_area003_scenario002 | 阶段=1 | 奖励=   10.9 | 步数=121.1 | 覆盖率= 43.8% | 成功率=  71% | 任务得分= 55.1% | 超时率=  29% | 零覆盖超时=  22% | KL=0.0055 | KLema=0.0060 | clip=0.060 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  240 | 场景=train_area004_scenario001 | 阶段=1 | 奖励=   11.7 | 步数=116.1 | 覆盖率= 45.3% | 成功率=  73% | 任务得分= 56.8% | 超时率=  27% | 零覆盖超时=  19% | KL=0.0055 | KLema=0.0060 | clip=0.060 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  250 | 场景=train_area001_scenario002 | 阶段=1 | 奖励=   11.6 | 步数=118.1 | 覆盖率= 45.8% | 成功率=  72% | 任务得分= 56.6% | 超时率=  28% | 零覆盖超时=  19% | KL=0.0055 | KLema=0.0060 | clip=0.060 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
 
 ======================================================================
 验证评估 | 回合=250 | 阶段=1 | 每场景回合=5
@@ -537,19 +541,20 @@ CTDE-PPO 基线已初始化 | 设备=cuda | 本地观测=24 | 全局状态=19 | 
 基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
 基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
 基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
-评估阶段=1 | 回合数=30 | 任务得分=29.2% | 覆盖率=23.3% | 成功率=36.7% | 平均步数=201.5
-  回报分离 | success=22.242508889199666 | found_failed=4.122612511825241 | margin=18.119896377374424 | negative_action_gain=0
+评估阶段=1 | 回合数=30 | 任务得分=52.9% | 覆盖率=44.1% | 成功率=66.7% | 平均步数=137.5
+  回报分离 | success=23.744373978473135 | found_failed=9.10190727964362 | margin=14.642466698829516 | negative_action_gain=0
   [课程门槛] substage=1 | pooled_validations=3/3
-    boundary_found_by_150: 37.8% >= 85.0% | FAIL
-    tracking_given_found: 91.2% >= 70.0% | PASS
-    zero_discovery_timeout: 62.2% <= 15.0% | FAIL
-    median_unique_boundary_cells: 18.0 >= 8.0 | PASS
-    episodes=250/400 | stage2_phase=early | stage2_mix=(0.6, 0.3, 0.1)
-回合  260 | 场景=train_area001_scenario003 | 阶段=1 | 奖励=    3.4 | 步数=113.7 | 覆盖率= 46.0% | 成功率=  75% | 任务得分= 57.9% | 超时率=  25% | 零覆盖超时=  24% | KL=0.0055 | KLema=0.0060 | clip=0.064 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
-回合  270 | 场景=train_area001_scenario002 | 阶段=1 | 奖励=    4.9 | 步数=108.5 | 覆盖率= 46.6% | 成功率=  77% | 任务得分= 59.2% | 超时率=  23% | 零覆盖超时=  22% | KL=0.0055 | KLema=0.0060 | clip=0.064 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
-回合  280 | 场景=train_area003_scenario003 | 阶段=1 | 奖励=    2.8 | 步数=118.9 | 覆盖率= 44.2% | 成功率=  73% | 任务得分= 56.1% | 超时率=  27% | 零覆盖超时=  26% | KL=0.0055 | KLema=0.0060 | clip=0.064 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
-回合  290 | 场景=train_area003_scenario005 | 阶段=1 | 奖励=    1.7 | 步数=122.4 | 覆盖率= 44.5% | 成功率=  71% | 任务得分= 55.4% | 超时率=  29% | 零覆盖超时=  28% | KL=0.0071 | KLema=0.0062 | clip=0.087 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
-回合  300 | 场景=train_area004_scenario006 | 阶段=1 | 奖励=    1.2 | 步数=126.7 | 覆盖率= 44.1% | 成功率=  69% | 任务得分= 54.3% | 超时率=  31% | 零覆盖超时=  28% | KL=0.0071 | KLema=0.0062 | clip=0.087 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+    boundary_found_by_150: 70.0% >= 85.0% | FAIL
+    tracking_given_found: 90.5% >= 70.0% | PASS
+    zero_discovery_timeout: 30.0% <= 15.0% | FAIL
+    median_unique_boundary_cells: 23.5 >= 8.0 | PASS
+    episodes=250/600 | stage2_phase=early | stage2_mix=(0.6, 0.3, 0.1)
+  -> 最佳Stage 1综合验证分数: 79.1%
+回合  260 | 场景=train_area001_scenario003 | 阶段=1 | 奖励=   12.0 | 步数=111.7 | 覆盖率= 46.7% | 成功率=  74% | 任务得分= 58.1% | 超时率=  26% | 零覆盖超时=  18% | KL=0.0055 | KLema=0.0060 | clip=0.060 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  270 | 场景=train_area001_scenario002 | 阶段=1 | 奖励=   12.5 | 步数=103.1 | 覆盖率= 49.3% | 成功率=  77% | 任务得分= 60.9% | 超时率=  23% | 零覆盖超时=  18% | KL=0.0055 | KLema=0.0060 | clip=0.060 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  280 | 场景=train_area003_scenario003 | 阶段=1 | 奖励=   11.6 | 步数=113.3 | 覆盖率= 47.6% | 成功率=  73% | 任务得分= 58.2% | 超时率=  27% | 零覆盖超时=  20% | KL=0.0053 | KLema=0.0059 | clip=0.049 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  290 | 场景=train_area003_scenario005 | 阶段=1 | 奖励=   12.1 | 步数=116.0 | 覆盖率= 48.5% | 成功率=  74% | 任务得分= 58.7% | 超时率=  26% | 零覆盖超时=  20% | KL=0.0053 | KLema=0.0059 | clip=0.049 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  300 | 场景=train_area004_scenario006 | 阶段=1 | 奖励=   12.2 | 步数=115.6 | 覆盖率= 49.6% | 成功率=  75% | 任务得分= 59.6% | 超时率=  25% | 零覆盖超时=  19% | KL=0.0053 | KLema=0.0059 | clip=0.049 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
 
 ======================================================================
 验证评估 | 回合=300 | 阶段=1 | 每场景回合=5
@@ -560,20 +565,21 @@ CTDE-PPO 基线已初始化 | 设备=cuda | 本地观测=24 | 全局状态=19 | 
 基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
 基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
 基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
-评估阶段=1 | 回合数=30 | 任务得分=29.7% | 覆盖率=24.3% | 成功率=36.7% | 平均步数=201.2
-  回报分离 | success=22.48848888930452 | found_failed=4.122612511825241 | margin=18.365876377479278 | negative_action_gain=0
+评估阶段=1 | 回合数=30 | 任务得分=66.1% | 覆盖率=58.0% | 成功率=80.0% | 平均步数=102.6
+  回报分离 | success=22.489918438352237 | found_failed=11.1574407746585 | margin=11.332477663693737 | negative_action_gain=0
   [课程门槛] substage=1 | pooled_validations=3/3
-    boundary_found_by_150: 38.9% >= 85.0% | FAIL
-    tracking_given_found: 91.4% >= 70.0% | PASS
-    zero_discovery_timeout: 61.1% <= 15.0% | FAIL
-    median_unique_boundary_cells: 18.0 >= 8.0 | PASS
-    episodes=300/400 | stage2_phase=early | stage2_mix=(0.6, 0.3, 0.1)
-  -> 最佳训练滚动任务得分: 54.3%
-回合  310 | 场景=train_area002_scenario006 | 阶段=1 | 奖励=    2.4 | 步数=121.0 | 覆盖率= 45.6% | 成功率=  71% | 任务得分= 56.0% | 超时率=  29% | 零覆盖超时=  26% | KL=0.0071 | KLema=0.0062 | clip=0.087 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
-回合  320 | 场景=train_area001_scenario001 | 阶段=1 | 奖励=    2.5 | 步数=123.4 | 覆盖率= 44.5% | 成功率=  70% | 任务得分= 55.0% | 超时率=  30% | 零覆盖超时=  25% | KL=0.0057 | KLema=0.0061 | clip=0.053 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
-回合  330 | 场景=train_area003_scenario004 | 阶段=1 | 奖励=    2.2 | 步数=125.3 | 覆盖率= 42.7% | 成功率=  69% | 任务得分= 53.7% | 超时率=  31% | 零覆盖超时=  26% | KL=0.0057 | KLema=0.0061 | clip=0.053 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
-回合  340 | 场景=train_area003_scenario003 | 阶段=1 | 奖励=    0.8 | 步数=128.8 | 覆盖率= 40.9% | 成功率=  67% | 任务得分= 52.0% | 超时率=  33% | 零覆盖超时=  28% | KL=0.0057 | KLema=0.0061 | clip=0.053 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
-回合  350 | 场景=train_area004_scenario006 | 阶段=1 | 奖励=    1.2 | 步数=128.7 | 覆盖率= 39.9% | 成功率=  67% | 任务得分= 51.5% | 超时率=  33% | 零覆盖超时=  27% | KL=0.0056 | KLema=0.0060 | clip=0.070 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+    boundary_found_by_150: 76.7% >= 85.0% | FAIL
+    tracking_given_found: 89.9% >= 70.0% | PASS
+    zero_discovery_timeout: 22.2% <= 15.0% | FAIL
+    median_unique_boundary_cells: 21.5 >= 8.0 | PASS
+    episodes=300/600 | stage2_phase=early | stage2_mix=(0.6, 0.3, 0.1)
+  -> 最佳Stage 1综合验证分数: 83.1%
+  -> 最佳训练滚动任务得分: 59.6%
+回合  310 | 场景=train_area002_scenario006 | 阶段=1 | 奖励=   13.3 | 步数=106.2 | 覆盖率= 51.9% | 成功率=  78% | 任务得分= 62.3% | 超时率=  22% | 零覆盖超时=  16% | KL=0.0053 | KLema=0.0059 | clip=0.049 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  320 | 场景=train_area001_scenario001 | 阶段=1 | 奖励=   13.3 | 步数=106.8 | 覆盖率= 50.4% | 成功率=  78% | 任务得分= 61.5% | 超时率=  22% | 零覆盖超时=  16% | KL=0.0051 | KLema=0.0057 | clip=0.050 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  330 | 场景=train_area003_scenario004 | 阶段=1 | 奖励=   13.9 | 步数=100.7 | 覆盖率= 50.0% | 成功率=  81% | 任务得分= 62.6% | 超时率=  19% | 零覆盖超时=  14% | KL=0.0051 | KLema=0.0057 | clip=0.050 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  340 | 场景=train_area003_scenario003 | 阶段=1 | 奖励=   13.6 | 步数=101.5 | 覆盖率= 49.0% | 成功率=  81% | 任务得分= 62.0% | 超时率=  19% | 零覆盖超时=  15% | KL=0.0051 | KLema=0.0057 | clip=0.050 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  350 | 场景=train_area004_scenario006 | 阶段=1 | 奖励=   14.2 | 步数= 97.8 | 覆盖率= 50.7% | 成功率=  82% | 任务得分= 63.4% | 超时率=  18% | 零覆盖超时=  15% | KL=0.0051 | KLema=0.0057 | clip=0.050 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
 
 ======================================================================
 验证评估 | 回合=350 | 阶段=1 | 每场景回合=5
@@ -584,22 +590,26 @@ CTDE-PPO 基线已初始化 | 设备=cuda | 本地观测=24 | 全局状态=19 | 
 基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
 基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
 基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
-评估阶段=1 | 回合数=30 | 任务得分=24.8% | 覆盖率=20.7% | 成功率=30.0% | 平均步数=218.9
-  回报分离 | success=22.77614928584834 | found_failed=5.406453979741139 | margin=17.369695306107204 | negative_action_gain=0
+评估阶段=1 | 回合数=30 | 任务得分=75.2% | 覆盖率=64.0% | 成功率=93.3% | 平均步数=71.2
+  回报分离 | success=22.35824851760662 | found_failed=7.984130160429126 | margin=14.374118357177492 | negative_action_gain=0
   [课程门槛] substage=1 | pooled_validations=3/3
-    boundary_found_by_150: 41.1% >= 85.0% | FAIL
-    tracking_given_found: 83.8% >= 70.0% | PASS
-    zero_discovery_timeout: 58.9% <= 15.0% | FAIL
-    median_unique_boundary_cells: 18.0 >= 8.0 | PASS
-    episodes=350/400 | stage2_phase=early | stage2_mix=(0.6, 0.3, 0.1)
-回合  360 | 场景=train_area002_scenario003 | 阶段=1 | 奖励=    0.7 | 步数=128.2 | 覆盖率= 40.9% | 成功率=  67% | 任务得分= 52.0% | 超时率=  33% | 零覆盖超时=  28% | KL=0.0056 | KLema=0.0060 | clip=0.070 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
-回合  370 | 场景=train_area001_scenario001 | 阶段=1 | 奖励=   -1.0 | 步数=135.0 | 覆盖率= 39.5% | 成功率=  64% | 任务得分= 49.9% | 超时率=  36% | 零覆盖超时=  31% | KL=0.0056 | KLema=0.0060 | clip=0.070 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
-回合  380 | 场景=train_area002_scenario004 | 阶段=1 | 奖励=   -1.3 | 步数=137.8 | 覆盖率= 39.4% | 成功率=  63% | 任务得分= 49.4% | 超时率=  37% | 零覆盖超时=  32% | KL=0.0048 | KLema=0.0058 | clip=0.049 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
-回合  390 | 场景=train_area004_scenario005 | 阶段=1 | 奖励=   -2.5 | 步数=144.6 | 覆盖率= 37.9% | 成功率=  61% | 任务得分= 47.6% | 超时率=  39% | 零覆盖超时=  34% | KL=0.0048 | KLema=0.0058 | clip=0.049 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
-回合  400 | 场景=train_area004_scenario002 | 阶段=1 | 奖励=   -2.4 | 步数=144.8 | 覆盖率= 38.2% | 成功率=  61% | 任务得分= 47.8% | 超时率=  39% | 零覆盖超时=  35% | KL=0.0049 | KLema=0.0056 | clip=0.054 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+    boundary_found_by_150: 86.7% >= 85.0% | PASS
+    tracking_given_found: 92.3% >= 70.0% | PASS
+    zero_discovery_timeout: 12.2% <= 15.0% | PASS
+    median_unique_boundary_cells: 21.0 >= 8.0 | PASS
+    episodes=350/600 | stage2_phase=early | stage2_mix=(0.6, 0.3, 0.1)
+
+  [验证课程] 1 -> 2 | pooled_episodes=90
+  -> 最佳Stage 1综合验证分数: 89.9%
+课程阶段已切换为 2
+回合  360 | 场景=train_area002_scenario001 | 阶段=2 | 奖励=   10.9 | 步数=132.3 | 覆盖率= 48.5% | 成功率=  80% | 任务得分= 60.9% | 超时率=  20% | 零覆盖超时=  17% | KL=0.0058 | KLema=0.0056 | clip=0.065 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  370 | 场景=train_area003_scenario006 | 阶段=2 | 奖励=    6.9 | 步数=173.4 | 覆盖率= 43.7% | 成功率=  75% | 任务得分= 55.8% | 超时率=  25% | 零覆盖超时=  22% | KL=0.0081 | KLema=0.0061 | clip=0.119 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  380 | 场景=train_area003_scenario005 | 阶段=2 | 奖励=    4.4 | 步数=193.2 | 覆盖率= 41.9% | 成功率=  75% | 任务得分= 54.7% | 超时率=  25% | 零覆盖超时=  24% | KL=0.0081 | KLema=0.0061 | clip=0.119 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  390 | 场景=train_area003_scenario002 | 阶段=2 | 奖励=   -0.5 | 步数=222.2 | 覆盖率= 38.9% | 成功率=  71% | 任务得分= 51.6% | 超时率=  29% | 零覆盖超时=  29% | KL=0.0056 | KLema=0.0060 | clip=0.068 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  400 | 场景=train_area004_scenario001 | 阶段=2 | 奖励=   -4.4 | 步数=254.3 | 覆盖率= 35.7% | 成功率=  69% | 任务得分= 48.7% | 超时率=  31% | 零覆盖超时=  31% | KL=0.0072 | KLema=0.0062 | clip=0.081 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
 
 ======================================================================
-验证评估 | 回合=400 | 阶段=1 | 每场景回合=5
+验证评估 | 回合=400 | 阶段=2 | 每场景回合=5
 ======================================================================
 基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
 基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
@@ -607,48 +617,44 @@ CTDE-PPO 基线已初始化 | 设备=cuda | 本地观测=24 | 全局状态=19 | 
 基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
 基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
 基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
-评估阶段=1 | 回合数=30 | 任务得分=37.3% | 覆盖率=33.1% | 成功率=43.3% | 平均步数=183.9
-  回报分离 | success=22.722042453473453 | found_failed=6.205533869852177 | margin=16.516508583621274 | negative_action_gain=0
-  [课程门槛] substage=1 | pooled_validations=3/3
-    boundary_found_by_150: 44.4% >= 85.0% | FAIL
-    tracking_given_found: 82.5% >= 70.0% | PASS
-    zero_discovery_timeout: 55.6% <= 15.0% | FAIL
-    median_unique_boundary_cells: 18.0 >= 8.0 | PASS
-    episodes=400/400 | stage2_phase=early | stage2_mix=(0.6, 0.3, 0.1)
-
-  [课程失败] 1 exhausted its 400-episode hard budget without passing pooled validation
-训练因课程能力门槛未达标而停止 | reason=1 exhausted its 400-episode hard budget without passing pooled validation | checkpoint=D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260724_154437\训练结果\Fixed_LR_CTDE_PPO_seed42\models\ppo_curriculum_failed.pth
-
-======================================================================
-训练后最佳验证模型评估
-数据划分=['validation', 'generalization', 'stress'] | 评估阶段=[3] | 每场景回合=50
-======================================================================
-未找到 best-val checkpoint，跳过训练后评估
+评估阶段=2 | 回合数=30 | 任务得分=13.9% | 覆盖率=13.1% | 成功率=16.7% | 平均步数=528.3
+  [课程门槛] substage=2 | pooled_validations=1/3
+    boundary_found: 16.7% >= 75.0% | FAIL
+    contact_given_found: 100.0% >= 70.0% | PASS
+    zero_discovery_timeout: 83.3% <= 25.0% | FAIL
+    far_median_first_boundary_step: 160.0 <= 240.0 | PASS
+    episodes=50/1000 | stage2_phase=early | stage2_mix=(0.6, 0.3, 0.1)
+回合  410 | 场景=train_area002_scenario006 | 阶段=2 | 奖励=   -9.7 | 步数=295.4 | 覆盖率= 30.8% | 成功率=  62% | 任务得分= 42.9% | 超时率=  38% | 零覆盖超时=  38% | KL=0.0051 | KLema=0.0060 | clip=0.049 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  420 | 场景=train_area002_scenario002 | 阶段=2 | 奖励=  -13.5 | 步数=330.1 | 覆盖率= 29.3% | 成功率=  58% | 任务得分= 40.2% | 超时率=  42% | 零覆盖超时=  42% | KL=0.0049 | KLema=0.0058 | clip=0.055 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  430 | 场景=train_area003_scenario001 | 阶段=2 | 奖励=  -17.7 | 步数=364.5 | 覆盖率= 26.2% | 成功率=  53% | 任务得分= 36.3% | 超时率=  47% | 零覆盖超时=  47% | KL=0.0054 | KLema=0.0057 | clip=0.053 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  440 | 场景=train_area003_scenario002 | 阶段=2 | 奖励=  -22.9 | 步数=401.0 | 覆盖率= 23.3% | 成功率=  48% | 任务得分= 32.4% | 超时率=  52% | 零覆盖超时=  52% | KL=0.0044 | KLema=0.0054 | clip=0.042 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  450 | 场景=train_area002_scenario005 | 阶段=2 | 奖励=  -26.7 | 步数=424.6 | 覆盖率= 18.6% | 成功率=  46% | 任务得分= 28.9% | 超时率=  54% | 零覆盖超时=  54% | KL=0.0055 | KLema=0.0054 | clip=0.069 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
 
 ======================================================================
-训练后完整时域覆盖评估
-validation选模每场景回合=20 | 最终报告每场景回合=50
+验证评估 | 回合=450 | 阶段=2 | 每场景回合=5
 ======================================================================
-未找到终末阶段 checkpoint，跳过完整时域评估
-full_horizon_summary=D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260724_154437\训练结果\Fixed_LR_CTDE_PPO_seed42\logs\full_horizon_summary.json
-eval_summary=D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260724_154437\训练结果\Fixed_LR_CTDE_PPO_seed42\logs\eval_summary.json
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+评估阶段=2 | 回合数=30 | 任务得分=11.4% | 覆盖率=11.0% | 成功率=13.3% | 平均步数=543.9
+  [课程门槛] substage=2 | pooled_validations=2/3
+    boundary_found: 16.7% >= 75.0% | FAIL
+    contact_given_found: 90.0% >= 70.0% | PASS
+    zero_discovery_timeout: 83.3% <= 25.0% | FAIL
+    far_median_first_boundary_step: 160.0 <= 240.0 | PASS
+    episodes=100/1000 | stage2_phase=early | stage2_mix=(0.6, 0.3, 0.1)
+回合  460 | 场景=train_area003_scenario001 | 阶段=2 | 奖励=  -26.3 | 步数=425.0 | 覆盖率= 19.2% | 成功率=  44% | 任务得分= 28.6% | 超时率=  56% | 零覆盖超时=  56% | KL=0.0051 | KLema=0.0054 | clip=0.058 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
+回合  470 | 场景=train_area002_scenario003 | 阶段=2 | 奖励=  -24.7 | 步数=415.7 | 覆盖率= 20.8% | 成功率=  46% | 任务得分= 30.4% | 超时率=  54% | 零覆盖超时=  54% | KL=0.0056 | KLema=0.0054 | clip=0.070 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  480 | 场景=train_area002_scenario004 | 阶段=2 | 奖励=  -26.6 | 步数=423.6 | 覆盖率= 21.1% | 成功率=  45% | 任务得分= 29.9% | 超时率=  55% | 零覆盖超时=  55% | KL=0.0053 | KLema=0.0054 | clip=0.064 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  490 | 场景=train_area003_scenario003 | 阶段=2 | 奖励=  -24.7 | 步数=419.7 | 覆盖率= 21.0% | 成功率=  46% | 任务得分= 30.3% | 超时率=  54% | 零覆盖超时=  53% | KL=0.0051 | KLema=0.0053 | clip=0.061 | lr=2.00e-04 | lr_action=fixed | 状态=max_steps_reached
+回合  500 | 场景=train_area002_scenario001 | 阶段=2 | 奖励=  -25.0 | 步数=414.6 | 覆盖率= 21.9% | 成功率=  45% | 任务得分= 30.6% | 超时率=  55% | 零覆盖超时=  54% | KL=0.0039 | KLema=0.0051 | clip=0.047 | lr=2.00e-04 | lr_action=fixed | 状态=mission_complete
 
 ======================================================================
-训练完成
-总步数=58947 | PPO更新=14 | 用时=17.9 分钟
-最终阶段=1
-训练日志=D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260724_154437\训练结果\Fixed_LR_CTDE_PPO_seed42\logs\training_log.json
-验证日志=D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260724_154437\训练结果\Fixed_LR_CTDE_PPO_seed42\logs\validation_log.json
-质量指标=D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260724_154437\训练结果\Fixed_LR_CTDE_PPO_seed42\logs\model_quality_metrics.json
-评估摘要=D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260724_154437\训练结果\Fixed_LR_CTDE_PPO_seed42\logs\eval_summary.json
-完整时域评估摘要=D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260724_154437\训练结果\Fixed_LR_CTDE_PPO_seed42\logs\full_horizon_summary.json
-最终模型=D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260724_154437\训练结果\Fixed_LR_CTDE_PPO_seed42\models\ppo_final.pth
-控制台日志=D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260724_154437\训练结果\Fixed_LR_CTDE_PPO_seed42\train_console_log.txt
-源码快照=D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260724_154437\训练结果\训练源码
-质量摘要 | AUC=0.3287961223853438 | tail得分标准差=0.3941813593367611 | KL超限率=0.0
+验证评估 | 回合=500 | 阶段=2 | 每场景回合=5
 ======================================================================
-
-================================================================================
-开始学习率对比变体: KL_LR_CTDE_PPO | 随机种子=42
-输出目录=D:\DestopMoren\Desktop\Pyproject\Self-adaptive parameters\environment_variables\environment_variables\outputs\lr_comparison_20260724_154437\训练结果\KL_LR_CTDE_PPO_seed42
-================================================================================
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True
+基线环境已初始化 | 模式=validation | 本地观测维度=24 | 全局状态维度=19 | observation_profile=persistent_cooperative | reward_profile=persistent_boundary | termination_mode=target_stop | communication=True | action_mask=True

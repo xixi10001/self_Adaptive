@@ -66,11 +66,6 @@ class CooperativeTaskCoordinator:
         self.search_targets = [None for _ in range(num_drones)]
         self.search_target_steps = [0 for _ in range(num_drones)]
         self.search_target_sectors = [-1 for _ in range(num_drones)]
-        self.direction_order_offset = int(self._coordinator_rng.randint(0, 8))
-        self.scan_base_cardinal_sector = int(
-            self._coordinator_rng.choice(np.array([0, 2, 4, 6], dtype=np.int32))
-        )
-        self.team_scan_phase = 0
         self.sector_cooldown_until = [
             np.zeros(8, dtype=np.int32) for _ in range(num_drones)
         ]
@@ -81,16 +76,6 @@ class CooperativeTaskCoordinator:
         self.forced_sector_switch_counts = [0 for _ in range(num_drones)]
         self.heat_signal_steps = [-1 for _ in range(num_drones)]
         self.disconnected_sector_phase = int(self._coordinator_rng.randint(0, 8))
-        observed_masks = getattr(
-            self.env,
-            "agent_observed_masks",
-            self.env.agent_known_masks,
-        )
-        self.last_observed_counts = [
-            int(np.count_nonzero(observed_masks[drone_idx]))
-            for drone_idx in range(num_drones)
-        ]
-        self.last_observation_progress_steps = [0 for _ in range(num_drones)]
         self.fire_ever_seen = [False for _ in range(num_drones)]
         self.candidates = np.zeros(
             (num_drones, self.NUM_ROLES, self.CANDIDATE_FEATURES),
@@ -107,9 +92,6 @@ class CooperativeTaskCoordinator:
         self.expired_message_count = 0
         self.expired_boundary_report_count = 0
         self.search_heading_histogram = np.zeros(8, dtype=np.int64)
-        self.initial_search_sector_pair = None
-        self.search_refresh_reason_counts: Dict[str, int] = {}
-        self.last_search_refresh_reason = "reset"
         self.search_tie_break_count = 0
         self.heat_separation_relaxation_count = 0
         self.edge_separation_fallback_count = 0
@@ -255,44 +237,9 @@ class CooperativeTaskCoordinator:
             dtype=np.float32,
         )
         if mode == "cardinal":
-            sector_ids = np.array([0, 2, 4, 6], dtype=np.int32)
-            cardinal_offset = int(self.direction_order_offset // 2) % 4
-            sector_ids = np.roll(sector_ids, -cardinal_offset)
+            sector_ids = np.array([0, 4, 6, 2], dtype=np.int32)
             return octants[sector_ids], sector_ids
-        sector_ids = np.roll(
-            np.arange(8, dtype=np.int32),
-            -int(self.direction_order_offset),
-        )
-        return octants[sector_ids], sector_ids
-
-    def _scan_phase_sector_pair(self) -> Tuple[int, int]:
-        """Return the seeded team sweep axis for the current scan phase."""
-        phase_offsets = (0, 2, 1, 3)
-        offset = phase_offsets[int(self.team_scan_phase) % len(phase_offsets)]
-        first = (int(self.scan_base_cardinal_sector) + offset) % 8
-        return first, (first + 4) % 8
-
-    @staticmethod
-    def _sector_name(sector_id: int) -> str:
-        names = ("N", "NE", "E", "SE", "S", "SW", "W", "NW")
-        return names[int(sector_id) % 8] if int(sector_id) >= 0 else "NONE"
-
-    def search_heading_type_ratios(self) -> Dict[str, float]:
-        total = max(int(np.sum(self.search_heading_histogram)), 1)
-        vertical = int(
-            self.search_heading_histogram[0] + self.search_heading_histogram[4]
-        )
-        horizontal = int(
-            self.search_heading_histogram[2] + self.search_heading_histogram[6]
-        )
-        diagonal = int(
-            sum(self.search_heading_histogram[index] for index in (1, 3, 5, 7))
-        )
-        return {
-            "vertical": float(vertical / total),
-            "horizontal": float(horizontal / total),
-            "diagonal": float(diagonal / total),
-        }
+        return octants, np.arange(8, dtype=np.int32)
 
     def _directional_novelty(
         self, drone_idx: int
@@ -355,11 +302,7 @@ class CooperativeTaskCoordinator:
     ) -> List[Tuple[np.ndarray, np.ndarray, int]]:
         env = self.env
         pos = env.drone_positions[drone_idx].astype(np.float32)
-        distance = max(
-            1.0,
-            float(getattr(env, "search_target_distance_factor", 1.5))
-            * env.vision_radius,
-        )
+        distance = max(1, env.vision_radius * 2)
         directions, sector_ids, _ = self._directional_novelty(drone_idx)
         targets = []
         for direction, sector_id in zip(directions, sector_ids):
@@ -498,13 +441,6 @@ class CooperativeTaskCoordinator:
                 return True
         return False
 
-    def _record_search_refresh_reason(self, reason: str) -> None:
-        reason = str(reason)
-        self.search_refresh_reason_counts[reason] = (
-            int(self.search_refresh_reason_counts.get(reason, 0)) + 1
-        )
-        self.last_search_refresh_reason = reason
-
     def _force_sector_switch(self, drone_idx: int, step: int) -> None:
         old_sector = int(self.search_target_sectors[drone_idx])
         if old_sector >= 0:
@@ -526,56 +462,10 @@ class CooperativeTaskCoordinator:
         self.last_forced_sector_switch_steps[drone_idx] = int(step)
         self.forced_sector_switch_counts[drone_idx] += 1
 
-    def _update_observation_progress(self, step: int) -> None:
-        observed_masks = getattr(
-            self.env,
-            "agent_observed_masks",
-            self.env.agent_known_masks,
-        )
-        for drone_idx in range(self.env.num_drones):
-            observed = int(
-                np.count_nonzero(observed_masks[drone_idx])
-            )
-            if observed > self.last_observed_counts[drone_idx]:
-                self.last_observed_counts[drone_idx] = observed
-                self.last_observation_progress_steps[drone_idx] = int(step)
-
-    def _early_search_refresh_reason(
-        self, drone_idx: int, step: int
-    ) -> Optional[str]:
-        if (
-            self.current_roles[drone_idx] != self.SEARCH
-            or self.fire_ever_seen[drone_idx]
-        ):
-            return None
-        target = self.search_targets[drone_idx]
-        if target is None:
-            return None
-        candidate = self._search_candidate_for_target(drone_idx, target)
-        if candidate[0] <= 0.0:
-            return "target_novelty_exhausted"
-        distance = float(
-            np.linalg.norm(
-                np.asarray(target, dtype=np.float32)
-                - self.env.drone_positions[drone_idx].astype(np.float32)
-            )
-        )
-        if distance <= max(1.0, 0.5 * self.env.vision_radius):
-            return "target_reached"
-        stagnation_steps = int(
-            getattr(self.env, "search_stagnation_steps", 9)
-        )
-        if (
-            int(step) - int(self.last_observation_progress_steps[drone_idx])
-            >= stagnation_steps
-        ):
-            return "no_new_observation"
-        return None
-
     def _maybe_force_sector_switch(self, step: int) -> None:
         if int(step) <= 0:
             return
-        due: List[Tuple[int, str]] = []
+        due = []
         for drone_idx in range(self.env.num_drones):
             if (
                 self.current_roles[drone_idx] != self.SEARCH
@@ -592,15 +482,13 @@ class CooperativeTaskCoordinator:
                     40 if first else 80,
                 )
             )
-            early_reason = self._early_search_refresh_reason(drone_idx, step)
-            if early_reason is not None:
-                due.append((drone_idx, early_reason))
-                continue
             reference = max(
-                0, int(self.last_forced_sector_switch_steps[drone_idx])
+                0,
+                int(self.last_boundary_evidence_steps[drone_idx]),
+                int(self.last_forced_sector_switch_steps[drone_idx]),
             )
             if int(step) - reference >= interval:
-                due.append((drone_idx, "scan_phase_timeout"))
+                due.append(drone_idx)
         if not due:
             return
 
@@ -610,24 +498,13 @@ class CooperativeTaskCoordinator:
             and self.env.communication_available[1]
         )
         if connected:
-            reason = (
-                "scan_phase_timeout"
-                if any(item_reason == "scan_phase_timeout" for _, item_reason in due)
-                else due[0][1]
-            )
-            due_agents = [
+            due = [
                 drone_idx
                 for drone_idx in range(self.env.num_drones)
                 if self.current_roles[drone_idx] == self.SEARCH
                 and not self.fire_ever_seen[drone_idx]
             ]
-            self.team_scan_phase = (int(self.team_scan_phase) + 1) % 4
-            self._record_search_refresh_reason(reason)
-        else:
-            due_agents = [drone_idx for drone_idx, _ in due]
-            for _, reason in due:
-                self._record_search_refresh_reason(reason)
-        for drone_idx in due_agents:
+        for drone_idx in due:
             self._force_sector_switch(drone_idx, step)
         self.request_role_decision("search_sector_switch")
 
@@ -698,8 +575,8 @@ class CooperativeTaskCoordinator:
         selected_tier = "soft"
         for min_angle, min_distance, tier_name in tiers:
             feasible = []
+            scores = []
             metrics = []
-            phase_errors = []
             for option0 in options[0]:
                 for option1 in options[1]:
                     angle, distance = self._pair_angle_distance(
@@ -708,28 +585,12 @@ class CooperativeTaskCoordinator:
                     if angle + 1e-9 < min_angle or distance + 1e-9 < min_distance:
                         continue
                     feasible.append((option0, option1))
+                    scores.append(self._search_pair_score(option0, option1))
                     metrics.append((angle, distance))
-                    desired0, desired1 = self._scan_phase_sector_pair()
-                    phase_errors.append(
-                        self._sector_angle_deg(option0[2], desired0)
-                        + self._sector_angle_deg(option1[2], desired1)
-                    )
             if feasible:
-                minimum_phase_error = min(phase_errors)
-                phase_indices = [
-                    index
-                    for index, error in enumerate(phase_errors)
-                    if error <= minimum_phase_error + 1e-9
-                ]
-                phase_feasible = [feasible[index] for index in phase_indices]
-                phase_metrics = [metrics[index] for index in phase_indices]
-                scores = [
-                    self._search_pair_score(option0, option1)
-                    for option0, option1 in phase_feasible
-                ]
                 best = self._random_best_index(scores)
-                selected_pair = phase_feasible[best]
-                selected_metrics = phase_metrics[best]
+                selected_pair = feasible[best]
+                selected_metrics = metrics[best]
                 selected_tier = tier_name
                 break
 
@@ -841,10 +702,6 @@ class CooperativeTaskCoordinator:
                 ).copy()
                 self.assigned_priorities[drone_idx] = float(candidate[3])
                 self.assigned_task_valid[drone_idx] = bool(candidate[0])
-        if self.initial_search_sector_pair is None and len(selected) == 2:
-            self.initial_search_sector_pair = tuple(
-                int(item[2]) for item in selected
-            )
 
     def _candidate(self, drone_idx: int, role: int, step: int) -> np.ndarray:
         env = self.env
@@ -1031,8 +888,6 @@ class CooperativeTaskCoordinator:
         self.role_decision_reason = "assigned"
 
     def maybe_request_periodic_decision(self, step: int) -> None:
-        self._update_observation_progress(step)
-        self._maybe_force_sector_switch(step)
         if int(step) > 0 and int(step) % self.role_decision_interval == 0:
             if all(
                 int(step) - started >= self.role_min_dwell_steps
@@ -1097,7 +952,6 @@ class FireSearchBaselineEnvironment(gym.Env):
         "r_severity",
         "r_explore",
         "r_search",
-        "r_search_target_progress",
         "r_contact",
         "r_track",
         "r_reacquire",
@@ -1165,15 +1019,10 @@ class FireSearchBaselineEnvironment(gym.Env):
         search_target_overlap_weight: float = 1.0,
         search_target_stickiness_weight: float = 0.10,
         search_target_min_novelty: float = 0.05,
-        search_target_refresh_steps: int = 20,
-        search_target_distance_factor: float = 1.5,
-        search_stagnation_steps: int = 9,
-        search_target_progress_reward_weight: float = 0.05,
-        search_target_progress_step_cap: float = 0.05,
-        search_target_progress_episode_cap: float = 2.0,
+        search_target_refresh_steps: int = 40,
         search_direction_mode: str = "octants",
-        search_sector_switch_steps_first: int = 20,
-        search_sector_switch_steps: int = 20,
+        search_sector_switch_steps_first: int = 40,
+        search_sector_switch_steps: int = 80,
         search_sector_cooldown_steps: int = 80,
         search_min_pair_angle_deg: float = 90.0,
         search_heat_pair_angle_deg: float = 45.0,
@@ -1183,10 +1032,8 @@ class FireSearchBaselineEnvironment(gym.Env):
         pre_boundary_team_novelty_weight: float = 0.20,
         pre_boundary_unique_novelty_weight: float = 0.10,
         pre_boundary_overlap_weight: float = 0.10,
-        pre_boundary_revisit_weight: float = 0.03,
-        pre_boundary_reward_episode_cap: float = 6.0,
-        pre_boundary_revisit_penalty_floor: float = -8.0,
-        pre_boundary_overlap_penalty_floor: float = -4.0,
+        pre_boundary_revisit_weight: float = 0.06,
+        pre_boundary_reward_episode_cap: float = 4.0,
         stage2_far_spawn_ratio: float = 1.0,
         stage2_spawn_mix: Tuple[float, float, float] = STAGE2_FINAL_SPAWN_MIX,
         coverage_objective: str = "auto",
@@ -1284,19 +1131,6 @@ class FireSearchBaselineEnvironment(gym.Env):
             np.clip(search_target_min_novelty, 0.0, 1.0)
         )
         self.search_target_refresh_steps = max(1, int(search_target_refresh_steps))
-        self.search_target_distance_factor = max(
-            0.5, float(search_target_distance_factor)
-        )
-        self.search_stagnation_steps = max(1, int(search_stagnation_steps))
-        self.search_target_progress_reward_weight = max(
-            0.0, float(search_target_progress_reward_weight)
-        )
-        self.search_target_progress_step_cap = max(
-            0.0, float(search_target_progress_step_cap)
-        )
-        self.search_target_progress_episode_cap = max(
-            0.0, float(search_target_progress_episode_cap)
-        )
         self.search_direction_mode = str(search_direction_mode).lower()
         if self.search_direction_mode not in {"cardinal", "octants"}:
             raise ValueError(
@@ -1346,12 +1180,6 @@ class FireSearchBaselineEnvironment(gym.Env):
         )
         self.pre_boundary_reward_episode_cap = max(
             0.0, float(pre_boundary_reward_episode_cap)
-        )
-        self.pre_boundary_revisit_penalty_floor = min(
-            0.0, float(pre_boundary_revisit_penalty_floor)
-        )
-        self.pre_boundary_overlap_penalty_floor = min(
-            0.0, float(pre_boundary_overlap_penalty_floor)
         )
         self.stage2_far_spawn_ratio = float(np.clip(stage2_far_spawn_ratio, 0.0, 1.0))
         self.set_stage2_spawn_mix(stage2_spawn_mix)
@@ -1457,11 +1285,6 @@ class FireSearchBaselineEnvironment(gym.Env):
         self._episode_area_reward_total = 0.0
         self._episode_search_reward_total = 0.0
         self._episode_pre_boundary_reward_total = 0.0
-        self._episode_search_target_progress_total = 0.0
-        self._episode_pre_boundary_revisit_penalty_total = 0.0
-        self._episode_pre_boundary_overlap_penalty_total = 0.0
-        self.search_target_progress_eligible_steps = 0
-        self.search_target_follow_steps = 0
         self.first_heat_step = -1
         self.first_boundary_step = -1
         self.stage1_tracking_window: List[bool] = []
@@ -1813,75 +1636,11 @@ class FireSearchBaselineEnvironment(gym.Env):
             + positive_total
         )
 
-        overlap_remaining = max(
-            0.0,
-            abs(
-                float(
-                    getattr(
-                        self,
-                        "pre_boundary_overlap_penalty_floor",
-                        -4.0,
-                    )
-                )
-            )
-            - abs(
-                float(
-                    getattr(
-                        self,
-                        "_episode_pre_boundary_overlap_penalty_total",
-                        0.0,
-                    )
-                )
-            ),
-        )
-        overlap_penalty = min(
-            self.pre_boundary_overlap_weight * overlap_ratio,
-            overlap_remaining,
-        )
+        overlap_penalty = self.pre_boundary_overlap_weight * overlap_ratio
         revisit_penalties = [
             self.pre_boundary_revisit_weight * fraction
             for fraction in revisit_fractions
         ]
-        revisit_total = float(sum(revisit_penalties))
-        revisit_remaining = max(
-            0.0,
-            abs(
-                float(
-                    getattr(
-                        self,
-                        "pre_boundary_revisit_penalty_floor",
-                        -8.0,
-                    )
-                )
-            )
-            - abs(
-                float(
-                    getattr(
-                        self,
-                        "_episode_pre_boundary_revisit_penalty_total",
-                        0.0,
-                    )
-                )
-            ),
-        )
-        if revisit_total > revisit_remaining and revisit_total > 0.0:
-            revisit_scale = revisit_remaining / revisit_total
-            revisit_penalties = [
-                value * revisit_scale for value in revisit_penalties
-            ]
-            revisit_total = revisit_remaining
-        self._episode_pre_boundary_overlap_penalty_total = float(
-            getattr(
-                self, "_episode_pre_boundary_overlap_penalty_total", 0.0
-            )
-            - overlap_penalty
-        )
-        self._episode_pre_boundary_revisit_penalty_total = float(
-            getattr(
-                self, "_episode_pre_boundary_revisit_penalty_total", 0.0
-            )
-            - revisit_total
-        )
         for idx in range(num_agents):
             rewards[idx] = (
                 positive[idx]
@@ -1891,8 +1650,8 @@ class FireSearchBaselineEnvironment(gym.Env):
 
         breakdown["r_novelty"] += positive_total
         breakdown["r_overlap"] -= overlap_penalty
-        breakdown["r_revisit"] -= revisit_total
-        breakdown["r_penalty"] -= overlap_penalty + revisit_total
+        breakdown["r_revisit"] -= float(sum(revisit_penalties))
+        breakdown["r_penalty"] -= overlap_penalty + float(sum(revisit_penalties))
 
         self.pre_boundary_agent_steps = getattr(self, "pre_boundary_agent_steps", 0) + num_agents
         self.pre_boundary_revisit_steps = float(
@@ -2108,11 +1867,6 @@ class FireSearchBaselineEnvironment(gym.Env):
         self._episode_area_reward_total = 0.0
         self._episode_search_reward_total = 0.0
         self._episode_pre_boundary_reward_total = 0.0
-        self._episode_search_target_progress_total = 0.0
-        self._episode_pre_boundary_revisit_penalty_total = 0.0
-        self._episode_pre_boundary_overlap_penalty_total = 0.0
-        self.search_target_progress_eligible_steps = 0
-        self.search_target_follow_steps = 0
         self.first_heat_step = -1
         self.first_boundary_step = -1
         self.stage1_discovered_within_deadline = False
@@ -2670,63 +2424,6 @@ class FireSearchBaselineEnvironment(gym.Env):
         )
         return float(reward)
 
-    def _search_target_progress_reward(
-        self,
-        drone_id: int,
-        old_pos: np.ndarray,
-        new_pos: np.ndarray,
-    ) -> float:
-        """Reward deployable progress toward a valid SEARCH assignment."""
-        coordinator = getattr(self, "task_coordinator", None)
-        if (
-            coordinator is None
-            or len(self.discovered_boundary) > 0
-            or coordinator.current_roles[drone_id] != coordinator.SEARCH
-            or not coordinator.assigned_task_valid[drone_id]
-        ):
-            return 0.0
-        target = coordinator.assigned_targets[drone_id]
-        if target is None:
-            return 0.0
-        target_age = int(self.step_count) - int(
-            coordinator.search_target_steps[drone_id]
-        )
-        if target_age < 0 or target_age >= self.search_target_refresh_steps:
-            return 0.0
-        target = np.asarray(target, dtype=np.float32)
-        old_distance = float(
-            np.linalg.norm(old_pos.astype(np.float32) - target)
-        )
-        if old_distance <= max(1.0, 0.25 * self.vision_radius):
-            return 0.0
-        new_distance = float(
-            np.linalg.norm(new_pos.astype(np.float32) - target)
-        )
-        self.search_target_progress_eligible_steps += 1
-        progress = old_distance - new_distance
-        if progress <= 0.0:
-            return 0.0
-        self.search_target_follow_steps += 1
-        remaining = max(
-            0.0,
-            self.search_target_progress_episode_cap
-            - float(
-                getattr(
-                    self, "_episode_search_target_progress_total", 0.0
-                )
-            ),
-        )
-        reward = min(
-            self.search_target_progress_reward_weight * progress,
-            self.search_target_progress_step_cap,
-            remaining,
-        )
-        self._episode_search_target_progress_total = float(
-            getattr(self, "_episode_search_target_progress_total", 0.0)
-            + reward
-        )
-        return float(reward)
-
     def _compute_reward(
         self,
         drone_id: int,
@@ -2810,14 +2507,6 @@ class FireSearchBaselineEnvironment(gym.Env):
             if r_search > 0.0:
                 reward += r_search
                 r_breakdown["r_search"] += r_search
-            r_target_progress = self._search_target_progress_reward(
-                drone_id, old_pos, new_pos
-            )
-            if r_target_progress > 0.0:
-                reward += r_target_progress
-                r_breakdown[
-                    "r_search_target_progress"
-                ] += r_target_progress
 
         return float(reward), r_breakdown
 
@@ -3624,44 +3313,6 @@ class FireSearchBaselineEnvironment(gym.Env):
                 if coordinator is not None
                 else [0] * 8
             ),
-            "initial_search_direction_pair": (
-                [
-                    coordinator._sector_name(sector)
-                    for sector in coordinator.initial_search_sector_pair
-                ]
-                if coordinator is not None
-                and coordinator.initial_search_sector_pair is not None
-                else []
-            ),
-            "search_heading_type_ratios": (
-                coordinator.search_heading_type_ratios()
-                if coordinator is not None
-                else {
-                    "vertical": 0.0,
-                    "horizontal": 0.0,
-                    "diagonal": 0.0,
-                }
-            ),
-            "search_refresh_reason_counts": (
-                dict(coordinator.search_refresh_reason_counts)
-                if coordinator is not None
-                else {}
-            ),
-            "last_search_refresh_reason": (
-                coordinator.last_search_refresh_reason
-                if coordinator is not None
-                else "disabled"
-            ),
-            "search_target_follow_rate": float(
-                getattr(self, "search_target_follow_steps", 0)
-                / max(
-                    getattr(self, "search_target_progress_eligible_steps", 0),
-                    1,
-                )
-            ),
-            "search_target_progress_eligible_steps": int(
-                getattr(self, "search_target_progress_eligible_steps", 0)
-            ),
             "search_tie_break_count": int(
                 coordinator.search_tie_break_count
                 if coordinator is not None
@@ -3850,17 +3501,6 @@ class FireSearchBaselineEnvironment(gym.Env):
             "search_target_stickiness_weight": self.search_target_stickiness_weight,
             "search_target_min_novelty": self.search_target_min_novelty,
             "search_target_refresh_steps": self.search_target_refresh_steps,
-            "search_target_distance_factor": self.search_target_distance_factor,
-            "search_stagnation_steps": self.search_stagnation_steps,
-            "search_target_progress_reward_weight": (
-                self.search_target_progress_reward_weight
-            ),
-            "search_target_progress_step_cap": (
-                self.search_target_progress_step_cap
-            ),
-            "search_target_progress_episode_cap": (
-                self.search_target_progress_episode_cap
-            ),
             "search_direction_mode": self.search_direction_mode,
             "search_sector_switch_steps_first": self.search_sector_switch_steps_first,
             "search_sector_switch_steps": self.search_sector_switch_steps,
@@ -3876,12 +3516,6 @@ class FireSearchBaselineEnvironment(gym.Env):
             "pre_boundary_overlap_weight": self.pre_boundary_overlap_weight,
             "pre_boundary_revisit_weight": self.pre_boundary_revisit_weight,
             "pre_boundary_reward_episode_cap": self.pre_boundary_reward_episode_cap,
-            "pre_boundary_revisit_penalty_floor": (
-                self.pre_boundary_revisit_penalty_floor
-            ),
-            "pre_boundary_overlap_penalty_floor": (
-                self.pre_boundary_overlap_penalty_floor
-            ),
             "stage2_far_spawn_ratio": self.stage2_far_spawn_ratio,
             "stage2_spawn_mix": list(self.stage2_spawn_mix),
             "stage2_target": self.stage_targets[2],

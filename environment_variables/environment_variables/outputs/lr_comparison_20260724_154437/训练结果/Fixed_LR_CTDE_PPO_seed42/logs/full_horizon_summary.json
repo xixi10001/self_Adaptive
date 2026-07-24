@@ -1,0 +1,9 @@
+{
+  "evaluation_mode": "full_horizon",
+  "selection_split": "validation",
+  "selection_metric": "mean_current_coverage_auc",
+  "selection_stage": 3,
+  "candidates": [],
+  "selected": null,
+  "splits": {}
+}

@@ -129,15 +129,10 @@ DEFAULT_TRAIN_CONFIG = {
     "search_target_overlap_weight": 1.0,
     "search_target_stickiness_weight": 0.10,
     "search_target_min_novelty": 0.05,
-    "search_target_refresh_steps": 20,
-    "search_target_distance_factor": 1.5,
-    "search_stagnation_steps": 9,
-    "search_target_progress_reward_weight": 0.05,
-    "search_target_progress_step_cap": 0.05,
-    "search_target_progress_episode_cap": 2.0,
+    "search_target_refresh_steps": 40,
     "search_direction_mode": "octants",
-    "search_sector_switch_steps_first": 20,
-    "search_sector_switch_steps": 20,
+    "search_sector_switch_steps_first": 40,
+    "search_sector_switch_steps": 80,
     "search_sector_cooldown_steps": 80,
     "search_min_pair_angle_deg": 90.0,
     "search_heat_pair_angle_deg": 45.0,
@@ -147,17 +142,15 @@ DEFAULT_TRAIN_CONFIG = {
     "pre_boundary_team_novelty_weight": 0.20,
     "pre_boundary_unique_novelty_weight": 0.10,
     "pre_boundary_overlap_weight": 0.10,
-    "pre_boundary_revisit_weight": 0.03,
-    "pre_boundary_reward_episode_cap": 6.0,
-    "pre_boundary_revisit_penalty_floor": -8.0,
-    "pre_boundary_overlap_penalty_floor": -4.0,
+    "pre_boundary_revisit_weight": 0.06,
+    "pre_boundary_reward_episode_cap": 4.0,
     "role_actor_lr": 2e-4,
     "role_critic_lr": 5e-4,
     "role_batch_size": 128,
     "norm_params_source": "scene_p99.5",
     "init_percentile": 5.0,
     "init_area_percent": 5.0,
-    "total_episodes": 3300,
+    "total_episodes": 3100,
     "max_environment_steps": None,
     "max_train_updates": None,
     "actor_lr": 2e-4,
@@ -364,27 +357,13 @@ def normalize_training_config(config: Dict = None) -> Dict:
         "pre_boundary_overlap_weight",
         "pre_boundary_revisit_weight",
         "pre_boundary_reward_episode_cap",
-        "search_target_progress_reward_weight",
-        "search_target_progress_step_cap",
-        "search_target_progress_episode_cap",
     ]:
         normalized[key] = max(0.0, float(normalized[key]))
-    for key in [
-        "pre_boundary_revisit_penalty_floor",
-        "pre_boundary_overlap_penalty_floor",
-    ]:
-        normalized[key] = min(0.0, float(normalized[key]))
     normalized["search_target_min_novelty"] = float(
         np.clip(normalized["search_target_min_novelty"], 0.0, 1.0)
     )
     normalized["search_target_refresh_steps"] = max(
         1, int(normalized["search_target_refresh_steps"])
-    )
-    normalized["search_target_distance_factor"] = max(
-        0.5, float(normalized["search_target_distance_factor"])
-    )
-    normalized["search_stagnation_steps"] = max(
-        1, int(normalized["search_stagnation_steps"])
     )
     normalized["search_direction_mode"] = str(
         normalized["search_direction_mode"]
@@ -760,18 +739,6 @@ def _append_episode_diagnostics(training_log: Dict, info: Dict) -> None:
     training_log.setdefault("search_heading_histogram", []).append(
         list(info.get("search_heading_histogram", [0] * 8))
     )
-    training_log.setdefault("initial_search_direction_pair", []).append(
-        list(info.get("initial_search_direction_pair", []))
-    )
-    training_log.setdefault("search_heading_type_ratios", []).append(
-        dict(info.get("search_heading_type_ratios", {}))
-    )
-    training_log.setdefault("search_refresh_reason_counts", []).append(
-        dict(info.get("search_refresh_reason_counts", {}))
-    )
-    training_log.setdefault("last_search_refresh_reason", []).append(
-        str(info.get("last_search_refresh_reason", "disabled"))
-    )
     for key in [
         "objective_coverage",
         "fresh_boundary_coverage",
@@ -805,8 +772,6 @@ def _append_episode_diagnostics(training_log: Dict, info: Dict) -> None:
         "controlled_refresh_post_coverage",
         "search_tie_break_count",
         "forced_sector_switch_count",
-        "search_target_follow_rate",
-        "search_target_progress_eligible_steps",
         "pair_target_angle_mean",
         "pair_target_angle_min",
         "pair_target_distance_mean",
@@ -1455,18 +1420,13 @@ class Stage4HorizonMixScheduler:
 
 
 class CurriculumManager:
-    GLOBAL_EPISODE_BUDGET = 3300
+    GLOBAL_EPISODE_BUDGET = 3100
     STAGE4_MIN_REMAINING_EPISODES = 800
     VALIDATION_POOL_SIZE = 3
 
     STAGE1_MIN_EPISODES = 200
-    STAGE1_SOFT_EPISODES = 400
-    STAGE1_MAX_EPISODES = 600
-    STAGE1_MIN_ENVIRONMENT_STEPS = 65000
-    STAGE1_MIN_PPO_UPDATES = 15
-    STAGE1_SCORE_IMPROVEMENT = 0.005
-    STAGE1_DEGRADATION_MARGIN = 0.02
-    STAGE1_PLATEAU_PATIENCE = 3
+    STAGE1_SOFT_EPISODES = 300
+    STAGE1_MAX_EPISODES = 400
 
     STAGE2_MIN_EPISODES = 600
     STAGE2_SOFT_EPISODES = 800
@@ -1522,11 +1482,6 @@ class CurriculumManager:
         self._stage2_best_score = -float("inf")
         self._stage2_plateau_count = 0
         self._stage2_recovery_until = 0
-        self._stage1_best_score = -float("inf")
-        self._stage1_last_score = None
-        self._stage1_plateau_count = 0
-        self._stage1_degradation_count = 0
-        self._stage1_rollback_requested = False
         self._terminal_focus_active = False
         self._transferable_budget = 0
         self.curriculum_failed = False
@@ -1679,14 +1634,11 @@ class CurriculumManager:
             "stable_tracking_success_rate",
             "stage1_discovery_within_deadline_rate",
             "stage1_tracking_given_found_rate",
-            "stage1_late_discovery_151_300_rate",
-            "stage1_late_discovery_given_missed_deadline_rate",
             "stage2_contact_success_rate",
             "stage2_contact_given_found_rate",
             "stage2_reacquire_success_rate",
             "mean_team_overlap_ratio",
             "mean_invalid_action_count",
-            "mean_search_target_follow_rate",
         }
         for key in rate_keys:
             pooled[key] = self._mean_rate(summaries, key)
@@ -1911,121 +1863,6 @@ class CurriculumManager:
             - 0.20 * pooled.get("zero_discovery_timeout_rate", 1.0)
         )
 
-    @staticmethod
-    def stage1_validation_score(summary: Dict) -> float:
-        found = float(
-            summary.get(
-                "stage1_discovery_within_deadline_rate",
-                summary.get("boundary_found_rate", 0.0),
-            )
-        )
-        tracking = float(
-            summary.get("stage1_tracking_given_found_rate", 0.0)
-        )
-        zero_timeout = float(
-            summary.get(
-                "zero_discovery_timeout_rate",
-                summary.get("zero_coverage_timeout_rate", 1.0),
-            )
-        )
-        unique_value = summary.get(
-            "median_unique_boundary_cells_given_found",
-            summary.get("median_unique_boundary_cells", 0.0),
-        )
-        unique_score = float(
-            np.clip(
-                0.0 if unique_value is None else float(unique_value) / 8.0,
-                0.0,
-                1.0,
-            )
-        )
-        return float(
-            0.45 * found
-            + 0.30 * tracking
-            + 0.15 * (1.0 - zero_timeout)
-            + 0.10 * unique_score
-        )
-
-    def _stage1_resource_floor_reached(
-        self,
-        total_environment_steps: Optional[int],
-        ppo_updates: Optional[int],
-    ) -> bool:
-        environment_ready = (
-            True
-            if total_environment_steps is None
-            else int(total_environment_steps)
-            >= self.STAGE1_MIN_ENVIRONMENT_STEPS
-        )
-        updates_ready = (
-            True
-            if ppo_updates is None
-            else int(ppo_updates) >= self.STAGE1_MIN_PPO_UPDATES
-        )
-        return bool(environment_ready and updates_ready)
-
-    def _handle_stage1_soft_budget(
-        self,
-        summary: Dict,
-        total_environment_steps: Optional[int],
-        ppo_updates: Optional[int],
-    ) -> None:
-        score = self.stage1_validation_score(summary)
-        previous_score = self._stage1_last_score
-        new_best = score > (
-            self._stage1_best_score + self.STAGE1_SCORE_IMPROVEMENT
-        )
-        if new_best:
-            self._stage1_best_score = score
-            self._stage1_degradation_count = 0
-        elif (
-            np.isfinite(self._stage1_best_score)
-            and score
-            < self._stage1_best_score - self.STAGE1_DEGRADATION_MARGIN
-        ):
-            self._stage1_degradation_count += 1
-        else:
-            self._stage1_degradation_count = 0
-
-        if self.stage_episodes[1] >= self.STAGE1_SOFT_EPISODES:
-            improving = bool(
-                previous_score is None
-                or score
-                > previous_score + self.STAGE1_SCORE_IMPROVEMENT
-            )
-            if improving:
-                self._stage1_plateau_count = 0
-            else:
-                self._stage1_plateau_count += 1
-        self._stage1_last_score = score
-
-        resource_ready = self._stage1_resource_floor_reached(
-            total_environment_steps, ppo_updates
-        )
-        if (
-            self.stage_episodes[1] >= self.STAGE1_MAX_EPISODES
-            and resource_ready
-        ):
-            self._fail_current_stage(
-                "Stage 1 reached its 600-episode hard budget without "
-                "passing pooled validation"
-            )
-            return
-        if self._stage1_degradation_count >= 3:
-            self._stage1_rollback_requested = True
-            self._stage1_degradation_count = 0
-            self._stage1_plateau_count = 0
-            return
-        if (
-            self.stage_episodes[1] >= self.STAGE1_SOFT_EPISODES
-            and resource_ready
-            and self._stage1_plateau_count >= self.STAGE1_PLATEAU_PATIENCE
-        ):
-            self._fail_current_stage(
-                "Stage 1 plateaued for three validations after its soft "
-                "budget and minimum environment-step/PPO-update floor"
-            )
-
     def _handle_stage2_soft_budget(self, pooled: Dict):
         if self.stage_episodes[2] < self.STAGE2_SOFT_EPISODES:
             return
@@ -2046,21 +1883,15 @@ class CurriculumManager:
                 f"未来至第{self._stage2_recovery_until}个Stage2回合提高近/中距离回放"
             )
 
-    def _fail_current_stage(self, reason: Optional[str] = None):
+    def _fail_current_stage(self):
         self.curriculum_failed = True
-        self.curriculum_failure_reason = reason or (
-            f"{self.current_substage} exhausted its "
-            f"{self.current_budget_cap}-episode hard budget without passing "
-            "pooled validation"
+        self.curriculum_failure_reason = (
+            f"{self.current_substage} exhausted its {self.current_budget_cap}-episode "
+            "hard budget without passing pooled validation"
         )
         print(f"\n  [课程失败] {self.curriculum_failure_reason}")
 
-    def update_validation(
-        self,
-        summary: Dict,
-        total_environment_steps: Optional[int] = None,
-        ppo_updates: Optional[int] = None,
-    ) -> bool:
+    def update_validation(self, summary: Dict) -> bool:
         if self.current_stage == 4:
             return False
         self._validation_summaries.append(copy.deepcopy(summary))
@@ -2084,21 +1915,11 @@ class CurriculumManager:
             )
             return True
 
-        if self.current_stage == 1 and enough_validation:
-            self._handle_stage1_soft_budget(
-                pooled,
-                total_environment_steps=total_environment_steps,
-                ppo_updates=ppo_updates,
-            )
-        elif self.current_stage == 2 and enough_validation:
+        if self.current_stage == 2 and enough_validation:
             self._handle_stage2_soft_budget(pooled)
         if (
-            not self.curriculum_failed
-            and self.current_stage != 1
-            and (
             self.substage_episodes[self.current_substage]
             >= self.current_budget_cap
-            )
         ):
             self._fail_current_stage()
         return False
@@ -2170,11 +1991,6 @@ class CurriculumManager:
             "stage2_phase": self.stage2_phase,
             "stage2_spawn_mix": self.stage2_spawn_mix,
             "stage2_recovery_until": self._stage2_recovery_until,
-            "stage1_best_score": self._stage1_best_score,
-            "stage1_last_score": self._stage1_last_score,
-            "stage1_plateau_count": self._stage1_plateau_count,
-            "stage1_degradation_count": self._stage1_degradation_count,
-            "stage1_rollback_requested": self._stage1_rollback_requested,
             "stage3_target_index": self._s3_target_idx,
             "stage3_budget_caps": list(self._stage3_budget_caps),
             "stage4_phase": self.stage4_phase,
@@ -2913,19 +2729,6 @@ def _build_experiment_metadata(
             ),
             "target_min_novelty": float(config["search_target_min_novelty"]),
             "target_refresh_steps": int(config["search_target_refresh_steps"]),
-            "target_distance_factor": float(
-                config["search_target_distance_factor"]
-            ),
-            "stagnation_steps": int(config["search_stagnation_steps"]),
-            "target_progress_reward_weight": float(
-                config["search_target_progress_reward_weight"]
-            ),
-            "target_progress_step_cap": float(
-                config["search_target_progress_step_cap"]
-            ),
-            "target_progress_episode_cap": float(
-                config["search_target_progress_episode_cap"]
-            ),
             "direction_mode": str(config["search_direction_mode"]),
             "sector_switch_steps_first": int(
                 config["search_sector_switch_steps_first"]
@@ -2956,27 +2759,13 @@ def _build_experiment_metadata(
             "episode_positive_cap": float(
                 config["pre_boundary_reward_episode_cap"]
             ),
-            "revisit_penalty_floor": float(
-                config["pre_boundary_revisit_penalty_floor"]
-            ),
-            "overlap_penalty_floor": float(
-                config["pre_boundary_overlap_penalty_floor"]
-            ),
             "thermal_reward_requires_sensor_signal": bool(
                 config["mask_thermal_below_signal"]
             ),
         },
         "curriculum_budget": {
             "total_episodes": int(config["total_episodes"]),
-            "stage1_min": CurriculumManager.STAGE1_MIN_EPISODES,
-            "stage1_soft": CurriculumManager.STAGE1_SOFT_EPISODES,
             "stage1_max": CurriculumManager.STAGE1_MAX_EPISODES,
-            "stage1_min_environment_steps": (
-                CurriculumManager.STAGE1_MIN_ENVIRONMENT_STEPS
-            ),
-            "stage1_min_ppo_updates": (
-                CurriculumManager.STAGE1_MIN_PPO_UPDATES
-            ),
             "stage2_min": CurriculumManager.STAGE2_MIN_EPISODES,
             "stage2_soft": CurriculumManager.STAGE2_SOFT_EPISODES,
             "stage2_max": CurriculumManager.STAGE2_MAX_EPISODES,
@@ -3322,19 +3111,6 @@ def _persistent_env_kwargs(
         "search_target_stickiness_weight": config["search_target_stickiness_weight"],
         "search_target_min_novelty": config["search_target_min_novelty"],
         "search_target_refresh_steps": config["search_target_refresh_steps"],
-        "search_target_distance_factor": config[
-            "search_target_distance_factor"
-        ],
-        "search_stagnation_steps": config["search_stagnation_steps"],
-        "search_target_progress_reward_weight": config[
-            "search_target_progress_reward_weight"
-        ],
-        "search_target_progress_step_cap": config[
-            "search_target_progress_step_cap"
-        ],
-        "search_target_progress_episode_cap": config[
-            "search_target_progress_episode_cap"
-        ],
         "search_direction_mode": config["search_direction_mode"],
         "search_sector_switch_steps_first": config[
             "search_sector_switch_steps_first"
@@ -3357,12 +3133,6 @@ def _persistent_env_kwargs(
         "pre_boundary_overlap_weight": config["pre_boundary_overlap_weight"],
         "pre_boundary_revisit_weight": config["pre_boundary_revisit_weight"],
         "pre_boundary_reward_episode_cap": config["pre_boundary_reward_episode_cap"],
-        "pre_boundary_revisit_penalty_floor": config[
-            "pre_boundary_revisit_penalty_floor"
-        ],
-        "pre_boundary_overlap_penalty_floor": config[
-            "pre_boundary_overlap_penalty_floor"
-        ],
         "post_target_step_penalty": config["post_target_step_penalty"],
         "post_target_step_cost_fraction": config["post_target_step_cost_fraction"],
         "post_target_hold_weight": config["post_target_hold_weight"],
@@ -3528,8 +3298,6 @@ def _collect_thermal_health(
 def _new_validation_log() -> Dict[str, List]:
     keys = (
         "episodes",
-        "total_environment_steps",
-        "ppo_updates",
         "stage",
         "substage",
         "stage2_far_spawn_ratio",
@@ -3547,17 +3315,6 @@ def _new_validation_log() -> Dict[str, List]:
         "val_stable_tracking_success_rate",
         "val_stage1_discovery_within_deadline_rate",
         "val_stage1_tracking_given_found_rate",
-        "val_stage1_late_discovery_151_300_rate",
-        "val_stage1_late_discovery_given_missed_deadline_rate",
-        "val_scene_boundary_found_rates",
-        "val_scene_stage1_found_by_deadline_rates",
-        "val_search_heading_type_ratios",
-        "val_search_refresh_reason_counts",
-        "val_mean_search_target_follow_rate",
-        "stage1_validation_score",
-        "stage1_plateau_count",
-        "stage1_degradation_count",
-        "stage1_rollback_requested",
         "val_stage2_contact_given_found_rate",
         "val_stage2_reacquire_success_rate",
         "val_median_first_boundary_step",
@@ -3755,12 +3512,6 @@ def train(config: Dict = None):
         "team_overlap_ratio": [],
         "invalid_action_count": [],
         "search_heading_histogram": [],
-        "initial_search_direction_pair": [],
-        "search_heading_type_ratios": [],
-        "search_refresh_reason_counts": [],
-        "last_search_refresh_reason": [],
-        "search_target_follow_rate": [],
-        "search_target_progress_eligible_steps": [],
         "reward_breakdown": [],
         "stage": [],
         "substage": [],
@@ -3807,13 +3558,11 @@ def train(config: Dict = None):
     total_steps = 0
     best_task_score = -float("inf")
     best_val_model_score = -float("inf")
-    best_stage1_score = -float("inf")
     best_stage4_score = -float("inf")
     best_model_paths = {
         "best": None,
         "best_train": None,
         "best_val": None,
-        "best_stage1": None,
         "stage3_source": None,
         "best_stage4": None,
         "final": None,
@@ -4130,7 +3879,6 @@ def train(config: Dict = None):
             )
 
         if episode % config["validation_interval"] == 0:
-            stage1_rollback_performed = False
             validated_stage = curriculum.current_stage
             validated_substage = curriculum.current_substage
             validated_stage2_far_ratio = curriculum.stage2_far_spawn_ratio
@@ -4292,54 +4040,17 @@ def train(config: Dict = None):
                 stage4_controlled_recovery_time = None
 
                 substage_checkpoint_state = checkpoint_training_state(episode)
-                validation_advanced = curriculum.update_validation(
-                    val_summary,
-                    total_environment_steps=total_steps,
-                    ppo_updates=agent.training_step,
-                )
                 if validated_stage == 1:
-                    pooled_stage1_summary = (
-                        curriculum._last_pooled_summary or val_summary
-                    )
-                    current_stage1_score = (
-                        curriculum.stage1_validation_score(
-                            pooled_stage1_summary
+                    stage1_gate = curriculum.validation_gate_status(val_summary)
+                    if curriculum._validation_passed(val_summary):
+                        stage1_candidate_path = os.path.join(
+                            model_dir, "ppo_stage1_gate_candidate.pth"
                         )
-                    )
-                    if current_stage1_score > best_stage1_score:
-                        best_stage1_score = current_stage1_score
-                        stage1_best_path = os.path.join(
-                            model_dir, "ppo_stage1_best.pth"
-                        )
-                        agent.save(
-                            stage1_best_path, substage_checkpoint_state
-                        )
-                        best_model_paths["best_stage1"] = stage1_best_path
-                        print(
-                            "  -> 最佳Stage 1综合验证分数: "
-                            f"{best_stage1_score * 100:.1f}%"
-                        )
-                    if curriculum._stage1_rollback_requested:
-                        rollback_path = best_model_paths.get("best_stage1")
-                        if rollback_path and os.path.exists(rollback_path):
-                            current_training_step = agent.training_step
-                            agent.buffer.clear()
-                            agent.load(
-                                rollback_path,
-                                restore_training_state=True,
-                            )
-                            agent.training_step = max(
-                                current_training_step,
-                                agent.training_step,
-                            )
-                            print(
-                                "  [Stage1回滚] 连续三次验证明显退化，"
-                                "已恢复Stage 1最佳模型与优化器状态，"
-                                "保留当前课程和预算进度"
-                            )
-                            stage1_rollback_performed = True
-                        curriculum._stage1_rollback_requested = False
-                if validation_advanced:
+                        agent.save(stage1_candidate_path, substage_checkpoint_state)
+                        best_model_paths[
+                            "stage1_gate_candidate"
+                        ] = stage1_candidate_path
+                if curriculum.update_validation(val_summary):
                     substage_key = (
                         "stage1" if validated_substage == "1" else validated_substage.lower()
                     )
@@ -4365,8 +4076,6 @@ def train(config: Dict = None):
                         )
 
             validation_log["episodes"].append(episode)
-            validation_log["total_environment_steps"].append(total_steps)
-            validation_log["ppo_updates"].append(agent.training_step)
             validation_log["stage"].append(validated_stage)
             validation_log["substage"].append(validated_substage)
             validation_log["stage2_far_spawn_ratio"].append(
@@ -4399,74 +4108,6 @@ def train(config: Dict = None):
             )
             validation_log["val_stage1_tracking_given_found_rate"].append(
                 float(val_summary.get("stage1_tracking_given_found_rate", 0.0))
-            )
-            validation_log[
-                "val_stage1_late_discovery_151_300_rate"
-            ].append(
-                float(
-                    val_summary.get(
-                        "stage1_late_discovery_151_300_rate", 0.0
-                    )
-                )
-            )
-            validation_log[
-                "val_stage1_late_discovery_given_missed_deadline_rate"
-            ].append(
-                float(
-                    val_summary.get(
-                        "stage1_late_discovery_given_missed_deadline_rate",
-                        0.0,
-                    )
-                )
-            )
-            validation_log["val_scene_boundary_found_rates"].append(
-                copy.deepcopy(
-                    val_summary.get("scene_boundary_found_rates", {})
-                )
-            )
-            validation_log[
-                "val_scene_stage1_found_by_deadline_rates"
-            ].append(
-                copy.deepcopy(
-                    val_summary.get(
-                        "scene_stage1_found_by_deadline_rates", {}
-                    )
-                )
-            )
-            validation_log["val_search_heading_type_ratios"].append(
-                copy.deepcopy(
-                    val_summary.get("search_heading_type_ratios", {})
-                )
-            )
-            validation_log["val_search_refresh_reason_counts"].append(
-                copy.deepcopy(
-                    val_summary.get("search_refresh_reason_counts", {})
-                )
-            )
-            validation_log[
-                "val_mean_search_target_follow_rate"
-            ].append(
-                float(
-                    val_summary.get(
-                        "mean_search_target_follow_rate", 0.0
-                    )
-                )
-            )
-            validation_log["stage1_validation_score"].append(
-                float(
-                    curriculum.stage1_validation_score(val_summary)
-                    if validated_stage == 1
-                    else 0.0
-                )
-            )
-            validation_log["stage1_plateau_count"].append(
-                int(curriculum._stage1_plateau_count)
-            )
-            validation_log["stage1_degradation_count"].append(
-                int(curriculum._stage1_degradation_count)
-            )
-            validation_log["stage1_rollback_requested"].append(
-                bool(stage1_rollback_performed)
             )
             validation_log["val_stage2_contact_given_found_rate"].append(
                 float(val_summary.get("stage2_contact_given_found_rate", 0.0))
@@ -5472,26 +5113,6 @@ def evaluate(agent: CTDE_PPO_Agent, config: Dict, num_episodes: int = None) -> D
                         "search_heading_histogram": list(
                             info.get("search_heading_histogram", [0] * 8)
                         ),
-                        "initial_search_direction_pair": list(
-                            info.get("initial_search_direction_pair", [])
-                        ),
-                        "search_heading_type_ratios": dict(
-                            info.get("search_heading_type_ratios", {})
-                        ),
-                        "search_refresh_reason_counts": dict(
-                            info.get("search_refresh_reason_counts", {})
-                        ),
-                        "last_search_refresh_reason": str(
-                            info.get("last_search_refresh_reason", "disabled")
-                        ),
-                        "search_target_follow_rate": float(
-                            info.get("search_target_follow_rate", 0.0)
-                        ),
-                        "search_target_progress_eligible_steps": int(
-                            info.get(
-                                "search_target_progress_eligible_steps", 0
-                            )
-                        ),
                         "search_tie_break_count": int(
                             info.get("search_tie_break_count", 0)
                         ),
@@ -5589,98 +5210,6 @@ def evaluate(agent: CTDE_PPO_Agent, config: Dict, num_episodes: int = None) -> D
                 never_found_records = [
                     r for r in stage_records if r["first_boundary_step"] <= 0
                 ]
-                stage1_late_discovery_records = [
-                    r
-                    for r in stage_records
-                    if (
-                        FireSearchBaselineEnvironment.STAGE1_DISCOVERY_DEADLINE
-                        < int(r["first_boundary_step"])
-                        <= FireSearchBaselineEnvironment.STAGE1_MAX_STEPS
-                    )
-                ]
-                stage1_missed_deadline_records = [
-                    r
-                    for r in stage_records
-                    if not r.get("stage1_discovered_within_deadline", False)
-                ]
-                scene_boundary_found_rates = {}
-                scene_stage1_found_by_deadline_rates = {}
-                for current_scene_key in sorted(
-                    {str(r["scene_key"]) for r in stage_records}
-                ):
-                    scene_records = [
-                        r
-                        for r in stage_records
-                        if str(r["scene_key"]) == current_scene_key
-                    ]
-                    scene_boundary_found_rates[current_scene_key] = float(
-                        np.mean(
-                            [
-                                int(r["first_boundary_step"]) > 0
-                                for r in scene_records
-                            ]
-                        )
-                    )
-                    scene_stage1_found_by_deadline_rates[
-                        current_scene_key
-                    ] = float(
-                        np.mean(
-                            [
-                                bool(
-                                    r.get(
-                                        "stage1_discovered_within_deadline",
-                                        False,
-                                    )
-                                )
-                                for r in scene_records
-                            ]
-                        )
-                    )
-                total_search_headings = np.sum(
-                    np.asarray(
-                        [
-                            r.get("search_heading_histogram", [0] * 8)
-                            for r in stage_records
-                        ],
-                        dtype=np.int64,
-                    ),
-                    axis=0,
-                )
-                search_heading_total = max(
-                    int(np.sum(total_search_headings)), 1
-                )
-                aggregate_search_heading_type_ratios = {
-                    "vertical": float(
-                        (
-                            total_search_headings[0]
-                            + total_search_headings[4]
-                        )
-                        / search_heading_total
-                    ),
-                    "horizontal": float(
-                        (
-                            total_search_headings[2]
-                            + total_search_headings[6]
-                        )
-                        / search_heading_total
-                    ),
-                    "diagonal": float(
-                        sum(
-                            total_search_headings[index]
-                            for index in (1, 3, 5, 7)
-                        )
-                        / search_heading_total
-                    ),
-                }
-                aggregate_refresh_reasons: Dict[str, int] = {}
-                for record in stage_records:
-                    for reason, count in record.get(
-                        "search_refresh_reason_counts", {}
-                    ).items():
-                        aggregate_refresh_reasons[str(reason)] = (
-                            aggregate_refresh_reasons.get(str(reason), 0)
-                            + int(count)
-                        )
 
                 def _mean_or_none(records: List[Dict], key: str):
                     return (
@@ -5744,17 +5273,6 @@ def evaluate(agent: CTDE_PPO_Agent, config: Dict, num_episodes: int = None) -> D
                             for r in stage1_deadline_found_records
                         )
                         / max(len(stage1_deadline_found_records), 1)
-                    ),
-                    "stage1_late_discovery_151_300_count": int(
-                        len(stage1_late_discovery_records)
-                    ),
-                    "stage1_late_discovery_151_300_rate": float(
-                        len(stage1_late_discovery_records)
-                        / max(len(stage_records), 1)
-                    ),
-                    "stage1_late_discovery_given_missed_deadline_rate": float(
-                        len(stage1_late_discovery_records)
-                        / max(len(stage1_missed_deadline_records), 1)
                     ),
                     "stage2_contact_success_rate": float(
                         np.mean([r["stage2_contact_success"] for r in stage_records])
@@ -5843,27 +5361,6 @@ def evaluate(agent: CTDE_PPO_Agent, config: Dict, num_episodes: int = None) -> D
                     ),
                     "mean_invalid_action_count": float(
                         np.mean([r["invalid_action_count"] for r in stage_records])
-                    ),
-                    "scene_boundary_found_rates": scene_boundary_found_rates,
-                    "scene_stage1_found_by_deadline_rates": (
-                        scene_stage1_found_by_deadline_rates
-                    ),
-                    "search_heading_histogram": (
-                        total_search_headings.astype(int).tolist()
-                    ),
-                    "search_heading_type_ratios": (
-                        aggregate_search_heading_type_ratios
-                    ),
-                    "search_refresh_reason_counts": (
-                        aggregate_refresh_reasons
-                    ),
-                    "mean_search_target_follow_rate": float(
-                        np.mean(
-                            [
-                                r.get("search_target_follow_rate", 0.0)
-                                for r in stage_records
-                            ]
-                        )
                     ),
                     "mean_forced_sector_switch_count": float(
                         np.mean(
